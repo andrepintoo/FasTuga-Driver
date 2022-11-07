@@ -20,7 +20,7 @@ public class User {
     }
 
     public String fullName() {
-        return firstName + lastName;
+        return firstName + " " + lastName;
     }
 
     public String getFirstName() {
