@@ -17,6 +17,9 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
+    public User() {
+    }
+
     public String fullName() {
         return firstName + " " + lastName;
     }

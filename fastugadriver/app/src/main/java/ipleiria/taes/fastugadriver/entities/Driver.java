@@ -10,6 +10,9 @@ public class Driver extends User {
         this.licensePlate = licensePlate;
     }
 
+    public Driver() {
+    }
+
     public String getLicensePlate() {
         return licensePlate;
     }
