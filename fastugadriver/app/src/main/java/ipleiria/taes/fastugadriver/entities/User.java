@@ -7,16 +7,14 @@ public class User {
     private ContactsContract.CommonDataKinds.Email email;
     private String password;
     private ContactsContract.CommonDataKinds.Phone phoneNumber;
-    private String licensePlate;
 
     public User(String firstName, String lastName, ContactsContract.CommonDataKinds.Email email,
-                String password, ContactsContract.CommonDataKinds.Phone phoneNumber, String licensePlate) {
+                String password, ContactsContract.CommonDataKinds.Phone phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.phoneNumber = phoneNumber;
-        this.licensePlate = licensePlate;
     }
 
     public String fullName() {
@@ -63,11 +61,4 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getLicensePlate() {
-        return licensePlate;
-    }
-
-    public void setLicensePlate(String licensePlate) {
-        this.licensePlate = licensePlate;
-    }
 }
