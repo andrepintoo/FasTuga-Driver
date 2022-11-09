@@ -4,12 +4,11 @@ import android.provider.ContactsContract;
 
 public class User {
     private String firstName, lastName;
-    private ContactsContract.CommonDataKinds.Email email;
+    private String email;
     private String password;
-    private ContactsContract.CommonDataKinds.Phone phoneNumber;
+    private String phoneNumber;
 
-    public User(String firstName, String lastName, ContactsContract.CommonDataKinds.Email email,
-                String password, ContactsContract.CommonDataKinds.Phone phoneNumber) {
+    public User(String firstName, String lastName, String email, String password, String phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -20,7 +19,7 @@ public class User {
     public User() {
     }
 
-    public String fullName() {
+    public String getFullName() {
         return firstName + " " + lastName;
     }
 
@@ -40,11 +39,11 @@ public class User {
         this.lastName = lastName;
     }
 
-    public ContactsContract.CommonDataKinds.Email getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(ContactsContract.CommonDataKinds.Email email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -56,11 +55,11 @@ public class User {
         this.password = password;
     }
 
-    public ContactsContract.CommonDataKinds.Phone getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(ContactsContract.CommonDataKinds.Phone phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

@@ -5,7 +5,7 @@ import android.provider.ContactsContract;
 public class Driver extends User {
     private String licensePlate;
 
-    public Driver(String firstName, String lastName, ContactsContract.CommonDataKinds.Email email, String password, ContactsContract.CommonDataKinds.Phone phoneNumber, String licensePlate) {
+    public Driver(String firstName, String lastName, String email, String password, String phoneNumber, String licensePlate) {
         super(firstName, lastName, email, password, phoneNumber);
         this.licensePlate = licensePlate;
     }

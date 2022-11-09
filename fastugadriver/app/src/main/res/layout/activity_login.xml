@@ -7,7 +7,7 @@
     tools:context=".activities.LoginActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonLogin"
         android:layout_width="342dp"
         android:layout_height="46dp"
         android:layout_marginStart="35dp"
@@ -16,13 +16,13 @@
         android:backgroundTint="#D9D9D9"
         android:text="Login"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGoToRegisterActivity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonGoToRegisterActivity"
         android:layout_width="145dp"
         android:layout_height="41dp"
         android:layout_marginStart="132dp"
@@ -67,7 +67,7 @@
         android:padding="10dp"
         android:textColor="#000000"
         android:textColorHint="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
