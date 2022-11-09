@@ -22,7 +22,7 @@ public class UserManager {
 
     public User getUser(String email) {
         // TODO: Get User by Email
-        return users.get(0);
+        return null;
     }
 
     public LinkedList<User> getUsers() {
