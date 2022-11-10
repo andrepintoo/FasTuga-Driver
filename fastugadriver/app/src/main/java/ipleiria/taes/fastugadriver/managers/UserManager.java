@@ -3,6 +3,8 @@ package ipleiria.taes.fastugadriver.managers;
 import android.provider.ContactsContract;
 
 import java.util.LinkedList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import ipleiria.taes.fastugadriver.entities.User;
 
