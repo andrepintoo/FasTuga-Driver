@@ -42,9 +42,18 @@ public class LoginActivity extends AppCompatActivity {
                 email = editTextEmail.getText().toString();
                 password = editTextPassword.getText().toString();
 
+                UserManager INSTANCE = UserManager.getManager();
+                if(!INSTANCE.logInUser(email, password)){
+                    showToastMessage("Wrong Credentials!");
+                    return;
+                }
                 showToastMessage("Welcome! " + email);
+                Intent i = new Intent(LoginActivity.this, MainActivity.class);
 
-                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                //TODO: ou mandamos o user entre activities ou vamos buscar à INSTANCE o user atual
+                //i.putExtra("loggedUser", );
+
+                startActivity(i);
             }
         });
     }

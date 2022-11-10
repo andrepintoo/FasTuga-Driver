@@ -13,7 +13,7 @@ public class UserManager {
 
     public UserManager() {
         users = new LinkedList<>();
-        User user = new User("PrimeiroNome", "Apelido", "contacto@email.pt", "password", "912345678");
+        users.add(new User("PrimeiroNome", "Apelido", "contacto@email.pt", "password", "912345678"));
     }
 
     public static UserManager getManager() {
@@ -21,8 +21,20 @@ public class UserManager {
     }
 
     public User getUser(String email) {
-        // TODO: Get User by Email
+        for(User user : users){
+            if(user.getEmail().equals(email)){
+                return user;
+            }
+        }
         return null;
+    }
+
+    public boolean logInUser(String email, String password){
+        User user = getUser(email);
+        if(user == null){
+            return false;
+        }
+        return user.getPassword().equals(password);
     }
 
     public LinkedList<User> getUsers() {
