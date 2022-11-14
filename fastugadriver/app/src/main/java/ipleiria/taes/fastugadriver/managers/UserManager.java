@@ -12,10 +12,12 @@ import ipleiria.taes.fastugadriver.entities.User;
 public class UserManager {
     private static final UserManager instance = new UserManager();
     private LinkedList<User> users;
+    private User userLogged;
 
     public UserManager() {
         users = new LinkedList<>();
         users.add(new User("PrimeiroNome", "Apelido", "contacto@email.pt", "password", "912345678"));
+        userLogged = null;
     }
 
     public static UserManager getManager() {
@@ -37,6 +39,17 @@ public class UserManager {
             return false;
         }
         return user.getPassword().equals(password);
+    }
+
+    public void setUserLogged(String email){
+        if(email.trim().isEmpty()){
+            return;
+        }
+        userLogged = getUser(email);
+    }
+
+    public User getUserLogged() {
+        return userLogged;
     }
 
     public LinkedList<User> getUsers() {

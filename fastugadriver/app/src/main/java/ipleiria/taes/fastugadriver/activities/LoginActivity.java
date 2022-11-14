@@ -73,12 +73,8 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
                 showToastMessage("Welcome! " + email);
-
+                INSTANCE.setUserLogged(email);
                 Intent i = new Intent(LoginActivity.this, MainActivity.class);
-
-                //TODO: ou mandamos o user entre activities ou vamos buscar à INSTANCE o user atual
-                //i.putExtra("loggedUser", );
-
                 startActivity(i);
             }
         });
