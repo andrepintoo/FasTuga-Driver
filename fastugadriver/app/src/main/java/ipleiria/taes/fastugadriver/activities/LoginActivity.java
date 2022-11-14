@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.regex.Matcher;
@@ -21,6 +22,7 @@ import ipleiria.taes.fastugadriver.managers.UserManager;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText editTextEmail, editTextPassword;
+    private TextView errorText;
     private String email, password;
 
     public static final Pattern VALID_EMAIL_ADDRESS_REGEX =
@@ -42,6 +44,8 @@ public class LoginActivity extends AppCompatActivity {
 
         editTextEmail = findViewById(R.id.editTextLoginEmail);
         editTextPassword = findViewById(R.id.editTextLoginPassword);
+        errorText = findViewById(R.id.textViewErrorLogin);
+        errorText.setVisibility(View.INVISIBLE);
         Button buttonToLogin = findViewById(R.id.buttonToLogin);
         buttonToLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,10 +73,9 @@ public class LoginActivity extends AppCompatActivity {
 
                 UserManager INSTANCE = UserManager.getManager();
                 if (!INSTANCE.logInUser(email, password)){
-                    showToastMessage("Wrong credentials!");
+                    errorText.setVisibility(View.VISIBLE);
                     return;
                 }
-                showToastMessage("Welcome! " + email);
                 INSTANCE.setUserLogged(email);
                 Intent i = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(i);
