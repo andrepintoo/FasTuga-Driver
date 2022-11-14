@@ -23,6 +23,7 @@ import ipleiria.taes.fastugadriver.managers.UserManager;
 public class RegisterActivity extends AppCompatActivity {
 
     private EditText editTextEmail, editTextPassword, editTextFirstName, editTextLastName, editTextPasswordConfirmation, editTextPhoneNumber, editTextLicensePlate;
+    private TextView textRegisterError;
     private String email, password, firstName, lastName, passwordConfirmation, phoneNumber, licensePlate;
     public static final Pattern VALID_EMAIL_ADDRESS_REGEX = Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);;
     public static final Pattern VALID_LICENSE_PLATE_REGEX = Pattern.compile("^[A-Z]{2}+-[0-9]{2}+-[A-Z]{2}$");
@@ -47,6 +48,8 @@ public class RegisterActivity extends AppCompatActivity {
         editTextPasswordConfirmation = findViewById(R.id.editTextPasswordConfirmation);
         editTextPhoneNumber = findViewById(R.id.editTextPhoneNumber);
         editTextLicensePlate = findViewById(R.id.editTextLicensePlate);
+        textRegisterError = findViewById(R.id.textError);
+        textRegisterError.setVisibility(View.INVISIBLE);
         Button buttonRegister = findViewById(R.id.buttonRegister);
 
         buttonRegister.setOnClickListener(new View.OnClickListener() {
@@ -106,8 +109,14 @@ public class RegisterActivity extends AppCompatActivity {
                 }
                 if(valid){
                     UserManager INSTANCE = UserManager.getManager();
-                    if (!INSTANCE.registerUser(firstName, lastName, email, password, phoneNumber, licensePlate)){
-                        showToastMessage("Wrong credentials!");
+                    if (INSTANCE.registerUser(firstName, lastName, email, password, phoneNumber, licensePlate) == -1){
+                        textRegisterError.setText("Email already exists!");
+                        textRegisterError.setVisibility(View.VISIBLE);
+                        return;
+                    }
+                    if (INSTANCE.registerUser(firstName, lastName, email, password, phoneNumber, licensePlate) == -2){
+                        textRegisterError.setText("License plate already exists!");
+                        textRegisterError.setVisibility(View.VISIBLE);
                         return;
                     }
 

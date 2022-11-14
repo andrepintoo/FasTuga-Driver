@@ -130,7 +130,7 @@
         android:id="@+id/buttonRegister"
         android:layout_width="225dp"
         android:layout_height="42dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="44dp"
         android:autoText="false"
         android:backgroundTint="#D9D9D9"
         android:color="#D9D9D9"
@@ -146,24 +146,31 @@
         android:id="@+id/buttonBackToLogin"
         android:layout_width="wrap_content"
         android:layout_height="42dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         android:backgroundTint="#D9D9D9"
         android:text="Back to Login"
         android:textAllCaps="false"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonRegister"
         tools:ignore="TextContrastCheck" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textError"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Made with Love"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="153dp"
+        android:layout_marginBottom="10dp"
+        android:text="Register Error!"
+        android:textColor="#C10000"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonBackToLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLicensePlate"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

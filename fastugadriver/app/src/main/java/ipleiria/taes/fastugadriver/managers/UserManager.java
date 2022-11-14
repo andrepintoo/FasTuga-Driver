@@ -20,6 +20,7 @@ public class UserManager {
         users = new LinkedList<>();
         drivers = new LinkedList<>();
         users.add(new User("PrimeiroNome", "Apelido", "contacto@email.pt", "password", "912345678"));
+        drivers.add(new Driver("Sara", "Martins", "sara@mail.pt", "password", "912345678", "AA-00-AA"));
         userLogged = null;
     }
 
@@ -34,6 +35,15 @@ public class UserManager {
             }
         }
         return null;
+    }
+
+    public boolean licenseExists(String licensePlate) {
+        for(Driver driver : drivers){
+            if(driver.getLicensePlate().equals(licensePlate)){
+                return true;
+            }
+        }
+        return false;
     }
 
     public Driver getDriver(String email) {
@@ -53,13 +63,17 @@ public class UserManager {
         return user.getPassword().equals(password);
     }
 
-    public boolean registerUser(String firstName, String lastName, String email, String password, String phoneNumber, String licensePlate){
+    public int registerUser(String firstName, String lastName, String email, String password, String phoneNumber, String licensePlate){
         Driver driver = getDriver(email);
-        if(driver != null){
-            return false;
+        if(driver != null) {
+            return -1;
+        }
+        if(licenseExists(licensePlate)){
+            return -2;
         }
         driver = new Driver(firstName, lastName, email, password, phoneNumber, licensePlate);
-        return users.add(driver);
+        users.add(driver);
+        return 0;
     }
 
     public void setUserLogged(String email){
