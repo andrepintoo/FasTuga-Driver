@@ -105,6 +105,12 @@ public class RegisterActivity extends AppCompatActivity {
                     valid = false;
                 }
                 if(valid){
+                    UserManager INSTANCE = UserManager.getManager();
+                    if (!INSTANCE.registerUser(firstName, lastName, email, password, phoneNumber, licensePlate)){
+                        showToastMessage("Wrong credentials!");
+                        return;
+                    }
+
                     showToastMessage("Welcome! " + email);
 
                     startActivity(new Intent(RegisterActivity.this, MainActivity.class));
