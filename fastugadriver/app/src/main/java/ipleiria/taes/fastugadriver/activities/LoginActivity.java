@@ -53,21 +53,24 @@ public class LoginActivity extends AppCompatActivity {
                 email = editTextEmail.getText().toString();
                 password = editTextPassword.getText().toString();
 
-                boolean valid = true;
+                boolean valid = true, emailHasErrors = false;
                 if(email.trim().isEmpty()){
-                    editTextEmail.setError("Email field cannot be empty");
+                    setErrorMessage(editTextEmail, "Email field cannot be empty");
                     valid = false;
+                    emailHasErrors = true;
                 }
                 if(password.trim().isEmpty()){
-                    editTextPassword.setError("Password field cannot be empty");
+                    setErrorMessage(editTextPassword, "Password field cannot be empty");
                     valid = false;
                 }
-                if(!valid){
-                    return;
-                }
+
                 Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(email);
-                if(!matcher.matches()){
-                    editTextEmail.setError("Wrong email format");
+                if(!emailHasErrors && !matcher.matches()){
+                    setErrorMessage(editTextEmail, "Wrong email format");
+                    valid = false;
+                }
+
+                if(!valid){
                     return;
                 }
 
@@ -89,5 +92,10 @@ public class LoginActivity extends AppCompatActivity {
 
         Toast toast = Toast.makeText(context, message, duration);
         toast.show();
+    }
+
+    private void setErrorMessage(EditText textField, String message) {
+        textField.setError(message);
+        textField.setContentDescription(message);
     }
 }
