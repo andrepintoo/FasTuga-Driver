@@ -65,6 +65,9 @@ public class RegisterActivity extends AppCompatActivity {
                 licensePlate = editTextLicensePlate.getText().toString();
 
                 boolean valid = true;
+                boolean validEmail = true;
+                boolean validLicensePlate = true;
+
                 if (firstName.length() <= 0) {
                     errorMessage = "Enter First Name.";
                     editTextFirstName.setError(errorMessage);
@@ -82,11 +85,13 @@ public class RegisterActivity extends AppCompatActivity {
                     editTextEmail.setError(errorMessage);
                     setErrorMessage(editTextEmail, errorMessage);
                     valid = false;
+                    validEmail = false;
                 } else if (!VALID_EMAIL_ADDRESS_REGEX.matcher(email).matches()) {
-                    errorMessage = "Wrong Email Format";
+                    errorMessage = "Wrong Email Format - AA@BB.CC.";
                     editTextEmail.setError(errorMessage);
                     setErrorMessage(editTextEmail, errorMessage);
                     valid = false;
+                    validEmail = false;
                 }
                 if (password.length() <= 0) {
                     errorMessage = "Enter Password.";
@@ -126,32 +131,42 @@ public class RegisterActivity extends AppCompatActivity {
                     editTextLicensePlate.setError(errorMessage);
                     setErrorMessage(editTextLicensePlate, errorMessage);
                     valid = false;
+                    validLicensePlate = false;
                 } else if (!VALID_LICENSE_PLATE_REGEX.matcher(licensePlate).matches()) {
                     errorMessage = "Wrong License Format - AA-00-AA.";
                     editTextLicensePlate.setError(errorMessage);
                     setErrorMessage(editTextLicensePlate, errorMessage);
                     valid = false;
+                    validLicensePlate = false;
                 }
-                if(valid){
+
+                if(validEmail || validLicensePlate) {
                     UserManager INSTANCE = UserManager.getManager();
                     int resultCode = INSTANCE.registerUser(firstName, lastName, email, password, phoneNumber, licensePlate);
-                    if (resultCode == -1){
-//                        textRegisterError.setText("Email already exists!");
-//                        textRegisterError.setVisibility(View.VISIBLE);
+                    if(resultCode == -3){
                         errorMessage = "Email already exists!";
                         editTextEmail.setError(errorMessage);
                         setErrorMessage(editTextEmail, errorMessage);
-                        return;
-                    }
-                    if (resultCode == -2){
-//                        textRegisterError.setText("License plate already exists!");
-//                        textRegisterError.setVisibility(View.VISIBLE);
                         errorMessage = "License plate already exists!";
                         editTextLicensePlate.setError(errorMessage);
                         setErrorMessage(editTextLicensePlate, errorMessage);
-                        return;
+                        valid = false;
                     }
+                    if (resultCode == -1) {
+                        errorMessage = "Email already exists!";
+                        editTextEmail.setError(errorMessage);
+                        setErrorMessage(editTextEmail, errorMessage);
+                        valid = false;
+                    }
+                    if (resultCode == -2) {
+                        errorMessage = "License plate already exists!";
+                        editTextLicensePlate.setError(errorMessage);
+                        setErrorMessage(editTextLicensePlate, errorMessage);
+                        valid = false;
+                    }
+                }
 
+                if(valid){
                     showToastMessage("Welcome! " + email);
 
                     startActivity(new Intent(RegisterActivity.this, MainActivity.class));
