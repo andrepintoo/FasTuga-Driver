@@ -1,7 +1,5 @@
 package ipleiria.taes.fastugadriver.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,19 +9,20 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import ipleiria.taes.fastugadriver.MainActivity;
 import ipleiria.taes.fastugadriver.R;
-import ipleiria.taes.fastugadriver.entities.User;
 import ipleiria.taes.fastugadriver.managers.UserManager;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private static final String TAG = "LoginActivity";
     private EditText editTextEmail, editTextPassword;
     private TextView errorText;
     private String email, password;
+    private TextView textView;
 
     public static final Pattern VALID_EMAIL_ADDRESS_REGEX =
             Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
@@ -34,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        // Go to Register
         Button buttonGoToRegisterActivity = findViewById(R.id.buttonGoToRegisterActivity);
         buttonGoToRegisterActivity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +42,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        // Login
         editTextEmail = findViewById(R.id.editTextLoginEmail);
         editTextPassword = findViewById(R.id.editTextLoginPassword);
         errorText = findViewById(R.id.textViewErrorLogin);
@@ -52,22 +53,24 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 email = editTextEmail.getText().toString();
                 password = editTextPassword.getText().toString();
-
-                boolean valid = true;
+                boolean valid = true, emailHasErrors = false;
                 if(email.trim().isEmpty()){
-                    editTextEmail.setError("Email field cannot be empty");
+                    setErrorMessage(editTextEmail, "Email field cannot be empty");
                     valid = false;
+                    emailHasErrors = true;
                 }
                 if(password.trim().isEmpty()){
-                    editTextPassword.setError("Password field cannot be empty");
+                    setErrorMessage(editTextPassword, "Password field cannot be empty");
                     valid = false;
                 }
-                if(!valid){
-                    return;
-                }
+
                 Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(email);
-                if(!matcher.matches()){
-                    editTextEmail.setError("Wrong email format");
+                if(!emailHasErrors && !matcher.matches()){
+                    setErrorMessage(editTextEmail, "Wrong email format");
+                    valid = false;
+                }
+
+                if(!valid){
                     return;
                 }
 
@@ -89,5 +92,10 @@ public class LoginActivity extends AppCompatActivity {
 
         Toast toast = Toast.makeText(context, message, duration);
         toast.show();
+    }
+
+    private void setErrorMessage(EditText textField, String message) {
+        textField.setError(message);
+        textField.setContentDescription(message);
     }
 }

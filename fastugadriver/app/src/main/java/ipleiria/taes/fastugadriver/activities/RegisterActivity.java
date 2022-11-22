@@ -55,6 +55,7 @@ public class RegisterActivity extends AppCompatActivity {
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String errorMessage;
                 email = editTextEmail.getText().toString();
                 password = editTextPassword.getText().toString();
                 firstName = editTextFirstName.getText().toString();
@@ -65,58 +66,89 @@ public class RegisterActivity extends AppCompatActivity {
 
                 boolean valid = true;
                 if (firstName.length() <= 0) {
-                    editTextFirstName.setError("Enter First Name.");
+                    errorMessage = "Enter First Name.";
+                    editTextFirstName.setError(errorMessage);
+                    setErrorMessage(editTextFirstName, errorMessage);
                     valid = false;
                 }
                 if (lastName.length() <= 0) {
-                    editTextLastName.setError("Enter Last Name.");
+                    errorMessage = "Enter Last Name.";
+                    editTextLastName.setError(errorMessage);
+                    setErrorMessage(editTextLastName, errorMessage);
                     valid = false;
                 }
                 if (email.length() <= 0) {
-                    editTextEmail.setError("Enter Email.");
+                    errorMessage = "Enter Email.";
+                    editTextEmail.setError(errorMessage);
+                    setErrorMessage(editTextEmail, errorMessage);
                     valid = false;
                 } else if (!VALID_EMAIL_ADDRESS_REGEX.matcher(email).matches()) {
-                    editTextEmail.setError("Wrong Email Format.");
+                    errorMessage = "Wrong Email Format";
+                    editTextEmail.setError(errorMessage);
+                    setErrorMessage(editTextEmail, errorMessage);
                     valid = false;
                 }
                 if (password.length() <= 0) {
-                    editTextPassword.setError("Enter Password.");
+                    errorMessage = "Enter Password.";
+                    editTextPassword.setError(errorMessage);
+                    setErrorMessage(editTextPassword, errorMessage);
                     valid = false;
                 } else if (password.length() < 8) {
-                    editTextPassword.setError("Password too short, at least 8 characters.");
+                    errorMessage = "Password too short, at least 8 characters.";
+                    editTextPassword.setError(errorMessage);
+                    setErrorMessage(editTextPassword, errorMessage);
                     valid = false;
                 }
                 if (passwordConfirmation.length() <= 0) {
-                    editTextPasswordConfirmation.setError("Enter Password Confirmation.");
+                    errorMessage = "Enter Password Confirmation.";
+                    editTextPasswordConfirmation.setError(errorMessage);
+                    setErrorMessage(editTextPasswordConfirmation, errorMessage);
                     valid = false;
                 } else if (!passwordConfirmation.equals(password)) {
-                    editTextPasswordConfirmation.setError("Passwords don't match.");
+                    errorMessage = "Passwords don't match.";
+                    editTextPasswordConfirmation.setError(errorMessage);
+                    setErrorMessage(editTextPasswordConfirmation, errorMessage);
                     valid = false;
                 }
                 if (phoneNumber.length() <= 0) {
-                    editTextPhoneNumber.setError("Enter Phone Number.");
+                    errorMessage = "Enter Phone Number.";
+                    editTextPhoneNumber.setError(errorMessage);
+                    setErrorMessage(editTextPhoneNumber, errorMessage);
                     valid = false;
                 } else if (!VALID_PHONE_NUMBER_REGEX.matcher(phoneNumber).matches()) {
-                    editTextPhoneNumber.setError("Wrong Phone Number Format - 9xxxxxxxx.");
+                    errorMessage = "Wrong Phone Number Format - 9xxxxxxxx.";
+                    editTextPhoneNumber.setError(errorMessage);
+                    setErrorMessage(editTextPhoneNumber, errorMessage);
                     valid = false;
                 }
                 if (licensePlate.length() <= 0) {
-                    editTextLicensePlate.setError("Enter License Plate.");
+                    errorMessage = "Enter License Plate.";
+                    editTextLicensePlate.setError(errorMessage);
+                    setErrorMessage(editTextLicensePlate, errorMessage);
                     valid = false;
                 } else if (!VALID_LICENSE_PLATE_REGEX.matcher(licensePlate).matches()) {
-                    editTextLicensePlate.setError("Wrong License Format - AA-00-AA.");
+                    errorMessage = "Wrong License Format - AA-00-AA.";
+                    editTextLicensePlate.setError(errorMessage);
+                    setErrorMessage(editTextLicensePlate, errorMessage);
                     valid = false;
                 }
                 if(valid){
                     UserManager INSTANCE = UserManager.getManager();
-                    if (INSTANCE.registerUser(firstName, lastName, email, password, phoneNumber, licensePlate) == -1){
-                        textRegisterError.setText("Email already exists!");
-                        textRegisterError.setVisibility(View.VISIBLE);
+                    int resultCode = INSTANCE.registerUser(firstName, lastName, email, password, phoneNumber, licensePlate);
+                    if (resultCode == -1){
+//                        textRegisterError.setText("Email already exists!");
+//                        textRegisterError.setVisibility(View.VISIBLE);
+                        errorMessage = "Email already exists!";
+                        editTextEmail.setError(errorMessage);
+                        setErrorMessage(editTextEmail, errorMessage);
                         return;
                     }
-                    if (INSTANCE.registerUser(firstName, lastName, email, password, phoneNumber, licensePlate) == -2){
-                        textRegisterError.setText("License plate already exists!");
-                        textRegisterError.setVisibility(View.VISIBLE);
+                    if (resultCode == -2){
+//                        textRegisterError.setText("License plate already exists!");
+//                        textRegisterError.setVisibility(View.VISIBLE);
+                        errorMessage = "License plate already exists!";
+                        editTextLicensePlate.setError(errorMessage);
+                        setErrorMessage(editTextLicensePlate, errorMessage);
                         return;
                     }
 
@@ -136,4 +168,8 @@ public class RegisterActivity extends AppCompatActivity {
         toast.show();
     }
 
+    private void setErrorMessage(EditText textField, String message){
+        textField.setError(message);
+        textField.setContentDescription(message);
+    }
 }
