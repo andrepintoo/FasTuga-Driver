@@ -65,10 +65,17 @@ public class UserManager {
 
     public int registerUser(String firstName, String lastName, String email, String password, String phoneNumber, String licensePlate){
         Driver driver = getDriver(email);
+        Boolean licensePlateExists = licenseExists(licensePlate);
+
+        if(driver != null && licensePlateExists){
+            return -3;
+        }
+
         if(driver != null) {
             return -1;
         }
-        if(licenseExists(licensePlate)){
+
+        if(licensePlateExists){
             return -2;
         }
         driver = new Driver(firstName, lastName, email, password, phoneNumber, licensePlate);
