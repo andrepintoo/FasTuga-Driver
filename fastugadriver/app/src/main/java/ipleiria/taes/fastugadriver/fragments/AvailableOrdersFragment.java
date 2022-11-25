@@ -1,66 +1,94 @@
 package ipleiria.taes.fastugadriver.fragments;
 
+import static android.content.ContentValues.TAG;
+
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
+import java.util.List;
+
+import ipleiria.taes.fastugadriver.MainActivity;
 import ipleiria.taes.fastugadriver.R;
+import ipleiria.taes.fastugadriver.api.OrderService;
+import ipleiria.taes.fastugadriver.api.RetrofitClient;
+import ipleiria.taes.fastugadriver.model.order.OrderModelArray;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link AvailableOrdersFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class AvailableOrdersFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public AvailableOrdersFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment AvailableOrdersFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static AvailableOrdersFragment newInstance(String param1, String param2) {
-        AvailableOrdersFragment fragment = new AvailableOrdersFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_available_orders, container, false);
+        View view = inflater.inflate(R.layout.fragment_available_orders, container, false);
+        LinearLayout layout = view.findViewById(R.id.LinearLayoutOrders);
+
+        OrderService service = RetrofitClient.getRetrofitInstance().create(OrderService.class);
+        Call<List<OrderModelArray>> orders = service.getOrderByStatus('R');
+
+        orders.enqueue(new Callback<List<OrderModelArray>>() {
+            @SuppressLint("RtlHardcoded")
+            @Override
+            public void onResponse(Call<List<OrderModelArray>> call, Response<List<OrderModelArray>> response) {
+                Log.e(TAG, "onResponse: code : " + response.code());
+                List<OrderModelArray> data = response.body();
+                for (OrderModelArray order : data) {
+                    int orderID = order.getId();
+                    char orderStatus = order.getStatus();
+                    Log.e(TAG, "onResponse: " + orderID);
+                    Log.e(TAG, "onResponse: " + orderStatus);
+                    String buttonText = "Order: " + orderID + "\n" +
+                            "Location: " + "<Street>" + "\n" +
+                            "Distance: " + "<Number>" + " km\n" +
+                            "Earning: " + "<Number>" + " €\n" +
+                            "Status: " + orderStatus;
+
+                    //set the properties for button
+                    Button buttonOrder = new Button(getActivity());
+                    buttonOrder.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT));
+                    buttonOrder.setText(buttonText);
+                    buttonOrder.setId(orderID);
+                    buttonOrder.setGravity(Gravity.LEFT);
+
+                    System.out.println("DEBUGGGGGGG");
+                    System.out.println("TEXTO:" +buttonOrder.getText());
+                    System.out.println("ID:"+buttonOrder.getId());
+                    System.out.println(buttonOrder);
+
+                    //add button to the layout
+                    layout.addView(buttonOrder);
+
+                    buttonOrder.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                           /* Intent intent = new Intent(MainActivity.this, OrderDetailsActivity.class);
+                            intent.putExtra("orderID",String.valueOf(orderID));
+                            startActivity(intent);*/
+                        }
+                    });
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<List<OrderModelArray>> call, Throwable t) {
+                Log.e(TAG, "onFailure : " + t.getMessage());
+            }
+
+        });
+
+        return view;
     }
 }

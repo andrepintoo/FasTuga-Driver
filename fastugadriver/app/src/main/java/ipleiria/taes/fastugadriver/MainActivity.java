@@ -6,13 +6,35 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
+import androidx.transition.Slide;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.List;
+
+import ipleiria.taes.fastugadriver.activities.LoginActivity;
+//import ipleiria.taes.fastugadriver.activities.OrderDetailsActivity;
+import ipleiria.taes.fastugadriver.activities.RegisterActivity;
+import ipleiria.taes.fastugadriver.api.OrderService;
+import ipleiria.taes.fastugadriver.api.RetrofitClient;
+import ipleiria.taes.fastugadriver.model.order.OrderModelArray;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
