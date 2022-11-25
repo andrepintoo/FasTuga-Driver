@@ -23,4 +23,7 @@
                 android:title="Opt Out"/>
         </menu>
     </item>
+    <item
+        android:id="@+id/testes"
+        android:title="Testes"/>
 </menu>

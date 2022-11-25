@@ -54,4 +54,7 @@ dependencies {
     //NavigationComponent
     implementation 'androidx.navigation:navigation-fragment:2.2.0-rc03'
     implementation 'androidx.navigation:navigation-ui:2.2.0-rc03'
+
+    //Map
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
 }

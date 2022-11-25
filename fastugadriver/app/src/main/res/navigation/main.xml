@@ -3,11 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    app:startDestination="@id/menuAvailableOrders">
+    app:startDestination="@id/testes">
 
     <fragment
         android:id="@+id/menuAvailableOrders"
         android:name="ipleiria.taes.fastugadriver.fragments.AvailableOrdersFragment"
         android:label="AvailableOrders"
         tools:layout="@layout/fragment_available_orders" />
+    <fragment
+        android:id="@+id/testes"
+        android:name="ipleiria.taes.fastugadriver.fragments.OrderDetailsFragment"
+        android:label="fragment_order_details"
+        tools:layout="@layout/fragment_order_details" />
 </navigation>
