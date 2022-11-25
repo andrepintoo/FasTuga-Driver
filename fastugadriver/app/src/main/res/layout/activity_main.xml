@@ -13,6 +13,12 @@
 
 
         <LinearLayout
+            android:id="@+id/LinearLayoutOrders"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
             android:id="@+id/layoutToolBar"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
