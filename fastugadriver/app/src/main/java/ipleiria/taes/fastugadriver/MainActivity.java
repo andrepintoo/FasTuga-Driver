@@ -55,57 +55,5 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.navHostFragment);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-        //LinearLayout layout = findViewById(R.id.LinearLayoutOrders);
-
-       /* OrderService service = RetrofitClient.getRetrofitInstance().create(OrderService.class);
-        Call<List<OrderModelArray>> orders = service.getOrderByStatus('R');
-
-        orders.enqueue(new Callback<List<OrderModelArray>>() {
-            @SuppressLint("RtlHardcoded")
-            @Override
-            public void onResponse(Call<List<OrderModelArray>> call, Response<List<OrderModelArray>> response) {
-                Log.e(TAG, "onResponse: code : " + response.code());
-                List<OrderModelArray> data = response.body();
-                for (OrderModelArray order : data) {
-                    int orderID = order.getId();
-                    char orderStatus = order.getStatus();
-                    Log.e(TAG, "onResponse: " + orderID);
-                    Log.e(TAG, "onResponse: " + orderStatus);
-                    String buttonText = "Order: " + orderID + "\n" +
-                            "Location: " + "<Street>" + "\n" +
-                            "Distance: " + "<Number>" + " km\n" +
-                            "Earning: " + "<Number>" + " €\n" +
-                            "Status: " + orderStatus;
-
-                    //set the properties for button
-                    Button buttonOrder = new Button(MainActivity.this);
-                    buttonOrder.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
-                            ViewGroup.LayoutParams.WRAP_CONTENT));
-                    buttonOrder.setText(buttonText);
-                    buttonOrder.setId(orderID);
-                    buttonOrder.setGravity(Gravity.LEFT);
-
-                    //add button to the layout
-                    layout.addView(buttonOrder);
-
-                    buttonOrder.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                           /* Intent intent = new Intent(MainActivity.this, OrderDetailsActivity.class);
-                            intent.putExtra("orderID",String.valueOf(orderID));
-                            startActivity(intent);*/
-                        //}
-                  /*  });
-                }
-
-            }
-
-            @Override
-            public void onFailure(Call<List<OrderModelArray>> call, Throwable t) {
-                Log.e(TAG, "onFailure : "+ t.getMessage());
-            }
-        });*/
-
-
     }
 }
