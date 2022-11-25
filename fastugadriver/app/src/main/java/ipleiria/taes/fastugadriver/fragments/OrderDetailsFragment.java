@@ -1,6 +1,8 @@
 package ipleiria.taes.fastugadriver.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +17,15 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.gson.JsonObject;
 
 import ipleiria.taes.fastugadriver.R;
+import ipleiria.taes.fastugadriver.api.OrderService;
+import ipleiria.taes.fastugadriver.api.RetrofitClient;
+import ipleiria.taes.fastugadriver.model.order.OrderModelObject;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +33,9 @@ import ipleiria.taes.fastugadriver.R;
  * create an instance of this fragment.
  */
 public class OrderDetailsFragment extends Fragment {
+
+    private static final String TAG = "OrderDetailsActivity";
+
     private TextView textOrderNumberInput;
     private TextView textClientInput;
     private TextView textClientPhoneInput;
@@ -85,12 +97,41 @@ public class OrderDetailsFragment extends Fragment {
         textLocationInput = (TextView) view.findViewById(R.id.textLocationInput);
         textDistanceInput = (TextView) view.findViewById(R.id.textDistanceInput);
         textEarningInput = (TextView) view.findViewById(R.id.textEarningInput);
-        textOrderNumberInput.setText("OrderID");
+        //textOrderNumberInput.setText("OrderID");
         textClientInput.setText("Information");
         textClientPhoneInput.setText("Phone Number");
         textLocationInput.setText("Client Location");
         textDistanceInput.setText("Distance km");
         textEarningInput.setText("Earning €");
+
+        // Receive Order
+        Intent intent = getActivity().getIntent();
+
+        int orderID = 190;//Integer.parseInt(intent.getStringExtra("orderID"));
+        System.out.println("AQUI SUA PARVA -- DEBUG -- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+        System.out.println(intent.getStringExtra("orderID"));
+        System.out.println(orderID);
+        // Retrofit
+        OrderService service = RetrofitClient.getRetrofitInstance().create(OrderService.class);
+        Call<OrderModelObject> order = service.getOrder(5);
+
+        order.enqueue(new Callback<OrderModelObject>() {
+            @Override
+            public void onResponse(Call<OrderModelObject> call, Response<OrderModelObject> response) {
+                Log.e(TAG, "onResponse: code : " + response.code());
+                JsonObject order = response.body().getOrder();
+                JsonObject delivered_by = order.getAsJsonObject("delivered_by");
+                Log.e(TAG, "onResponse: order : " +  delivered_by.get("name"));
+
+                textOrderNumberInput.setText(orderID);
+            }
+
+            @Override
+            public void onFailure(Call<OrderModelObject> call, Throwable t) {
+                Log.e(TAG, "onFaulure : "+ t.getMessage());
+            }
+        });
+
         return view;
 
 

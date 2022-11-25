@@ -43,14 +43,14 @@ public class OrderDetailsActivity extends AppCompatActivity {
                 JsonObject delivered_by = order.getAsJsonObject("delivered_by");
                 Log.e(TAG, "onResponse: order : " +  delivered_by.get("name"));
 
-                receivedOrderID = findViewById(R.id.textViewOrderDetails);
+                /*receivedOrderID = findViewById(R.id.textViewOrderDetails);
                 String orderDetails = "Order: " + orderID + "\n" +
                         "Client: <name>" + "\n" +
                         "Client Phone Number: <Number>" + "\n" +
                         "Location: <Address>" + "\n" +
                         "Distance: <Value> km" + "\n" +
                         "Earning: <Value> €" + "\n";
-                receivedOrderID.setText(orderDetails);
+                receivedOrderID.setText(orderDetails);*/
             }
 
             @Override
