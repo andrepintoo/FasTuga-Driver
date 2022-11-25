@@ -23,7 +23,7 @@ import com.google.android.material.navigation.NavigationView;
 import java.util.List;
 
 import ipleiria.taes.fastugadriver.activities.LoginActivity;
-import ipleiria.taes.fastugadriver.activities.OrderDetailsActivity;
+//import ipleiria.taes.fastugadriver.activities.OrderDetailsActivity;
 import ipleiria.taes.fastugadriver.activities.RegisterActivity;
 import ipleiria.taes.fastugadriver.api.OrderService;
 import ipleiria.taes.fastugadriver.api.RetrofitClient;
@@ -55,9 +55,9 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.navHostFragment);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-        LinearLayout layout = findViewById(R.id.LinearLayoutOrders);
+        //LinearLayout layout = findViewById(R.id.LinearLayoutOrders);
 
-        OrderService service = RetrofitClient.getRetrofitInstance().create(OrderService.class);
+       /* OrderService service = RetrofitClient.getRetrofitInstance().create(OrderService.class);
         Call<List<OrderModelArray>> orders = service.getOrderByStatus('R');
 
         orders.enqueue(new Callback<List<OrderModelArray>>() {
@@ -91,11 +91,11 @@ public class MainActivity extends AppCompatActivity {
                     buttonOrder.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(MainActivity.this, OrderDetailsActivity.class);
+                           /* Intent intent = new Intent(MainActivity.this, OrderDetailsActivity.class);
                             intent.putExtra("orderID",String.valueOf(orderID));
-                            startActivity(intent);
-                        }
-                    });
+                            startActivity(intent);*/
+                        //}
+                  /*  });
                 }
 
             }
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
             public void onFailure(Call<List<OrderModelArray>> call, Throwable t) {
                 Log.e(TAG, "onFailure : "+ t.getMessage());
             }
-        });
+        });*/
 
 
     }
