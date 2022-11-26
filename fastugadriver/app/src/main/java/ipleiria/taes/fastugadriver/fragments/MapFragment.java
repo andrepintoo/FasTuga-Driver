@@ -33,7 +33,7 @@ public class MapFragment extends Fragment {
                     public void onMapClick(@NonNull LatLng latLng) {
                         MarkerOptions markerOptions = new MarkerOptions();
                         markerOptions.position(latLng);
-                        markerOptions.title(latLng.latitude+" KG " + latLng.longitude);
+                        markerOptions.title(latLng.latitude + " KG " + latLng.longitude);
                         googleMap.clear();
                         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 20));
                         googleMap.addMarker(markerOptions);
