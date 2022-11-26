@@ -3,9 +3,12 @@ package ipleiria.taes.fastugadriver.fragments;
 import static android.content.ContentValues.TAG;
 
 import android.annotation.SuppressLint;
+import android.app.FragmentManager;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.util.Log;
 import android.view.Gravity;
@@ -62,20 +65,27 @@ public class AvailableOrdersFragment extends Fragment {
                     buttonOrder.setId(orderID);
                     buttonOrder.setGravity(Gravity.LEFT);
 
-                    System.out.println("DEBUGGGGGGG");
-                    System.out.println("TEXTO:" +buttonOrder.getText());
-                    System.out.println("ID:"+buttonOrder.getId());
-                    System.out.println(buttonOrder);
-
                     //add button to the layout
                     layout.addView(buttonOrder);
 
                     buttonOrder.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                           /* Intent intent = new Intent(MainActivity.this, OrderDetailsActivity.class);
-                            intent.putExtra("orderID",String.valueOf(orderID));
-                            startActivity(intent);*/
+                            //Bundle sends data to the other fragment
+                            Bundle args = new Bundle();
+                            args.putInt("orderID", orderID);
+                            args.putChar("orderStatus", orderStatus);
+                            Fragment fragment = new OrderDetailsFragment();
+                            fragment.setArguments(args);
+                                    replaceFragment(fragment);
+                        }
+
+                        public void replaceFragment(Fragment someFragment) {
+                            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                            //transaction.remove(AvailableOrdersFragment.this);
+                            transaction.replace(R.id.navHostFragment, someFragment);
+                            transaction.addToBackStack(null);
+                            transaction.commit();
                         }
                     });
                 }
