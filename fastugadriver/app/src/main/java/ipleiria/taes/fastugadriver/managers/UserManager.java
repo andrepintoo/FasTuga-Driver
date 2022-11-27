@@ -63,6 +63,14 @@ public class UserManager {
         return user.getPassword().equals(password);
     }
 
+    public boolean logOutUser(){
+        if(userLogged == null){
+            return false;
+        }
+        userLogged = null;
+        return true;
+    }
+
     public int registerUser(String firstName, String lastName, String email, String password, String phoneNumber, String licensePlate){
         Driver driver = getDriver(email);
         Boolean licensePlateExists = licenseExists(licensePlate);
