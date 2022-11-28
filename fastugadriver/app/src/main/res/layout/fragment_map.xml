@@ -5,9 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".fragments.MapFragment">
 
-    <fragment
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/MY_MAP"
-        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        android:clickable="true"
+        android:focusable="true" />
 </FrameLayout>

@@ -39,6 +39,9 @@ public class AvailableOrdersFragment extends Fragment {
     private ScrollView scrollViewAvailableOrders;
     private ScrollView scrollViewAssignedOrders;
 
+    private int orderID;
+    private char orderStatus;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -92,8 +95,8 @@ public class AvailableOrdersFragment extends Fragment {
 
         assert orders != null;
         for (OrderModelArray order : orders) {
-            int orderID = order.getId();
-            char orderStatus = order.getStatus();
+            orderID = order.getId();
+            orderStatus = order.getStatus();
 
             String buttonText = "Order: " + orderID + "\n" +
                     "Location: " + "<Street>" + "\n" +
@@ -109,12 +112,7 @@ public class AvailableOrdersFragment extends Fragment {
             buttonOrder.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //Bundle sends data to the other fragment
-                    Bundle args = new Bundle();
-                    args.putInt("orderID", orderID);
-                    args.putChar("orderStatus", orderStatus);
-                    Fragment fragment = new OrderDetailsFragment();
-                    fragment.setArguments(args);
+                    Fragment fragment = goToOrderDetailsFragment();
                     replaceFragment(fragment);
                 }
 
@@ -128,6 +126,15 @@ public class AvailableOrdersFragment extends Fragment {
                 }
             });
         }
+    }
+
+    private Fragment goToOrderDetailsFragment() {
+        Bundle args = new Bundle();
+        args.putInt("orderID", orderID);
+        args.putChar("orderStatus", orderStatus);
+        Fragment fragment = new OrderDetailsFragment();
+        fragment.setArguments(args);
+        return fragment;
     }
 
     @SuppressLint("RtlHardcoded")

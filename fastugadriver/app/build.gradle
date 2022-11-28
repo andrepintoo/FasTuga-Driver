@@ -57,4 +57,9 @@ dependencies {
 
     //Map
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
+
+    //MAP OSM
+    implementation 'org.osmdroid:osmdroid-android:6.1.14'
+
+    implementation files('libs/osmbonuspack_6.9.0.aar')
 }
