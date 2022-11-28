@@ -63,12 +63,8 @@ public class UserManager {
         return user.getPassword().equals(password);
     }
 
-    public boolean logOutUser(){
-        if(userLogged == null){
-            return false;
-        }
+    public void logOutUser(){
         userLogged = null;
-        return true;
     }
 
     public int registerUser(String firstName, String lastName, String email, String password, String phoneNumber, String licensePlate){
