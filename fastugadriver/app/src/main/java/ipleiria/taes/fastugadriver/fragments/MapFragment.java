@@ -106,7 +106,7 @@ public class MapFragment extends Fragment implements LocationListener {
 
 
         GeoPoint fastuga = new GeoPoint(39.73308546164388, -8.824988664507234);
-       // GeoPoint pontoTeste = new GeoPoint(39.75489162077547, -8.931481197546757);
+        // GeoPoint pontoTeste = new GeoPoint(39.75489162077547, -8.931481197546757);
         mc.animateTo(fastuga);
         addMarker(fastuga, "fastuga");
 
