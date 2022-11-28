@@ -32,7 +32,7 @@ import retrofit2.Response;
 public class AvailableOrdersFragment extends Fragment {
 
     private static final String TAG = "AvailableOrdersFragment";
-    private LinearLayout layout;
+    private View view;
     private Button buttonOrder;
     private GridLayout availableOrdersGrid;
     private GridLayout assignedOrdersGrid;
@@ -46,24 +46,32 @@ public class AvailableOrdersFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_available_orders, container, false);
+        view = inflater.inflate(R.layout.fragment_available_orders, container, false);
 
         //Define Available Orders Scroll View with Grid Layout
-        scrollViewAvailableOrders = (ScrollView) view.findViewById(R.id.ScrollViewAvailableOrders);
-        availableOrdersGrid = new GridLayout(scrollViewAvailableOrders.getContext());
-        availableOrdersGrid.setColumnCount(2);
-        scrollViewAvailableOrders.addView(availableOrdersGrid);
+        availableOrdersLayout();
 
         //Define Assigned Orders Scroll View with Grid Layout
-        scrollViewAssignedOrders = (ScrollView) view.findViewById(R.id.ScrollViewAssignedOrders);
-        assignedOrdersGrid = new GridLayout(scrollViewAssignedOrders.getContext());
-        assignedOrdersGrid.setColumnCount(2);
-        scrollViewAssignedOrders.addView(assignedOrdersGrid);
+        assignedOrdersLayout();
 
         // Gets Available Orders
         fetchOrders();
 
         return view;
+    }
+
+    private void assignedOrdersLayout() {
+        scrollViewAssignedOrders = (ScrollView) view.findViewById(R.id.ScrollViewAssignedOrders);
+        assignedOrdersGrid = new GridLayout(scrollViewAssignedOrders.getContext());
+        assignedOrdersGrid.setColumnCount(2);
+        scrollViewAssignedOrders.addView(assignedOrdersGrid);
+    }
+
+    private void availableOrdersLayout() {
+        scrollViewAvailableOrders = (ScrollView) view.findViewById(R.id.ScrollViewAvailableOrders);
+        availableOrdersGrid = new GridLayout(scrollViewAvailableOrders.getContext());
+        availableOrdersGrid.setColumnCount(2);
+        scrollViewAvailableOrders.addView(availableOrdersGrid);
     }
 
     private void fetchOrders() {
@@ -98,11 +106,7 @@ public class AvailableOrdersFragment extends Fragment {
             orderID = order.getId();
             orderStatus = order.getStatus();
 
-            String buttonText = "Order: " + orderID + "\n" +
-                    "Location: " + "<Street>" + "\n" +
-                    "Distance: " + "<Number>" + " km\n" +
-                    "Earning: " + "<Number>" + " €\n" +
-                    "Status: " + orderStatus;
+            String buttonText = getAvailableOrdersText();
 
             setButtonProperties(buttonText, orderID);
 
@@ -126,6 +130,15 @@ public class AvailableOrdersFragment extends Fragment {
                 }
             });
         }
+    }
+
+    private String getAvailableOrdersText() {
+       String text = "Order: " + orderID + "\n" +
+                "Location: " + "<Street>" + "\n" +
+                "Distance: " + "<Number>" + " km\n" +
+                "Earning: " + "<Number>" + " €\n" +
+                "Status: " + orderStatus;
+       return text;
     }
 
     private Fragment goToOrderDetailsFragment() {
