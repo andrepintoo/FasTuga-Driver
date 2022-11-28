@@ -1,13 +1,12 @@
 package ipleiria.taes.fastugadriver.activities;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,12 +16,14 @@ import java.util.regex.Pattern;
 import ipleiria.taes.fastugadriver.MainActivity;
 import ipleiria.taes.fastugadriver.R;
 import ipleiria.taes.fastugadriver.managers.UserManager;
+import ipleiria.taes.fastugadriver.preferences.SharedPreferences;
 
 public class LoginActivity extends AppCompatActivity {
 
     private EditText editTextEmail, editTextPassword;
     private TextView errorText;
     private String email, password;
+    private CheckBox keepMeLoggedIn;
 
     public static final Pattern VALID_EMAIL_ADDRESS_REGEX =
             Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
@@ -50,6 +51,11 @@ public class LoginActivity extends AppCompatActivity {
                 if (!validateLogin(email, password, INSTANCE)) {
                     return;
                 }
+
+                if(keepMeLoggedIn.isChecked()){
+                    SharedPreferences.setUserName(LoginActivity.this, email);
+                }
+                SharedPreferences.setIsNewLogin(LoginActivity.this, "yes");
 
                 INSTANCE.setUserLogged(email);
                 goToMainActivity();
@@ -90,6 +96,7 @@ public class LoginActivity extends AppCompatActivity {
         editTextPassword = findViewById(R.id.editTextLoginPassword);
         errorText = findViewById(R.id.textViewErrorLogin);
         errorText.setVisibility(View.INVISIBLE);
+        keepMeLoggedIn = findViewById(R.id.checkboxKeepMeLoggedIn);
     }
 
     private void goToRegisterActivity() {
