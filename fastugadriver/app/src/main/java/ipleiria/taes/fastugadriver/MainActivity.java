@@ -29,10 +29,10 @@ public class MainActivity extends AppCompatActivity {
         boolean isNewLogin = SharedPreferences.getKeepMeSignedInCheckbox(MainActivity.this).equals("no");
         boolean isEmailSaved = SharedPreferences.getUserEmail(MainActivity.this).length() != 0;
 
-        if(isNewLogin && !isEmailSaved)
+       /* if(isNewLogin && !isEmailSaved)
         {
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
-        }
+        }*/
 
         SharedPreferences.setIsNewLogin(MainActivity.this, "no");
 

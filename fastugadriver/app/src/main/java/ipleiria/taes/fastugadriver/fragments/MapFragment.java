@@ -5,11 +5,13 @@ import static android.os.Build.VERSION_CODES.M;
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,6 +22,11 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import org.osmdroid.api.IMapController;
+import org.osmdroid.bonuspack.routing.OSRMRoadManager;
+import org.osmdroid.bonuspack.routing.Road;
+import org.osmdroid.bonuspack.routing.RoadManager;
+import org.osmdroid.bonuspack.routing.RoadNode;
 import org.osmdroid.config.Configuration;
 import org.osmdroid.events.MapListener;
 import org.osmdroid.events.ScrollEvent;
@@ -29,38 +36,31 @@ import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapController;
 import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.Marker;
+import org.osmdroid.views.overlay.Polyline;
+import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider;
+import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+
 import ipleiria.taes.fastugadriver.BuildConfig;
 import ipleiria.taes.fastugadriver.R;
 
-public class MapFragment extends Fragment implements LocationListener {
-    private static MapFragment INSTANCE = null;
+public class MapFragment extends Fragment implements LocationListener  {
+
     View view;
-    MapView osm;
+    MapView map;
 
-    MapView map = null;
-    private MapController mc;
     private LocationManager locationManager;
+
     private static final int PERMISSAO_REQUERIDA = 1;
-
-    private static final String TAG = "OsmFragment";
-
-    public MapFragment() {
-        // Required empty public constructor
-    }
-
-    public static MapFragment getINSTANCE() {
-        if (INSTANCE == null)
-            INSTANCE = new MapFragment();
-        return INSTANCE;
-
-    }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
         view = inflater.inflate(R.layout.fragment_map, container, false);
-        //return view;
+        map = (MapView) view.findViewById(R.id.mapView);
 
         if (Build.VERSION.SDK_INT >= M) {
             if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.INTERNET) != PackageManager.PERMISSION_GRANTED ||
@@ -70,69 +70,76 @@ public class MapFragment extends Fragment implements LocationListener {
                 requestPermissions(permissoes, PERMISSAO_REQUERIDA);
             }
         }
-        //onde mostra a imagem do mapa
-        Context ctx = getActivity().getApplicationContext();
-        Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
-        Configuration.getInstance().setUserAgentValue(BuildConfig.APPLICATION_ID);
 
-        osm = (MapView) view.findViewById(R.id.mapView);
-        osm.setTileSource(TileSourceFactory.MAPNIK);
-        osm.setBuiltInZoomControls(true);
-        osm.setMultiTouchControls(true);
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
 
-        mc = (MapController) osm.getController();
-        mc.setZoom(15);
+        Configuration.getInstance().setUserAgentValue("MyOwnUserAgent/1.0");
 
-
+        map.setMultiTouchControls(true);
 
         locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10000, 0, this);
 
+        GeoPoint startPoint = new GeoPoint(39.73240919913415, -8.824827700055856);
 
-        osm.setMapListener(new MapListener() {
-            @Override
-            public boolean onScroll(ScrollEvent event) {
-                Log.i("Script", "onScroll()");
-                return false;
-            }
+        IMapController mapController = map.getController();
+        mapController.setZoom(15);
+        mapController.setCenter(startPoint);
 
-            @Override
-            public boolean onZoom(ZoomEvent event) {
-                Log.i("Script", "onZoom()");
-                return false;
-            }
-        });
+        Marker startMarker = new Marker(map);
+        startMarker.setPosition(startPoint);
+        startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
+        map.getOverlays().add(startMarker);
 
+        startMarker.setTitle("Start point");
 
+        RoadManager roadManager = new OSRMRoadManager(getContext(), Configuration.getInstance().getUserAgentValue());
+        ArrayList<GeoPoint> waypoints = new ArrayList<GeoPoint>();
+        waypoints.add(startPoint);
+        GeoPoint endPoint = new GeoPoint(39.740619424193376, -8.809390227303869);
 
-        GeoPoint fastuga = new GeoPoint(39.73308546164388, -8.824988664507234);
-        // GeoPoint pontoTeste = new GeoPoint(39.75489162077547, -8.931481197546757);
-        mc.animateTo(fastuga);
-        addMarker(fastuga, "fastuga");
+        Marker endMarker = new Marker(map);
+        endMarker.setPosition(endPoint);
+        endMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
+        waypoints.add(endPoint);
+        map.getOverlays().add(endMarker);
 
-        /*RoadManager roadManager = new OSRMRoadManager(getContext(), Configuration.getInstance().getUserAgentValue());
-        ArrayList<GeoPoint> points = new ArrayList<GeoPoint>();
-        points.add(pontoTeste);
-        points.add(fastuga);
+        startMarker.setTitle("End point");
+        Road road = roadManager.getRoad(waypoints);
 
-        Road road = roadManager.getRoad(points);
+        System.out.println("DEBUGGGGGGGGGGGGGGGGGGGGGG................. Distancia - " + String.format("%.1f", road.mLength) + " km");
 
-        List<Overlay> mapOverlays = osm.getOverlays();
+        double totalSecs = road.mDuration;
+        //double hours = totalSecs / 3600;
+        double minutes = (totalSecs % 3600) / 60;
+        //double seconds = totalSecs % 60;
+
+        System.out.println("DEBUGGGGGGGGGGGGGGGGGGGGGG................. Duração - " + String.format("%.0f", minutes) + " min." );
+
         Polyline roadOverlay = RoadManager.buildRoadOverlay(road);
-       mapOverlays.add(roadOverlay);
-        osm.invalidate();*/
+        map.getOverlays().add(roadOverlay);
+        Drawable nodeIcon = getResources().getDrawable(R.drawable.ic_baseline_fmd_bad_24);
+        for (int i=0; i<road.mNodes.size(); i++){
+            RoadNode node = road.mNodes.get(i);
+
+            Marker nodeMarker = new Marker(map);
+            nodeMarker.setPosition(node.mLocation);
+            nodeMarker.setTitle("Step "+i);
+            nodeMarker.setSnippet(node.mInstructions);
+
+            nodeMarker.setIcon(nodeIcon);
+            nodeMarker.setSubDescription(Road.getLengthDurationText(getContext(), node.mLength, node.mDuration));
+            Drawable icon = getResources().getDrawable(R.drawable.ic_baseline_arrow_upward_24);
+            nodeMarker.setImage(icon);
+            //TODO: icons mManeuverType
+            System.out.println("DEBUGGGGGGGGGGGGGGGGGGGGGGGGGGGG: " + node.mManeuverType);
+            map.getOverlays().add(nodeMarker);
+        }
+        map.invalidate();
 
         return view;
     }
-
-    public void addMarker(GeoPoint center, String title) {
-        Marker startMarker = new Marker(osm);
-        startMarker.setPosition(center);
-        startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
-        osm.getOverlays().add(startMarker);
-        startMarker.setTitle(title);
-    }
-
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -150,42 +157,6 @@ public class MapFragment extends Fragment implements LocationListener {
             }
         }
     }
-
-    public void onResume() {
-        super.onResume();
-
-    }
-
-
-    public void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    public void onLocationChanged(Location location) {
-        GeoPoint center = new GeoPoint(location.getLatitude(), location.getLongitude());
-
-
-        mc.animateTo(center);
-        addMarker(center,"Localização Atual");
-
-    }
-
-    @Override
-    public void onStatusChanged(String provider, int status, Bundle extras) {
-
-    }
-
-    @Override
-    public void onProviderEnabled(String provider) {
-
-    }
-
-    @Override
-    public void onProviderDisabled(String provider) {
-
-    }
-
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -195,31 +166,16 @@ public class MapFragment extends Fragment implements LocationListener {
 
     }
 
-    /*class MapOverlay extends Overlay{
-        public MapOverlay (Context ctx){
-            super(ctx);
-        }
-        @Override
-        public void draw(Canvas arg0, MapView arg1, boolean arg2){}
+    @Override
+    public void onLocationChanged(@NonNull Location location) {
 
-       // @Override
-        public boolean OnSingleTapConfirmed(MotionEvent me, MapView mv){
-            Projection p = osm.getProjection();
-            GeoPoint gp = (GeoPoint) p.fromPixels((int) me.getX(), (int) me.getY());
-            mc.animateTo(gp);
+        Drawable person = getResources().getDrawable(R.drawable.ic_baseline_person_pin_24);
+        GeoPoint center = new GeoPoint(location.getLatitude(), location.getLongitude());
+        Marker personMarker = new Marker(map);
+        personMarker.setPosition(center);
+personMarker.setIcon(person);
 
-            addMarker(gp,"youtube");
-            return (false);
-        }
-    }*/
-
-    //ROUTE
-   /* public void drawRoute(GeoPoint start, GeoPoint end){
-        RoadManager roadManager = new OSRMRoadManager();
-        ArrayList<GeoPoint> points = new ArrayList<GeoPoint>();
-        points.add(start);
-        points.add(end);
-        Road road = roadManager.getRoad(points);
-        final Polyline roadOverlay = RoadManager.buildRoadOverlay(road, getActivity().getApplicationContext());
-    }*/
+        map.getOverlays().add(personMarker);
+        map.invalidate();
+    }
 }
