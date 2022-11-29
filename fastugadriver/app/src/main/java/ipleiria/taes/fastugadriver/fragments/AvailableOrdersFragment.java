@@ -19,6 +19,11 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.google.gson.JsonPrimitive;
+
 import java.util.List;
 
 import ipleiria.taes.fastugadriver.R;
@@ -41,6 +46,7 @@ public class AvailableOrdersFragment extends Fragment {
 
     private int orderID;
     private char orderStatus;
+    private String[] customClientDetailsString;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -54,8 +60,11 @@ public class AvailableOrdersFragment extends Fragment {
         //Define Assigned Orders Scroll View with Grid Layout
         assignedOrdersLayout();
 
-        // Gets Available Orders
-        fetchOrders();
+        // Gets Orders that are Ready
+        fetchOrders('R');
+
+        // Gets Orders that are Preparing
+        fetchOrders('P');
 
         return view;
     }
@@ -74,12 +83,12 @@ public class AvailableOrdersFragment extends Fragment {
         scrollViewAvailableOrders.addView(availableOrdersGrid);
     }
 
-    private void fetchOrders() {
+    private void fetchOrders(char orderStatus) {
         // Creates Service
         OrderService service = RetrofitClient.getRetrofitInstance().create(OrderService.class);
 
         // Creates Call interface for API (Retrofit)
-        Call<List<OrderModelArray>> orders = service.getOrderByStatus('R');
+        Call<List<OrderModelArray>> orders = service.getOrderByStatus(orderStatus);
 
         // Calls API
         orders.enqueue(new Callback<List<OrderModelArray>>() {
@@ -105,11 +114,13 @@ public class AvailableOrdersFragment extends Fragment {
         for (OrderModelArray order : orders) {
             orderID = order.getId();
             orderStatus = order.getStatus();
+            // Not how I like it but it works
+            JsonElement customClientDetails = order.getCustom();
+            customClientDetailsString = customClientDetails.getAsString().split("\"");
 
             String buttonText = getAvailableOrdersText();
 
             setButtonProperties(buttonText, orderID);
-
             // Add Button to Layout
             assignedOrdersGrid.addView(buttonOrder);
 
@@ -133,11 +144,11 @@ public class AvailableOrdersFragment extends Fragment {
     }
 
     private String getAvailableOrdersText() {
-       String text = "Order: " + orderID + "\n" +
-                "Location: " + "<Street>" + "\n" +
+       String text = "Order: " + getOrderID() + "\n" +
+                "Location: " + getCustomClientDetailsString(3) + "\n" +
                 "Distance: " + "<Number>" + " km\n" +
                 "Earning: " + "<Number>" + " €\n" +
-                "Status: " + orderStatus;
+                "Status: " + getOrderStatus();
        return text;
     }
 
@@ -145,9 +156,27 @@ public class AvailableOrdersFragment extends Fragment {
         Bundle args = new Bundle();
         args.putInt("orderID", orderID);
         args.putChar("orderStatus", orderStatus);
+        args.putString("orderAddress", getCustomClientDetailsString(3));
         Fragment fragment = new OrderDetailsFragment();
         fragment.setArguments(args);
         return fragment;
+    }
+
+    public int getOrderID() {
+        return orderID;
+    }
+
+    public String getOrderStatus() {
+        if (orderStatus == 'R') {
+            return "Ready to pick up";
+        } else if (orderStatus == 'P') {
+            return "Preparing...";
+        }
+        return "Not Defined";
+    }
+
+    public String getCustomClientDetailsString(int index) {
+        return customClientDetailsString[index];
     }
 
     @SuppressLint("RtlHardcoded")

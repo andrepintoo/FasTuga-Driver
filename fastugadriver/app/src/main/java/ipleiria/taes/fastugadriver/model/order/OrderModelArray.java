@@ -1,5 +1,13 @@
 package ipleiria.taes.fastugadriver.model.order;
 
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonPrimitive;
+
+import org.json.JSONObject;
+
+import java.util.List;
+
 public class OrderModelArray {
     int id;
     int ticket_number;
@@ -14,7 +22,7 @@ public class OrderModelArray {
     String payment_reference;
     String date;
     int delivered_by;
-    String custom;
+    JsonElement custom;
 
     public int getId() {
         return id;
@@ -60,15 +68,15 @@ public class OrderModelArray {
         return date;
     }
 
-    public String getCustom() {
-        return custom;
-    }
-
     public int getCustomer_id() {
         return customer_id;
     }
 
     public int getDelivered_by() {
         return delivered_by;
+    }
+
+    public JsonElement getCustom() {
+        return custom;
     }
 }
