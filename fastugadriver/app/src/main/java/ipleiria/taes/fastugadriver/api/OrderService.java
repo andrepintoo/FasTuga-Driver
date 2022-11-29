@@ -56,26 +56,5 @@ public interface OrderService {
      */
 
     @GET("orders/status/{status}")
-    Call<List<OrderModelArray>> getOrderByStatus(@Path("status") char status);
-    /*
-        OrderService service = RetrofitClient.getRetrofitInstance().create(OrderService.class);
-        Call<List<OrderModelArray>> orders = service.getOrderByStatus('R');
-
-        orders.enqueue(new Callback<List<OrderModelArray>>() {
-            @Override
-            public void onResponse(Call<List<OrderModelArray>> call, Response<List<OrderModelArray>> response) {
-                Log.e(TAG, "onResponse: code : " + response.code());
-                List<OrderModelArray> data = response.body();
-                for (OrderModelArray order : data) {
-                    Log.e(TAG, "onResponse: " + order.getId());
-                    Log.e(TAG, "onResponse: " + order.getStatus());
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<OrderModelArray>> call, Throwable t) {
-                Log.e(TAG, "onFailure : "+ t.getMessage());
-            }
-        });
-     */
+    Call<OrderModelDataArray> getOrderByStatus(@Path("status") char status);
 }

@@ -24,12 +24,14 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import ipleiria.taes.fastugadriver.R;
 import ipleiria.taes.fastugadriver.api.OrderService;
 import ipleiria.taes.fastugadriver.api.RetrofitClient;
 import ipleiria.taes.fastugadriver.model.order.OrderModelArray;
+import ipleiria.taes.fastugadriver.model.order.OrderModelDataArray;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -88,30 +90,30 @@ public class AvailableOrdersFragment extends Fragment {
         OrderService service = RetrofitClient.getRetrofitInstance().create(OrderService.class);
 
         // Creates Call interface for API (Retrofit)
-        Call<List<OrderModelArray>> orders = service.getOrderByStatus(orderStatus);
+        Call<OrderModelDataArray> orders = service.getOrderByStatus(orderStatus);
 
         // Calls API
-        orders.enqueue(new Callback<List<OrderModelArray>>() {
+        orders.enqueue(new Callback<OrderModelDataArray>() {
             @SuppressLint("RtlHardcoded")
             @Override
-            public void onResponse(@NonNull Call<List<OrderModelArray>> call, @NonNull Response<List<OrderModelArray>> response) {
+            public void onResponse(@NonNull Call<OrderModelDataArray> call, @NonNull Response<OrderModelDataArray> response) {
                 Log.e(TAG, "onResponse: code : " + response.code());
                 displayOrders(response);
             }
 
             @Override
-            public void onFailure(@NonNull Call<List<OrderModelArray>> call, @NonNull Throwable t) {
+            public void onFailure(@NonNull Call<OrderModelDataArray> call, @NonNull Throwable t) {
                 Log.e(TAG, "onFailure : " + t.getMessage());
             }
 
         });
     }
 
-    private void displayOrders(Response<List<OrderModelArray>> response) {
-        List<OrderModelArray> orders = response.body();
+    private void displayOrders(Response<OrderModelDataArray> response) {
 
-        assert orders != null;
-        for (OrderModelArray order : orders) {
+        assert response.body() != null;
+        ArrayList<OrderModelDataArray.data> orders = response.body().getOrders();
+        for (OrderModelDataArray.data order : orders) {
             orderID = order.getId();
             orderStatus = order.getStatus();
             // Not how I like it but it works
@@ -144,12 +146,11 @@ public class AvailableOrdersFragment extends Fragment {
     }
 
     private String getAvailableOrdersText() {
-       String text = "Order: " + getOrderID() + "\n" +
-                "Location: " + getCustomClientDetailsString(3) + "\n" +
-                "Distance: " + "<Number>" + " km\n" +
-                "Earning: " + "<Number>" + " €\n" +
-                "Status: " + getOrderStatus();
-       return text;
+        return "Order: " + getOrderID() + "\n" +
+                 "Location: " + getCustomClientDetailsString(3) + "\n" +
+                 "Distance: " + "<Number>" + " km\n" +
+                 "Earning: " + "<Number>" + " €\n" +
+                 "Status: " + getOrderStatus();
     }
 
     private Fragment goToOrderDetailsFragment() {
