@@ -1,6 +1,7 @@
 package ipleiria.taes.fastugadriver.fragments;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,7 +14,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -30,6 +34,13 @@ public class AvailableOrdersFragment extends Fragment {
     private static final String TAG = "AvailableOrdersFragment";
     private LinearLayout layout;
     private Button buttonOrder;
+    private GridLayout availableOrdersGrid;
+    private GridLayout assignedOrdersGrid;
+    private ScrollView scrollViewAvailableOrders;
+    private ScrollView scrollViewAssignedOrders;
+
+    private int orderID;
+    private char orderStatus;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -37,8 +48,17 @@ public class AvailableOrdersFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_available_orders, container, false);
 
-        // Define Layout
-        layout = view.findViewById(R.id.LinearLayoutOrders);
+        //Define Available Orders Scroll View with Grid Layout
+        scrollViewAvailableOrders = (ScrollView) view.findViewById(R.id.ScrollViewAvailableOrders);
+        availableOrdersGrid = new GridLayout(scrollViewAvailableOrders.getContext());
+        availableOrdersGrid.setColumnCount(2);
+        scrollViewAvailableOrders.addView(availableOrdersGrid);
+
+        //Define Assigned Orders Scroll View with Grid Layout
+        scrollViewAssignedOrders = (ScrollView) view.findViewById(R.id.ScrollViewAssignedOrders);
+        assignedOrdersGrid = new GridLayout(scrollViewAssignedOrders.getContext());
+        assignedOrdersGrid.setColumnCount(2);
+        scrollViewAssignedOrders.addView(assignedOrdersGrid);
 
         // Gets Available Orders
         fetchOrders();
@@ -75,8 +95,8 @@ public class AvailableOrdersFragment extends Fragment {
 
         assert orders != null;
         for (OrderModelArray order : orders) {
-            int orderID = order.getId();
-            char orderStatus = order.getStatus();
+            orderID = order.getId();
+            orderStatus = order.getStatus();
 
             String buttonText = "Order: " + orderID + "\n" +
                     "Location: " + "<Street>" + "\n" +
@@ -87,17 +107,12 @@ public class AvailableOrdersFragment extends Fragment {
             setButtonProperties(buttonText, orderID);
 
             // Add Button to Layout
-            layout.addView(buttonOrder);
+            assignedOrdersGrid.addView(buttonOrder);
 
             buttonOrder.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //Bundle sends data to the other fragment
-                    Bundle args = new Bundle();
-                    args.putInt("orderID", orderID);
-                    args.putChar("orderStatus", orderStatus);
-                    Fragment fragment = new OrderDetailsFragment();
-                    fragment.setArguments(args);
+                    Fragment fragment = goToOrderDetailsFragment();
                     replaceFragment(fragment);
                 }
 
@@ -113,13 +128,33 @@ public class AvailableOrdersFragment extends Fragment {
         }
     }
 
+    private Fragment goToOrderDetailsFragment() {
+        Bundle args = new Bundle();
+        args.putInt("orderID", orderID);
+        args.putChar("orderStatus", orderStatus);
+        Fragment fragment = new OrderDetailsFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
     @SuppressLint("RtlHardcoded")
     private void setButtonProperties(String buttonText, int orderID) {
         buttonOrder = new Button(getActivity());
+
         buttonOrder.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT));
         buttonOrder.setText(buttonText);
         buttonOrder.setId(orderID);
         buttonOrder.setGravity(Gravity.LEFT);
+
+        buttonOrder.setBackgroundColor(Color.BLACK);
+        buttonOrder.setTextColor(Color.WHITE);
+
+        ViewGroup.MarginLayoutParams marginParams = new ViewGroup.MarginLayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+        marginParams.setMargins(0,30,30,40);
+
+        buttonOrder.setLayoutParams(marginParams);
+        buttonOrder.setPadding(0,30,0,40);
     }
 }
