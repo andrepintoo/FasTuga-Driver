@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -23,6 +24,12 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
+
+import org.osmdroid.bonuspack.routing.OSRMRoadManager;
+import org.osmdroid.bonuspack.routing.Road;
+import org.osmdroid.bonuspack.routing.RoadManager;
+import org.osmdroid.config.Configuration;
+import org.osmdroid.util.GeoPoint;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,9 +56,16 @@ public class AvailableOrdersFragment extends Fragment {
     private int orderID;
     private char orderStatus;
     private String[] customClientDetailsString;
+    private double distance;
+    private final GeoPoint restaurantPoint = new GeoPoint(39.73240919913415, -8.824827700055856);
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        // Need to add this to connect to map network
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
 
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_available_orders, container, false);
@@ -120,6 +134,10 @@ public class AvailableOrdersFragment extends Fragment {
             JsonElement customClientDetails = order.getCustom();
             customClientDetailsString = customClientDetails.getAsString().split("\"");
 
+            double clientLatitude = Double.parseDouble(customClientDetailsString[7]);
+            double clientLongitude = Double.parseDouble(customClientDetailsString[11]);
+            distance = getDistanceRestaurantToClientInKm(restaurantPoint.getLatitude(), restaurantPoint.getLongitude(),clientLatitude,clientLongitude);
+
             String buttonText = getAvailableOrdersText();
 
             setButtonProperties(buttonText, orderID);
@@ -145,12 +163,39 @@ public class AvailableOrdersFragment extends Fragment {
         }
     }
 
+    private double getDistanceRestaurantToClientInKm(double restaurantLatitude, double restaurantLongitude,
+                                                     double clientLatitude, double clientLongitude) {
+        Configuration.getInstance().setUserAgentValue("MyOwnUserAgent/1.0");
+        ArrayList<GeoPoint> waypoints = new ArrayList<>();
+        GeoPoint restaurant = new GeoPoint(restaurantLatitude, restaurantLongitude);
+        GeoPoint client = new GeoPoint(clientLatitude, clientLongitude);
+
+        waypoints.add(restaurant);
+        waypoints.add(client);
+
+        RoadManager roadManager = new OSRMRoadManager(getContext(), Configuration.getInstance().getUserAgentValue());
+        Road road = roadManager.getRoad(waypoints);
+
+        return road.mLength;
+    }
+
+    @SuppressLint("DefaultLocale")
     private String getAvailableOrdersText() {
         return "Order: " + getOrderID() + "\n" +
-                 "Location: " + getCustomClientDetailsString(3) + "\n" +
-                 "Distance: " + "<Number>" + " km\n" +
-                 "Earning: " + "<Number>" + " €\n" +
-                 "Status: " + getOrderStatus();
+                "Location: " + getCustomClientDetailsString(3) + "\n" +
+                "Distance: " + String.format("%.3f", getDistance()) + " km\n" +
+                "Earning: " + String.valueOf(getEarning()) + " €\n" +
+                "Status: " + getOrderStatus();
+    }
+
+    private int getEarning() {
+        double distance = getDistance();
+        if (distance < 3) {
+            return 2;
+        } else if (distance < 10) {
+            return 3;
+        }
+        return 4;
     }
 
     private Fragment goToOrderDetailsFragment() {
@@ -180,6 +225,10 @@ public class AvailableOrdersFragment extends Fragment {
         return customClientDetailsString[index];
     }
 
+    public double getDistance() {
+        return distance;
+    }
+
     @SuppressLint("RtlHardcoded")
     private void setButtonProperties(String buttonText, int orderID) {
         buttonOrder = new Button(getActivity());
@@ -195,9 +244,9 @@ public class AvailableOrdersFragment extends Fragment {
 
         ViewGroup.MarginLayoutParams marginParams = new ViewGroup.MarginLayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT);
-        marginParams.setMargins(0,30,30,40);
+        marginParams.setMargins(0, 30, 30, 40);
 
         buttonOrder.setLayoutParams(marginParams);
-        buttonOrder.setPadding(0,30,0,40);
+        buttonOrder.setPadding(0, 30, 0, 40);
     }
 }
