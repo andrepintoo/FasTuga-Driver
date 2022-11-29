@@ -25,6 +25,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
 
+import org.json.JSONObject;
 import org.osmdroid.bonuspack.routing.OSRMRoadManager;
 import org.osmdroid.bonuspack.routing.Road;
 import org.osmdroid.bonuspack.routing.RoadManager;
@@ -57,6 +58,8 @@ public class AvailableOrdersFragment extends Fragment {
     private char orderStatus;
     private String[] customClientDetailsString;
     private double distance;
+    private String clientName;
+    private String clientAddress;
     private final GeoPoint restaurantPoint = new GeoPoint(39.73240919913415, -8.824827700055856);
 
 
@@ -136,7 +139,9 @@ public class AvailableOrdersFragment extends Fragment {
 
             double clientLatitude = Double.parseDouble(customClientDetailsString[7]);
             double clientLongitude = Double.parseDouble(customClientDetailsString[11]);
-            distance = getDistanceRestaurantToClientInKm(restaurantPoint.getLatitude(), restaurantPoint.getLongitude(),clientLatitude,clientLongitude);
+            distance = getDistanceRestaurantToClientInKm(restaurantPoint.getLatitude(), restaurantPoint.getLongitude(), clientLatitude, clientLongitude);
+
+            clientName = setClientName(order.getCustomer_id());
 
             String buttonText = getAvailableOrdersText();
 
@@ -184,7 +189,7 @@ public class AvailableOrdersFragment extends Fragment {
         return "Order: " + getOrderID() + "\n" +
                 "Location: " + getCustomClientDetailsString(3) + "\n" +
                 "Distance: " + String.format("%.3f", getDistance()) + " km\n" +
-                "Earning: " + String.valueOf(getEarning()) + " €\n" +
+                "Earning: " + getEarning() + " €\n" +
                 "Status: " + getOrderStatus();
     }
 
@@ -201,11 +206,29 @@ public class AvailableOrdersFragment extends Fragment {
     private Fragment goToOrderDetailsFragment() {
         Bundle args = new Bundle();
         args.putInt("orderID", orderID);
-        args.putChar("orderStatus", orderStatus);
-        args.putString("orderAddress", getCustomClientDetailsString(3));
+        args.putString("clientName", getClientName());
+        args.putString("clientPhoneNumber", getClientAddress());
+        args.putString("clientAddress", getCustomClientDetailsString(3));
+        args.putDouble("distance", getDistance());
+        args.putInt("earning", getEarning());
         Fragment fragment = new OrderDetailsFragment();
         fragment.setArguments(args);
         return fragment;
+    }
+
+    public String getClientName() {
+        return clientName;
+    }
+
+    public String setClientName(JsonObject customer) {
+        JsonObject user = customer.getAsJsonObject("user_id");
+        String name = user.get("name").toString();
+        name = name.replace("\"","");
+        return name;
+    }
+
+    public String getClientAddress() {
+        return clientAddress;
     }
 
     public int getOrderID() {
