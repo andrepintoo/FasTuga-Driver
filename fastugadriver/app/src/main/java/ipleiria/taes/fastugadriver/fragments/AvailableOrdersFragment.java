@@ -54,12 +54,7 @@ public class AvailableOrdersFragment extends Fragment {
     private ScrollView scrollViewAvailableOrders;
     private ScrollView scrollViewAssignedOrders;
 
-    private int orderID;
-    private char orderStatus;
     private String[] customClientDetailsString;
-    private double distance;
-    private String clientName;
-    private String clientAddress;
     private final GeoPoint restaurantPoint = new GeoPoint(39.73240919913415, -8.824827700055856);
 
 
@@ -131,19 +126,24 @@ public class AvailableOrdersFragment extends Fragment {
         assert response.body() != null;
         ArrayList<OrderModelDataArray.data> orders = response.body().getOrders();
         for (OrderModelDataArray.data order : orders) {
-            orderID = order.getId();
-            orderStatus = order.getStatus();
-            // Not how I like it but it works
+
+            // Get JSON Custom
             JsonElement customClientDetails = order.getCustom();
             customClientDetailsString = customClientDetails.getAsString().split("\"");
 
+            // Setting variables
+            int orderID = order.getId();
+            char orderStatusChar = order.getStatus();
             double clientLatitude = Double.parseDouble(customClientDetailsString[7]);
             double clientLongitude = Double.parseDouble(customClientDetailsString[11]);
-            distance = getDistanceRestaurantToClientInKm(restaurantPoint.getLatitude(), restaurantPoint.getLongitude(), clientLatitude, clientLongitude);
+            double distance = getDistanceRestaurantToClientInKm(restaurantPoint.getLatitude(), restaurantPoint.getLongitude(), clientLatitude, clientLongitude);
+            String clientName = setClientName(order.getCustomer_id());
+            String status = setOrderStatus(orderStatusChar);
+            int earning = setEarning(distance);
+            String clientAddress = customClientDetailsString[3];
+            String clientPhoneNumber = setClientPhoneNumber(order.getCustomer_id());
 
-            clientName = setClientName(order.getCustomer_id());
-
-            String buttonText = getAvailableOrdersText();
+            String buttonText = getAvailableOrdersText(orderID,clientAddress,distance,earning,status);
 
             setButtonProperties(buttonText, orderID);
             // Add Button to Layout
@@ -152,7 +152,7 @@ public class AvailableOrdersFragment extends Fragment {
             buttonOrder.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Fragment fragment = goToOrderDetailsFragment();
+                    Fragment fragment = goToOrderDetailsFragment(orderID,clientName,clientPhoneNumber,clientAddress,distance,earning);
                     replaceFragment(fragment);
                 }
 
@@ -185,16 +185,16 @@ public class AvailableOrdersFragment extends Fragment {
     }
 
     @SuppressLint("DefaultLocale")
-    private String getAvailableOrdersText() {
-        return "Order: " + getOrderID() + "\n" +
-                "Location: " + getCustomClientDetailsString(3) + "\n" +
-                "Distance: " + String.format("%.3f", getDistance()) + " km\n" +
-                "Earning: " + getEarning() + " €\n" +
-                "Status: " + getOrderStatus();
+    private String getAvailableOrdersText(int orderId, String clientAddress, double distance,
+                                          int earning, String status) {
+        return "Order: " + orderId + "\n" +
+                "Location: " + clientAddress + "\n" +
+                "Distance: " + String.format("%.2f",distance)  + " km\n" +
+                "Earning: " + earning + "€\n" +
+                "Status: " + status;
     }
 
-    private int getEarning() {
-        double distance = getDistance();
+    private int setEarning(double distance) {
         if (distance < 3) {
             return 2;
         } else if (distance < 10) {
@@ -203,39 +203,33 @@ public class AvailableOrdersFragment extends Fragment {
         return 4;
     }
 
-    private Fragment goToOrderDetailsFragment() {
+    private Fragment goToOrderDetailsFragment(int orderId, String clientName,
+                                              String clientPhoneNumber, String clientAddress,
+                                              double distance, int earning) {
         Bundle args = new Bundle();
-        args.putInt("orderID", orderID);
-        args.putString("clientName", getClientName());
-        args.putString("clientPhoneNumber", getClientAddress());
-        args.putString("clientAddress", getCustomClientDetailsString(3));
-        args.putDouble("distance", getDistance());
-        args.putInt("earning", getEarning());
+        args.putInt("orderID", orderId);
+        args.putString("clientName", clientName);
+        args.putString("clientPhoneNumber", clientPhoneNumber);
+        args.putString("clientAddress", clientAddress);
+        args.putDouble("distance", distance);
+        args.putInt("earning", earning);
         Fragment fragment = new OrderDetailsFragment();
         fragment.setArguments(args);
         return fragment;
     }
 
-    public String getClientName() {
-        return clientName;
-    }
-
     public String setClientName(JsonObject customer) {
         JsonObject user = customer.getAsJsonObject("user_id");
         String name = user.get("name").toString();
-        name = name.replace("\"","");
-        return name;
+        return name.replace("\"", "");
     }
 
-    public String getClientAddress() {
-        return clientAddress;
+    private String setClientPhoneNumber(JsonObject customer) {
+        String number = customer.get("phone").toString();
+        return number.replace("\"", "");
     }
 
-    public int getOrderID() {
-        return orderID;
-    }
-
-    public String getOrderStatus() {
+    public String setOrderStatus(char orderStatus) {
         if (orderStatus == 'R') {
             return "Ready to pick up";
         } else if (orderStatus == 'P') {
@@ -246,10 +240,6 @@ public class AvailableOrdersFragment extends Fragment {
 
     public String getCustomClientDetailsString(int index) {
         return customClientDetailsString[index];
-    }
-
-    public double getDistance() {
-        return distance;
     }
 
     @SuppressLint("RtlHardcoded")
