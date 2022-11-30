@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.os.Handler;
 import android.os.StrictMode;
 import android.util.Log;
 import android.view.Gravity;
@@ -16,16 +17,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridLayout;
-import android.widget.LinearLayout;
 import android.widget.ScrollView;
-import android.widget.TextView;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import com.google.gson.JsonPrimitive;
 
-import org.json.JSONObject;
 import org.osmdroid.bonuspack.routing.OSRMRoadManager;
 import org.osmdroid.bonuspack.routing.Road;
 import org.osmdroid.bonuspack.routing.RoadManager;
@@ -33,12 +29,10 @@ import org.osmdroid.config.Configuration;
 import org.osmdroid.util.GeoPoint;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import ipleiria.taes.fastugadriver.R;
 import ipleiria.taes.fastugadriver.api.OrderService;
 import ipleiria.taes.fastugadriver.api.RetrofitClient;
-import ipleiria.taes.fastugadriver.model.order.OrderModelArray;
 import ipleiria.taes.fastugadriver.model.order.OrderModelDataArray;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -49,14 +43,10 @@ public class AvailableOrdersFragment extends Fragment {
     private static final String TAG = "AvailableOrdersFragment";
     private View view;
     private Button buttonOrder;
-    private GridLayout availableOrdersGrid;
     private GridLayout assignedOrdersGrid;
-    private ScrollView scrollViewAvailableOrders;
-    private ScrollView scrollViewAssignedOrders;
 
-    private String[] customClientDetailsString;
     private final GeoPoint restaurantPoint = new GeoPoint(39.73240919913415, -8.824827700055856);
-
+    int countClicks;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -84,15 +74,15 @@ public class AvailableOrdersFragment extends Fragment {
     }
 
     private void assignedOrdersLayout() {
-        scrollViewAssignedOrders = (ScrollView) view.findViewById(R.id.ScrollViewAssignedOrders);
+        ScrollView scrollViewAssignedOrders = (ScrollView) view.findViewById(R.id.ScrollViewAssignedOrders);
         assignedOrdersGrid = new GridLayout(scrollViewAssignedOrders.getContext());
         assignedOrdersGrid.setColumnCount(2);
         scrollViewAssignedOrders.addView(assignedOrdersGrid);
     }
 
     private void availableOrdersLayout() {
-        scrollViewAvailableOrders = (ScrollView) view.findViewById(R.id.ScrollViewAvailableOrders);
-        availableOrdersGrid = new GridLayout(scrollViewAvailableOrders.getContext());
+        ScrollView scrollViewAvailableOrders = (ScrollView) view.findViewById(R.id.ScrollViewAvailableOrders);
+        GridLayout availableOrdersGrid = new GridLayout(scrollViewAvailableOrders.getContext());
         availableOrdersGrid.setColumnCount(2);
         scrollViewAvailableOrders.addView(availableOrdersGrid);
     }
@@ -127,9 +117,9 @@ public class AvailableOrdersFragment extends Fragment {
         ArrayList<OrderModelDataArray.data> orders = response.body().getOrders();
         for (OrderModelDataArray.data order : orders) {
 
-            // Get JSON Custom
+            // Get JSON Custom, not the best way but it works...
             JsonElement customClientDetails = order.getCustom();
-            customClientDetailsString = customClientDetails.getAsString().split("\"");
+            String[] customClientDetailsString = customClientDetails.getAsString().split("\"");
 
             // Setting variables
             int orderID = order.getId();
@@ -137,23 +127,37 @@ public class AvailableOrdersFragment extends Fragment {
             double clientLatitude = Double.parseDouble(customClientDetailsString[7]);
             double clientLongitude = Double.parseDouble(customClientDetailsString[11]);
             double distance = getDistanceRestaurantToClientInKm(restaurantPoint.getLatitude(), restaurantPoint.getLongitude(), clientLatitude, clientLongitude);
-            String clientName = setClientName(order.getCustomer_id());
+            String clientName = setClientName((JsonObject) order.getCustomer_id());
             String status = setOrderStatus(orderStatusChar);
             int earning = setEarning(distance);
             String clientAddress = customClientDetailsString[3];
-            String clientPhoneNumber = setClientPhoneNumber(order.getCustomer_id());
+            String clientPhoneNumber = setClientPhoneNumber((JsonObject) order.getCustomer_id());
 
-            String buttonText = getAvailableOrdersText(orderID,clientAddress,distance,earning,status);
+            String buttonText = getAvailableOrdersText(orderID, clientAddress, distance, earning, status);
 
             setButtonProperties(buttonText, orderID);
             // Add Button to Layout
             assignedOrdersGrid.addView(buttonOrder);
 
+            countClicks = 0;
             buttonOrder.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Fragment fragment = goToOrderDetailsFragment(orderID,clientName,clientPhoneNumber,clientAddress,distance,earning);
-                    replaceFragment(fragment);
+                    countClicks++;
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(() -> {
+                        // If button is pressed once
+                        if (countClicks == 1) {
+                            Fragment fragment = goToOrderDetailsFragment(orderID, clientName, clientPhoneNumber, clientAddress, distance, earning);
+                            replaceFragment(fragment);
+
+                            // If button is pressed twice
+                        } else if (countClicks == 2) {
+                            Log.e(TAG, "2 Clicks");
+                        }
+                        countClicks = 0;
+                    }, 500);
                 }
 
                 public void replaceFragment(Fragment someFragment) {
@@ -189,7 +193,7 @@ public class AvailableOrdersFragment extends Fragment {
                                           int earning, String status) {
         return "Order: " + orderId + "\n" +
                 "Location: " + clientAddress + "\n" +
-                "Distance: " + String.format("%.2f",distance)  + " km\n" +
+                "Distance: " + String.format("%.2f", distance) + " km\n" +
                 "Earning: " + earning + "€\n" +
                 "Status: " + status;
     }
@@ -236,10 +240,6 @@ public class AvailableOrdersFragment extends Fragment {
             return "Preparing...";
         }
         return "Not Defined";
-    }
-
-    public String getCustomClientDetailsString(int index) {
-        return customClientDetailsString[index];
     }
 
     @SuppressLint("RtlHardcoded")
