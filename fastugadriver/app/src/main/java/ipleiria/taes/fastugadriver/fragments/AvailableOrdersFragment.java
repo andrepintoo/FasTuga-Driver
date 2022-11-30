@@ -33,7 +33,9 @@ import java.util.ArrayList;
 import ipleiria.taes.fastugadriver.R;
 import ipleiria.taes.fastugadriver.api.OrderService;
 import ipleiria.taes.fastugadriver.api.RetrofitClient;
+import ipleiria.taes.fastugadriver.model.order.OrderModelArray;
 import ipleiria.taes.fastugadriver.model.order.OrderModelDataArray;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -147,14 +149,32 @@ public class AvailableOrdersFragment extends Fragment {
 
                     Handler handler = new Handler();
                     handler.postDelayed(() -> {
-                        // If button is pressed once
-                        if (countClicks == 1) {
+                        if (countClicks == 1) { // If button is pressed once
                             Fragment fragment = goToOrderDetailsFragment(orderID, clientName, clientPhoneNumber, clientAddress, distance, earning);
                             replaceFragment(fragment);
+                        } else if (countClicks == 2) { // If button is pressed twice
+                            OrderModelArray updateOrder = new OrderModelArray();
+                            JsonElement customer = ((JsonObject) order.getCustomer_id()).get("id");
 
-                            // If button is pressed twice
-                        } else if (countClicks == 2) {
-                            Log.e(TAG, "2 Clicks");
+                            updateOrder.setTicket_number(order.getTicket_number());
+                            updateOrder.setStatus(orderStatusChar);
+                            updateOrder.setCustomer_id(customer.getAsInt());
+                            updateOrder.setTotal_price(order.getTotal_price());
+                            updateOrder.setTotal_paid(order.getTotal_paid());
+                            updateOrder.setTotal_paid_with_points(order.getTotal_paid_with_points());
+                            updateOrder.setPoints_gained(order.getPoints_gained());
+                            updateOrder.setPoints_used_to_pay(order.getPoints_used_to_pay());
+                            updateOrder.setPayment_type(order.getPayment_type());
+                            updateOrder.setPayment_reference(order.getPayment_reference());
+                            updateOrder.setDate(order.getDate());
+                            updateOrder.setDelivered_by(15);
+                            JsonObject custom = new JsonObject();
+                            custom.addProperty("address", customClientDetailsString[3]);
+                            custom.addProperty("latitude", customClientDetailsString[7]);
+                            custom.addProperty("longitude", customClientDetailsString[11]);
+                            updateOrder.setCustom(custom);
+
+                            updateOrder(orderID, updateOrder);
                         }
                         countClicks = 0;
                     }, 500);
@@ -170,6 +190,25 @@ public class AvailableOrdersFragment extends Fragment {
                 }
             });
         }
+    }
+
+    private void updateOrder(int id, OrderModelArray body) {
+        // Creates Service
+        OrderService service = RetrofitClient.getRetrofitInstance().create(OrderService.class);
+
+        // Creates Call interface for API (Retrofit)
+        Call<ResponseBody> call = service.updateOrder(id, body);
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                Log.e(TAG, "onResponse: code : " + response.code());
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Log.e(TAG, "onFailure : " + t.getMessage());
+            }
+        });
     }
 
     private double getDistanceRestaurantToClientInKm(double restaurantLatitude, double restaurantLongitude,

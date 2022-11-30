@@ -5,8 +5,13 @@ import java.util.List;
 import ipleiria.taes.fastugadriver.model.order.OrderModelArray;
 import ipleiria.taes.fastugadriver.model.order.OrderModelDataArray;
 import ipleiria.taes.fastugadriver.model.order.OrderModelObject;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
+import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface OrderService {
@@ -57,4 +62,8 @@ public interface OrderService {
 
     @GET("orders/status/{status}")
     Call<OrderModelDataArray> getOrderByStatus(@Path("status") char status);
+
+    @Headers({"Content-Type: application/json"})
+    @PUT("orders/{id}")
+    Call<ResponseBody> updateOrder(@Path("id") int id, @Body OrderModelArray body);
 }
