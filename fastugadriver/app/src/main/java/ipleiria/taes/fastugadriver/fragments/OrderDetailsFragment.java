@@ -36,8 +36,13 @@ public class OrderDetailsFragment extends Fragment {
     private Button buttonAccept;
     private Button buttonClaim;
     private Button buttonComplete;
+
     private int orderID;
-    private char orderStatus;
+    private String clientName;
+    private String clientPhoneNumber;
+    private String clientAddress;
+    private double distance;
+    private int earning;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -63,12 +68,13 @@ public class OrderDetailsFragment extends Fragment {
         if (bundle == null)
             return;
 
+        // Values received from AvailableOrdersFragment
         orderID = bundle.getInt("orderID");
-        orderStatus = bundle.getChar("orderStatus");
-
-        if (isOrderReady(orderStatus)) {
-            showAcceptOrderButton();
-        }
+        clientName = bundle.getString("clientName");
+        clientPhoneNumber = bundle.getString("clientPhoneNumber");
+        clientAddress = bundle.getString("clientAddress");
+        distance = bundle.getDouble("distance");
+        earning = bundle.getInt("earning");
 
         fetchOrder();
     }
@@ -85,7 +91,7 @@ public class OrderDetailsFragment extends Fragment {
             @Override
             public void onResponse(@NonNull Call<OrderModelObject> call, @NonNull Response<OrderModelObject> response) {
                 Log.e(TAG, "onResponse: code : " + response.code());
-                textOrderNumberInput.setText(String.valueOf(orderID));
+                setOrderDetailsText(orderID,clientName,clientPhoneNumber,clientAddress,distance,earning);
             }
 
             @Override
@@ -93,6 +99,16 @@ public class OrderDetailsFragment extends Fragment {
                 Log.e(TAG, "onFailure : " + t.getMessage());
             }
         });
+    }
+
+    @SuppressLint({"DefaultLocale", "SetTextI18n"})
+    private void setOrderDetailsText(int orderID, String clientName, String clientPhoneNumber, String clientAddress, double distance, int earning) {
+        textOrderNumberInput.setText(String.valueOf(orderID));
+        textClientInput.setText(clientName);
+        textClientPhoneInput.setText(clientPhoneNumber);
+        textLocationInput.setText(clientAddress);
+        textDistanceInput.setText(String.format("%.2f", distance) + " Km");
+        textEarningInput.setText(earning + " €");
     }
 
     private void showAcceptOrderButton() {
