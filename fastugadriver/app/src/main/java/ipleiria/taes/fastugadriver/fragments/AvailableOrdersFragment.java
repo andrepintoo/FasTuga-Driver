@@ -50,6 +50,8 @@ public class AvailableOrdersFragment extends Fragment {
     private final GeoPoint restaurantPoint = new GeoPoint(39.73240919913415, -8.824827700055856);
     int countClicks;
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -128,14 +130,16 @@ public class AvailableOrdersFragment extends Fragment {
             char orderStatusChar = order.getStatus();
             double clientLatitude = Double.parseDouble(customClientDetailsString[7]);
             double clientLongitude = Double.parseDouble(customClientDetailsString[11]);
-            double distance = getDistanceRestaurantToClientInKm(restaurantPoint.getLatitude(), restaurantPoint.getLongitude(), clientLatitude, clientLongitude);
+            double[] distanceKmAndTimeMinutes = getDistanceKmAndTimeInMinutesFromRestaurantToClient(restaurantPoint.getLatitude(), restaurantPoint.getLongitude(), clientLatitude, clientLongitude);
+            double distance = distanceKmAndTimeMinutes[0];
+            double duration = distanceKmAndTimeMinutes[1];
             String clientName = setClientName((JsonObject) order.getCustomer_id());
             String status = setOrderStatus(orderStatusChar);
             int earning = setEarning(distance);
             String clientAddress = customClientDetailsString[3];
             String clientPhoneNumber = setClientPhoneNumber((JsonObject) order.getCustomer_id());
 
-            String buttonText = getAvailableOrdersText(orderID, clientAddress, distance, earning, status);
+            String buttonText = getAvailableOrdersText(orderID, duration, distance, earning, status);
 
             setButtonProperties(buttonText, orderID);
             // Add Button to Layout
@@ -150,7 +154,8 @@ public class AvailableOrdersFragment extends Fragment {
                     Handler handler = new Handler();
                     handler.postDelayed(() -> {
                         if (countClicks == 1) { // If button is pressed once
-                            Fragment fragment = goToOrderDetailsFragment(orderID, clientName, clientPhoneNumber, clientAddress, distance, earning);
+                            Fragment fragment = goToOrderDetailsFragment(orderID, clientName, clientPhoneNumber, clientAddress, distance, earning,
+                                    clientLatitude,clientLongitude,restaurantPoint.getLatitude(),restaurantPoint.getLongitude());
                             replaceFragment(fragment);
                         } else if (countClicks == 2) { // If button is pressed twice
                             OrderModelArray updateOrder = new OrderModelArray();
@@ -183,7 +188,6 @@ public class AvailableOrdersFragment extends Fragment {
                 public void replaceFragment(Fragment someFragment) {
                     assert getFragmentManager() != null;
                     FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                    //transaction.remove(AvailableOrdersFragment.this);
                     transaction.replace(R.id.navHostFragment, someFragment);
                     transaction.addToBackStack(null);
                     transaction.commit();
@@ -211,7 +215,7 @@ public class AvailableOrdersFragment extends Fragment {
         });
     }
 
-    private double getDistanceRestaurantToClientInKm(double restaurantLatitude, double restaurantLongitude,
+    private double[] getDistanceKmAndTimeInMinutesFromRestaurantToClient(double restaurantLatitude, double restaurantLongitude,
                                                      double clientLatitude, double clientLongitude) {
         Configuration.getInstance().setUserAgentValue("MyOwnUserAgent/1.0");
         ArrayList<GeoPoint> waypoints = new ArrayList<>();
@@ -224,15 +228,21 @@ public class AvailableOrdersFragment extends Fragment {
         RoadManager roadManager = new OSRMRoadManager(getContext(), Configuration.getInstance().getUserAgentValue());
         Road road = roadManager.getRoad(waypoints);
 
-        return road.mLength;
+        double totalSecs = road.mDuration;
+        double minutes = (totalSecs % 3600) / 60;
+
+        double[] distanceAndMinutes = new double[2];
+        distanceAndMinutes[0] = road.mLength;
+        distanceAndMinutes[1] = minutes;
+        return distanceAndMinutes;
     }
 
     @SuppressLint("DefaultLocale")
-    private String getAvailableOrdersText(int orderId, String clientAddress, double distance,
+    private String getAvailableOrdersText(int orderId, double minutes, double distance,
                                           int earning, String status) {
         return "Order: " + orderId + "\n" +
-                "Location: " + clientAddress + "\n" +
                 "Distance: " + String.format("%.2f", distance) + " km\n" +
+                "Duration: " + String.format("%.2f", minutes) + " min\n" +
                 "Earning: " + earning + "€\n" +
                 "Status: " + status;
     }
@@ -246,9 +256,9 @@ public class AvailableOrdersFragment extends Fragment {
         return 4;
     }
 
-    private Fragment goToOrderDetailsFragment(int orderId, String clientName,
-                                              String clientPhoneNumber, String clientAddress,
-                                              double distance, int earning) {
+    private Fragment goToOrderDetailsFragment(int orderId, String clientName, String clientPhoneNumber, String clientAddress,
+                                              double distance, int earning, double clientLatitude, double clientLongitude,
+                                              double restaurantLatitude, double restaurantLongitude) {
         Bundle args = new Bundle();
         args.putInt("orderID", orderId);
         args.putString("clientName", clientName);
@@ -256,6 +266,10 @@ public class AvailableOrdersFragment extends Fragment {
         args.putString("clientAddress", clientAddress);
         args.putDouble("distance", distance);
         args.putInt("earning", earning);
+        args.putDouble("clientLatitude",clientLatitude);
+        args.putDouble("clientLongitude",clientLongitude);
+        args.putDouble("restaurantLatitude",restaurantLatitude);
+        args.putDouble("restaurantLongitude",restaurantLongitude);
         Fragment fragment = new OrderDetailsFragment();
         fragment.setArguments(args);
         return fragment;
@@ -274,7 +288,7 @@ public class AvailableOrdersFragment extends Fragment {
 
     public String setOrderStatus(char orderStatus) {
         if (orderStatus == 'R') {
-            return "Ready to pick up";
+            return "Ready to pick";
         } else if (orderStatus == 'P') {
             return "Preparing...";
         }

@@ -62,6 +62,14 @@ public class MapFragment extends Fragment implements LocationListener  {
         view = inflater.inflate(R.layout.fragment_map, container, false);
         map = (MapView) view.findViewById(R.id.mapView);
 
+        // Values received from AvailableOrdersFragment
+        Bundle bundle = getArguments();
+        assert bundle != null;
+        double restaurantLatitude = bundle.getDouble("restaurantLatitude");
+        double restaurantLongitude = bundle.getDouble("restaurantLongitude");
+        double clientLatitude = bundle.getDouble("clientLatitude");
+        double clientLongitude = bundle.getDouble("clientLongitude");
+
         if (Build.VERSION.SDK_INT >= M) {
             if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.INTERNET) != PackageManager.PERMISSION_GRANTED ||
                     ContextCompat.checkSelfPermission(getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED ||
@@ -81,7 +89,7 @@ public class MapFragment extends Fragment implements LocationListener  {
         locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10000, 0, this);
 
-        GeoPoint startPoint = new GeoPoint(39.73240919913415, -8.824827700055856);
+        GeoPoint startPoint = new GeoPoint(restaurantLatitude, restaurantLongitude);
 
         IMapController mapController = map.getController();
         mapController.setZoom(15);
@@ -97,7 +105,7 @@ public class MapFragment extends Fragment implements LocationListener  {
         RoadManager roadManager = new OSRMRoadManager(getContext(), Configuration.getInstance().getUserAgentValue());
         ArrayList<GeoPoint> waypoints = new ArrayList<GeoPoint>();
         waypoints.add(startPoint);
-        GeoPoint endPoint = new GeoPoint(39.740619424193376, -8.809390227303869);
+        GeoPoint endPoint = new GeoPoint(clientLatitude, clientLongitude);
 
         Marker endMarker = new Marker(map);
         endMarker.setPosition(endPoint);
@@ -107,15 +115,6 @@ public class MapFragment extends Fragment implements LocationListener  {
 
         startMarker.setTitle("End point");
         Road road = roadManager.getRoad(waypoints);
-
-        System.out.println("DEBUGGGGGGGGGGGGGGGGGGGGGG................. Distancia - " + String.format("%.1f", road.mLength) + " km");
-
-        double totalSecs = road.mDuration;
-        //double hours = totalSecs / 3600;
-        double minutes = (totalSecs % 3600) / 60;
-        //double seconds = totalSecs % 60;
-
-        System.out.println("DEBUGGGGGGGGGGGGGGGGGGGGGG................. Duração - " + String.format("%.0f", minutes) + " min." );
 
         Polyline roadOverlay = RoadManager.buildRoadOverlay(road);
         map.getOverlays().add(roadOverlay);

@@ -36,8 +36,14 @@ public class OrderDetailsFragment extends Fragment {
     private Button buttonAccept;
     private Button buttonClaim;
     private Button buttonComplete;
+
     private int orderID;
-    private char orderStatus;
+    private String clientName;
+    private String clientPhoneNumber;
+    private String clientAddress;
+    private double distance;
+    private int earning;
+    private Bundle bundle;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,8 +51,11 @@ public class OrderDetailsFragment extends Fragment {
 
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_order_details, container, false);
-        Fragment map_fragment = new MapFragment();
-        requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, map_fragment).commit();
+
+        // Receive Previous Data
+        bundle = getArguments();
+
+        showMapFragment();
 
         defineLayoutElements();
         setLayoutElementsText();
@@ -57,18 +66,25 @@ public class OrderDetailsFragment extends Fragment {
         return view;
     }
 
+    private void showMapFragment() {
+        Bundle mapArgs = new Bundle();
+        mapArgs.putDouble("clientLatitude", bundle.getDouble("clientLatitude"));
+        mapArgs.putDouble("clientLongitude", bundle.getDouble("clientLongitude"));
+        mapArgs.putDouble("restaurantLatitude", bundle.getDouble("restaurantLatitude"));
+        mapArgs.putDouble("restaurantLongitude", bundle.getDouble("restaurantLongitude"));
+        Fragment map_fragment = new MapFragment();
+        map_fragment.setArguments(mapArgs);
+        requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, map_fragment).commit();
+    }
+
     private void showOrder() {
-        // Receive Previous Data
-        Bundle bundle = getArguments();
-        if (bundle == null)
-            return;
-
+        // Values received from AvailableOrdersFragment
         orderID = bundle.getInt("orderID");
-        orderStatus = bundle.getChar("orderStatus");
-
-        if (isOrderReady(orderStatus)) {
-            showAcceptOrderButton();
-        }
+        clientName = bundle.getString("clientName");
+        clientPhoneNumber = bundle.getString("clientPhoneNumber");
+        clientAddress = bundle.getString("clientAddress");
+        distance = bundle.getDouble("distance");
+        earning = bundle.getInt("earning");
 
         fetchOrder();
     }
@@ -85,7 +101,7 @@ public class OrderDetailsFragment extends Fragment {
             @Override
             public void onResponse(@NonNull Call<OrderModelObject> call, @NonNull Response<OrderModelObject> response) {
                 Log.e(TAG, "onResponse: code : " + response.code());
-                textOrderNumberInput.setText(String.valueOf(orderID));
+                setOrderDetailsText(orderID, clientName, clientPhoneNumber, clientAddress, distance, earning);
             }
 
             @Override
@@ -93,6 +109,16 @@ public class OrderDetailsFragment extends Fragment {
                 Log.e(TAG, "onFailure : " + t.getMessage());
             }
         });
+    }
+
+    @SuppressLint({"DefaultLocale", "SetTextI18n"})
+    private void setOrderDetailsText(int orderID, String clientName, String clientPhoneNumber, String clientAddress, double distance, int earning) {
+        textOrderNumberInput.setText(String.valueOf(orderID));
+        textClientInput.setText(clientName);
+        textClientPhoneInput.setText(clientPhoneNumber);
+        textLocationInput.setText(clientAddress);
+        textDistanceInput.setText(String.format("%.2f", distance) + " Km");
+        textEarningInput.setText(earning + " €");
     }
 
     private void showAcceptOrderButton() {
