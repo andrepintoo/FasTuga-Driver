@@ -1,5 +1,6 @@
 package ipleiria.taes.fastugadriver.model.order;
 
+import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;
 
@@ -16,7 +17,7 @@ public class OrderModelDataArray {
         int id;
         int ticket_number;
         char status;
-        JsonObject customer_id;
+        JsonElement customer_id;
         float total_price;
         float total_paid;
         float total_paid_with_points;
@@ -25,8 +26,8 @@ public class OrderModelDataArray {
         String payment_type;
         String payment_reference;
         String date;
-        JsonObject delivered_by;
-        String custom;
+        JsonElement delivered_by;
+        JsonElement custom;
 
         public int getId() {
             return id;
@@ -72,24 +73,26 @@ public class OrderModelDataArray {
             return date;
         }
 
-        public String getCustom() {
+        public JsonElement getCustom() {
             return custom;
         }
 
-        public JsonObject getCustomer_id() {
+        public JsonElement getCustomer_id() {
             if (customer_id.isJsonNull()) {
                 JsonObject emptyJson = new JsonObject();
                 emptyJson.add("id",null);
                 return emptyJson;
             }
-            return customer_id;
+            return (JsonObject) customer_id;
         }
 
-        public JsonObject getDelivered_by() {
-            if (customer_id.isJsonNull()) {
-                return new JsonObject();
+        public JsonElement getDelivered_by() {
+            if (delivered_by.isJsonNull()) {
+                JsonObject emptyJson = new JsonObject();
+                emptyJson.add("id",null);
+                return emptyJson;
             }
-            return customer_id;
+            return (JsonObject) delivered_by;
         }
     }
 }

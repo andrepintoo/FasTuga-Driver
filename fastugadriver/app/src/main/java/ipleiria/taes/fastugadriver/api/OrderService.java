@@ -5,8 +5,13 @@ import java.util.List;
 import ipleiria.taes.fastugadriver.model.order.OrderModelArray;
 import ipleiria.taes.fastugadriver.model.order.OrderModelDataArray;
 import ipleiria.taes.fastugadriver.model.order.OrderModelObject;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
+import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface OrderService {
@@ -56,26 +61,9 @@ public interface OrderService {
      */
 
     @GET("orders/status/{status}")
-    Call<List<OrderModelArray>> getOrderByStatus(@Path("status") char status);
-    /*
-        OrderService service = RetrofitClient.getRetrofitInstance().create(OrderService.class);
-        Call<List<OrderModelArray>> orders = service.getOrderByStatus('R');
+    Call<OrderModelDataArray> getOrderByStatus(@Path("status") char status);
 
-        orders.enqueue(new Callback<List<OrderModelArray>>() {
-            @Override
-            public void onResponse(Call<List<OrderModelArray>> call, Response<List<OrderModelArray>> response) {
-                Log.e(TAG, "onResponse: code : " + response.code());
-                List<OrderModelArray> data = response.body();
-                for (OrderModelArray order : data) {
-                    Log.e(TAG, "onResponse: " + order.getId());
-                    Log.e(TAG, "onResponse: " + order.getStatus());
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<OrderModelArray>> call, Throwable t) {
-                Log.e(TAG, "onFailure : "+ t.getMessage());
-            }
-        });
-     */
+    @Headers({"Content-Type: application/json"})
+    @PUT("orders/{id}")
+    Call<ResponseBody> updateOrder(@Path("id") int id, @Body OrderModelArray body);
 }
