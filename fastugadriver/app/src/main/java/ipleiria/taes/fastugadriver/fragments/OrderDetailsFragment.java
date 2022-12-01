@@ -43,6 +43,7 @@ public class OrderDetailsFragment extends Fragment {
     private String clientAddress;
     private double distance;
     private int earning;
+    private Bundle bundle;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -50,8 +51,11 @@ public class OrderDetailsFragment extends Fragment {
 
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_order_details, container, false);
-        Fragment map_fragment = new MapFragment();
-        requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, map_fragment).commit();
+
+        // Receive Previous Data
+        bundle = getArguments();
+
+        showMapFragment();
 
         defineLayoutElements();
         setLayoutElementsText();
@@ -62,12 +66,18 @@ public class OrderDetailsFragment extends Fragment {
         return view;
     }
 
-    private void showOrder() {
-        // Receive Previous Data
-        Bundle bundle = getArguments();
-        if (bundle == null)
-            return;
+    private void showMapFragment() {
+        Bundle mapArgs = new Bundle();
+        mapArgs.putDouble("clientLatitude", bundle.getDouble("clientLatitude"));
+        mapArgs.putDouble("clientLongitude", bundle.getDouble("clientLongitude"));
+        mapArgs.putDouble("restaurantLatitude", bundle.getDouble("restaurantLatitude"));
+        mapArgs.putDouble("restaurantLongitude", bundle.getDouble("restaurantLongitude"));
+        Fragment map_fragment = new MapFragment();
+        map_fragment.setArguments(mapArgs);
+        requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, map_fragment).commit();
+    }
 
+    private void showOrder() {
         // Values received from AvailableOrdersFragment
         orderID = bundle.getInt("orderID");
         clientName = bundle.getString("clientName");
@@ -91,7 +101,7 @@ public class OrderDetailsFragment extends Fragment {
             @Override
             public void onResponse(@NonNull Call<OrderModelObject> call, @NonNull Response<OrderModelObject> response) {
                 Log.e(TAG, "onResponse: code : " + response.code());
-                setOrderDetailsText(orderID,clientName,clientPhoneNumber,clientAddress,distance,earning);
+                setOrderDetailsText(orderID, clientName, clientPhoneNumber, clientAddress, distance, earning);
             }
 
             @Override
