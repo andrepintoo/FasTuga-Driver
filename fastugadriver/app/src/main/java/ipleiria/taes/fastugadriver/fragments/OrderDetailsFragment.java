@@ -13,10 +13,15 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
 import ipleiria.taes.fastugadriver.R;
 import ipleiria.taes.fastugadriver.api.OrderService;
 import ipleiria.taes.fastugadriver.api.RetrofitClient;
+import ipleiria.taes.fastugadriver.model.order.OrderModelArray;
 import ipleiria.taes.fastugadriver.model.order.OrderModelObject;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -33,9 +38,9 @@ public class OrderDetailsFragment extends Fragment {
     private TextView textDistanceInput;
     private TextView textEarningInput;
     private Button buttonBack;
-    private Button buttonAccept;
-    private Button buttonClaim;
-    private Button buttonComplete;
+    private Button buttonAssign;
+    private Button buttonDelivered;
+    private Button buttonCancelOrder;
 
     private int orderID;
     private String clientName;
@@ -43,7 +48,19 @@ public class OrderDetailsFragment extends Fragment {
     private String clientAddress;
     private double distance;
     private int earning;
+    private int driverID;
     private Bundle bundle;
+    private int ticketNumber;
+    private char orderStatus;
+    private int customerId;
+    private double totalPrice;
+    private double totalPaid;
+    private double totalPaidWithPoints;
+    private int pointsGained;
+    private int pointsUsedToPay;
+    private String paymentType;
+    private String paymentReference;
+    private String date;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -79,14 +96,87 @@ public class OrderDetailsFragment extends Fragment {
 
     private void showOrder() {
         // Values received from AvailableOrdersFragment
+        receiveSpecificOrderValuesFromChoosenOrder();
+
+        showButtons(driverID);
+
+        fetchOrder();
+    }
+
+    private void receiveSpecificOrderValuesFromChoosenOrder() {
         orderID = bundle.getInt("orderID");
         clientName = bundle.getString("clientName");
         clientPhoneNumber = bundle.getString("clientPhoneNumber");
         clientAddress = bundle.getString("clientAddress");
         distance = bundle.getDouble("distance");
         earning = bundle.getInt("earning");
+        driverID = bundle.getInt("driverId");
+        ticketNumber = bundle.getInt("ticketNumber");
+        orderStatus = bundle.getChar("orderStatus");
+        customerId = bundle.getInt("customerId");
+        totalPrice = bundle.getDouble("totalPrice");
+        totalPaid = bundle.getDouble("totalPaid");
+        totalPaidWithPoints = bundle.getDouble("totalPaidWithPoints");
+        pointsGained = bundle.getInt("pointsGained");
+        pointsUsedToPay = bundle.getInt("pointsUsedToPay");
+        paymentType = bundle.getString("paymentType");
+        paymentReference = bundle.getString("paymentReference");
+        date = bundle.getString("date");
+    }
 
-        fetchOrder();
+    private void showButtons(int driverID) {
+        if (driverID == 0) {
+            buttonBack.setVisibility(View.VISIBLE);
+            buttonAssign.setVisibility(View.VISIBLE);
+            buttonAssign.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    OrderModelArray updateOrder = new OrderModelArray();
+
+                    updateOrder.setTicket_number(ticketNumber);
+                    updateOrder.setStatus(orderStatus);
+                    updateOrder.setCustomer_id(customerId);
+                    updateOrder.setTotal_price(totalPrice);
+                    updateOrder.setTotal_paid(totalPaid);
+                    updateOrder.setTotal_paid_with_points(totalPaidWithPoints);
+                    updateOrder.setPoints_gained(pointsGained);
+                    updateOrder.setPoints_used_to_pay(pointsUsedToPay);
+                    updateOrder.setPayment_type(paymentType);
+                    updateOrder.setPayment_reference(paymentReference);
+                    updateOrder.setDate(date);
+                    updateOrder.setDelivered_by(15);
+                    JsonObject custom = new JsonObject();
+                    custom.addProperty("address", clientAddress);
+                    custom.addProperty("latitude", String.valueOf(bundle.getDouble("clientLatitude")));
+                    custom.addProperty("longitude", String.valueOf(bundle.getDouble("clientLongitude")));
+                    updateOrder.setCustom(custom);
+
+                    updateOrder(orderID, updateOrder);
+                }
+            });
+        } else {
+            buttonBack.setVisibility(View.VISIBLE);
+            buttonDelivered.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private void updateOrder(int id, OrderModelArray body) {
+        // Creates Service
+        OrderService service = RetrofitClient.getRetrofitInstance().create(OrderService.class);
+
+        // Creates Call interface for API (Retrofit)
+        Call<ResponseBody> call = service.updateOrder(id, body);
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                Log.e(TAG, "onResponse: code : " + response.code());
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Log.e(TAG, "onFailure : " + t.getMessage());
+            }
+        });
     }
 
     private void fetchOrder() {
@@ -119,12 +209,6 @@ public class OrderDetailsFragment extends Fragment {
         textLocationInput.setText(clientAddress);
         textDistanceInput.setText(String.format("%.2f", distance) + " Km");
         textEarningInput.setText(earning + " €");
-    }
-
-    private void showAcceptOrderButton() {
-        buttonAccept.setVisibility(View.VISIBLE);
-        buttonComplete.setVisibility(View.GONE);
-        buttonClaim.setVisibility(View.GONE);
     }
 
     private void goBackButton() {
@@ -169,9 +253,9 @@ public class OrderDetailsFragment extends Fragment {
         textDistanceInput = (TextView) view.findViewById(R.id.textDistanceInput);
         textEarningInput = (TextView) view.findViewById(R.id.textEarningInput);
         buttonBack = (Button) view.findViewById(R.id.buttonBack);
-        buttonAccept = (Button) view.findViewById(R.id.buttonAccept);
-        buttonClaim = (Button) view.findViewById(R.id.buttonClaim);
-        buttonComplete = (Button) view.findViewById(R.id.buttonComplete);
+        buttonAssign = (Button) view.findViewById(R.id.buttonAssign);
+        buttonDelivered = (Button) view.findViewById(R.id.buttonDelivered);
+        buttonCancelOrder = (Button) view.findViewById(R.id.buttonCancelOrder);
     }
 
 }

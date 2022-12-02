@@ -50,11 +50,8 @@ public class AvailableOrdersFragment extends Fragment {
     private final GeoPoint restaurantPoint = new GeoPoint(39.73240919913415, -8.824827700055856);
     int countClicks;
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
         // Need to add this to connect to map network
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -154,8 +151,16 @@ public class AvailableOrdersFragment extends Fragment {
                     Handler handler = new Handler();
                     handler.postDelayed(() -> {
                         if (countClicks == 1) { // If button is pressed once
+                            JsonObject deliveredByUser = (JsonObject) order.getDelivered_by();
+                            int driverId = 0;
+                            if (!deliveredByUser.get("id").isJsonNull()) {
+                                driverId = deliveredByUser.get("id").getAsInt();
+                            }
+                            JsonElement customer = ((JsonObject) order.getCustomer_id()).get("id");
                             Fragment fragment = goToOrderDetailsFragment(orderID, clientName, clientPhoneNumber, clientAddress, distance, earning,
-                                    clientLatitude,clientLongitude,restaurantPoint.getLatitude(),restaurantPoint.getLongitude());
+                                    clientLatitude, clientLongitude, restaurantPoint.getLatitude(), restaurantPoint.getLongitude(), driverId,
+                                    order.getTicket_number(),orderStatusChar,customer.getAsInt(),order.getTotal_price(),order.getTotal_paid(),order.getTotal_paid_with_points(),
+                                    order.getPoints_gained(),order.getPoints_used_to_pay(),order.getPayment_type(),order.getPayment_reference(),order.getDate());
                             replaceFragment(fragment);
                         } else if (countClicks == 2) { // If button is pressed twice
                             OrderModelArray updateOrder = new OrderModelArray();
@@ -216,7 +221,7 @@ public class AvailableOrdersFragment extends Fragment {
     }
 
     private double[] getDistanceKmAndTimeInMinutesFromRestaurantToClient(double restaurantLatitude, double restaurantLongitude,
-                                                     double clientLatitude, double clientLongitude) {
+                                                                         double clientLatitude, double clientLongitude) {
         Configuration.getInstance().setUserAgentValue("MyOwnUserAgent/1.0");
         ArrayList<GeoPoint> waypoints = new ArrayList<>();
         GeoPoint restaurant = new GeoPoint(restaurantLatitude, restaurantLongitude);
@@ -258,7 +263,10 @@ public class AvailableOrdersFragment extends Fragment {
 
     private Fragment goToOrderDetailsFragment(int orderId, String clientName, String clientPhoneNumber, String clientAddress,
                                               double distance, int earning, double clientLatitude, double clientLongitude,
-                                              double restaurantLatitude, double restaurantLongitude) {
+                                              double restaurantLatitude, double restaurantLongitude, int driverId,
+                                              int ticketNumber, char orderStatus, int customerId, double totalPrice,
+                                              double totalPaid, double totalPaidWithPoints, int pointsGained,
+                                              int pointsUsedToPay, String paymentType, String paymentReference, String date) {
         Bundle args = new Bundle();
         args.putInt("orderID", orderId);
         args.putString("clientName", clientName);
@@ -266,10 +274,22 @@ public class AvailableOrdersFragment extends Fragment {
         args.putString("clientAddress", clientAddress);
         args.putDouble("distance", distance);
         args.putInt("earning", earning);
-        args.putDouble("clientLatitude",clientLatitude);
-        args.putDouble("clientLongitude",clientLongitude);
-        args.putDouble("restaurantLatitude",restaurantLatitude);
-        args.putDouble("restaurantLongitude",restaurantLongitude);
+        args.putDouble("clientLatitude", clientLatitude);
+        args.putDouble("clientLongitude", clientLongitude);
+        args.putDouble("restaurantLatitude", restaurantLatitude);
+        args.putDouble("restaurantLongitude", restaurantLongitude);
+        args.putInt("driverId", driverId);
+        args.putInt("ticketNumber", ticketNumber);
+        args.putChar("orderStatus", orderStatus);
+        args.putInt("customerId", customerId);
+        args.putDouble("totalPrice", totalPrice);
+        args.putDouble("totalPaid", totalPaid);
+        args.putDouble("totalPaidWithPoints", totalPaidWithPoints);
+        args.putInt("pointsGained", pointsGained);
+        args.putInt("pointsUsedToPay", pointsUsedToPay);
+        args.putString("paymentType", paymentType);
+        args.putString("paymentReference", paymentReference);
+        args.putString("date", date);
         Fragment fragment = new OrderDetailsFragment();
         fragment.setArguments(args);
         return fragment;
