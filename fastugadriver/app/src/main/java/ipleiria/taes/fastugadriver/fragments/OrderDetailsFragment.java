@@ -1,6 +1,13 @@
 package ipleiria.taes.fastugadriver.fragments;
 
+import static androidx.core.content.ContextCompat.getSystemService;
+
 import android.annotation.SuppressLint;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.Context;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,12 +17,15 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+import ipleiria.taes.fastugadriver.MainActivity;
 import ipleiria.taes.fastugadriver.R;
 import ipleiria.taes.fastugadriver.api.OrderService;
 import ipleiria.taes.fastugadriver.api.RetrofitClient;
@@ -63,8 +73,7 @@ public class OrderDetailsFragment extends Fragment {
     private String date;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_order_details, container, false);
@@ -152,6 +161,14 @@ public class OrderDetailsFragment extends Fragment {
                     updateOrder.setCustom(custom);
 
                     updateOrder(orderID, updateOrder);
+
+                    // Goes back to AvailableOrders, shows order on Assigned Orders
+                    Fragment fragment = new AvailableOrdersFragment();
+                    assert getFragmentManager() != null;
+                    FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                    transaction.replace(R.id.navHostFragment, fragment);
+                    transaction.addToBackStack(null);
+                    transaction.commit();
                 }
             });
         } else {
@@ -257,5 +274,4 @@ public class OrderDetailsFragment extends Fragment {
         buttonDelivered = (Button) view.findViewById(R.id.buttonDelivered);
         buttonCancelOrder = (Button) view.findViewById(R.id.buttonCancelOrder);
     }
-
 }
