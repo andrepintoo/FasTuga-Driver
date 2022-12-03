@@ -55,7 +55,6 @@ public class LoginActivity extends AppCompatActivity {
                 if(keepMeLoggedIn.isChecked()){
                     SharedPreferences.setUserName(LoginActivity.this, email);
                 }
-                SharedPreferences.setIsNewLogin(LoginActivity.this, "yes");
 
                 INSTANCE.setUserLogged(email);
                 goToMainActivity();
@@ -88,7 +87,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void goToMainActivity() {
-        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        Intent i = new Intent(LoginActivity.this, MainActivity.class);
+        i.putExtra("newLogin","yes");
+        startActivity(i);
     }
 
     private void setLoginElements() {
