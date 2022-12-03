@@ -88,7 +88,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private void goToMainActivity() {
         Intent i = new Intent(LoginActivity.this, MainActivity.class);
-        //MUDAR PARA A BRANCH!!
         i.putExtra("newLogin","yes");
         startActivity(i);
     }
