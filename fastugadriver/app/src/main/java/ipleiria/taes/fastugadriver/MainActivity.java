@@ -26,15 +26,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        boolean isNewLogin = SharedPreferences.getKeepMeSignedInCheckbox(MainActivity.this).equals("no");
         boolean isEmailSaved = SharedPreferences.getUserEmail(MainActivity.this).length() != 0;
+        Bundle extras = getIntent().getExtras();
+        boolean isNewLogin = false;
 
-       /* if(isNewLogin && !isEmailSaved)
+        if (extras != null) {
+            isNewLogin = extras.getString("newLogin") != null;
+        }
+        if(!isNewLogin && !isEmailSaved)
         {
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
-        }*/
+        }
 
-        SharedPreferences.setIsNewLogin(MainActivity.this, "no");
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
