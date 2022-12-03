@@ -39,6 +39,8 @@ import retrofit2.Response;
 public class OrderDetailsFragment extends Fragment {
 
     private static final String TAG = "OrderDetailsActivity";
+    private final char ORDER_CANCELED = 'C';
+    private final char ORDER_DELIVERED = 'D';
 
     private View view;
     private TextView textOrderNumberInput;
@@ -140,41 +142,58 @@ public class OrderDetailsFragment extends Fragment {
             buttonAssign.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    OrderModelArray updateOrder = new OrderModelArray();
-
-                    updateOrder.setTicket_number(ticketNumber);
-                    updateOrder.setStatus(orderStatus);
-                    updateOrder.setCustomer_id(customerId);
-                    updateOrder.setTotal_price(totalPrice);
-                    updateOrder.setTotal_paid(totalPaid);
-                    updateOrder.setTotal_paid_with_points(totalPaidWithPoints);
-                    updateOrder.setPoints_gained(pointsGained);
-                    updateOrder.setPoints_used_to_pay(pointsUsedToPay);
-                    updateOrder.setPayment_type(paymentType);
-                    updateOrder.setPayment_reference(paymentReference);
-                    updateOrder.setDate(date);
-                    updateOrder.setDelivered_by(15);
-                    JsonObject custom = new JsonObject();
-                    custom.addProperty("address", clientAddress);
-                    custom.addProperty("latitude", String.valueOf(bundle.getDouble("clientLatitude")));
-                    custom.addProperty("longitude", String.valueOf(bundle.getDouble("clientLongitude")));
-                    updateOrder.setCustom(custom);
-
-                    updateOrder(orderID, updateOrder);
-
-                    // Goes back to AvailableOrders, shows order on Assigned Orders
-                    Fragment fragment = new AvailableOrdersFragment();
-                    assert getFragmentManager() != null;
-                    FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                    transaction.replace(R.id.navHostFragment, fragment);
-                    transaction.addToBackStack(null);
-                    transaction.commit();
+                    OrderModelArray json = createJson(orderStatus);
+                    updateOrder(orderID, json);
+                    goBackToAvailableOrders();
                 }
             });
         } else {
             buttonBack.setVisibility(View.VISIBLE);
+            buttonCancelOrder.setVisibility(View.VISIBLE);
             buttonDelivered.setVisibility(View.VISIBLE);
+
+            // Button Cancel Action
+            buttonCancelOrder.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    OrderModelArray json = createJson(ORDER_CANCELED);
+                    updateOrder(orderID, json);
+                    goBackToAvailableOrders();
+                }
+            });
         }
+    }
+
+    private void goBackToAvailableOrders() {
+        Fragment fragment = new AvailableOrdersFragment();
+        assert getFragmentManager() != null;
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.navHostFragment, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    private OrderModelArray createJson(char orderStatus) {
+        OrderModelArray updateOrder = new OrderModelArray();
+
+        updateOrder.setTicket_number(ticketNumber);
+        updateOrder.setStatus(orderStatus);
+        updateOrder.setCustomer_id(customerId);
+        updateOrder.setTotal_price(totalPrice);
+        updateOrder.setTotal_paid(totalPaid);
+        updateOrder.setTotal_paid_with_points(totalPaidWithPoints);
+        updateOrder.setPoints_gained(pointsGained);
+        updateOrder.setPoints_used_to_pay(pointsUsedToPay);
+        updateOrder.setPayment_type(paymentType);
+        updateOrder.setPayment_reference(paymentReference);
+        updateOrder.setDate(date);
+        updateOrder.setDelivered_by(driverID);
+        JsonObject custom = new JsonObject();
+        custom.addProperty("address", clientAddress);
+        custom.addProperty("latitude", String.valueOf(bundle.getDouble("clientLatitude")));
+        custom.addProperty("longitude", String.valueOf(bundle.getDouble("clientLongitude")));
+        updateOrder.setCustom(custom);
+        return updateOrder;
     }
 
     private void updateOrder(int id, OrderModelArray body) {
