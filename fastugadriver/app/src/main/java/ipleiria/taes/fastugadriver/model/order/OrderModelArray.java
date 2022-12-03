@@ -12,9 +12,9 @@ public class OrderModelArray {
     int ticket_number;
     char status;
     int customer_id;
-    float total_price;
-    float total_paid;
-    float total_paid_with_points;
+    double total_price;
+    double total_paid;
+    double total_paid_with_points;
     int points_gained;
     int points_used_to_pay;
     String payment_type;
@@ -35,15 +35,15 @@ public class OrderModelArray {
         this.customer_id = customer_id;
     }
 
-    public void setTotal_price(float total_price) {
+    public void setTotal_price(double total_price) {
         this.total_price = total_price;
     }
 
-    public void setTotal_paid(float total_paid) {
+    public void setTotal_paid(double total_paid) {
         this.total_paid = total_paid;
     }
 
-    public void setTotal_paid_with_points(float total_paid_with_points) {
+    public void setTotal_paid_with_points(double total_paid_with_points) {
         this.total_paid_with_points = total_paid_with_points;
     }
 
@@ -83,15 +83,15 @@ public class OrderModelArray {
         return status;
     }
 
-    public float getTotal_price() {
+    public double getTotal_price() {
         return total_price;
     }
 
-    public float getTotal_paid() {
+    public double getTotal_paid() {
         return total_paid;
     }
 
-    public float getTotal_paid_with_points() {
+    public double getTotal_paid_with_points() {
         return total_paid_with_points;
     }
 

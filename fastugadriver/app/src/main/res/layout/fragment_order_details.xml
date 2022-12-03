@@ -151,10 +151,11 @@
         android:layout_marginBottom="60dp"
         android:backgroundTint="#000000"
         android:text="Back"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:visibility="invisible" />
 
     <Button
-        android:id="@+id/buttonAccept"
+        android:id="@+id/buttonAssign"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="290dp"
@@ -162,11 +163,12 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="60dp"
         android:backgroundTint="#000000"
-        android:text="Accept"
-        android:textColor="@color/white" />
+        android:text="Assign"
+        android:textColor="@color/white"
+        android:visibility="invisible" />
 
     <Button
-        android:id="@+id/buttonClaim"
+        android:id="@+id/buttonDelivered"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="290dp"
@@ -174,11 +176,12 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="60dp"
         android:backgroundTint="#000000"
-        android:text="Claim"
-        android:textColor="@color/white" />
+        android:text="Delivered"
+        android:textColor="@color/white"
+        android:visibility="invisible" />
 
     <Button
-        android:id="@+id/buttonComplete"
+        android:id="@+id/buttonCancelOrder"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="290dp"
@@ -186,8 +189,9 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="60dp"
         android:backgroundTint="#000000"
-        android:text="Complete"
-        android:textColor="@color/white" />
+        android:text="Cancel"
+        android:textColor="@color/white"
+        android:visibility="invisible" />
 
 
 </FrameLayout>
