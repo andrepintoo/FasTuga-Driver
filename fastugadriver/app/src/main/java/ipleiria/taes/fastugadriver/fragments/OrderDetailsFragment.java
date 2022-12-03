@@ -1,13 +1,6 @@
 package ipleiria.taes.fastugadriver.fragments;
 
-import static androidx.core.content.ContextCompat.getSystemService;
-
 import android.annotation.SuppressLint;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.content.Context;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,15 +10,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-import ipleiria.taes.fastugadriver.MainActivity;
 import ipleiria.taes.fastugadriver.R;
 import ipleiria.taes.fastugadriver.api.OrderService;
 import ipleiria.taes.fastugadriver.api.RetrofitClient;
@@ -107,14 +96,14 @@ public class OrderDetailsFragment extends Fragment {
 
     private void showOrder() {
         // Values received from AvailableOrdersFragment
-        receiveSpecificOrderValuesFromChoosenOrder();
+        receiveSpecificOrderValuesFromChosenOrder();
 
         showButtons(driverID);
 
         fetchOrder();
     }
 
-    private void receiveSpecificOrderValuesFromChoosenOrder() {
+    private void receiveSpecificOrderValuesFromChosenOrder() {
         orderID = bundle.getInt("orderID");
         clientName = bundle.getString("clientName");
         clientPhoneNumber = bundle.getString("clientPhoneNumber");
@@ -157,6 +146,16 @@ public class OrderDetailsFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     OrderModelArray json = createJson(ORDER_CANCELED);
+                    updateOrder(orderID, json);
+                    goBackToAvailableOrders();
+                }
+            });
+
+            // Button Delivered Action
+            buttonDelivered.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    OrderModelArray json = createJson(ORDER_DELIVERED);
                     updateOrder(orderID, json);
                     goBackToAvailableOrders();
                 }
