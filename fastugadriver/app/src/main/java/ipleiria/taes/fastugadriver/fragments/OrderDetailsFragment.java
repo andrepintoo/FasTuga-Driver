@@ -186,7 +186,7 @@ public class OrderDetailsFragment extends Fragment {
         updateOrder.setPayment_type(paymentType);
         updateOrder.setPayment_reference(paymentReference);
         updateOrder.setDate(date);
-        updateOrder.setDelivered_by(driverID);
+        updateOrder.setDelivered_by(15);
         JsonObject custom = new JsonObject();
         custom.addProperty("address", clientAddress);
         custom.addProperty("latitude", String.valueOf(bundle.getDouble("clientLatitude")));
