@@ -1,9 +1,14 @@
 package ipleiria.taes.fastugadriver.api;
 
+import java.util.List;
+
 import ipleiria.taes.fastugadriver.model.user.UserModelObject;
 import ipleiria.taes.fastugadriver.model.user.UserModelArray;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.Path;
 
 public interface UserService {
@@ -51,5 +56,12 @@ public interface UserService {
                     }
                 });
      */
+
+    @Headers({"Content-Type: application/json"})
+    @DELETE("users/{email}")
+    Call<ResponseBody> deleteUser(@Path("email") String email);
+
+    @GET("users/{email}")
+    Call<UserModelArray> getUserByEmail(@Path("email") String email);
 
 }
