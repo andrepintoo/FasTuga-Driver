@@ -1,15 +1,26 @@
 package ipleiria.taes.fastugadriver.fragments;
 
+import static android.content.Context.NOTIFICATION_SERVICE;
+
+import static androidx.core.content.ContextCompat.getSystemService;
+
 import android.annotation.SuppressLint;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.contentcapture.ContentCaptureCondition;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -147,6 +158,8 @@ public class OrderDetailsFragment extends Fragment {
                 public void onClick(View v) {
                     OrderModelArray json = createJson(ORDER_CANCELED);
                     updateOrder(orderID, json);
+                    showNotification("Order " + orderID + " has been CANCELLED",
+                            "Please Contact " + clientName + " - " + clientPhoneNumber);
                     goBackToAvailableOrders();
                 }
             });
@@ -161,6 +174,27 @@ public class OrderDetailsFragment extends Fragment {
                 }
             });
         }
+    }
+
+    private void showNotification(String title, String context) {
+        String CHANNEL_ID = "CancelOrderNotification";
+        NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID,"Cancel Order", NotificationManager.IMPORTANCE_DEFAULT);
+        notificationChannel.setLightColor(Color.RED);
+        notificationChannel.setLockscreenVisibility(NotificationCompat.VISIBILITY_PRIVATE);
+
+        NotificationManager notificationManager = (NotificationManager) getSystemService(requireContext(),NotificationManager.class);
+        assert  notificationManager != null;
+        notificationManager.createNotificationChannel(notificationChannel);
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(requireContext(), CHANNEL_ID);
+        Notification notification = builder.setOngoing(true)
+                .setSmallIcon(R.drawable.ic_launcher_foreground)
+                .setPriority(NotificationManager.IMPORTANCE_HIGH)
+                .setCategory(Notification.CATEGORY_SERVICE)
+                .setContentTitle(title)
+                .setContentText(context)
+                .build();
+        notificationManager.notify(0,notification);
     }
 
     private void goBackToAvailableOrders() {
