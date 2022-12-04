@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Handler;
@@ -18,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -57,6 +59,9 @@ public class AvailableOrdersFragment extends Fragment {
     private double clientLongitude;
     private double clientLatitude;
 
+    private boolean hasAssignedOrders;
+    private boolean hasAvailableOrders;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Need to add this to connect to map network
@@ -72,8 +77,6 @@ public class AvailableOrdersFragment extends Fragment {
         //Define Assigned Orders Scroll View with Grid Layout
         assignedOrdersLayout();
 
-//        fetchUnassignedOrders();
-
         // Gets Orders that are Ready
         fetchOrders('R');
 
@@ -83,35 +86,13 @@ public class AvailableOrdersFragment extends Fragment {
         return view;
     }
 
-    private void fetchUnassignedOrders() {
-        // Creates Service
-        OrderService service = RetrofitClient.getRetrofitInstance().create(OrderService.class);
-
-        // Creates Call interface for API (Retrofit)
-        Call<OrderModelDataArray> orders = service.getUnassignedOrders();
-
-        // Calls API
-        orders.enqueue(new Callback<OrderModelDataArray>() {
-            @SuppressLint("RtlHardcoded")
-            @Override
-            public void onResponse(@NonNull Call<OrderModelDataArray> call, @NonNull Response<OrderModelDataArray> response) {
-                Log.e(TAG, "onResponse: code : " + response.code());
-                displayOrders(response);
-            }
-
-            @Override
-            public void onFailure(@NonNull Call<OrderModelDataArray> call, @NonNull Throwable t) {
-                Log.e(TAG, "onFailure : " + t.getMessage());
-            }
-
-        });
-    }
-
     private void assignedOrdersLayout() {
         ScrollView scrollViewAssignedOrders = (ScrollView) view.findViewById(R.id.ScrollViewAssignedOrders);
         assignedOrdersGrid = new GridLayout(scrollViewAssignedOrders.getContext());
         assignedOrdersGrid.setColumnCount(2);
         scrollViewAssignedOrders.addView(assignedOrdersGrid);
+
+        hasAssignedOrders = false;
     }
 
     private void availableOrdersLayout() {
@@ -119,6 +100,8 @@ public class AvailableOrdersFragment extends Fragment {
         availableOrdersGrid = new GridLayout(scrollViewAvailableOrders.getContext());
         availableOrdersGrid.setColumnCount(2);
         scrollViewAvailableOrders.addView(availableOrdersGrid);
+
+        hasAvailableOrders = false;
     }
 
     private void fetchOrders(char orderStatus) {
@@ -134,7 +117,19 @@ public class AvailableOrdersFragment extends Fragment {
             @Override
             public void onResponse(@NonNull Call<OrderModelDataArray> call, @NonNull Response<OrderModelDataArray> response) {
                 Log.e(TAG, "onResponse: code : " + response.code());
-                displayOrders(response);
+                assert response.body() != null;
+                if( response.body().getOrders().size()==0) {
+                    if (orderStatus != 'P'){
+                        TextView noAvailableOrders = new TextView(getContext());
+                        noAvailableOrders.setText("\nNo orders available");
+                        availableOrdersGrid.addView(noAvailableOrders);
+                        TextView noAssignedOrders = new TextView(getContext());
+                        noAssignedOrders.setText("\nNo assigned Orders");
+                        assignedOrdersGrid.addView(noAssignedOrders);
+                    }
+                }else{
+                    displayOrders(response);
+                }
             }
 
             @Override
@@ -188,14 +183,18 @@ public class AvailableOrdersFragment extends Fragment {
             switch (orderStatusChar) {
                 case 'P':
                     status = "Preparing";
+                    hasAssignedOrders = true;
                     break;
                 case 'R':
-                    if (claimedID == 0) {
+                    if (deliveredByUser.get("id").isJsonNull()) {
                         status = "Available";
-                    } else if (deliveredByUser.get("id").isJsonNull()) {
+                        hasAvailableOrders = true;
+                    } else if (claimedID == 0) { //&& deliveredByUser.get("id").getAsInt()==FASTUGADRIVER
                         status = "Ready to Claim";
+                        hasAssignedOrders = true;
                     } else {
                         status = "Delivering";
+                        hasAssignedOrders = true;
                     }
                     break;
                 default:
@@ -280,6 +279,9 @@ public class AvailableOrdersFragment extends Fragment {
                             updateOrder.setCustom(custom);
 
                             updateOrder(orderID, updateOrder);
+
+                            Fragment fragment = new AvailableOrdersFragment();
+                            replaceFragment(fragment);
                         }
                         countClicks = 0;
                     }, 500);
@@ -293,6 +295,18 @@ public class AvailableOrdersFragment extends Fragment {
                     transaction.commit();
                 }
             });
+        }
+
+        if(!hasAvailableOrders) {
+            TextView noAvailableOrders = new TextView(getContext());
+            noAvailableOrders.setText("\nNo orders available");
+            availableOrdersGrid.addView(noAvailableOrders);
+        }
+
+        if(!hasAssignedOrders) {
+            TextView noAssignedOrders = new TextView(getContext());
+            noAssignedOrders.setText("\nNo assigned Orders");
+            assignedOrdersGrid.addView(noAssignedOrders);
         }
     }
 
