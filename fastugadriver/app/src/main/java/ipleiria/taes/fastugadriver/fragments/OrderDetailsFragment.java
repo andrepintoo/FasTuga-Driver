@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import ipleiria.taes.fastugadriver.R;
@@ -30,6 +31,8 @@ public class OrderDetailsFragment extends Fragment {
     private static final String TAG = "OrderDetailsActivity";
     private final char ORDER_CANCELED = 'C';
     private final char ORDER_DELIVERED = 'D';
+
+    private static int FASTUGADRIVER = 15;
 
     private View view;
     private TextView textOrderNumberInput;
@@ -51,7 +54,7 @@ public class OrderDetailsFragment extends Fragment {
     private double distance;
     private int earning;
     private int deliveredId;
-    private int assignedId;
+    private int claimedId;
     private Bundle bundle;
     private int ticketNumber;
     private char orderStatus;
@@ -100,7 +103,7 @@ public class OrderDetailsFragment extends Fragment {
         // Values received from AvailableOrdersFragment
         receiveSpecificOrderValuesFromChosenOrder();
 
-        showButtons(assignedId, deliveredId);
+        showButtons(deliveredId, claimedId);
 
         fetchOrder();
     }
@@ -112,11 +115,11 @@ public class OrderDetailsFragment extends Fragment {
         clientAddress = bundle.getString("clientAddress");
         distance = bundle.getDouble("distance");
         earning = bundle.getInt("earning");
-        assignedId = bundle.getInt("assignedId");
+        claimedId = bundle.getInt("claimedId");
         deliveredId = bundle.getInt("deliveredId");
         ticketNumber = bundle.getInt("ticketNumber");
         orderStatus = bundle.getChar("orderStatus");
-//        customerId = bundle.getInt("customerId");
+        customerId = bundle.getInt("customerId");
         totalPrice = bundle.getDouble("totalPrice");
         totalPaid = bundle.getDouble("totalPaid");
         totalPaidWithPoints = bundle.getDouble("totalPaidWithPoints");
@@ -127,8 +130,8 @@ public class OrderDetailsFragment extends Fragment {
         date = bundle.getString("date");
     }
 
-    private void showButtons(int assignedId, int deliveredId) {
-        if (assignedId == 0) {
+    private void showButtons(int deliveredId, int claimedId) {
+        if (deliveredId == 0) {
             buttonBack.setVisibility(View.VISIBLE);
             buttonAssign.setVisibility(View.VISIBLE);
             buttonAssign.setOnClickListener(new View.OnClickListener() {
@@ -139,7 +142,7 @@ public class OrderDetailsFragment extends Fragment {
                     goBackToAvailableOrders();
                 }
             });
-        } else if(deliveredId==0) {
+        } else if (claimedId == 0) {
             buttonBack.setVisibility(View.VISIBLE);
             buttonClaim.setVisibility(View.VISIBLE);
             buttonClaim.setOnClickListener(new View.OnClickListener() {
@@ -150,7 +153,7 @@ public class OrderDetailsFragment extends Fragment {
                     goBackToAvailableOrders();
                 }
             });
-        }else{
+        } else {
             buttonBack.setVisibility(View.VISIBLE);
             buttonCancelOrder.setVisibility(View.VISIBLE);
             buttonDelivered.setVisibility(View.VISIBLE);
@@ -191,7 +194,7 @@ public class OrderDetailsFragment extends Fragment {
 
         updateOrder.setTicket_number(ticketNumber);
         updateOrder.setStatus(orderStatus);
-//        updateOrder.setCustomer_id(customerId);
+        updateOrder.setCustomer_id(customerId);
         updateOrder.setTotal_price(totalPrice);
         updateOrder.setTotal_paid(totalPaid);
         updateOrder.setTotal_paid_with_points(totalPaidWithPoints);
@@ -200,15 +203,16 @@ public class OrderDetailsFragment extends Fragment {
         updateOrder.setPayment_type(paymentType);
         updateOrder.setPayment_reference(paymentReference);
         updateOrder.setDate(date);
-        if(deliveredId!=0) {
-            updateOrder.setDelivered_by(15);
-        }
+        updateOrder.setDelivered_by(FASTUGADRIVER);
         JsonObject custom = new JsonObject();
+        if (deliveredId != 0) {
+            custom.addProperty("claim", String.valueOf(FASTUGADRIVER));
+        } else {
+            custom.addProperty("claim", "null");
+        }
         custom.addProperty("address", clientAddress);
         custom.addProperty("latitude", String.valueOf(bundle.getDouble("clientLatitude")));
         custom.addProperty("longitude", String.valueOf(bundle.getDouble("clientLongitude")));
-//        custom.addProperty("assigned", String.valueOf(bundle.getInt("assignedBy")));
-        custom.addProperty("assigned", String.valueOf(15));
         updateOrder.setCustom(custom);
         return updateOrder;
     }
@@ -255,7 +259,8 @@ public class OrderDetailsFragment extends Fragment {
     }
 
     @SuppressLint({"DefaultLocale", "SetTextI18n"})
-    private void setOrderDetailsText(int orderID, String clientName, String clientPhoneNumber, String clientAddress, double distance, int earning) {
+    private void setOrderDetailsText(int orderID, String clientName, String
+            clientPhoneNumber, String clientAddress, double distance, int earning) {
         textOrderNumberInput.setText(String.valueOf(orderID));
         textClientInput.setText(clientName);
         textClientPhoneInput.setText(clientPhoneNumber);
@@ -284,10 +289,6 @@ public class OrderDetailsFragment extends Fragment {
         });
     }
 
-    private boolean isOrderReady(char orderStatus) {
-        return orderStatus == 'R';
-    }
-
     @SuppressLint("SetTextI18n")
     private void setLayoutElementsText() {
         //textOrderNumberInput.setText("OrderID");
@@ -309,5 +310,6 @@ public class OrderDetailsFragment extends Fragment {
         buttonAssign = (Button) view.findViewById(R.id.buttonAssign);
         buttonDelivered = (Button) view.findViewById(R.id.buttonDelivered);
         buttonCancelOrder = (Button) view.findViewById(R.id.buttonCancelOrder);
+        buttonClaim = (Button) view.findViewById(R.id.buttonClaim);
     }
 }
