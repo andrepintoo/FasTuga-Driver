@@ -46,6 +46,7 @@ public class AvailableOrdersFragment extends Fragment {
     private View view;
     private Button buttonOrder;
     private GridLayout assignedOrdersGrid;
+    private GridLayout availableOrdersGrid;
 
     private final GeoPoint restaurantPoint = new GeoPoint(39.73240919913415, -8.824827700055856);
     int countClicks;
@@ -65,6 +66,8 @@ public class AvailableOrdersFragment extends Fragment {
         //Define Assigned Orders Scroll View with Grid Layout
         assignedOrdersLayout();
 
+//        fetchUnassignedOrders();
+
         // Gets Orders that are Ready
         fetchOrders('R');
 
@@ -72,6 +75,30 @@ public class AvailableOrdersFragment extends Fragment {
         fetchOrders('P');
 
         return view;
+    }
+
+    private void fetchUnassignedOrders() {
+        // Creates Service
+        OrderService service = RetrofitClient.getRetrofitInstance().create(OrderService.class);
+
+        // Creates Call interface for API (Retrofit)
+        Call<OrderModelDataArray> orders = service.getUnassignedOrders();
+
+        // Calls API
+        orders.enqueue(new Callback<OrderModelDataArray>() {
+            @SuppressLint("RtlHardcoded")
+            @Override
+            public void onResponse(@NonNull Call<OrderModelDataArray> call, @NonNull Response<OrderModelDataArray> response) {
+                Log.e(TAG, "onResponse: code : " + response.code());
+                displayOrders(response);
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<OrderModelDataArray> call, @NonNull Throwable t) {
+                Log.e(TAG, "onFailure : " + t.getMessage());
+            }
+
+        });
     }
 
     private void assignedOrdersLayout() {
@@ -83,7 +110,7 @@ public class AvailableOrdersFragment extends Fragment {
 
     private void availableOrdersLayout() {
         ScrollView scrollViewAvailableOrders = (ScrollView) view.findViewById(R.id.ScrollViewAvailableOrders);
-        GridLayout availableOrdersGrid = new GridLayout(scrollViewAvailableOrders.getContext());
+        availableOrdersGrid = new GridLayout(scrollViewAvailableOrders.getContext());
         availableOrdersGrid.setColumnCount(2);
         scrollViewAvailableOrders.addView(availableOrdersGrid);
     }
@@ -125,22 +152,50 @@ public class AvailableOrdersFragment extends Fragment {
             // Setting variables
             int orderID = order.getId();
             char orderStatusChar = order.getStatus();
-            double clientLatitude = Double.parseDouble(customClientDetailsString[7]);
-            double clientLongitude = Double.parseDouble(customClientDetailsString[11]);
+            String assignedIDString = customClientDetailsString[7];
+            int assignedID = assignedIDString.equals("null") ? 0 : Integer.parseInt(assignedIDString);
+            double clientLatitude = Double.parseDouble(customClientDetailsString[11]);
+            double clientLongitude = Double.parseDouble(customClientDetailsString[15]);
             double[] distanceKmAndTimeMinutes = getDistanceKmAndTimeInMinutesFromRestaurantToClient(restaurantPoint.getLatitude(), restaurantPoint.getLongitude(), clientLatitude, clientLongitude);
             double distance = distanceKmAndTimeMinutes[0];
             double duration = distanceKmAndTimeMinutes[1];
-            String clientName = setClientName((JsonObject) order.getCustomer_id());
-            String status = setOrderStatus(orderStatusChar);
+
+            JsonObject customer_id = (JsonObject) order.getCustomer_id();
+            String clientName =  customer_id.isJsonNull() ? setClientName(customer_id) : "anonymous";
+            String clientPhoneNumber = customer_id.isJsonNull() ? setClientPhoneNumber(customer_id) : "none";
+
+            JsonObject deliveredByUser = (JsonObject) order.getDelivered_by();
+
+            String status;
+            switch (orderStatusChar){
+                case 'P':
+                    status = "Preparing";
+                    break;
+                case 'R':
+                    if(assignedID==0){
+                        status = "Available";
+                    }
+                    else if(deliveredByUser.get("id").isJsonNull()){
+                        status = "Ready to Claim";
+                    }else{
+                        status = "Delivering";
+                    }
+                    break;
+                default:
+                    status = "";
+                    break;
+            }
             int earning = setEarning(distance);
             String clientAddress = customClientDetailsString[3];
-            String clientPhoneNumber = setClientPhoneNumber((JsonObject) order.getCustomer_id());
-
             String buttonText = getAvailableOrdersText(orderID, duration, distance, earning, status);
 
             setButtonProperties(buttonText, orderID);
             // Add Button to Layout
-            assignedOrdersGrid.addView(buttonOrder);
+            if(status.equals("Available")){
+                availableOrdersGrid.addView(buttonOrder);
+            }else{
+                assignedOrdersGrid.addView(buttonOrder);
+            }
 
             countClicks = 0;
             buttonOrder.setOnClickListener(new View.OnClickListener() {
@@ -151,16 +206,36 @@ public class AvailableOrdersFragment extends Fragment {
                     Handler handler = new Handler();
                     handler.postDelayed(() -> {
                         if (countClicks == 1) { // If button is pressed once
+
                             JsonObject deliveredByUser = (JsonObject) order.getDelivered_by();
-                            int driverId = 0;
+                            int deliveredId = 0;
                             if (!deliveredByUser.get("id").isJsonNull()) {
-                                driverId = deliveredByUser.get("id").getAsInt();
+                                deliveredId = deliveredByUser.get("id").getAsInt();
                             }
-                            JsonElement customer = ((JsonObject) order.getCustomer_id()).get("id");
-                            Fragment fragment = goToOrderDetailsFragment(orderID, clientName, clientPhoneNumber, clientAddress, distance, earning,
-                                    clientLatitude, clientLongitude, restaurantPoint.getLatitude(), restaurantPoint.getLongitude(), driverId,
-                                    order.getTicket_number(),orderStatusChar,customer.getAsInt(),order.getTotal_price(),order.getTotal_paid(),order.getTotal_paid_with_points(),
-                                    order.getPoints_gained(),order.getPoints_used_to_pay(),order.getPayment_type(),order.getPayment_reference(),order.getDate());
+
+                            JsonElement customer = !order.getCustomer_id().isJsonNull() ? ((JsonObject) order.getCustomer_id()).get("id") : null;
+
+                            Fragment fragment = goToOrderDetailsFragment(
+                                    orderID,
+                                    clientName,
+                                    clientPhoneNumber,
+                                    clientAddress,
+                                    distance,
+                                    earning,
+                                    clientLatitude, clientLongitude,
+                                    restaurantPoint.getLatitude(), restaurantPoint.getLongitude(),
+                                    deliveredId,
+                                    assignedID,
+                                    order.getTicket_number(),
+                                    orderStatusChar,
+                                    order.getTotal_price(),
+                                    order.getTotal_paid(),
+                                    order.getTotal_paid_with_points(),
+                                    order.getPoints_gained(),
+                                    order.getPoints_used_to_pay(),
+                                    order.getPayment_type(),
+                                    order.getPayment_reference(),
+                                    order.getDate());
                             replaceFragment(fragment);
                         } else if (countClicks == 2) { // If button is pressed twice
                             OrderModelArray updateOrder = new OrderModelArray();
@@ -263,8 +338,8 @@ public class AvailableOrdersFragment extends Fragment {
 
     private Fragment goToOrderDetailsFragment(int orderId, String clientName, String clientPhoneNumber, String clientAddress,
                                               double distance, int earning, double clientLatitude, double clientLongitude,
-                                              double restaurantLatitude, double restaurantLongitude, int driverId,
-                                              int ticketNumber, char orderStatus, int customerId, double totalPrice,
+                                              double restaurantLatitude, double restaurantLongitude, int deliveredId, int assignedId,
+                                              int ticketNumber, char orderStatus, double totalPrice,
                                               double totalPaid, double totalPaidWithPoints, int pointsGained,
                                               int pointsUsedToPay, String paymentType, String paymentReference, String date) {
         Bundle args = new Bundle();
@@ -278,10 +353,11 @@ public class AvailableOrdersFragment extends Fragment {
         args.putDouble("clientLongitude", clientLongitude);
         args.putDouble("restaurantLatitude", restaurantLatitude);
         args.putDouble("restaurantLongitude", restaurantLongitude);
-        args.putInt("driverId", driverId);
+        args.putInt("deliveredId", deliveredId);
+        args.putInt("assignedId", assignedId);
         args.putInt("ticketNumber", ticketNumber);
         args.putChar("orderStatus", orderStatus);
-        args.putInt("customerId", customerId);
+//        args.putInt("customerId", customerId);
         args.putDouble("totalPrice", totalPrice);
         args.putDouble("totalPaid", totalPaid);
         args.putDouble("totalPaidWithPoints", totalPaidWithPoints);

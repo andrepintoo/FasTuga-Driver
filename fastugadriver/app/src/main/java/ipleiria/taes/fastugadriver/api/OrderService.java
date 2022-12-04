@@ -66,4 +66,7 @@ public interface OrderService {
     @Headers({"Content-Type: application/json"})
     @PUT("orders/{id}")
     Call<ResponseBody> updateOrder(@Path("id") int id, @Body OrderModelArray body);
+
+    @GET("unassignedOrders")
+    Call<OrderModelDataArray> getUnassignedOrders();
 }

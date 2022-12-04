@@ -39,6 +39,7 @@ public class OrderDetailsFragment extends Fragment {
     private TextView textDistanceInput;
     private TextView textEarningInput;
     private Button buttonBack;
+    private Button buttonClaim;
     private Button buttonAssign;
     private Button buttonDelivered;
     private Button buttonCancelOrder;
@@ -49,7 +50,8 @@ public class OrderDetailsFragment extends Fragment {
     private String clientAddress;
     private double distance;
     private int earning;
-    private int driverID;
+    private int deliveredId;
+    private int assignedId;
     private Bundle bundle;
     private int ticketNumber;
     private char orderStatus;
@@ -98,7 +100,7 @@ public class OrderDetailsFragment extends Fragment {
         // Values received from AvailableOrdersFragment
         receiveSpecificOrderValuesFromChosenOrder();
 
-        showButtons(driverID);
+        showButtons(assignedId, deliveredId);
 
         fetchOrder();
     }
@@ -110,10 +112,11 @@ public class OrderDetailsFragment extends Fragment {
         clientAddress = bundle.getString("clientAddress");
         distance = bundle.getDouble("distance");
         earning = bundle.getInt("earning");
-        driverID = bundle.getInt("driverId");
+        assignedId = bundle.getInt("assignedId");
+        deliveredId = bundle.getInt("deliveredId");
         ticketNumber = bundle.getInt("ticketNumber");
         orderStatus = bundle.getChar("orderStatus");
-        customerId = bundle.getInt("customerId");
+//        customerId = bundle.getInt("customerId");
         totalPrice = bundle.getDouble("totalPrice");
         totalPaid = bundle.getDouble("totalPaid");
         totalPaidWithPoints = bundle.getDouble("totalPaidWithPoints");
@@ -124,8 +127,8 @@ public class OrderDetailsFragment extends Fragment {
         date = bundle.getString("date");
     }
 
-    private void showButtons(int driverID) {
-        if (driverID == 0) {
+    private void showButtons(int assignedId, int deliveredId) {
+        if (assignedId == 0) {
             buttonBack.setVisibility(View.VISIBLE);
             buttonAssign.setVisibility(View.VISIBLE);
             buttonAssign.setOnClickListener(new View.OnClickListener() {
@@ -136,7 +139,18 @@ public class OrderDetailsFragment extends Fragment {
                     goBackToAvailableOrders();
                 }
             });
-        } else {
+        } else if(deliveredId==0) {
+            buttonBack.setVisibility(View.VISIBLE);
+            buttonClaim.setVisibility(View.VISIBLE);
+            buttonClaim.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    OrderModelArray json = createJson(orderStatus);
+                    updateOrder(orderID, json);
+                    goBackToAvailableOrders();
+                }
+            });
+        }else{
             buttonBack.setVisibility(View.VISIBLE);
             buttonCancelOrder.setVisibility(View.VISIBLE);
             buttonDelivered.setVisibility(View.VISIBLE);
@@ -177,7 +191,7 @@ public class OrderDetailsFragment extends Fragment {
 
         updateOrder.setTicket_number(ticketNumber);
         updateOrder.setStatus(orderStatus);
-        updateOrder.setCustomer_id(customerId);
+//        updateOrder.setCustomer_id(customerId);
         updateOrder.setTotal_price(totalPrice);
         updateOrder.setTotal_paid(totalPaid);
         updateOrder.setTotal_paid_with_points(totalPaidWithPoints);
@@ -186,11 +200,15 @@ public class OrderDetailsFragment extends Fragment {
         updateOrder.setPayment_type(paymentType);
         updateOrder.setPayment_reference(paymentReference);
         updateOrder.setDate(date);
-        updateOrder.setDelivered_by(15);
+        if(deliveredId!=0) {
+            updateOrder.setDelivered_by(15);
+        }
         JsonObject custom = new JsonObject();
         custom.addProperty("address", clientAddress);
         custom.addProperty("latitude", String.valueOf(bundle.getDouble("clientLatitude")));
         custom.addProperty("longitude", String.valueOf(bundle.getDouble("clientLongitude")));
+//        custom.addProperty("assigned", String.valueOf(bundle.getInt("assignedBy")));
+        custom.addProperty("assigned", String.valueOf(15));
         updateOrder.setCustom(custom);
         return updateOrder;
     }
