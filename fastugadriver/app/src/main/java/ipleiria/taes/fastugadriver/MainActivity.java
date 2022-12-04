@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         boolean isNewLogin = false;
 
-        if (extras != null) {
+       if (extras != null) {
             isNewLogin = extras.getString("newLogin") != null;
         }
         if(!isNewLogin && !isEmailSaved)
