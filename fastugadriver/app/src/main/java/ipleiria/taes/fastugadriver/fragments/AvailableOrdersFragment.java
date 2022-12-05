@@ -89,6 +89,19 @@ public class AvailableOrdersFragment extends Fragment {
         // Gets Orders that are Preparing
         fetchOrders('P');
 
+//        if(orderStatus=='P') {
+        if (!hasAvailableOrders) {
+            TextView noAvailableOrders = new TextView(getContext());
+            noAvailableOrders.setText("\nNo orders Available");
+            availableOrdersGrid.addView(noAvailableOrders);
+        }
+        if (!hasAssignedOrders) {
+            TextView noAssignedOrders = new TextView(getContext());
+            noAssignedOrders.setText("\nNo assigned Orders");
+            assignedOrdersGrid.addView(noAssignedOrders);
+        }
+//        }
+
         return view;
     }
 
@@ -118,27 +131,22 @@ public class AvailableOrdersFragment extends Fragment {
         Call<OrderModelDataArray> orders = service.getOrderByStatus(orderStatus);
 
         // Calls API
-        orders.enqueue(new Callback<OrderModelDataArray>() {
-            @SuppressLint("RtlHardcoded")
-            @Override
-            public void onResponse(@NonNull Call<OrderModelDataArray> call, @NonNull Response<OrderModelDataArray> response) {
-                Log.e(TAG, "onResponse: code : " + response.code());
-                assert response.body() != null;
-                displayOrders(response);
-
-            }
-
-            @Override
-            public void onFailure(@NonNull Call<OrderModelDataArray> call, @NonNull Throwable t) {
-                Log.e(TAG, "onFailure : " + t.getMessage());
-            }
-
-        });
+        try
+        {
+            Response<OrderModelDataArray> response = orders.execute();
+            assert response.body() != null;
+            displayOrders(response, orderStatus);
+        }
+        catch (Exception ex)
+        {
+            ex.printStackTrace();
+        }
     }
 
-    private void displayOrders(Response<OrderModelDataArray> response) {
+    private void displayOrders(Response<OrderModelDataArray> response, char orderStatus) {
         assert response.body() != null;
         ArrayList<OrderModelDataArray.data> orders = response.body().getOrders();
+
         for (OrderModelDataArray.data order : orders) {
 
             // Get JSON Custom, not the best way but it works...
@@ -299,19 +307,6 @@ public class AvailableOrdersFragment extends Fragment {
                     transaction.commit();
                 }
             });
-
-            if (orderStatusChar == 'P') {
-                if (!hasAvailableOrders) {
-                    TextView noAvailableOrders = new TextView(getContext());
-                    noAvailableOrders.setText("\nNo orders Available");
-                    availableOrdersGrid.addView(noAvailableOrders);
-                }
-                if (!hasAssignedOrders) {
-                    TextView noAssignedOrders = new TextView(getContext());
-                    noAssignedOrders.setText("\nNo assigned Orders");
-                    assignedOrdersGrid.addView(noAssignedOrders);
-                }
-            }
         }
     }
 

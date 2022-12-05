@@ -120,7 +120,7 @@ public class OrderDetailsFragment extends Fragment {
         // Values received from AvailableOrdersFragment
         receiveSpecificOrderValuesFromChosenOrder();
 
-        showButtons(deliveredId, claimedId);
+        showButtons(deliveredId, claimedId, orderStatus);
 
         fetchOrder();
     }
@@ -147,7 +147,7 @@ public class OrderDetailsFragment extends Fragment {
         date = bundle.getString("date");
     }
 
-    private void showButtons(int deliveredId, int claimedId) {
+    private void showButtons(int deliveredId, int claimedId, char orderStatus) {
         if (deliveredId == 0) {
             buttonBack.setVisibility(View.VISIBLE);
             buttonAssign.setVisibility(View.VISIBLE);
@@ -159,7 +159,7 @@ public class OrderDetailsFragment extends Fragment {
                     goBackToAvailableOrders();
                 }
             });
-        } else if (claimedId == 0) {
+        } else if (claimedId == 0 && orderStatus=='R') {
             buttonBack.setVisibility(View.VISIBLE);
             buttonClaim.setVisibility(View.VISIBLE);
             buttonClaim.setOnClickListener(new View.OnClickListener() {
@@ -170,7 +170,7 @@ public class OrderDetailsFragment extends Fragment {
                     goBackToAvailableOrders();
                 }
             });
-        } else {
+        } else if(orderStatus!='P'){
             buttonBack.setVisibility(View.VISIBLE);
             buttonCancelOrder.setVisibility(View.VISIBLE);
             buttonDelivered.setVisibility(View.VISIBLE);
@@ -226,6 +226,8 @@ public class OrderDetailsFragment extends Fragment {
                     goBackToAvailableOrders();
                 }
             });
+        }else{
+            buttonBack.setVisibility(View.VISIBLE);
         }
     }
 
