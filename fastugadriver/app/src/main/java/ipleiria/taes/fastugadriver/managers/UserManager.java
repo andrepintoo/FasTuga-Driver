@@ -31,6 +31,7 @@ public class UserManager {
         users = new LinkedList<>();
         drivers = new LinkedList<>();
         users.add(new User("PrimeiroNome", "Apelido", "customer_6@mail.pt", "12345678", "912345678"));
+        users.add(new User("PrimeiroNome", "Apelido", "contacto@email.pt", "password", "912345678"));
         users.add(new User("PrimeiroNome", "Apelido", "dsfsdfsdf@mail.pt", "12345678", "912345678"));
         drivers.add(new Driver("Sara", "Martins", "sara@mail.pt", "password", "912345678", "AA-00-AA"));
         userLogged = null;
