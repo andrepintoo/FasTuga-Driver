@@ -37,11 +37,10 @@ public class MainActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         boolean isNewLogin = false;
 
-       if (extras != null) {
+        if (extras != null) {
             isNewLogin = extras.getString("newLogin") != null;
         }
-        if(!isNewLogin && !isEmailSaved)
-        {
+        if (!isNewLogin && !isEmailSaved) {
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
         }
 
@@ -112,6 +111,23 @@ public class MainActivity extends AppCompatActivity {
                 });
                 return true;
             }
+        });
+
+        // Turn On / Off Notifications
+        navigationView.getMenu().findItem(R.id.turnOffNotifications).setOnMenuItemClickListener(menuItem -> {
+            Intent intent = new Intent();
+            intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+            //for Android 5-7
+            intent.putExtra("app_package", getPackageName());
+            intent.putExtra("app_uid", getApplicationInfo().uid);
+
+            // for Android 8 and above
+            intent.putExtra("android.provider.extra.APP_PACKAGE", getPackageName());
+
+            startActivity(intent);
+            return true;
         });
 
         NavController navController = Navigation.findNavController(this, R.id.navHostFragment);

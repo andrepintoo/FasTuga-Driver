@@ -19,6 +19,9 @@
                 android:id="@+id/logout"
                 android:title="Logout"/>
             <item
+                android:id="@+id/turnOffNotifications"
+                android:title="Turn On/Off Notifications"/>
+            <item
                 android:id="@+id/optOut"
                 android:title="Opt Out"/>
         </menu>
