@@ -63,19 +63,25 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private boolean validateLogin(String email, String password, UserManager INSTANCE) {
+        boolean valid = true, emailHasErrors = false;
         if (email.trim().isEmpty()) {
             setErrorMessage(editTextEmail, "Email field cannot be empty");
-            return false;
+            valid = false;
+            emailHasErrors = true;
         }
 
         if (password.trim().isEmpty()) {
             setErrorMessage(editTextPassword, "Password field cannot be empty");
-            return false;
+            valid = false;
         }
 
         Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(email);
-        if (!matcher.matches()) {
+        if (!emailHasErrors && !matcher.matches()) {
             setErrorMessage(editTextEmail, "Wrong email format");
+            valid = false;
+        }
+
+        if(!valid){
             return false;
         }
 

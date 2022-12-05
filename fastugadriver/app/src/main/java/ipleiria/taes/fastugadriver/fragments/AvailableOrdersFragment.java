@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Handler;
@@ -18,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -46,9 +48,19 @@ public class AvailableOrdersFragment extends Fragment {
     private View view;
     private Button buttonOrder;
     private GridLayout assignedOrdersGrid;
+    private GridLayout availableOrdersGrid;
 
     private final GeoPoint restaurantPoint = new GeoPoint(39.73240919913415, -8.824827700055856);
     int countClicks;
+    private static int FASTUGADRIVER = 15;
+
+    private String claimedIDString;
+    private String clientAddress;
+    private double clientLongitude;
+    private double clientLatitude;
+
+    private boolean hasAssignedOrders;
+    private boolean hasAvailableOrders;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -79,13 +91,17 @@ public class AvailableOrdersFragment extends Fragment {
         assignedOrdersGrid = new GridLayout(scrollViewAssignedOrders.getContext());
         assignedOrdersGrid.setColumnCount(2);
         scrollViewAssignedOrders.addView(assignedOrdersGrid);
+
+        hasAssignedOrders = false;
     }
 
     private void availableOrdersLayout() {
         ScrollView scrollViewAvailableOrders = (ScrollView) view.findViewById(R.id.ScrollViewAvailableOrders);
-        GridLayout availableOrdersGrid = new GridLayout(scrollViewAvailableOrders.getContext());
+        availableOrdersGrid = new GridLayout(scrollViewAvailableOrders.getContext());
         availableOrdersGrid.setColumnCount(2);
         scrollViewAvailableOrders.addView(availableOrdersGrid);
+
+        hasAvailableOrders = false;
     }
 
     private void fetchOrders(char orderStatus) {
@@ -101,7 +117,19 @@ public class AvailableOrdersFragment extends Fragment {
             @Override
             public void onResponse(@NonNull Call<OrderModelDataArray> call, @NonNull Response<OrderModelDataArray> response) {
                 Log.e(TAG, "onResponse: code : " + response.code());
-                displayOrders(response);
+                assert response.body() != null;
+                if( response.body().getOrders().size()==0) {
+                    if (orderStatus != 'P'){
+                        TextView noAvailableOrders = new TextView(getContext());
+                        noAvailableOrders.setText("\nNo orders available");
+                        availableOrdersGrid.addView(noAvailableOrders);
+                        TextView noAssignedOrders = new TextView(getContext());
+                        noAssignedOrders.setText("\nNo assigned Orders");
+                        assignedOrdersGrid.addView(noAssignedOrders);
+                    }
+                }else{
+                    displayOrders(response);
+                }
             }
 
             @Override
@@ -125,22 +153,64 @@ public class AvailableOrdersFragment extends Fragment {
             // Setting variables
             int orderID = order.getId();
             char orderStatusChar = order.getStatus();
-            double clientLatitude = Double.parseDouble(customClientDetailsString[7]);
-            double clientLongitude = Double.parseDouble(customClientDetailsString[11]);
+            int index = 0;
+            for (String word:customClientDetailsString) {
+                if (word.equals("address")) {
+                    clientAddress = customClientDetailsString[index+2];
+                }
+                if (word.equals("claim")) {
+                    claimedIDString = customClientDetailsString[index+2];
+                }
+                if (word.equals("latitude")) {
+                    clientLatitude = Double.parseDouble(customClientDetailsString[index+2]);
+                }
+                if (word.equals("longitude")) {
+                    clientLongitude = Double.parseDouble(customClientDetailsString[index+2]);
+                }
+                index++;
+            }
+            int claimedID = claimedIDString.equals("null") ? 0 : Integer.parseInt(claimedIDString);
+
             double[] distanceKmAndTimeMinutes = getDistanceKmAndTimeInMinutesFromRestaurantToClient(restaurantPoint.getLatitude(), restaurantPoint.getLongitude(), clientLatitude, clientLongitude);
             double distance = distanceKmAndTimeMinutes[0];
             double duration = distanceKmAndTimeMinutes[1];
-            String clientName = setClientName((JsonObject) order.getCustomer_id());
-            String status = setOrderStatus(orderStatusChar);
-            int earning = setEarning(distance);
-            String clientAddress = customClientDetailsString[3];
-            String clientPhoneNumber = setClientPhoneNumber((JsonObject) order.getCustomer_id());
 
+            String clientName = setClientName((JsonObject) order.getCustomer_id());
+            String clientPhoneNumber = setClientPhoneNumber((JsonObject) order.getCustomer_id());
+            JsonObject deliveredByUser = (JsonObject) order.getDelivered_by();
+
+            String status;
+            switch (orderStatusChar) {
+                case 'P':
+                    status = "Preparing";
+                    hasAssignedOrders = true;
+                    break;
+                case 'R':
+                    if (deliveredByUser.get("id").isJsonNull()) {
+                        status = "Available";
+                        hasAvailableOrders = true;
+                    } else if (claimedID == 0) { //&& deliveredByUser.get("id").getAsInt()==FASTUGADRIVER
+                        status = "Ready to Claim";
+                        hasAssignedOrders = true;
+                    } else {
+                        status = "Delivering";
+                        hasAssignedOrders = true;
+                    }
+                    break;
+                default:
+                    status = "";
+                    break;
+            }
+            int earning = setEarning(distance);
             String buttonText = getAvailableOrdersText(orderID, duration, distance, earning, status);
 
             setButtonProperties(buttonText, orderID);
             // Add Button to Layout
-            assignedOrdersGrid.addView(buttonOrder);
+            if (status.equals("Available")) {
+                availableOrdersGrid.addView(buttonOrder);
+            } else {
+                assignedOrdersGrid.addView(buttonOrder);
+            }
 
             countClicks = 0;
             buttonOrder.setOnClickListener(new View.OnClickListener() {
@@ -151,24 +221,47 @@ public class AvailableOrdersFragment extends Fragment {
                     Handler handler = new Handler();
                     handler.postDelayed(() -> {
                         if (countClicks == 1) { // If button is pressed once
+
                             JsonObject deliveredByUser = (JsonObject) order.getDelivered_by();
-                            int driverId = 0;
+                            int deliveredId = 0;
                             if (!deliveredByUser.get("id").isJsonNull()) {
-                                driverId = deliveredByUser.get("id").getAsInt();
+                                deliveredId = deliveredByUser.get("id").getAsInt();
                             }
-                            JsonElement customer = ((JsonObject) order.getCustomer_id()).get("id");
-                            Fragment fragment = goToOrderDetailsFragment(orderID, clientName, clientPhoneNumber, clientAddress, distance, earning,
-                                    clientLatitude, clientLongitude, restaurantPoint.getLatitude(), restaurantPoint.getLongitude(), driverId,
-                                    order.getTicket_number(),orderStatusChar,customer.getAsInt(),order.getTotal_price(),order.getTotal_paid(),order.getTotal_paid_with_points(),
-                                    order.getPoints_gained(),order.getPoints_used_to_pay(),order.getPayment_type(),order.getPayment_reference(),order.getDate());
+
+                            JsonElement customer = !order.getCustomer_id().isJsonNull() ? ((JsonObject) order.getCustomer_id()).get("id") : null;
+
+                            assert customer != null;
+                            Fragment fragment = goToOrderDetailsFragment(
+                                    orderID,
+                                    clientName,
+                                    clientPhoneNumber,
+                                    clientAddress,
+                                    distance,
+                                    earning,
+                                    clientLatitude, clientLongitude,
+                                    restaurantPoint.getLatitude(), restaurantPoint.getLongitude(),
+                                    deliveredId,
+                                    claimedID,
+                                    order.getTicket_number(),
+                                    orderStatusChar,
+                                    customer.getAsInt(),
+                                    order.getTotal_price(),
+                                    order.getTotal_paid(),
+                                    order.getTotal_paid_with_points(),
+                                    order.getPoints_gained(),
+                                    order.getPoints_used_to_pay(),
+                                    order.getPayment_type(),
+                                    order.getPayment_reference(),
+                                    order.getDate());
                             replaceFragment(fragment);
                         } else if (countClicks == 2) { // If button is pressed twice
+                            // Creates JSON
                             OrderModelArray updateOrder = new OrderModelArray();
-                            JsonElement customer = ((JsonObject) order.getCustomer_id()).get("id");
+                            JsonElement customerID = ((JsonObject) order.getCustomer_id()).get("id");
 
                             updateOrder.setTicket_number(order.getTicket_number());
                             updateOrder.setStatus(orderStatusChar);
-                            updateOrder.setCustomer_id(customer.getAsInt());
+                            updateOrder.setCustomer_id(customerID.getAsInt());
                             updateOrder.setTotal_price(order.getTotal_price());
                             updateOrder.setTotal_paid(order.getTotal_paid());
                             updateOrder.setTotal_paid_with_points(order.getTotal_paid_with_points());
@@ -177,14 +270,18 @@ public class AvailableOrdersFragment extends Fragment {
                             updateOrder.setPayment_type(order.getPayment_type());
                             updateOrder.setPayment_reference(order.getPayment_reference());
                             updateOrder.setDate(order.getDate());
-                            updateOrder.setDelivered_by(15);
+                            updateOrder.setDelivered_by(FASTUGADRIVER);
                             JsonObject custom = new JsonObject();
-                            custom.addProperty("address", customClientDetailsString[3]);
-                            custom.addProperty("latitude", customClientDetailsString[7]);
-                            custom.addProperty("longitude", customClientDetailsString[11]);
+                            custom.addProperty("claim", "null");
+                            custom.addProperty("address", customClientDetailsString[7]);
+                            custom.addProperty("latitude", customClientDetailsString[11]);
+                            custom.addProperty("longitude", customClientDetailsString[15]);
                             updateOrder.setCustom(custom);
 
                             updateOrder(orderID, updateOrder);
+
+                            Fragment fragment = new AvailableOrdersFragment();
+                            replaceFragment(fragment);
                         }
                         countClicks = 0;
                     }, 500);
@@ -198,6 +295,18 @@ public class AvailableOrdersFragment extends Fragment {
                     transaction.commit();
                 }
             });
+        }
+
+        if(!hasAvailableOrders) {
+            TextView noAvailableOrders = new TextView(getContext());
+            noAvailableOrders.setText("\nNo orders available");
+            availableOrdersGrid.addView(noAvailableOrders);
+        }
+
+        if(!hasAssignedOrders) {
+            TextView noAssignedOrders = new TextView(getContext());
+            noAssignedOrders.setText("\nNo assigned Orders");
+            assignedOrdersGrid.addView(noAssignedOrders);
         }
     }
 
@@ -263,7 +372,7 @@ public class AvailableOrdersFragment extends Fragment {
 
     private Fragment goToOrderDetailsFragment(int orderId, String clientName, String clientPhoneNumber, String clientAddress,
                                               double distance, int earning, double clientLatitude, double clientLongitude,
-                                              double restaurantLatitude, double restaurantLongitude, int driverId,
+                                              double restaurantLatitude, double restaurantLongitude, int deliveredId, int claimedId,
                                               int ticketNumber, char orderStatus, int customerId, double totalPrice,
                                               double totalPaid, double totalPaidWithPoints, int pointsGained,
                                               int pointsUsedToPay, String paymentType, String paymentReference, String date) {
@@ -278,7 +387,8 @@ public class AvailableOrdersFragment extends Fragment {
         args.putDouble("clientLongitude", clientLongitude);
         args.putDouble("restaurantLatitude", restaurantLatitude);
         args.putDouble("restaurantLongitude", restaurantLongitude);
-        args.putInt("driverId", driverId);
+        args.putInt("deliveredId", deliveredId);
+        args.putInt("claimedId", claimedId);
         args.putInt("ticketNumber", ticketNumber);
         args.putChar("orderStatus", orderStatus);
         args.putInt("customerId", customerId);
