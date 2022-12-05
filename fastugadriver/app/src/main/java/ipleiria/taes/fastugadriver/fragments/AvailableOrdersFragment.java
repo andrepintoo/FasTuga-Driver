@@ -1,10 +1,16 @@
 package ipleiria.taes.fastugadriver.fragments;
 
+import static androidx.core.content.ContextCompat.getSystemService;
+
 import android.annotation.SuppressLint;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -211,6 +217,10 @@ public class AvailableOrdersFragment extends Fragment {
             } else {
                 assignedOrdersGrid.addView(buttonOrder);
             }
+            if (orderStatusChar == 'R') {
+                showNotification("Order " + orderID + " is Ready to be Claimed",
+                        "Please Claim the following order to be delivered");
+            }
 
             countClicks = 0;
             buttonOrder.setOnClickListener(new View.OnClickListener() {
@@ -403,6 +413,27 @@ public class AvailableOrdersFragment extends Fragment {
         Fragment fragment = new OrderDetailsFragment();
         fragment.setArguments(args);
         return fragment;
+    }
+
+    private void showNotification(String title, String context) {
+        String CHANNEL_ID = "ReadyOrderNotification";
+        NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID,"Ready Order", NotificationManager.IMPORTANCE_DEFAULT);
+        notificationChannel.setLightColor(Color.RED);
+        notificationChannel.setLockscreenVisibility(NotificationCompat.VISIBILITY_PRIVATE);
+
+        NotificationManager notificationManager = (NotificationManager) getSystemService(requireContext(),NotificationManager.class);
+        assert  notificationManager != null;
+        notificationManager.createNotificationChannel(notificationChannel);
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(requireContext(), CHANNEL_ID);
+        Notification notification = builder.setOngoing(true)
+                .setSmallIcon(R.drawable.ic_launcher_foreground)
+                .setPriority(NotificationManager.IMPORTANCE_HIGH)
+                .setCategory(Notification.CATEGORY_SERVICE)
+                .setContentTitle(title)
+                .setContentText(context)
+                .build();
+        notificationManager.notify(0,notification);
     }
 
     public String setClientName(JsonObject customer) {
