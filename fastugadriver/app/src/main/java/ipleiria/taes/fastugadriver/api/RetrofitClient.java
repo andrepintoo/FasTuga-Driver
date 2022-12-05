@@ -8,7 +8,7 @@ public class RetrofitClient {
     private static Retrofit retrofit;
     public static Retrofit  getRetrofitInstance() {
         if (retrofit == null) {
-            String BASE_URL = "http://192.168.1.21:8081/api/";
+            String BASE_URL = "http://172.22.196.25:8081/api/";
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())

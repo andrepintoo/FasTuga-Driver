@@ -21,6 +21,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import org.osmdroid.api.IMapController;
 import org.osmdroid.bonuspack.routing.OSRMRoadManager;
@@ -42,6 +43,7 @@ import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Objects;
 
 import ipleiria.taes.fastugadriver.BuildConfig;
 import ipleiria.taes.fastugadriver.R;
@@ -58,9 +60,21 @@ public class MapFragment extends Fragment implements LocationListener  {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
         view = inflater.inflate(R.layout.fragment_map, container, false);
-        map = (MapView) view.findViewById(R.id.mapView);
+        view.setVisibility(View.VISIBLE);
+        map = view.findViewById(R.id.mapView);
+
+        // Values received from AvailableOrdersFragment
+        Bundle bundle = getArguments();
+        assert bundle != null;
+
+//        Set Coordinates
+        double restaurantLatitude = bundle.getDouble("restaurantLatitude");
+        double restaurantLongitude = bundle.getDouble("restaurantLongitude");
+        double clientLatitude = bundle.getDouble("clientLatitude");
+        double clientLongitude = bundle.getDouble("clientLongitude");
+
+        assert getContext()!=null;
 
         if (Build.VERSION.SDK_INT >= M) {
             if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.INTERNET) != PackageManager.PERMISSION_GRANTED ||
@@ -78,10 +92,15 @@ public class MapFragment extends Fragment implements LocationListener  {
 
         map.setMultiTouchControls(true);
 
-        locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+        locationManager = (LocationManager) requireActivity().getSystemService(Context.LOCATION_SERVICE);
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10000, 0, this);
 
-        GeoPoint startPoint = new GeoPoint(39.73240919913415, -8.824827700055856);
+        RoadManager roadManager = new OSRMRoadManager(getContext(), Configuration.getInstance().getUserAgentValue());
+
+        ArrayList<GeoPoint> waypoints = new ArrayList<GeoPoint>();
+
+//        Set startPoint and startMarker
+        GeoPoint startPoint = new GeoPoint(restaurantLatitude, restaurantLongitude);
 
         IMapController mapController = map.getController();
         mapController.setZoom(15);
@@ -90,35 +109,31 @@ public class MapFragment extends Fragment implements LocationListener  {
         Marker startMarker = new Marker(map);
         startMarker.setPosition(startPoint);
         startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
-        map.getOverlays().add(startMarker);
-
         startMarker.setTitle("Start point");
 
-        RoadManager roadManager = new OSRMRoadManager(getContext(), Configuration.getInstance().getUserAgentValue());
-        ArrayList<GeoPoint> waypoints = new ArrayList<GeoPoint>();
+        map.getOverlays().add(startMarker);
+
         waypoints.add(startPoint);
-        GeoPoint endPoint = new GeoPoint(39.740619424193376, -8.809390227303869);
+
+//        Set endPoint and endMarker
+        GeoPoint endPoint = new GeoPoint(clientLatitude, clientLongitude);
 
         Marker endMarker = new Marker(map);
         endMarker.setPosition(endPoint);
         endMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
-        waypoints.add(endPoint);
+        endMarker.setTitle("End point");
+
         map.getOverlays().add(endMarker);
 
-        startMarker.setTitle("End point");
+        waypoints.add(endPoint);
+
+//        Road Overlay
         Road road = roadManager.getRoad(waypoints);
-
-        System.out.println("DEBUGGGGGGGGGGGGGGGGGGGGGG................. Distancia - " + String.format("%.1f", road.mLength) + " km");
-
-        double totalSecs = road.mDuration;
-        //double hours = totalSecs / 3600;
-        double minutes = (totalSecs % 3600) / 60;
-        //double seconds = totalSecs % 60;
-
-        System.out.println("DEBUGGGGGGGGGGGGGGGGGGGGGG................. Duração - " + String.format("%.0f", minutes) + " min." );
-
         Polyline roadOverlay = RoadManager.buildRoadOverlay(road);
+
         map.getOverlays().add(roadOverlay);
+
+//        Path
         Drawable nodeIcon = getResources().getDrawable(R.drawable.ic_baseline_fmd_bad_24);
         for (int i=0; i<road.mNodes.size(); i++){
             RoadNode node = road.mNodes.get(i);
@@ -127,15 +142,16 @@ public class MapFragment extends Fragment implements LocationListener  {
             nodeMarker.setPosition(node.mLocation);
             nodeMarker.setTitle("Step "+i);
             nodeMarker.setSnippet(node.mInstructions);
-
             nodeMarker.setIcon(nodeIcon);
             nodeMarker.setSubDescription(Road.getLengthDurationText(getContext(), node.mLength, node.mDuration));
+
             Drawable icon = getResources().getDrawable(R.drawable.ic_baseline_arrow_upward_24);
             nodeMarker.setImage(icon);
             //TODO: icons mManeuverType
             System.out.println("DEBUGGGGGGGGGGGGGGGGGGGGGGGGGGGG: " + node.mManeuverType);
             map.getOverlays().add(nodeMarker);
         }
+
         map.invalidate();
 
         return view;
@@ -144,16 +160,13 @@ public class MapFragment extends Fragment implements LocationListener  {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        switch (requestCode) {
-            case PERMISSAO_REQUERIDA: {
-                // Se a solicitação de permissão foi cancelada o array vem vazio.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    // Permissão cedida, recria a activity para carregar o mapa, só será executado uma vez
-                    getActivity().recreate();
 
-                }
-
+        if (requestCode == PERMISSAO_REQUERIDA) {
+            // Se a solicitação de permissão foi cancelada o array vem vazio.
+            if (grantResults.length > 0
+                    && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Permissão cedida, recria a activity para carregar o mapa, só será executado uma vez
+                requireActivity().recreate();
             }
         }
     }
@@ -163,19 +176,25 @@ public class MapFragment extends Fragment implements LocationListener  {
         if (locationManager != null) {
             locationManager.removeUpdates(this);
         }
-
+        view.setVisibility(View.INVISIBLE);
     }
 
     @Override
     public void onLocationChanged(@NonNull Location location) {
+        MapFragment mapFragment = FragmentManager.findFragment(view);
+        if (mapFragment.isVisible()) {
+            Drawable person = getResources().getDrawable(R.drawable.ic_baseline_person_pin_24);
+            GeoPoint center = new GeoPoint(location.getLatitude(), location.getLongitude());
 
-        Drawable person = getResources().getDrawable(R.drawable.ic_baseline_person_pin_24);
-        GeoPoint center = new GeoPoint(location.getLatitude(), location.getLongitude());
-        Marker personMarker = new Marker(map);
-        personMarker.setPosition(center);
-personMarker.setIcon(person);
+            assert map != null;
+            assert view != null;
+            Marker personMarker = new Marker(map);
 
-        map.getOverlays().add(personMarker);
-        map.invalidate();
+            personMarker.setPosition(center);
+            personMarker.setIcon(person);
+
+            map.getOverlays().add(personMarker);
+            map.invalidate();
+        }
     }
 }

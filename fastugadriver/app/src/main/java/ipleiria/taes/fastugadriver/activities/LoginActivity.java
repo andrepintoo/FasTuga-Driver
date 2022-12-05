@@ -55,7 +55,6 @@ public class LoginActivity extends AppCompatActivity {
                 if(keepMeLoggedIn.isChecked()){
                     SharedPreferences.setUserName(LoginActivity.this, email);
                 }
-                SharedPreferences.setIsNewLogin(LoginActivity.this, "yes");
 
                 INSTANCE.setUserLogged(email);
                 goToMainActivity();
@@ -64,19 +63,25 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private boolean validateLogin(String email, String password, UserManager INSTANCE) {
+        boolean valid = true, emailHasErrors = false;
         if (email.trim().isEmpty()) {
             setErrorMessage(editTextEmail, "Email field cannot be empty");
-            return false;
+            valid = false;
+            emailHasErrors = true;
         }
 
         if (password.trim().isEmpty()) {
             setErrorMessage(editTextPassword, "Password field cannot be empty");
-            return false;
+            valid = false;
         }
 
         Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(email);
-        if (!matcher.matches()) {
+        if (!emailHasErrors && !matcher.matches()) {
             setErrorMessage(editTextEmail, "Wrong email format");
+            valid = false;
+        }
+
+        if(!valid){
             return false;
         }
 
@@ -88,7 +93,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void goToMainActivity() {
-        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        Intent i = new Intent(LoginActivity.this, MainActivity.class);
+        i.putExtra("newLogin","yes");
+        startActivity(i);
     }
 
     private void setLoginElements() {

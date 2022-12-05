@@ -60,10 +60,13 @@ public interface OrderService {
                 });
      */
 
-    @GET("orders/status/{status}")
+    @GET("orders/statusTAES/{status}")
     Call<OrderModelDataArray> getOrderByStatus(@Path("status") char status);
 
     @Headers({"Content-Type: application/json"})
     @PUT("orders/{id}")
     Call<ResponseBody> updateOrder(@Path("id") int id, @Body OrderModelArray body);
+
+    @GET("unassignedOrders")
+    Call<OrderModelDataArray> getUnassignedOrders();
 }

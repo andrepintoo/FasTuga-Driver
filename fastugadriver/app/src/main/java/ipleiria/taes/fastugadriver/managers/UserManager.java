@@ -1,13 +1,24 @@
 package ipleiria.taes.fastugadriver.managers;
 
+import static android.content.ContentValues.TAG;
+
 import android.provider.ContactsContract;
+import android.util.Log;
 
 import java.util.LinkedList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import ipleiria.taes.fastugadriver.api.OrderService;
+import ipleiria.taes.fastugadriver.api.RetrofitClient;
+import ipleiria.taes.fastugadriver.api.UserService;
 import ipleiria.taes.fastugadriver.entities.Driver;
 import ipleiria.taes.fastugadriver.entities.User;
+import ipleiria.taes.fastugadriver.model.order.OrderModelArray;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class UserManager {
@@ -19,7 +30,8 @@ public class UserManager {
     public UserManager() {
         users = new LinkedList<>();
         drivers = new LinkedList<>();
-        users.add(new User("PrimeiroNome", "Apelido", "contacto@email.pt", "password", "912345678"));
+        users.add(new User("PrimeiroNome", "Apelido", "customer_6@mail.pt", "12345678", "912345678"));
+        users.add(new User("PrimeiroNome", "Apelido", "dsfsdfsdf@mail.pt", "12345678", "912345678"));
         drivers.add(new Driver("Sara", "Martins", "sara@mail.pt", "password", "912345678", "AA-00-AA"));
         userLogged = null;
     }
@@ -67,6 +79,11 @@ public class UserManager {
         userLogged = null;
     }
 
+    public void optOut(){
+        deleteUser(userLogged.getEmail());
+        userLogged = null;
+    }
+
     public int registerUser(String firstName, String lastName, String email, String password, String phoneNumber, String licensePlate){
         Driver driver = getDriver(email);
         Boolean licensePlateExists = licenseExists(licensePlate);
@@ -104,5 +121,23 @@ public class UserManager {
 
     public void setUsers(LinkedList<User> users) {
         this.users = users;
+    }
+
+    private void deleteUser(String email) {
+        // Creates Service
+        UserService service = RetrofitClient.getRetrofitInstance().create(UserService.class);
+
+        Call<ResponseBody> call = service.deleteUser(email);
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                Log.e(TAG, "onResponse: code : " + response.code());
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Log.e(TAG, "onFailure : " + t.getMessage());
+            }
+        });
     }
 }
