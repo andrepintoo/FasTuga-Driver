@@ -10,13 +10,18 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.contentcapture.ContentCaptureCondition;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -52,6 +57,7 @@ public class OrderDetailsFragment extends Fragment {
     private TextView textLocationInput;
     private TextView textDistanceInput;
     private TextView textEarningInput;
+    private EditText textReasonCancel;
     private Button buttonBack;
     private Button buttonClaim;
     private Button buttonAssign;
@@ -173,11 +179,41 @@ public class OrderDetailsFragment extends Fragment {
             buttonCancelOrder.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    OrderModelArray json = createJson(ORDER_CANCELED);
-                    updateOrder(orderID, json);
-                    showNotification("Order " + orderID + " has been CANCELLED",
-                            "Please Contact " + clientName + " - " + clientPhoneNumber);
-                    goBackToAvailableOrders();
+                    LayoutInflater inflater = getActivity().getLayoutInflater();
+                    View popupView = inflater.inflate(R.layout.popup_cancel_order, null);
+                    textReasonCancel = (EditText) popupView.findViewById(R.id.textReasonCancel);
+
+                    int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+                    int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+                    boolean focusable = true;
+                    final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
+
+                    popupWindow.setElevation(40);
+                    popupWindow.setBackgroundDrawable(new ColorDrawable(Color.BLACK));
+                    popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
+
+                    Button yes_button = popupWindow.getContentView().findViewById(R.id.buttonYesCancel);
+                    Button no_button = popupWindow.getContentView().findViewById(R.id.buttonNoCancel);
+
+                    yes_button.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            String reason = textReasonCancel.getText().toString();
+                            OrderModelArray json = createJson(ORDER_CANCELED);
+                            updateOrder(orderID, json);
+                            showNotification("Order " + orderID + " has been CANCELLED",
+                                    "Please Contact " + clientName + " - " + clientPhoneNumber);
+                            popupWindow.dismiss();
+                            goBackToAvailableOrders();
+                        }
+                    });
+
+                    no_button.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            popupWindow.dismiss();
+                        }
+                    });
                 }
             });
 
