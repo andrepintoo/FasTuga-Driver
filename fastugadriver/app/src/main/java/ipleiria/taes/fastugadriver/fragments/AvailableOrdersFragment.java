@@ -124,18 +124,8 @@ public class AvailableOrdersFragment extends Fragment {
             public void onResponse(@NonNull Call<OrderModelDataArray> call, @NonNull Response<OrderModelDataArray> response) {
                 Log.e(TAG, "onResponse: code : " + response.code());
                 assert response.body() != null;
-                if( response.body().getOrders().size()==0) {
-                    if (orderStatus != 'P'){
-                        TextView noAvailableOrders = new TextView(getContext());
-                        noAvailableOrders.setText("\nNo orders available");
-                        availableOrdersGrid.addView(noAvailableOrders);
-                        TextView noAssignedOrders = new TextView(getContext());
-                        noAssignedOrders.setText("\nNo assigned Orders");
-                        assignedOrdersGrid.addView(noAssignedOrders);
-                    }
-                }else{
-                    displayOrders(response);
-                }
+                displayOrders(response);
+
             }
 
             @Override
@@ -147,7 +137,6 @@ public class AvailableOrdersFragment extends Fragment {
     }
 
     private void displayOrders(Response<OrderModelDataArray> response) {
-
         assert response.body() != null;
         ArrayList<OrderModelDataArray.data> orders = response.body().getOrders();
         for (OrderModelDataArray.data order : orders) {
@@ -160,18 +149,18 @@ public class AvailableOrdersFragment extends Fragment {
             int orderID = order.getId();
             char orderStatusChar = order.getStatus();
             int index = 0;
-            for (String word:customClientDetailsString) {
+            for (String word : customClientDetailsString) {
                 if (word.equals("address")) {
-                    clientAddress = customClientDetailsString[index+2];
+                    clientAddress = customClientDetailsString[index + 2];
                 }
                 if (word.equals("claim")) {
-                    claimedIDString = customClientDetailsString[index+2];
+                    claimedIDString = customClientDetailsString[index + 2];
                 }
                 if (word.equals("latitude")) {
-                    clientLatitude = Double.parseDouble(customClientDetailsString[index+2]);
+                    clientLatitude = Double.parseDouble(customClientDetailsString[index + 2]);
                 }
                 if (word.equals("longitude")) {
-                    clientLongitude = Double.parseDouble(customClientDetailsString[index+2]);
+                    clientLongitude = Double.parseDouble(customClientDetailsString[index + 2]);
                 }
                 index++;
             }
@@ -188,8 +177,13 @@ public class AvailableOrdersFragment extends Fragment {
             String status;
             switch (orderStatusChar) {
                 case 'P':
-                    status = "Preparing";
-                    hasAssignedOrders = true;
+                    if (deliveredByUser.get("id").isJsonNull()) {
+                        status = "Available";
+                        hasAvailableOrders = true;
+                    } else {
+                        status = "Preparing";
+                        hasAssignedOrders = true;
+                    }
                     break;
                 case 'R':
                     if (deliveredByUser.get("id").isJsonNull()) {
@@ -305,18 +299,19 @@ public class AvailableOrdersFragment extends Fragment {
                     transaction.commit();
                 }
             });
-        }
 
-        if(!hasAvailableOrders) {
-            TextView noAvailableOrders = new TextView(getContext());
-            noAvailableOrders.setText("\nNo orders available");
-            availableOrdersGrid.addView(noAvailableOrders);
-        }
-
-        if(!hasAssignedOrders) {
-            TextView noAssignedOrders = new TextView(getContext());
-            noAssignedOrders.setText("\nNo assigned Orders");
-            assignedOrdersGrid.addView(noAssignedOrders);
+            if (orderStatusChar == 'P') {
+                if (!hasAvailableOrders) {
+                    TextView noAvailableOrders = new TextView(getContext());
+                    noAvailableOrders.setText("\nNo orders Available");
+                    availableOrdersGrid.addView(noAvailableOrders);
+                }
+                if (!hasAssignedOrders) {
+                    TextView noAssignedOrders = new TextView(getContext());
+                    noAssignedOrders.setText("\nNo assigned Orders");
+                    assignedOrdersGrid.addView(noAssignedOrders);
+                }
+            }
         }
     }
 
@@ -417,12 +412,12 @@ public class AvailableOrdersFragment extends Fragment {
 
     private void showNotification(String title, String context) {
         String CHANNEL_ID = "ReadyOrderNotification";
-        NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID,"Ready Order", NotificationManager.IMPORTANCE_DEFAULT);
+        NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, "Ready Order", NotificationManager.IMPORTANCE_DEFAULT);
         notificationChannel.setLightColor(Color.RED);
         notificationChannel.setLockscreenVisibility(NotificationCompat.VISIBILITY_PRIVATE);
 
-        NotificationManager notificationManager = (NotificationManager) getSystemService(requireContext(),NotificationManager.class);
-        assert  notificationManager != null;
+        NotificationManager notificationManager = (NotificationManager) getSystemService(requireContext(), NotificationManager.class);
+        assert notificationManager != null;
         notificationManager.createNotificationChannel(notificationChannel);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(requireContext(), CHANNEL_ID);
@@ -433,7 +428,7 @@ public class AvailableOrdersFragment extends Fragment {
                 .setContentTitle(title)
                 .setContentText(context)
                 .build();
-        notificationManager.notify(0,notification);
+        notificationManager.notify(0, notification);
     }
 
     public String setClientName(JsonObject customer) {
