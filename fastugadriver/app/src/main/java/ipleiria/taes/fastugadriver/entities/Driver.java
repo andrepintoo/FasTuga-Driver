@@ -6,7 +6,7 @@ public class Driver extends User {
     private String licensePlate;
 
     public Driver(String firstName, String lastName, String email, String password, String phoneNumber, String licensePlate) {
-        super(firstName, lastName, email, password, phoneNumber);
+        super(firstName, lastName, email, password, phoneNumber, 0);
         this.licensePlate = licensePlate;
     }
 

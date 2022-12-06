@@ -35,6 +35,7 @@ import com.google.gson.JsonObject;
 import ipleiria.taes.fastugadriver.R;
 import ipleiria.taes.fastugadriver.api.OrderService;
 import ipleiria.taes.fastugadriver.api.RetrofitClient;
+import ipleiria.taes.fastugadriver.managers.UserManager;
 import ipleiria.taes.fastugadriver.model.order.OrderModelArray;
 import ipleiria.taes.fastugadriver.model.order.OrderModelObject;
 import okhttp3.ResponseBody;
@@ -223,6 +224,7 @@ public class OrderDetailsFragment extends Fragment {
                 public void onClick(View v) {
                     OrderModelArray json = createJson(ORDER_DELIVERED);
                     updateOrder(orderID, json);
+                    UserManager.getManager().updateBalance(earning);
                     goBackToAvailableOrders();
                 }
             });
