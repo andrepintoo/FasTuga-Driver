@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import ipleiria.taes.fastugadriver.R;
 import ipleiria.taes.fastugadriver.api.OrderService;
 import ipleiria.taes.fastugadriver.api.RetrofitClient;
+import ipleiria.taes.fastugadriver.managers.UserManager;
 import ipleiria.taes.fastugadriver.model.order.OrderModelArray;
 import ipleiria.taes.fastugadriver.model.order.OrderModelDataArray;
 import okhttp3.ResponseBody;
@@ -55,6 +56,7 @@ public class AvailableOrdersFragment extends Fragment {
     private Button buttonOrder;
     private GridLayout assignedOrdersGrid;
     private GridLayout availableOrdersGrid;
+    private TextView textViewBalance;
 
     private final GeoPoint restaurantPoint = new GeoPoint(39.73240919913415, -8.824827700055856);
     int countClicks;
@@ -83,6 +85,9 @@ public class AvailableOrdersFragment extends Fragment {
         //Define Assigned Orders Scroll View with Grid Layout
         assignedOrdersLayout();
 
+        //Balance Update
+        updateBalance();
+
         // Gets Orders that are Ready
         fetchOrders('R');
 
@@ -92,17 +97,23 @@ public class AvailableOrdersFragment extends Fragment {
 //        if(orderStatus=='P') {
         if (!hasAvailableOrders) {
             TextView noAvailableOrders = new TextView(getContext());
-            noAvailableOrders.setText("\nNo orders Available");
+            noAvailableOrders.setText("No orders Available");
             availableOrdersGrid.addView(noAvailableOrders);
         }
         if (!hasAssignedOrders) {
             TextView noAssignedOrders = new TextView(getContext());
-            noAssignedOrders.setText("\nNo assigned Orders");
+            noAssignedOrders.setText("No assigned Orders");
             assignedOrdersGrid.addView(noAssignedOrders);
         }
 //        }
 
         return view;
+    }
+
+    private void updateBalance() {
+        textViewBalance = (TextView) view.findViewById(R.id.textViewBalance);
+        int balance = UserManager.getManager().getLoggedUserBalance();
+        textViewBalance.setText(String.valueOf(balance));
     }
 
     private void assignedOrdersLayout() {

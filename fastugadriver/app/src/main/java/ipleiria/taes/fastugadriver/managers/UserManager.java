@@ -30,9 +30,9 @@ public class UserManager {
     public UserManager() {
         users = new LinkedList<>();
         drivers = new LinkedList<>();
-        users.add(new User("PrimeiroNome", "Apelido", "customer_6@mail.pt", "12345678", "912345678"));
-        users.add(new User("PrimeiroNome", "Apelido", "contacto@email.pt", "password", "912345678"));
-        users.add(new User("PrimeiroNome", "Apelido", "dsfsdfsdf@mail.pt", "12345678", "912345678"));
+        users.add(new User("PrimeiroNome", "Apelido", "customer_6@mail.pt", "12345678", "912345678",0));
+        users.add(new User("PrimeiroNome", "Apelido", "contacto@email.pt", "password", "912345678",0));
+        users.add(new User("PrimeiroNome", "Apelido", "dsfsdfsdf@mail.pt", "12345678", "912345678",0));
         drivers.add(new Driver("Sara", "Martins", "sara@mail.pt", "password", "912345678", "AA-00-AA"));
         userLogged = null;
     }
@@ -48,6 +48,13 @@ public class UserManager {
             }
         }
         return null;
+    }
+
+    public int getLoggedUserBalance(){
+        if(userLogged != null){
+            return userLogged.getBalance();
+        }
+        return 0;
     }
 
     public boolean licenseExists(String licensePlate) {
@@ -140,5 +147,11 @@ public class UserManager {
                 Log.e(TAG, "onFailure : " + t.getMessage());
             }
         });
+    }
+
+    public void updateBalance(int earning) {
+        if(userLogged != null){
+            userLogged.updateBalance(earning);
+        }
     }
 }
