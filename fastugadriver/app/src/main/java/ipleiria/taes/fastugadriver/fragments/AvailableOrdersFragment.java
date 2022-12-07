@@ -37,6 +37,8 @@ import org.osmdroid.config.Configuration;
 import org.osmdroid.util.GeoPoint;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
 
 import ipleiria.taes.fastugadriver.R;
 import ipleiria.taes.fastugadriver.api.OrderService;
@@ -89,7 +91,6 @@ public class AvailableOrdersFragment extends Fragment {
         // Gets Orders that are Preparing
         fetchOrders('P');
 
-//        if(orderStatus=='P') {
         if (!hasAvailableOrders) {
             TextView noAvailableOrders = new TextView(getContext());
             noAvailableOrders.setText("\nNo orders Available");
@@ -100,7 +101,6 @@ public class AvailableOrdersFragment extends Fragment {
             noAssignedOrders.setText("\nNo assigned Orders");
             assignedOrdersGrid.addView(noAssignedOrders);
         }
-//        }
 
         return view;
     }
@@ -131,14 +131,11 @@ public class AvailableOrdersFragment extends Fragment {
         Call<OrderModelDataArray> orders = service.getOrderByStatus(orderStatus);
 
         // Calls API
-        try
-        {
+        try {
             Response<OrderModelDataArray> response = orders.execute();
             assert response.body() != null;
             displayOrders(response, orderStatus);
-        }
-        catch (Exception ex)
-        {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
@@ -147,6 +144,9 @@ public class AvailableOrdersFragment extends Fragment {
         assert response.body() != null;
         ArrayList<OrderModelDataArray.data> orders = response.body().getOrders();
 
+        LinkedList<Button> orderButtons = new LinkedList<>();
+        LinkedList<String> orderButtonsStatus = new LinkedList<>();
+        LinkedList<Double> orderButtonDistance = new LinkedList<>();
         for (OrderModelDataArray.data order : orders) {
 
             // Get JSON Custom, not the best way but it works...
@@ -209,20 +209,21 @@ public class AvailableOrdersFragment extends Fragment {
                     status = "";
                     break;
             }
+
             int earning = setEarning(distance);
             String buttonText = getAvailableOrdersText(orderID, duration, distance, earning, status);
 
             setButtonProperties(buttonText, orderID);
-            // Add Button to Layout
-            if (status.equals("Available")) {
-                availableOrdersGrid.addView(buttonOrder);
-            } else {
-                assignedOrdersGrid.addView(buttonOrder);
-            }
+
             if (orderStatusChar == 'R') {
                 showNotification("Order " + orderID + " is Ready to be Claimed",
                         "Please Claim the following order to be delivered");
             }
+
+            // Add Buttons to LinkedList
+            orderButtonsStatus.add(status);
+            orderButtonDistance.add(distance);
+            orderButtons.add(buttonOrder);
 
             countClicks = 0;
             buttonOrder.setOnClickListener(new View.OnClickListener() {
@@ -243,28 +244,12 @@ public class AvailableOrdersFragment extends Fragment {
                             JsonElement customer = !order.getCustomer_id().isJsonNull() ? ((JsonObject) order.getCustomer_id()).get("id") : null;
 
                             assert customer != null;
-                            Fragment fragment = goToOrderDetailsFragment(
-                                    orderID,
-                                    clientName,
-                                    clientPhoneNumber,
-                                    clientAddress,
-                                    distance,
-                                    earning,
-                                    clientLatitude, clientLongitude,
-                                    restaurantPoint.getLatitude(), restaurantPoint.getLongitude(),
-                                    deliveredId,
-                                    claimedID,
-                                    order.getTicket_number(),
-                                    orderStatusChar,
-                                    customer.getAsInt(),
-                                    order.getTotal_price(),
-                                    order.getTotal_paid(),
-                                    order.getTotal_paid_with_points(),
-                                    order.getPoints_gained(),
-                                    order.getPoints_used_to_pay(),
-                                    order.getPayment_type(),
-                                    order.getPayment_reference(),
-                                    order.getDate());
+                            Fragment fragment = goToOrderDetailsFragment(orderID, clientName, clientPhoneNumber, clientAddress, distance,
+                                    earning, clientLatitude, clientLongitude, restaurantPoint.getLatitude(), restaurantPoint.getLongitude(),
+                                    deliveredId, claimedID, order.getTicket_number(), orderStatusChar, customer.getAsInt(), order.getTotal_price(),
+                                    order.getTotal_paid(), order.getTotal_paid_with_points(), order.getPoints_gained(),
+                                    order.getPoints_used_to_pay(), order.getPayment_type(), order.getPayment_reference(), order.getDate());
+
                             replaceFragment(fragment);
                         } else if (countClicks == 2) { // If button is pressed twice
                             // Creates JSON
@@ -307,6 +292,16 @@ public class AvailableOrdersFragment extends Fragment {
                     transaction.commit();
                 }
             });
+        }
+
+        Collections.sort(orderButtonDistance);
+        //  Display Buttons on Layout
+        for (int i = 0; i < orderButtons.size(); i++) {
+            if (orderButtonsStatus.get(i).equals("Available")) {
+                availableOrdersGrid.addView(orderButtons.get(i));
+            } else {
+                assignedOrdersGrid.addView(orderButtons.get(i));
+            }
         }
     }
 
