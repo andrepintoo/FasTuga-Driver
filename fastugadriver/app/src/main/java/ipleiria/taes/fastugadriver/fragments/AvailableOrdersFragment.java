@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -37,7 +38,10 @@ import org.osmdroid.config.Configuration;
 import org.osmdroid.util.GeoPoint;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
+import ipleiria.taes.fastugadriver.MainActivity;
 import ipleiria.taes.fastugadriver.R;
 import ipleiria.taes.fastugadriver.api.OrderService;
 import ipleiria.taes.fastugadriver.api.RetrofitClient;
@@ -69,6 +73,8 @@ public class AvailableOrdersFragment extends Fragment {
 
     private boolean hasAssignedOrders;
     private boolean hasAvailableOrders;
+
+    private static int TIMER = 5000; // 5 Seconds
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -107,7 +113,24 @@ public class AvailableOrdersFragment extends Fragment {
         }
 //        }
 
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                Fragment fragment = new AvailableOrdersFragment();
+                replaceFragment(fragment);
+            }
+        }, TIMER);
+
         return view;
+    }
+
+    public void replaceFragment(Fragment someFragment) {
+        assert getFragmentManager() != null;
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.navHostFragment, someFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
     private void updateBalance() {
