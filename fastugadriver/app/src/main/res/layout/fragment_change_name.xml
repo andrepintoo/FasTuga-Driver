@@ -72,5 +72,17 @@
         android:text="Change name"
         android:textColor="@color/white"/>
 
+    <Button
+        android:id="@+id/buttonBackChangeName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="660dp"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#000000"
+        android:text="Back"
+        android:textColor="@color/white"/>
+
 
 </FrameLayout>
