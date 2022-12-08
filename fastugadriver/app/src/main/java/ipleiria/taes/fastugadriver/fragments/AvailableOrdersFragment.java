@@ -17,6 +17,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Handler;
 import android.os.StrictMode;
+import android.text.Layout;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -38,11 +39,13 @@ import org.osmdroid.util.GeoPoint;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedList;
 
 import ipleiria.taes.fastugadriver.R;
 import ipleiria.taes.fastugadriver.api.OrderService;
 import ipleiria.taes.fastugadriver.api.RetrofitClient;
+import ipleiria.taes.fastugadriver.entities.OrderButton;
 import ipleiria.taes.fastugadriver.model.order.OrderModelArray;
 import ipleiria.taes.fastugadriver.model.order.OrderModelDataArray;
 import okhttp3.ResponseBody;
@@ -70,6 +73,11 @@ public class AvailableOrdersFragment extends Fragment {
     private boolean hasAssignedOrders;
     private boolean hasAvailableOrders;
 
+    private Button buttonFilterFurthestAssigned;
+    private Button buttonFilterFurthestAvailable;
+
+    LinkedList<OrderButton> orderButtons = new LinkedList<>();
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Need to add this to connect to map network
@@ -84,6 +92,10 @@ public class AvailableOrdersFragment extends Fragment {
 
         //Define Assigned Orders Scroll View with Grid Layout
         assignedOrdersLayout();
+
+        // Define buttons
+        buttonFilterFurthestAssigned = view.findViewById(R.id.buttonFilterFurthestAssigned);
+        buttonFilterFurthestAvailable = view.findViewById(R.id.buttonFilterFurthestAvailable);
 
         // Gets Orders that are Ready
         fetchOrders('R');
@@ -101,6 +113,36 @@ public class AvailableOrdersFragment extends Fragment {
             noAssignedOrders.setText("\nNo assigned Orders");
             assignedOrdersGrid.addView(noAssignedOrders);
         }
+
+        buttonFilterFurthestAssigned.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        buttonFilterFurthestAvailable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (OrderButton orderButton : orderButtons) {
+                    GridLayout layout = (GridLayout) orderButton.getButton().getParent();
+                    layout.removeView(orderButton.getButton());
+                }
+                Collections.sort(orderButtons, new Comparator<OrderButton>() {
+                    @Override
+                    public int compare(OrderButton o1, OrderButton o2) {
+                        return (int) Math.ceil(o2.getDistance()) - (int) Math.ceil(o1.getDistance());
+                    }
+                });
+                for (OrderButton orderButton : orderButtons) {
+                    if (orderButton.getStatus().equals("Available")) {
+                        availableOrdersGrid.addView(orderButton.getButton());
+                    } else {
+                        assignedOrdersGrid.addView(orderButton.getButton());
+                    }
+                }
+            }
+        });
 
         return view;
     }
@@ -144,9 +186,6 @@ public class AvailableOrdersFragment extends Fragment {
         assert response.body() != null;
         ArrayList<OrderModelDataArray.data> orders = response.body().getOrders();
 
-        LinkedList<Button> orderButtons = new LinkedList<>();
-        LinkedList<String> orderButtonsStatus = new LinkedList<>();
-        LinkedList<Double> orderButtonDistance = new LinkedList<>();
         for (OrderModelDataArray.data order : orders) {
 
             // Get JSON Custom, not the best way but it works...
@@ -221,9 +260,8 @@ public class AvailableOrdersFragment extends Fragment {
             }
 
             // Add Buttons to LinkedList
-            orderButtonsStatus.add(status);
-            orderButtonDistance.add(distance);
-            orderButtons.add(buttonOrder);
+            OrderButton orderButton = new OrderButton(buttonOrder, status, distance);
+            orderButtons.add(orderButton);
 
             countClicks = 0;
             buttonOrder.setOnClickListener(new View.OnClickListener() {
@@ -294,13 +332,11 @@ public class AvailableOrdersFragment extends Fragment {
             });
         }
 
-        Collections.sort(orderButtonDistance);
-        //  Display Buttons on Layout
-        for (int i = 0; i < orderButtons.size(); i++) {
-            if (orderButtonsStatus.get(i).equals("Available")) {
-                availableOrdersGrid.addView(orderButtons.get(i));
+        for (OrderButton orderButton : orderButtons) {
+            if (orderButton.getStatus().equals("Available")) {
+                availableOrdersGrid.addView(orderButton.getButton());
             } else {
-                assignedOrdersGrid.addView(orderButtons.get(i));
+                assignedOrdersGrid.addView(orderButton.getButton());
             }
         }
     }
