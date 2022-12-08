@@ -105,7 +105,7 @@
             android:textSize="20sp" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="212dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -117,6 +117,21 @@
                 android:text="Furthest"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/buttonFilterClosestAvailable"
+                android:layout_width="54dp"
+                android:layout_height="100px"
+                android:layout_weight="1"
+                android:backgroundTint="#000000"
+                android:text="Closest"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
         </LinearLayout>
 
         <ScrollView

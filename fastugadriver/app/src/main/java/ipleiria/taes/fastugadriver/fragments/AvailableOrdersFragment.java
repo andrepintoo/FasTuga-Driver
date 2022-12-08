@@ -9,15 +9,12 @@ import android.app.NotificationManager;
 import android.graphics.Color;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Handler;
 import android.os.StrictMode;
-import android.text.Layout;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -75,6 +72,7 @@ public class AvailableOrdersFragment extends Fragment {
 
     private Button buttonFilterFurthestAssigned;
     private Button buttonFilterFurthestAvailable;
+    private Button buttonFilterClosestAvailable;
 
     LinkedList<OrderButton> orderButtons = new LinkedList<>();
 
@@ -96,6 +94,8 @@ public class AvailableOrdersFragment extends Fragment {
         // Define buttons
         buttonFilterFurthestAssigned = view.findViewById(R.id.buttonFilterFurthestAssigned);
         buttonFilterFurthestAvailable = view.findViewById(R.id.buttonFilterFurthestAvailable);
+        buttonFilterClosestAvailable = view.findViewById(R.id.buttonFilterClosestAvailable);
+
 
         // Gets Orders that are Ready
         fetchOrders('R');
@@ -132,6 +132,29 @@ public class AvailableOrdersFragment extends Fragment {
                     @Override
                     public int compare(OrderButton o1, OrderButton o2) {
                         return (int) Math.ceil(o2.getDistance()) - (int) Math.ceil(o1.getDistance());
+                    }
+                });
+                for (OrderButton orderButton : orderButtons) {
+                    if (orderButton.getStatus().equals("Available")) {
+                        availableOrdersGrid.addView(orderButton.getButton());
+                    } else {
+                        assignedOrdersGrid.addView(orderButton.getButton());
+                    }
+                }
+            }
+        });
+
+        buttonFilterClosestAvailable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (OrderButton orderButton : orderButtons) {
+                    GridLayout layout = (GridLayout) orderButton.getButton().getParent();
+                    layout.removeView(orderButton.getButton());
+                }
+                Collections.sort(orderButtons, new Comparator<OrderButton>() {
+                    @Override
+                    public int compare(OrderButton o1, OrderButton o2) {
+                        return (int) Math.ceil(o1.getDistance()) - (int) Math.ceil(o2.getDistance());
                     }
                 });
                 for (OrderButton orderButton : orderButtons) {
