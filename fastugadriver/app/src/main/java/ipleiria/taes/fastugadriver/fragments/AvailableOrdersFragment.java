@@ -10,10 +10,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
@@ -39,6 +37,9 @@ import org.osmdroid.config.Configuration;
 import org.osmdroid.util.GeoPoint;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -46,6 +47,7 @@ import ipleiria.taes.fastugadriver.MainActivity;
 import ipleiria.taes.fastugadriver.R;
 import ipleiria.taes.fastugadriver.api.OrderService;
 import ipleiria.taes.fastugadriver.api.RetrofitClient;
+import ipleiria.taes.fastugadriver.entities.OrderButton;
 import ipleiria.taes.fastugadriver.managers.UserManager;
 import ipleiria.taes.fastugadriver.model.order.OrderModelArray;
 import ipleiria.taes.fastugadriver.model.order.OrderModelDataArray;
@@ -75,6 +77,11 @@ public class AvailableOrdersFragment extends Fragment {
     private boolean hasAssignedOrders;
     private boolean hasAvailableOrders;
 
+    private Button buttonFilterFurthestAssigned;
+    private Button buttonFilterFurthestAvailable;
+    private Button buttonFilterClosestAvailable;
+
+    LinkedList<OrderButton> orderButtons = new LinkedList<>();
     SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
@@ -91,6 +98,11 @@ public class AvailableOrdersFragment extends Fragment {
 
         //Define Assigned Orders Scroll View with Grid Layout
         assignedOrdersLayout();
+
+        // Define buttons
+        buttonFilterFurthestAssigned = view.findViewById(R.id.buttonFilterFurthestAssigned);
+        buttonFilterFurthestAvailable = view.findViewById(R.id.buttonFilterFurthestAvailable);
+        buttonFilterClosestAvailable = view.findViewById(R.id.buttonFilterClosestAvailable);
 
         //Balance Update
         updateBalance();
@@ -112,6 +124,59 @@ public class AvailableOrdersFragment extends Fragment {
             assignedOrdersGrid.addView(noAssignedOrders);
         }
 
+        buttonFilterFurthestAssigned.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        buttonFilterFurthestAvailable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (OrderButton orderButton : orderButtons) {
+                    GridLayout layout = (GridLayout) orderButton.getButton().getParent();
+                    layout.removeView(orderButton.getButton());
+                }
+                Collections.sort(orderButtons, new Comparator<OrderButton>() {
+                    @Override
+                    public int compare(OrderButton o1, OrderButton o2) {
+                        return (int) Math.ceil(o2.getDistance()) - (int) Math.ceil(o1.getDistance());
+                    }
+                });
+                for (OrderButton orderButton : orderButtons) {
+                    if (orderButton.getStatus().equals("Available")) {
+                        availableOrdersGrid.addView(orderButton.getButton());
+                    } else {
+                        assignedOrdersGrid.addView(orderButton.getButton());
+                    }
+                }
+            }
+        });
+
+        buttonFilterClosestAvailable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (OrderButton orderButton : orderButtons) {
+                    GridLayout layout = (GridLayout) orderButton.getButton().getParent();
+                    layout.removeView(orderButton.getButton());
+                }
+                Collections.sort(orderButtons, new Comparator<OrderButton>() {
+                    @Override
+                    public int compare(OrderButton o1, OrderButton o2) {
+                        return (int) Math.ceil(o1.getDistance()) - (int) Math.ceil(o2.getDistance());
+                    }
+                });
+                for (OrderButton orderButton : orderButtons) {
+                    if (orderButton.getStatus().equals("Available")) {
+                        availableOrdersGrid.addView(orderButton.getButton());
+                    } else {
+                        assignedOrdersGrid.addView(orderButton.getButton());
+                    }
+                }
+            }
+        });
+
         // Swipe Refresh
         swipeRefreshLayout = view.findViewById(R.id.availableOrdersFragment);
         swipeRefreshLayout.setOnRefreshListener(() -> {
@@ -120,7 +185,6 @@ public class AvailableOrdersFragment extends Fragment {
 
             swipeRefreshLayout.setRefreshing(false);
         });
-
 
         return view;
     }
@@ -165,14 +229,11 @@ public class AvailableOrdersFragment extends Fragment {
         Call<OrderModelDataArray> orders = service.getOrderByStatus(orderStatus);
 
         // Calls API
-        try
-        {
+        try {
             Response<OrderModelDataArray> response = orders.execute();
             assert response.body() != null;
             displayOrders(response, orderStatus);
-        }
-        catch (Exception ex)
-        {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
@@ -243,20 +304,20 @@ public class AvailableOrdersFragment extends Fragment {
                     status = "";
                     break;
             }
+
             int earning = setEarning(distance);
             String buttonText = getAvailableOrdersText(orderID, duration, distance, earning, status);
 
             setButtonProperties(buttonText, orderID);
-            // Add Button to Layout
-            if (status.equals("Available")) {
-                availableOrdersGrid.addView(buttonOrder);
-            } else {
-                assignedOrdersGrid.addView(buttonOrder);
-            }
+
             if (orderStatusChar == 'R') {
                 showNotification("Order " + orderID + " is Ready to be Claimed",
                         "Please Claim the following order to be delivered");
             }
+
+            // Add Buttons to LinkedList
+            OrderButton orderButton = new OrderButton(buttonOrder, status, distance);
+            orderButtons.add(orderButton);
 
             countClicks = 0;
             buttonOrder.setOnClickListener(new View.OnClickListener() {
@@ -277,28 +338,12 @@ public class AvailableOrdersFragment extends Fragment {
                             JsonElement customer = !order.getCustomer_id().isJsonNull() ? ((JsonObject) order.getCustomer_id()).get("id") : null;
 
                             assert customer != null;
-                            Fragment fragment = goToOrderDetailsFragment(
-                                    orderID,
-                                    clientName,
-                                    clientPhoneNumber,
-                                    clientAddress,
-                                    distance,
-                                    earning,
-                                    clientLatitude, clientLongitude,
-                                    restaurantPoint.getLatitude(), restaurantPoint.getLongitude(),
-                                    deliveredId,
-                                    claimedID,
-                                    order.getTicket_number(),
-                                    orderStatusChar,
-                                    customer.getAsInt(),
-                                    order.getTotal_price(),
-                                    order.getTotal_paid(),
-                                    order.getTotal_paid_with_points(),
-                                    order.getPoints_gained(),
-                                    order.getPoints_used_to_pay(),
-                                    order.getPayment_type(),
-                                    order.getPayment_reference(),
-                                    order.getDate());
+                            Fragment fragment = goToOrderDetailsFragment(orderID, clientName, clientPhoneNumber, clientAddress, distance,
+                                    earning, clientLatitude, clientLongitude, restaurantPoint.getLatitude(), restaurantPoint.getLongitude(),
+                                    deliveredId, claimedID, order.getTicket_number(), orderStatusChar, customer.getAsInt(), order.getTotal_price(),
+                                    order.getTotal_paid(), order.getTotal_paid_with_points(), order.getPoints_gained(),
+                                    order.getPoints_used_to_pay(), order.getPayment_type(), order.getPayment_reference(), order.getDate());
+
                             replaceFragment(fragment);
                         } else if (countClicks == 2) { // If button is pressed twice
                             // Creates JSON
@@ -335,6 +380,14 @@ public class AvailableOrdersFragment extends Fragment {
 
 
             });
+        }
+
+        for (OrderButton orderButton : orderButtons) {
+            if (orderButton.getStatus().equals("Available")) {
+                availableOrdersGrid.addView(orderButton.getButton());
+            } else {
+                assignedOrdersGrid.addView(orderButton.getButton());
+            }
         }
     }
 
