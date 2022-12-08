@@ -78,6 +78,8 @@ public class AvailableOrdersFragment extends Fragment {
     private boolean hasAvailableOrders;
 
     private Button buttonFilterFurthestAssigned;
+    private Button buttonFilterClosestAssigned;
+
     private Button buttonFilterFurthestAvailable;
     private Button buttonFilterClosestAvailable;
 
@@ -103,6 +105,7 @@ public class AvailableOrdersFragment extends Fragment {
         buttonFilterFurthestAssigned = view.findViewById(R.id.buttonFilterFurthestAssigned);
         buttonFilterFurthestAvailable = view.findViewById(R.id.buttonFilterFurthestAvailable);
         buttonFilterClosestAvailable = view.findViewById(R.id.buttonFilterClosestAvailable);
+        buttonFilterClosestAssigned = view.findViewById(R.id.buttonFilterClosestAssigned);
 
         //Balance Update
         updateBalance();
@@ -127,53 +130,36 @@ public class AvailableOrdersFragment extends Fragment {
         buttonFilterFurthestAssigned.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                removeButtonsFromView();
+                sortListByFurthest();
+                addButtonsToView();
+            }
+        });
 
+        buttonFilterClosestAssigned.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                removeButtonsFromView();
+                sortListByClosest();
+                addButtonsToView();
             }
         });
 
         buttonFilterFurthestAvailable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for (OrderButton orderButton : orderButtons) {
-                    GridLayout layout = (GridLayout) orderButton.getButton().getParent();
-                    layout.removeView(orderButton.getButton());
-                }
-                Collections.sort(orderButtons, new Comparator<OrderButton>() {
-                    @Override
-                    public int compare(OrderButton o1, OrderButton o2) {
-                        return (int) Math.ceil(o2.getDistance()) - (int) Math.ceil(o1.getDistance());
-                    }
-                });
-                for (OrderButton orderButton : orderButtons) {
-                    if (orderButton.getStatus().equals("Available")) {
-                        availableOrdersGrid.addView(orderButton.getButton());
-                    } else {
-                        assignedOrdersGrid.addView(orderButton.getButton());
-                    }
-                }
+                removeButtonsFromView();
+                sortListByFurthest();
+                addButtonsToView();
             }
         });
 
         buttonFilterClosestAvailable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for (OrderButton orderButton : orderButtons) {
-                    GridLayout layout = (GridLayout) orderButton.getButton().getParent();
-                    layout.removeView(orderButton.getButton());
-                }
-                Collections.sort(orderButtons, new Comparator<OrderButton>() {
-                    @Override
-                    public int compare(OrderButton o1, OrderButton o2) {
-                        return (int) Math.ceil(o1.getDistance()) - (int) Math.ceil(o2.getDistance());
-                    }
-                });
-                for (OrderButton orderButton : orderButtons) {
-                    if (orderButton.getStatus().equals("Available")) {
-                        availableOrdersGrid.addView(orderButton.getButton());
-                    } else {
-                        assignedOrdersGrid.addView(orderButton.getButton());
-                    }
-                }
+                removeButtonsFromView();
+                sortListByClosest();
+                addButtonsToView();
             }
         });
 
@@ -187,6 +173,41 @@ public class AvailableOrdersFragment extends Fragment {
         });
 
         return view;
+    }
+
+    private void addButtonsToView() {
+        for (OrderButton orderButton : orderButtons) {
+            if (orderButton.getStatus().equals("Available")) {
+                availableOrdersGrid.addView(orderButton.getButton());
+            } else {
+                assignedOrdersGrid.addView(orderButton.getButton());
+            }
+        }
+    }
+
+    private void removeButtonsFromView() {
+        for (OrderButton orderButton : orderButtons) {
+            GridLayout layout = (GridLayout) orderButton.getButton().getParent();
+            layout.removeView(orderButton.getButton());
+        }
+    }
+
+    private void sortListByFurthest() {
+        Collections.sort(orderButtons, new Comparator<OrderButton>() {
+            @Override
+            public int compare(OrderButton o1, OrderButton o2) {
+                return (int) Math.ceil(o2.getDistance()) - (int) Math.ceil(o1.getDistance());
+            }
+        });
+    }
+
+    private void sortListByClosest() {
+        Collections.sort(orderButtons, new Comparator<OrderButton>() {
+            @Override
+            public int compare(OrderButton o1, OrderButton o2) {
+                return (int) Math.ceil(o1.getDistance()) - (int) Math.ceil(o2.getDistance());
+            }
+        });
     }
 
     public void replaceFragment(Fragment someFragment) {
