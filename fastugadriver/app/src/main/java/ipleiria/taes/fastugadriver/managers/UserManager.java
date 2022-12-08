@@ -32,6 +32,7 @@ public class UserManager {
         drivers = new LinkedList<>();
         users.add(new User("PrimeiroNome", "Apelido", "customer_6@mail.pt", "12345678", "912345678",0));
         users.add(new User("PrimeiroNome", "Apelido", "contacto@email.pt", "password", "912345678",0));
+        users.add(new User("PrimeiroNome", "Apelido", "rodrigo.campos@mail.pt", "12345678", "912345678",0));
         users.add(new User("PrimeiroNome", "Apelido", "dsfsdfsdf@mail.pt", "12345678", "912345678",0));
         drivers.add(new Driver("Sara", "Martins", "sara@mail.pt", "password", "912345678", "AA-00-AA"));
         userLogged = null;
@@ -153,5 +154,21 @@ public class UserManager {
         if(userLogged != null){
             userLogged.updateBalance(earning);
         }
+    }
+
+    public boolean updatePassword(String newPasword) {
+        if(userLogged != null){
+            userLogged.setPassword(newPasword);
+            return true;
+        }
+        return false;
+    }
+    public boolean updateName(String firstName, String lastName) {
+        if(userLogged != null){
+            userLogged.setFirstName(firstName);
+            userLogged.setLastName(lastName);
+            return true;
+        }
+        return false;
     }
 }

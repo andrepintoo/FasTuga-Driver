@@ -19,4 +19,9 @@
         android:name="ipleiria.taes.fastugadriver.fragments.OrderDetailsFragment"
         android:label="fragment_order_details"
         tools:layout="@layout/fragment_order_details" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="ipleiria.taes.fastugadriver.fragments.MyProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
