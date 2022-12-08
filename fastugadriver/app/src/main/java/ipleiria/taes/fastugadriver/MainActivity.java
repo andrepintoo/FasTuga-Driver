@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        /*
         boolean isEmailSaved = SharedPreferences.getUserEmail(MainActivity.this).length() != 0;
         Bundle extras = getIntent().getExtras();
         boolean isNewLogin = false;
@@ -44,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
         if (!isNewLogin && !isEmailSaved) {
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
         }
-         */
-
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);

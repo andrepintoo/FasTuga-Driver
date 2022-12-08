@@ -15,6 +15,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Handler;
 import android.os.StrictMode;
@@ -74,7 +75,7 @@ public class AvailableOrdersFragment extends Fragment {
     private boolean hasAssignedOrders;
     private boolean hasAvailableOrders;
 
-    private static int TIMER = 5000; // 5 Seconds
+    SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -100,7 +101,6 @@ public class AvailableOrdersFragment extends Fragment {
         // Gets Orders that are Preparing
         fetchOrders('P');
 
-//        if(orderStatus=='P') {
         if (!hasAvailableOrders) {
             TextView noAvailableOrders = new TextView(getContext());
             noAvailableOrders.setText("No orders Available");
@@ -111,16 +111,16 @@ public class AvailableOrdersFragment extends Fragment {
             noAssignedOrders.setText("No assigned Orders");
             assignedOrdersGrid.addView(noAssignedOrders);
         }
-//        }
 
-        Timer timer = new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                Fragment fragment = new AvailableOrdersFragment();
-                replaceFragment(fragment);
-            }
-        }, TIMER);
+        // Swipe Refresh
+        swipeRefreshLayout = view.findViewById(R.id.availableOrdersFragment);
+        swipeRefreshLayout.setOnRefreshListener(() -> {
+            Fragment fragment = new AvailableOrdersFragment();
+            replaceFragment(fragment);
+
+            swipeRefreshLayout.setRefreshing(false);
+        });
+
 
         return view;
     }
@@ -333,13 +333,7 @@ public class AvailableOrdersFragment extends Fragment {
                     }, 500);
                 }
 
-                public void replaceFragment(Fragment someFragment) {
-                    assert getFragmentManager() != null;
-                    FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                    transaction.replace(R.id.navHostFragment, someFragment);
-                    transaction.addToBackStack(null);
-                    transaction.commit();
-                }
+
             });
         }
     }
