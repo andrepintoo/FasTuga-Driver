@@ -7,16 +7,30 @@ public class User {
     private String email;
     private String password;
     private String phoneNumber;
+    private int balance;
 
-    public User(String firstName, String lastName, String email, String password, String phoneNumber) {
+    public User(String firstName, String lastName, String email, String password, String phoneNumber, int balance) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.phoneNumber = phoneNumber;
+        this.balance = balance;
     }
 
     public User() {
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+    public void updateBalance(int balance){
+        this.balance += balance;
     }
 
     public String getFullName() {

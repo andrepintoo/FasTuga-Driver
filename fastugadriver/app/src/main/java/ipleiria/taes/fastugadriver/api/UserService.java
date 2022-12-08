@@ -1,14 +1,16 @@
 package ipleiria.taes.fastugadriver.api;
 
-import java.util.List;
-
 import ipleiria.taes.fastugadriver.model.user.UserModelObject;
 import ipleiria.taes.fastugadriver.model.user.UserModelArray;
+import ipleiria.taes.fastugadriver.model.user.UserNameModelArray;
+import ipleiria.taes.fastugadriver.model.user.UserPasswordModelArray;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface UserService {
@@ -63,5 +65,13 @@ public interface UserService {
 
     @GET("users/{email}")
     Call<UserModelArray> getUserByEmail(@Path("email") String email);
+
+    @Headers({"Content-Type: application/json"})
+    @PUT("users/updateNameTAES/{email}")
+    Call<ResponseBody> updateUserName(@Path("email") String email, @Body UserNameModelArray body);
+
+    @Headers({"Content-Type: application/json"})
+    @PUT("users/updatePasswordTAES/{email}")
+    Call<ResponseBody> updateUserPassword(@Path("email") String email, @Body UserPasswordModelArray body);
 
 }

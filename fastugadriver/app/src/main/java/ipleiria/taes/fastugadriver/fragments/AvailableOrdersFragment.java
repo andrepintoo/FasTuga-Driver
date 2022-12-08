@@ -6,12 +6,14 @@ import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Handler;
 import android.os.StrictMode;
@@ -38,11 +40,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
+import java.util.Timer;
+import java.util.TimerTask;
 
+import ipleiria.taes.fastugadriver.MainActivity;
 import ipleiria.taes.fastugadriver.R;
 import ipleiria.taes.fastugadriver.api.OrderService;
 import ipleiria.taes.fastugadriver.api.RetrofitClient;
 import ipleiria.taes.fastugadriver.entities.OrderButton;
+import ipleiria.taes.fastugadriver.managers.UserManager;
 import ipleiria.taes.fastugadriver.model.order.OrderModelArray;
 import ipleiria.taes.fastugadriver.model.order.OrderModelDataArray;
 import okhttp3.ResponseBody;
@@ -57,6 +63,7 @@ public class AvailableOrdersFragment extends Fragment {
     private Button buttonOrder;
     private GridLayout assignedOrdersGrid;
     private GridLayout availableOrdersGrid;
+    private TextView textViewBalance;
 
     private final GeoPoint restaurantPoint = new GeoPoint(39.73240919913415, -8.824827700055856);
     int countClicks;
@@ -75,6 +82,7 @@ public class AvailableOrdersFragment extends Fragment {
     private Button buttonFilterClosestAvailable;
 
     LinkedList<OrderButton> orderButtons = new LinkedList<>();
+    SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -96,6 +104,8 @@ public class AvailableOrdersFragment extends Fragment {
         buttonFilterFurthestAvailable = view.findViewById(R.id.buttonFilterFurthestAvailable);
         buttonFilterClosestAvailable = view.findViewById(R.id.buttonFilterClosestAvailable);
 
+        //Balance Update
+        updateBalance();
 
         // Gets Orders that are Ready
         fetchOrders('R');
@@ -105,12 +115,12 @@ public class AvailableOrdersFragment extends Fragment {
 
         if (!hasAvailableOrders) {
             TextView noAvailableOrders = new TextView(getContext());
-            noAvailableOrders.setText("\nNo orders Available");
+            noAvailableOrders.setText("No orders Available");
             availableOrdersGrid.addView(noAvailableOrders);
         }
         if (!hasAssignedOrders) {
             TextView noAssignedOrders = new TextView(getContext());
-            noAssignedOrders.setText("\nNo assigned Orders");
+            noAssignedOrders.setText("No assigned Orders");
             assignedOrdersGrid.addView(noAssignedOrders);
         }
 
@@ -167,7 +177,30 @@ public class AvailableOrdersFragment extends Fragment {
             }
         });
 
+        // Swipe Refresh
+        swipeRefreshLayout = view.findViewById(R.id.availableOrdersFragment);
+        swipeRefreshLayout.setOnRefreshListener(() -> {
+            Fragment fragment = new AvailableOrdersFragment();
+            replaceFragment(fragment);
+
+            swipeRefreshLayout.setRefreshing(false);
+        });
+
         return view;
+    }
+
+    public void replaceFragment(Fragment someFragment) {
+        assert getFragmentManager() != null;
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.navHostFragment, someFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    private void updateBalance() {
+        textViewBalance = (TextView) view.findViewById(R.id.textViewBalance);
+        int balance = UserManager.getManager().getLoggedUserBalance();
+        textViewBalance.setText(String.valueOf(balance));
     }
 
     private void assignedOrdersLayout() {
@@ -345,13 +378,7 @@ public class AvailableOrdersFragment extends Fragment {
                     }, 500);
                 }
 
-                public void replaceFragment(Fragment someFragment) {
-                    assert getFragmentManager() != null;
-                    FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                    transaction.replace(R.id.navHostFragment, someFragment);
-                    transaction.addToBackStack(null);
-                    transaction.commit();
-                }
+
             });
         }
 

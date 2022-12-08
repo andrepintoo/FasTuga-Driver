@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ChangeMyName"
+    tools:context=".fragments.ChangeName">
+
+
+    <TextView
+        android:id="@+id/textMyProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change Name"
+        android:textColor="#000000"
+        android:textSize="31dp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/textFirstNameChange"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:textColor="#000000"
+        android:text="New First Name:"
+        android:textSize="18dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="220dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="97dp"/>
+
+    <EditText
+        android:id="@+id/editTextFirstNameChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="97dp"/>
+
+    <TextView
+        android:id="@+id/textLastNameChange"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:textColor="#000000"
+        android:text="New Last Name:"
+        android:textSize="18dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="210dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="97dp"/>
+
+    <EditText
+        android:id="@+id/editTextLastNameChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="97dp"/>
+
+    <Button
+        android:id="@+id/buttonChangeNameChange"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="360dp"
+        android:backgroundTint="#000000"
+        android:text="Change name"
+        android:textColor="@color/white"/>
+
+
+</FrameLayout>
