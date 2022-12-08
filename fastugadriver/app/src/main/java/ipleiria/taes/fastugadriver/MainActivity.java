@@ -129,6 +129,13 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
 
+        // Statistics
+        navigationView.getMenu().findItem(R.id.statistics).setOnMenuItemClickListener(menuItem -> {
+            Intent intent = new Intent();
+
+            return true;
+        });
+
         NavController navController = Navigation.findNavController(this, R.id.navHostFragment);
         NavigationUI.setupWithNavController(navigationView, navController);
     }

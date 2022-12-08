@@ -5,6 +5,8 @@ import static android.content.ContentValues.TAG;
 import android.provider.ContactsContract;
 import android.util.Log;
 
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.LinkedList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -30,10 +32,10 @@ public class UserManager {
     public UserManager() {
         users = new LinkedList<>();
         drivers = new LinkedList<>();
-        users.add(new User("PrimeiroNome", "Apelido", "customer_6@mail.pt", "12345678", "912345678",0));
-        users.add(new User("PrimeiroNome", "Apelido", "contacto@email.pt", "password", "912345678",0));
-        users.add(new User("PrimeiroNome", "Apelido", "rodrigo.campos@mail.pt", "12345678", "912345678",0));
-        users.add(new User("PrimeiroNome", "Apelido", "dsfsdfsdf@mail.pt", "12345678", "912345678",0));
+        users.add(new User("PrimeiroNome", "Apelido", "customer_6@mail.pt", "12345678", "912345678",0, 0, 0));
+        users.add(new User("PrimeiroNome", "Apelido", "contacto@email.pt", "password", "912345678",0 ,0, 0));
+        users.add(new User("PrimeiroNome", "Apelido", "rodrigo.campos@mail.pt", "12345678", "912345678",0, 0, 0));
+        users.add(new User("PrimeiroNome", "Apelido", "dsfsdfsdf@mail.pt", "12345678", "912345678",0, 0, 0));
         drivers.add(new Driver("Sara", "Martins", "sara@mail.pt", "password", "912345678", "AA-00-AA"));
         userLogged = null;
     }
@@ -170,5 +172,25 @@ public class UserManager {
             return true;
         }
         return false;
+    }
+
+    public void incrementDeliveries(){
+        if(userLogged != null){
+            userLogged.incrementDeliveries();
+        }
+    }
+
+    public void incrementDeliveryTime(LocalDateTime time){
+        if(userLogged != null){
+            LocalDateTime now = LocalDateTime.now();
+            long minutes = ChronoUnit.MINUTES.between(time, now);
+            userLogged.incrementDeliveryTime(minutes);
+        }
+    }
+
+    public void addCustomerServed(int customer_id) {
+        if(userLogged != null){
+            userLogged.addCustomerServed(customer_id);
+        }
     }
 }
