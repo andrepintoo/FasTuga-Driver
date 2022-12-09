@@ -226,6 +226,7 @@ public class MapFragment extends Fragment implements LocationListener {
 
         personMarker.setPosition(center);
         personMarker.setIcon(person);
+        personMarker.setTitle("Driver");
 
         map.getOverlays().add(personMarker);
         map.invalidate();
