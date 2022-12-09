@@ -236,6 +236,7 @@ public class OrderDetailsFragment extends Fragment {
                     updateOrder(orderID, json);
                     INSTANCE.updateBalance(earning);
                     INSTANCE.incrementDeliveries();
+                    INSTANCE.incrementAverageSpeed(distance, getClaimedOrderTime().getMinute());
                     goBackToAvailableOrders();
                 }
             });

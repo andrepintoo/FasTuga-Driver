@@ -9,10 +9,11 @@ public class User {
     private String phoneNumber;
     private int balance;
     private int totalDeliveries;
-    private long totalDeliverySeconds;
+    private long totalDeliveryMinutes;
     private Hashtable<Integer, Integer> customersServed;
+    private double totalAverageSpeed;
 
-    public User(String firstName, String lastName, String email, String password, String phoneNumber, int balance, int totalDeliveries, long totalDeliveryTime) {
+    public User(String firstName, String lastName, String email, String password, String phoneNumber, int balance, int totalDeliveries, long totalDeliveryTime, double totalAverageSpeed) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -20,7 +21,8 @@ public class User {
         this.phoneNumber = phoneNumber;
         this.balance = balance;
         this.totalDeliveries = totalDeliveries;
-        this.totalDeliverySeconds = totalDeliveryTime;
+        this.totalDeliveryMinutes = totalDeliveryTime;
+        this.totalAverageSpeed = totalAverageSpeed;
         customersServed = new Hashtable<>();
     }
 
@@ -35,16 +37,16 @@ public class User {
         return customersServed.size();
     }
 
-    public double getTotalDeliverySeconds() {
-        return totalDeliverySeconds;
+    public long getTotalDeliveryMinutes() {
+        return totalDeliveryMinutes;
     }
 
-    public void setTotalDeliverySeconds(long totalDeliverySeconds) {
-        this.totalDeliverySeconds = totalDeliverySeconds;
+    public void setTotalDeliveryMinutes(long totalDeliveryMinutes) {
+        this.totalDeliveryMinutes = totalDeliveryMinutes;
     }
 
     public void incrementDeliveryTime(long time){
-        totalDeliverySeconds += time;
+        totalDeliveryMinutes += time;
     }
 
     public int getTotalDeliveries() {
@@ -115,4 +117,15 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
+    public double getTotalAverageSpeed() {
+        return totalAverageSpeed;
+    }
+
+    public void setTotalAverageSpeed(double totalAverageSpeed) {
+        this.totalAverageSpeed = totalAverageSpeed;
+    }
+
+    public void incrementTotalAverageSpeed(double averageSpeed){
+        this.totalAverageSpeed += averageSpeed;
+    }
 }

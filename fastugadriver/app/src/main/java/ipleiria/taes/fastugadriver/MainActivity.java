@@ -24,6 +24,7 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 
 import ipleiria.taes.fastugadriver.activities.LoginActivity;
+import ipleiria.taes.fastugadriver.fragments.StatisticsFragment;
 import ipleiria.taes.fastugadriver.preferences.SharedPreferences;
 
 import ipleiria.taes.fastugadriver.managers.UserManager;
@@ -126,13 +127,6 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("android.provider.extra.APP_PACKAGE", getPackageName());
 
             startActivity(intent);
-            return true;
-        });
-
-        // Statistics
-        navigationView.getMenu().findItem(R.id.statistics).setOnMenuItemClickListener(menuItem -> {
-            Intent intent = new Intent();
-
             return true;
         });
 
