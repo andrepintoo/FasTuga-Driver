@@ -1,6 +1,6 @@
 package ipleiria.taes.fastugadriver.entities;
 
-import android.provider.ContactsContract;
+import java.util.Hashtable;
 
 public class User {
     private String firstName, lastName;
@@ -8,17 +8,57 @@ public class User {
     private String password;
     private String phoneNumber;
     private int balance;
+    private int totalDeliveries;
+    private long totalDeliveryMinutes;
+    private Hashtable<Integer, Integer> customersServed;
+    private double totalAverageSpeed;
 
-    public User(String firstName, String lastName, String email, String password, String phoneNumber, int balance) {
+    public User(String firstName, String lastName, String email, String password, String phoneNumber, int balance, int totalDeliveries, long totalDeliveryTime, double totalAverageSpeed) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.phoneNumber = phoneNumber;
         this.balance = balance;
+        this.totalDeliveries = totalDeliveries;
+        this.totalDeliveryMinutes = totalDeliveryTime;
+        this.totalAverageSpeed = totalAverageSpeed;
+        customersServed = new Hashtable<>();
     }
 
     public User() {
+    }
+
+    public void addCustomerServed(int customer_id){
+        customersServed.put(customer_id, 1);
+    }
+
+    public int getDistinctCustomers() {
+        return customersServed.size();
+    }
+
+    public long getTotalDeliveryMinutes() {
+        return totalDeliveryMinutes;
+    }
+
+    public void setTotalDeliveryMinutes(long totalDeliveryMinutes) {
+        this.totalDeliveryMinutes = totalDeliveryMinutes;
+    }
+
+    public void incrementDeliveryTime(long time){
+        totalDeliveryMinutes += time;
+    }
+
+    public int getTotalDeliveries() {
+        return totalDeliveries;
+    }
+
+    public void setTotalDeliveries(int totalDeliveries) {
+        this.totalDeliveries = totalDeliveries;
+    }
+
+    public void incrementDeliveries(){
+        totalDeliveries++;
     }
 
     public int getBalance() {
@@ -77,4 +117,15 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
+    public double getTotalAverageSpeed() {
+        return totalAverageSpeed;
+    }
+
+    public void setTotalAverageSpeed(double totalAverageSpeed) {
+        this.totalAverageSpeed = totalAverageSpeed;
+    }
+
+    public void incrementTotalAverageSpeed(double averageSpeed){
+        this.totalAverageSpeed += averageSpeed;
+    }
 }

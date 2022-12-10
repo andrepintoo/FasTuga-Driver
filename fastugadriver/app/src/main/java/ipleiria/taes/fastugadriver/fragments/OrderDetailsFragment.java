@@ -34,6 +34,9 @@ import com.google.gson.JsonObject;
 
 import java.util.Date;
 import java.util.LinkedList;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 import ipleiria.taes.fastugadriver.R;
 import ipleiria.taes.fastugadriver.api.OrderService;
@@ -89,6 +92,7 @@ public class OrderDetailsFragment extends Fragment {
     private String paymentType;
     private String paymentReference;
     private String date;
+    private String updated_at;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -150,6 +154,7 @@ public class OrderDetailsFragment extends Fragment {
         paymentType = bundle.getString("paymentType");
         paymentReference = bundle.getString("paymentReference");
         date = bundle.getString("date");
+        updated_at = bundle.getString("updated_at");
     }
 
     private void showButtons(int deliveredId, int claimedId, char orderStatus) {
@@ -171,6 +176,7 @@ public class OrderDetailsFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     OrderModelArray json = createJson(orderStatus);
+                    //atualizar updated_at
                     updateOrder(orderID, json);
                     goBackToAvailableOrders();
                 }
@@ -237,14 +243,28 @@ public class OrderDetailsFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     OrderModelArray json = createJson(ORDER_DELIVERED);
+                    UserManager INSTANCE = UserManager.getManager();
+                    INSTANCE.addCustomerServed(json.getCustomer_id());
+                    INSTANCE.incrementDeliveryTime(getClaimedOrderTime());
                     updateOrder(orderID, json);
-                    UserManager.getManager().updateBalance(earning);
+                    INSTANCE.updateBalance(earning);
+                    INSTANCE.incrementDeliveries();
+                    INSTANCE.incrementAverageSpeed(distance, getClaimedOrderTime().getMinute());
                     goBackToAvailableOrders();
                 }
             });
         } else {
             buttonBack.setVisibility(View.VISIBLE);
         }
+    }
+
+    private LocalDateTime getClaimedOrderTime() {
+        //2022-12-08T21:11:36.000000Z
+        String[] dateStrings = updated_at.split("T");
+        String calendarDate = dateStrings[0];
+        String hourMinuteSeconds = dateStrings[1].split("\\.")[0];
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd H:m:s", Locale.ENGLISH);
+        return LocalDateTime.parse(calendarDate + " " + hourMinuteSeconds, dateTimeFormatter);
     }
 
     private void showNotification(String title, String context) {
@@ -292,6 +312,7 @@ public class OrderDetailsFragment extends Fragment {
         updateOrder.setPayment_reference(paymentReference);
         updateOrder.setDate(date);
         updateOrder.setDelivered_by(FASTUGADRIVER);
+        updateOrder.setUpdated_at(updated_at);
         JsonObject custom = new JsonObject();
         if (deliveredId != 0) {
             custom.addProperty("claim", String.valueOf(FASTUGADRIVER));

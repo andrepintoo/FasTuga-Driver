@@ -20,6 +20,12 @@
         android:label="fragment_order_details"
         tools:layout="@layout/fragment_order_details" />
     <fragment
+        android:id="@+id/statistics"
+        android:name="ipleiria.taes.fastugadriver.fragments.StatisticsFragment"
+        android:label="Statistics"
+        tools:layout="@layout/fragment_statistics" >
+    </fragment>
+    <fragment
         android:id="@+id/profile"
         android:name="ipleiria.taes.fastugadriver.fragments.MyProfileFragment"
         android:label="Profile"

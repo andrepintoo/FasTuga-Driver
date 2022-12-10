@@ -33,6 +33,7 @@ public class ChangeName extends Fragment {
     private View view;
 
     private Button buttonChangeName;
+    private Button buttonBack;
     private EditText editFirstName;
     private EditText editLastName;
 
@@ -41,8 +42,18 @@ public class ChangeName extends Fragment {
         view = inflater.inflate(R.layout.fragment_change_name, container, false);
 
         buttonChangeName = (Button) view.findViewById(R.id.buttonChangeNameChange);
+        buttonBack = (Button) view.findViewById(R.id.buttonBackChangeName);
         editFirstName = view.findViewById(R.id.editTextFirstNameChange);
         editLastName = view.findViewById(R.id.editTextLastNameChange);
+
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Bundle sends data to the other fragment
+                Fragment fragment = new MyProfileFragment();
+                replaceFragment(fragment);
+            }
+        });
 
         buttonChangeName.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +62,7 @@ public class ChangeName extends Fragment {
                 String firstName = editFirstName.getText().toString();
                 String lastName = editLastName.getText().toString();
 
-                if(validate(firstName, lastName)){
+                if (validate(firstName, lastName)) {
 
                     String name = firstName + " " + lastName;
                     UserNameModelArray updateUserName = new UserNameModelArray();
@@ -91,15 +102,16 @@ public class ChangeName extends Fragment {
                 }
             }
 
-            public void replaceFragment(Fragment someFragment) {
-                assert getFragmentManager() != null;
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.navHostFragment, someFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
         });
         return view;
+    }
+
+    public void replaceFragment(Fragment someFragment) {
+        assert getFragmentManager() != null;
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.navHostFragment, someFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
     private boolean validate(String firstName, String lastName) {

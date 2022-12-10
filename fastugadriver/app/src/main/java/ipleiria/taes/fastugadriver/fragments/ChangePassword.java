@@ -33,6 +33,7 @@ public class ChangePassword extends Fragment {
     private View view;
 
     private Button buttonChangePassword;
+    private Button buttonBack;
     private EditText editAtualPassword;
     private EditText editNewPassword;
     private EditText editConfirmPassword;
@@ -42,9 +43,19 @@ public class ChangePassword extends Fragment {
         view = inflater.inflate(R.layout.fragment_change_password, container, false);
 
         buttonChangePassword = (Button) view.findViewById(R.id.buttonChangePasswordChange);
+        buttonBack = (Button) view.findViewById(R.id.buttonBackChangePassword);
         editAtualPassword = view.findViewById(R.id.editTextAtualPassword);
         editNewPassword = view.findViewById(R.id.editTextNewPassword);
         editConfirmPassword = view.findViewById(R.id.editTextConfirmPassword);
+
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Bundle sends data to the other fragment
+                Fragment fragment = new MyProfileFragment();
+                replaceFragment(fragment);
+            }
+        });
 
         buttonChangePassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,17 +105,18 @@ public class ChangePassword extends Fragment {
                     }
                 }
             }
-
-            public void replaceFragment(Fragment someFragment) {
-                assert getFragmentManager() != null;
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.navHostFragment, someFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
         });
         return view;
     }
+
+    public void replaceFragment(Fragment someFragment) {
+        assert getFragmentManager() != null;
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.navHostFragment, someFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
 
     private boolean validate(String atualPassword, String newPassword, String confirmPassword, UserManager INSTANCE) {
         boolean valid = true;
