@@ -52,6 +52,7 @@ public class UserManager {
         if(userLogged != null){
             return userLogged.getBalance();
         }
+        //If no user is logged, then show 0€
         return 0;
     }
 

@@ -105,7 +105,7 @@ public class AvailableOrdersFragment extends Fragment {
         buttonFilterClosestAvailable = view.findViewById(R.id.buttonFilterClosestAvailable);
         buttonFilterClosestAssigned = view.findViewById(R.id.buttonFilterClosestAssigned);
 
-        //Balance Update
+        //Balance Update for logged user
         updateBalance();
 
         // Gets Orders that are Ready
