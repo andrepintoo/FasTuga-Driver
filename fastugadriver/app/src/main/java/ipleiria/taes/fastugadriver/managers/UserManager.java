@@ -198,7 +198,11 @@ public class UserManager {
 
     public long getLoggedUserAverageDeliveryTime() {
         if(userLogged != null){
-            return userLogged.getTotalDeliveryMinutes()/userLogged.getTotalDeliveries();
+            int totalDeliveries = userLogged.getTotalDeliveries();
+            if (totalDeliveries==0) {
+                return 0;
+            }
+            return userLogged.getTotalDeliveryMinutes()/totalDeliveries;
         }
         return 0;
     }
@@ -219,13 +223,21 @@ public class UserManager {
 
     public void incrementAverageSpeed(double distance, int minutes ) {
         if(userLogged != null){
-            userLogged.incrementTotalAverageSpeed(distance/(minutes/60.0));
+            if (minutes != 0) {
+                userLogged.incrementTotalAverageSpeed(distance / (minutes / 60.0));
+            } else {
+                userLogged.incrementTotalAverageSpeed(distance / (1 / 60.0));
+            }
         }
     }
 
     public double getLoggedUserAverageSpeed(){
         if(userLogged != null){
-            return userLogged.getTotalAverageSpeed()/userLogged.getTotalDeliveries();
+            int totalDeliveries = userLogged.getTotalDeliveries();
+            if (totalDeliveries==0) {
+                return 0;
+            }
+            return userLogged.getTotalAverageSpeed()/totalDeliveries;
         }
         return 0;
     }
