@@ -26,8 +26,13 @@ public class OrderModelDataArray {
         String payment_type;
         String payment_reference;
         String date;
+        String updated_at;
         JsonElement delivered_by;
         JsonElement custom;
+
+        public String getUpdated_at() {
+            return updated_at;
+        }
 
         public int getId() {
             return id;

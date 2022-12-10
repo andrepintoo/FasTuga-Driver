@@ -24,6 +24,7 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 
 import ipleiria.taes.fastugadriver.activities.LoginActivity;
+import ipleiria.taes.fastugadriver.fragments.StatisticsFragment;
 import ipleiria.taes.fastugadriver.preferences.SharedPreferences;
 
 import ipleiria.taes.fastugadriver.managers.UserManager;
