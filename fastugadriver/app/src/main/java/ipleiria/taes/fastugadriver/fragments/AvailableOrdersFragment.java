@@ -6,7 +6,6 @@ import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -39,15 +38,14 @@ import org.osmdroid.util.GeoPoint;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.LinkedList;
-import java.util.Timer;
-import java.util.TimerTask;
 
-import ipleiria.taes.fastugadriver.MainActivity;
 import ipleiria.taes.fastugadriver.R;
 import ipleiria.taes.fastugadriver.api.OrderService;
 import ipleiria.taes.fastugadriver.api.RetrofitClient;
 import ipleiria.taes.fastugadriver.entities.OrderButton;
+import ipleiria.taes.fastugadriver.entities.OrderNotification;
 import ipleiria.taes.fastugadriver.managers.UserManager;
 import ipleiria.taes.fastugadriver.model.order.OrderModelArray;
 import ipleiria.taes.fastugadriver.model.order.OrderModelDataArray;
@@ -332,8 +330,13 @@ public class AvailableOrdersFragment extends Fragment {
             setButtonProperties(buttonText, orderID);
 
             if (orderStatusChar == 'R') {
-                showNotification("Order " + orderID + " is Ready to be Claimed",
-                        "Please Claim the following order to be delivered");
+                String buttonTitleText = "Order " + orderID + " is Ready to be Claimed";
+                String buttonContextText = "Please Claim the following order to be delivered";
+                showNotification(buttonTitleText, buttonContextText);
+
+                // Add Ready Notification to Notification Manager
+                OrderNotification readyNotification = new OrderNotification(orderID, buttonTitleText, buttonContextText, new Date());
+                ipleiria.taes.fastugadriver.managers.NotificationManager.getManager().addToOrdersReadyNotification(readyNotification);
             }
 
             // Add Buttons to LinkedList

@@ -3,10 +3,12 @@ package ipleiria.taes.fastugadriver;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.Context;
 import android.graphics.Color;
@@ -24,6 +26,7 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 
 import ipleiria.taes.fastugadriver.activities.LoginActivity;
+import ipleiria.taes.fastugadriver.fragments.AvailableOrdersFragment;
 import ipleiria.taes.fastugadriver.preferences.SharedPreferences;
 
 import ipleiria.taes.fastugadriver.managers.UserManager;
@@ -132,13 +135,4 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.navHostFragment);
         NavigationUI.setupWithNavController(navigationView, navController);
     }
-
-    private void showToastMessage(String message) {
-        Context context = getApplicationContext();
-        int duration = Toast.LENGTH_SHORT;
-
-        Toast toast = Toast.makeText(context, message, duration);
-        toast.show();
-    }
-
 }

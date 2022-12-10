@@ -11,6 +11,9 @@
         android:id="@+id/statistics"
         android:title="Statistics"/>
     <item
+        android:id="@+id/notificationHistory"
+        android:title="Notification History"/>
+    <item
         android:id="@+id/profile"
         android:title="Profile"/>
     <item android:title="Others" >

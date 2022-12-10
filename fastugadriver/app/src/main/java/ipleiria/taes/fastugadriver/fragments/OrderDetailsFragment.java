@@ -32,9 +32,13 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+import java.util.Date;
+import java.util.LinkedList;
+
 import ipleiria.taes.fastugadriver.R;
 import ipleiria.taes.fastugadriver.api.OrderService;
 import ipleiria.taes.fastugadriver.api.RetrofitClient;
+import ipleiria.taes.fastugadriver.entities.OrderNotification;
 import ipleiria.taes.fastugadriver.managers.UserManager;
 import ipleiria.taes.fastugadriver.model.order.OrderModelArray;
 import ipleiria.taes.fastugadriver.model.order.OrderModelObject;
@@ -160,7 +164,7 @@ public class OrderDetailsFragment extends Fragment {
                     goBackToAvailableOrders();
                 }
             });
-        } else if (claimedId == 0 && orderStatus=='R') {
+        } else if (claimedId == 0 && orderStatus == 'R') {
             buttonBack.setVisibility(View.VISIBLE);
             buttonClaim.setVisibility(View.VISIBLE);
             buttonClaim.setOnClickListener(new View.OnClickListener() {
@@ -171,7 +175,7 @@ public class OrderDetailsFragment extends Fragment {
                     goBackToAvailableOrders();
                 }
             });
-        } else if(orderStatus!='P'){
+        } else if (orderStatus != 'P') {
             buttonBack.setVisibility(View.VISIBLE);
             buttonCancelOrder.setVisibility(View.VISIBLE);
             buttonDelivered.setVisibility(View.VISIBLE);
@@ -202,8 +206,18 @@ public class OrderDetailsFragment extends Fragment {
                             String reason = textReasonCancel.getText().toString();
                             OrderModelArray json = createJson(ORDER_CANCELED);
                             updateOrder(orderID, json);
-                            showNotification("Order " + orderID + " has been CANCELLED",
-                                    "Please Contact " + clientName + " - " + clientPhoneNumber);
+
+                            String buttonTitleText = "Order " + orderID + " has been CANCELLED";
+                            showNotification(buttonTitleText, reason);
+
+                            // Add Cancelled Notification to Notification Manager - Cancelled List
+                            OrderNotification cancelledOrderNotification = new OrderNotification(orderID, buttonTitleText, reason, new Date());
+                            LinkedList<OrderNotification> cancelledOrderNotificationLinkedList = ipleiria.taes.fastugadriver.managers.NotificationManager.getManager().getOrdersCancelledNotification();
+                            cancelledOrderNotificationLinkedList.add(cancelledOrderNotification);
+                            // Remove Order from Ready Notification List
+                            ipleiria.taes.fastugadriver.managers.NotificationManager.getManager().removeFromOrdersReadyNotification(orderID);
+
+
                             popupWindow.dismiss();
                             goBackToAvailableOrders();
                         }
@@ -228,19 +242,19 @@ public class OrderDetailsFragment extends Fragment {
                     goBackToAvailableOrders();
                 }
             });
-        }else{
+        } else {
             buttonBack.setVisibility(View.VISIBLE);
         }
     }
 
     private void showNotification(String title, String context) {
         String CHANNEL_ID = "CancelOrderNotification";
-        NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID,"Cancel Order", NotificationManager.IMPORTANCE_DEFAULT);
+        NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, "Cancel Order", NotificationManager.IMPORTANCE_DEFAULT);
         notificationChannel.setLightColor(Color.RED);
         notificationChannel.setLockscreenVisibility(NotificationCompat.VISIBILITY_PRIVATE);
 
-        NotificationManager notificationManager = (NotificationManager) getSystemService(requireContext(),NotificationManager.class);
-        assert  notificationManager != null;
+        NotificationManager notificationManager = (NotificationManager) getSystemService(requireContext(), NotificationManager.class);
+        assert notificationManager != null;
         notificationManager.createNotificationChannel(notificationChannel);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(requireContext(), CHANNEL_ID);
@@ -251,7 +265,7 @@ public class OrderDetailsFragment extends Fragment {
                 .setContentTitle(title)
                 .setContentText(context)
                 .build();
-        notificationManager.notify(0,notification);
+        notificationManager.notify(0, notification);
     }
 
     private void goBackToAvailableOrders() {
