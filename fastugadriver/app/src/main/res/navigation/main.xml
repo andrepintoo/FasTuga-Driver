@@ -30,4 +30,9 @@
         android:name="ipleiria.taes.fastugadriver.fragments.MyProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/notificationHistory"
+        android:name="ipleiria.taes.fastugadriver.fragments.NotificationHistoryFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification_history" />
 </navigation>
