@@ -22,6 +22,11 @@ public class OrderModelArray {
     String date;
     int delivered_by;
     JsonElement custom;
+    String updated_at;
+
+    public void setUpdated_at(String updated_at) {
+        this.updated_at = updated_at;
+    }
 
     public void setTicket_number(int ticket_number) {
         this.ticket_number = ticket_number;

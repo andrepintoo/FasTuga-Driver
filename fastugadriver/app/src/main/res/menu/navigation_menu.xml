@@ -5,9 +5,6 @@
         android:id="@+id/menuAvailableOrders"
         android:title="Available Orders" />
     <item
-        android:id="@+id/menuCurrentOrder"
-        android:title="Current Order"/>
-    <item
         android:id="@+id/statistics"
         android:title="Statistics"/>
     <item

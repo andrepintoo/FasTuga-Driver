@@ -363,7 +363,7 @@ public class AvailableOrdersFragment extends Fragment {
                                     earning, clientLatitude, clientLongitude, restaurantPoint.getLatitude(), restaurantPoint.getLongitude(),
                                     deliveredId, claimedID, order.getTicket_number(), orderStatusChar, customer.getAsInt(), order.getTotal_price(),
                                     order.getTotal_paid(), order.getTotal_paid_with_points(), order.getPoints_gained(),
-                                    order.getPoints_used_to_pay(), order.getPayment_type(), order.getPayment_reference(), order.getDate());
+                                    order.getPoints_used_to_pay(), order.getPayment_type(), order.getPayment_reference(), order.getDate(), order.getUpdated_at());
 
                             replaceFragment(fragment);
                         } else if (countClicks == 2) { // If button is pressed twice
@@ -477,7 +477,7 @@ public class AvailableOrdersFragment extends Fragment {
                                               double restaurantLatitude, double restaurantLongitude, int deliveredId, int claimedId,
                                               int ticketNumber, char orderStatus, int customerId, double totalPrice,
                                               double totalPaid, double totalPaidWithPoints, int pointsGained,
-                                              int pointsUsedToPay, String paymentType, String paymentReference, String date) {
+                                              int pointsUsedToPay, String paymentType, String paymentReference, String date, String updated_at) {
         Bundle args = new Bundle();
         args.putInt("orderID", orderId);
         args.putString("clientName", clientName);
@@ -502,6 +502,7 @@ public class AvailableOrdersFragment extends Fragment {
         args.putString("paymentType", paymentType);
         args.putString("paymentReference", paymentReference);
         args.putString("date", date);
+        args.putString("updated_at", updated_at);
         Fragment fragment = new OrderDetailsFragment();
         fragment.setArguments(args);
         return fragment;
