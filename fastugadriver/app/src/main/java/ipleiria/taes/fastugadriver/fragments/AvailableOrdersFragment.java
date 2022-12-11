@@ -108,11 +108,8 @@ public class AvailableOrdersFragment extends Fragment {
         //Balance Update for logged user
         updateBalance();
 
-        // Gets Orders that are Ready
-        fetchOrders('R');
-
-        // Gets Orders that are Preparing
-        fetchOrders('P');
+        // Gets Orders that are Ready and Preparing
+        fetchOrders();
 
         if (!hasAvailableOrders) {
             TextView noAvailableOrders = new TextView(getContext());
@@ -240,24 +237,24 @@ public class AvailableOrdersFragment extends Fragment {
         hasAvailableOrders = false;
     }
 
-    private void fetchOrders(char orderStatus) {
+    private void fetchOrders() {
         // Creates Service
         OrderService service = RetrofitClient.getRetrofitInstance().create(OrderService.class);
 
         // Creates Call interface for API (Retrofit)
-        Call<OrderModelDataArray> orders = service.getOrderByStatus(orderStatus);
+        Call<OrderModelDataArray> orders = service.getOrderByStatus();
 
         // Calls API
         try {
             Response<OrderModelDataArray> response = orders.execute();
             assert response.body() != null;
-            displayOrders(response, orderStatus);
+            displayOrders(response);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
 
-    private void displayOrders(Response<OrderModelDataArray> response, char orderStatus) {
+    private void displayOrders(Response<OrderModelDataArray> response) {
         assert response.body() != null;
         ArrayList<OrderModelDataArray.data> orders = response.body().getOrders();
 
