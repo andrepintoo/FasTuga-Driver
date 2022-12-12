@@ -7,17 +7,19 @@ public class User {
     private String email;
     private String password;
     private String phoneNumber;
+    private String licensePlate;
     private int balance;
     private int totalDeliveries;
     private long totalDeliveryMinutes;
     private Hashtable<Integer, Integer> customersServed;
     private double totalAverageSpeed;
 
-    public User(String firstName, String lastName, String email, String password, String phoneNumber, int balance, int totalDeliveries, long totalDeliveryTime, double totalAverageSpeed) {
+    public User(String firstName, String lastName, String email, String password, String phoneNumber, int balance, int totalDeliveries, long totalDeliveryTime, double totalAverageSpeed, String licensePlate) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.licensePlate = licensePlate;
         this.phoneNumber = phoneNumber;
         this.balance = balance;
         this.totalDeliveries = totalDeliveries;
@@ -127,5 +129,13 @@ public class User {
 
     public void incrementTotalAverageSpeed(double averageSpeed){
         this.totalAverageSpeed += averageSpeed;
+    }
+
+    public String getLicensePlate() {
+        return licensePlate;
+    }
+
+    public void setLicensePlate(String licensePlate) {
+        this.licensePlate = licensePlate;
     }
 }

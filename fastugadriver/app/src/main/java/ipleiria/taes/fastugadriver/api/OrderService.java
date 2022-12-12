@@ -60,8 +60,8 @@ public interface OrderService {
                 });
      */
 
-    @GET("orders/statusTAES/{status}")
-    Call<OrderModelDataArray> getOrderByStatus(@Path("status") char status);
+    @GET("orders/statusTAES")
+    Call<OrderModelDataArray> getOrderByStatus();
 
     @Headers({"Content-Type: application/json"})
     @PUT("orders/{id}")

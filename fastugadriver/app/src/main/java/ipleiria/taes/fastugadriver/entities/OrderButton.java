@@ -4,8 +4,8 @@ import android.widget.Button;
 
 public class OrderButton {
     private Button button;
-    private String status;
-    private double distance;
+    private final String status;
+    private final double distance;
 
     public OrderButton(Button button, String status, double distance) {
         this.button = button;
@@ -25,15 +25,7 @@ public class OrderButton {
         return status;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
     public double getDistance() {
         return distance;
-    }
-
-    public void setDistance(double distance) {
-        this.distance = distance;
     }
 }

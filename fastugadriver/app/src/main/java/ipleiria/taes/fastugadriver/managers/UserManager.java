@@ -10,7 +10,6 @@ import java.util.LinkedList;
 
 import ipleiria.taes.fastugadriver.api.RetrofitClient;
 import ipleiria.taes.fastugadriver.api.UserService;
-import ipleiria.taes.fastugadriver.entities.Driver;
 import ipleiria.taes.fastugadriver.entities.User;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -21,17 +20,14 @@ import retrofit2.Response;
 public class UserManager {
     private static final UserManager instance = new UserManager();
     private LinkedList<User> users;
-    private LinkedList<Driver> drivers;
     private User userLogged;
 
     public UserManager() {
         users = new LinkedList<>();
-        drivers = new LinkedList<>();
-        users.add(new User("PrimeiroNome", "Apelido", "customer_6@mail.pt", "12345678", "912345678",0, 0, 0, 0.0));
-        users.add(new User("PrimeiroNome", "Apelido", "contacto@email.pt", "password", "912345678",0 ,0, 0, 0.0));
-        users.add(new User("PrimeiroNome", "Apelido", "rodrigo.campos@mail.pt", "12345678", "912345678",0, 0, 0, 0.0));
-        users.add(new User("PrimeiroNome", "Apelido", "dsfsdfsdf@mail.pt", "12345678", "912345678",0, 0, 0, 0.0));
-        drivers.add(new Driver("Sara", "Martins", "sara@mail.pt", "password", "912345678", "AA-00-AA"));
+        users.add(new User("PrimeiroNome", "Apelido", "customer_6@mail.pt", "12345678", "912345678",0, 0, 0, 0.0, "AA-00-AA"));
+        users.add(new User("PrimeiroNome", "Apelido", "contacto@email.pt", "password", "912345678",0 ,0, 0, 0.0, "AA-00-AA"));
+        users.add(new User("PrimeiroNome", "Apelido", "rodrigo.campos@mail.pt", "12345678", "912345678",0, 0, 0, 0.0, "AA-00-AA"));
+        users.add(new User("PrimeiroNome", "Apelido", "dsfsdfsdf@mail.pt", "12345678", "912345678",0, 0, 0, 0.0, "AA-00-AA"));
         userLogged = null;
     }
 
@@ -56,22 +52,14 @@ public class UserManager {
         return 0;
     }
 
+
     public boolean licenseExists(String licensePlate) {
-        for(Driver driver : drivers){
-            if(driver.getLicensePlate().equals(licensePlate)){
+        for(User user : users){
+            if(user.getLicensePlate().equals(licensePlate)){
                 return true;
             }
         }
         return false;
-    }
-
-    public Driver getDriver(String email) {
-        for(Driver driver : drivers){
-            if(driver.getEmail().equals(email)){
-                return driver;
-            }
-        }
-        return null;
     }
 
     public boolean logInUser(String email, String password){
@@ -92,22 +80,22 @@ public class UserManager {
     }
 
     public int registerUser(String firstName, String lastName, String email, String password, String phoneNumber, String licensePlate){
-        Driver driver = getDriver(email);
+        User user = getUser(email);
         Boolean licensePlateExists = licenseExists(licensePlate);
 
-        if(driver != null && licensePlateExists){
+        if(user != null && licensePlateExists){
             return -3;
         }
 
-        if(driver != null) {
+        if(user != null) {
             return -1;
         }
 
         if(licensePlateExists){
             return -2;
         }
-        driver = new Driver(firstName, lastName, email, password, phoneNumber, licensePlate);
-        users.add(driver);
+        user = new User(firstName, lastName, email, password, phoneNumber, 0, 0, 0, 0, licensePlate);
+        users.add(user);
         return 0;
     }
 
