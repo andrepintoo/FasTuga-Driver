@@ -24,6 +24,9 @@ To use the application, the driver has to register and conduct a valid login. Al
 The FasTuga Driver application is designed to be simple and easy to use, providing a seamless experience for drivers and enhancing the FasTuga restaurant's business by providing an additional value to its customers.
 <br><br>
 
+  
+ <p>&#8702; <a href="https://github.com/andrepintoo/FasTuga-Driver/blob/main/EI_TAES_2022_2023_1S_ProjectAssignment.pdf">Project Assignment</a></p>
+<p>&#8702; <a href="https://github.com/andrepintoo/FasTuga-Driver/blob/main/report_2201723_2200672_2201711_2201757.pdf">Report</a></p>
 
 <h1>Tools Used</h1>
 <ul>
