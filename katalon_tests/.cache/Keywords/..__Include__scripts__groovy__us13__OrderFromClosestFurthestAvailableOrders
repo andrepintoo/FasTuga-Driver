@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "8E2AD74A7FAC8CA7A6F34609F218333E",
+  "keywordClasses": [
+    {
+      "name": "us13.OrderFromClosestFurthestAvailableOrders",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": false
+}

@@ -1,0 +1,7 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+US11 Test Suite,,,,2022-12-05 18:26:36,2022-12-05 18:27:56,1m - 20.254s,PASSED
+,,,,,,,
+Test Cases/US11 - Cancel Order/US11TestCaseAllFeatures,,,,2022-12-05 18:26:36,2022-12-05 18:27:56,1m - 20.002s,PASSED
+"runFeatureFile(""Include/features/us11.feature"")",,,,2022-12-05 18:26:37,2022-12-05 18:27:22,45.648s,PASSED
+"callTestCase(findTestCase(""US11 - Cancel Order/CheckSuccessfulCancelOrder""), [:], STOP_ON_FAILURE)",,,,2022-12-05 18:27:22,2022-12-05 18:27:41,18.888s,PASSED
+"runFeatureFile(""Include/features/us11emptyorders.feature"")",,,,2022-12-05 18:27:41,2022-12-05 18:27:56,15.060s,PASSED

@@ -1,0 +1,296 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "BDD_TESTRUN_UUID": "2bc6e86f-f885-4163-8c59-a1506c0b18d6",
+        "line": 6,
+        "name": "Check Keep Me Logged In Checkbox Exists",
+        "description": "",
+        "id": "us7---keep-me-logged-in;check-keep-me-logged-in-checkbox-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 13522409000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "2ce0a7e5-861c-40cb-bdf6-6d39c22955fb"
+          },
+          {
+            "result": {
+              "duration": 721206200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user sees the \"Keep Me Logged In\" checkbox",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Keep Me Logged In\"",
+                  "offset": 18
+                }
+              ],
+              "location": "KeepMeLoggedInTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "c55e9d90-a60d-416c-b575-8f5674aec5e5"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "aa95c6bc-f2eb-4ae7-9296-cfdd6812d98c",
+        "line": 10,
+        "name": "Check Opening Application After Logout With Keep Me Signed In",
+        "description": "",
+        "id": "us7---keep-me-logged-in;check-opening-application-after-logout-with-keep-me-signed-in",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6582486400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user opens the application - false",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_opens_the_application_false()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "2c6097f7-595f-4dba-9d51-fd74bb97bd8b"
+          },
+          {
+            "result": {
+              "duration": 662469000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on the \"Keep Me Logged In\" checkbox",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Keep Me Logged In\"",
+                  "offset": 23
+                }
+              ],
+              "location": "KeepMeLoggedInTests.the_user_clicks_on_the_checkbox(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "277c3d2d-4ded-46fc-b7d4-078075a44e56"
+          },
+          {
+            "result": {
+              "duration": 4751904700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "9c751d26-239d-4ce9-a92b-17aaec12cb11"
+          },
+          {
+            "result": {
+              "duration": 235523700,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "d68097cf-4427-4b86-8984-fa4c08c49a78"
+          },
+          {
+            "result": {
+              "duration": 1145517500,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user clicks on the \"Logout\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Logout\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "9fbe1652-adea-45c5-b8b1-39825f7a78c9"
+          },
+          {
+            "result": {
+              "duration": 536100700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user closes the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_closes_the_application()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "9e81d56b-9652-4a8b-b2ff-54d167ccf39d"
+          },
+          {
+            "result": {
+              "duration": 9858169300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user opens the application - false",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_opens_the_application_false()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "61ddf13c-e650-4c4c-ba68-9fc4738701e4"
+          },
+          {
+            "result": {
+              "duration": 478671000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user sees the \"LOGIN\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "e6693b14-606e-4937-ab22-ab466ada3d99"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "4ae5fdad-23e0-4665-aefa-78e610fb9bcf",
+        "line": 20,
+        "name": "Check Successful Keep Me Logged In",
+        "description": "",
+        "id": "us7---keep-me-logged-in;check-successful-keep-me-logged-in",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6824842100,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user opens the application - false",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_opens_the_application_false()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "4fb022b6-42a1-4f7e-adb4-3330c25276a8"
+          },
+          {
+            "result": {
+              "duration": 491828900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user clicks on the \"Keep Me Logged In\" checkbox",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Keep Me Logged In\"",
+                  "offset": 23
+                }
+              ],
+              "location": "KeepMeLoggedInTests.the_user_clicks_on_the_checkbox(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "cc6f7c02-6c01-4677-881e-b449f1aa7ea9"
+          },
+          {
+            "result": {
+              "duration": 4266542200,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "9eb43d8d-524d-47b8-8ddf-0d0a1b830b2e"
+          },
+          {
+            "result": {
+              "duration": 298883400,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user closes the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_closes_the_application()"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "29b4bfb2-056d-4987-b341-4d63777bad28"
+          },
+          {
+            "result": {
+              "duration": 8961820400,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user opens the application - false",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_opens_the_application_false()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "2344ef15-e92c-469c-8021-ad0df038f62a"
+          },
+          {
+            "result": {
+              "duration": 523286600,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "a8cd86e5-eaf2-45e8-8e65-88d41077e3c7"
+          }
+        ]
+      }
+    ],
+    "name": "US7 - Keep Me Logged In",
+    "description": "  As a user\n\tI want to keep me login\n\tSo that I don’t have to authenticate myself every time I want to access the application",
+    "id": "us7---keep-me-logged-in",
+    "keyword": "Feature",
+    "uri": "C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us7.feature",
+    "tags": []
+  }
+]

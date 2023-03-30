@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+US13 Test Suite,,,,2022-12-08 19:35:39,2022-12-08 19:38:19,2m - 40.251s,PASSED
+,,,,,,,
+Test Cases/US13 - Order from Closest-Furthest Available Orders/US13TestCaseAllFeatures,,,,2022-12-08 19:35:39,2022-12-08 19:38:19,2m - 39.886s,PASSED
+"runFeatureFile(""include/features/us13.feature"")",,,,2022-12-08 19:35:40,2022-12-08 19:38:19,2m - 39.385s,PASSED

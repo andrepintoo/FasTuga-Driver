@@ -1,0 +1,2468 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "BDD_TESTRUN_UUID": "9b3f00a8-bfcc-4398-8dbd-03243744b639",
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 24416354800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "b1a38469-4ef3-42e9-9939-7dcb8d732a73"
+          },
+          {
+            "result": {
+              "duration": 1468833200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user fills the \"email login\" field with \"rodrigo.campos@mail.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"rodrigo.campos@mail.pt\"",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "8f4d047e-da5d-4d57-9124-2dedb3df6251"
+          },
+          {
+            "result": {
+              "duration": 1664585700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user fills the \"password login\" field with \"12345678\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"12345678\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "337bf62f-6758-4189-bdfa-f27231b1d6ee"
+          },
+          {
+            "result": {
+              "duration": 665244800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "84423c79-5151-465d-8a08-12d7722baa34"
+          },
+          {
+            "result": {
+              "duration": 4236217400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "1d975228-7d71-4d50-9be6-fd6da4c328be"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "9b3f00a8-bfcc-4398-8dbd-03243744b639",
+        "line": 14,
+        "name": "Check Profile Button Exists",
+        "description": "",
+        "id": "us21---see-and-change-my-profile-details;check-profile-button-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 350941400,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user sees the \"Profile\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LogoutTests.the_user_sees_the_text(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "3f5d631b-0c80-4229-b680-de6f804827f5"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "3bfb89b9-0c0d-4cff-ad84-71d8a7fb9a1a",
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 10991481800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "e8655c82-8cfd-42c1-bdd6-7ea915f81fe7"
+          },
+          {
+            "result": {
+              "duration": 2072821000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user fills the \"email login\" field with \"rodrigo.campos@mail.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"rodrigo.campos@mail.pt\"",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "c37cdfb5-8c9b-44d5-b877-bfcdbb872da8"
+          },
+          {
+            "result": {
+              "duration": 1171714900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user fills the \"password login\" field with \"12345678\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"12345678\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "4a4a56d2-21a2-437b-9559-3a66cffbe476"
+          },
+          {
+            "result": {
+              "duration": 710644200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "04170bed-e9f9-4c64-b5be-74a7e215bf91"
+          },
+          {
+            "result": {
+              "duration": 3414508300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "bc04e8c1-3e74-4e17-848b-c2070895c48a"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "3bfb89b9-0c0d-4cff-ad84-71d8a7fb9a1a",
+        "line": 17,
+        "name": "Check User Profile Details Exist",
+        "description": "",
+        "id": "us21---see-and-change-my-profile-details;check-user-profile-details-exist",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1268664700,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user clicks on the \"Profile\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "96dc6b08-367e-4078-87e3-e2ae90fac6ad"
+          },
+          {
+            "result": {
+              "duration": 1061266600,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user sees that the \"Profile Name\" text is not empty",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile Name\"",
+                  "offset": 23
+                }
+              ],
+              "location": "SeeAndChangeMyProfileDetailsTests.the_user_that_the_text_is_not_empty(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "be1a8dcd-0577-4c70-8cda-33021a85adec"
+          },
+          {
+            "result": {
+              "duration": 244143800,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user sees that the \"Profile Email\" text is not empty",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile Email\"",
+                  "offset": 23
+                }
+              ],
+              "location": "SeeAndChangeMyProfileDetailsTests.the_user_that_the_text_is_not_empty(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "d545d207-911c-402a-a41c-52baaff0f82e"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "79692124-fffb-442a-9898-8536439a6d7e",
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 11655297600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "6fa0e2d6-7900-4ff0-bc6b-f1b045f640be"
+          },
+          {
+            "result": {
+              "duration": 1727014500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user fills the \"email login\" field with \"rodrigo.campos@mail.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"rodrigo.campos@mail.pt\"",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "4f72a925-2579-421c-8b73-eef64f495fbb"
+          },
+          {
+            "result": {
+              "duration": 1135404800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user fills the \"password login\" field with \"12345678\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"12345678\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "2bfbce41-426b-43a0-889d-a918ad719893"
+          },
+          {
+            "result": {
+              "duration": 750420900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "31f73d02-86cb-4cc8-a3e5-6b3b71a02b66"
+          },
+          {
+            "result": {
+              "duration": 3578377000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "44592520-ed25-403c-aa02-b2a17c8ee125"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "79692124-fffb-442a-9898-8536439a6d7e",
+        "line": 22,
+        "name": "Check Change Password Button Exists",
+        "description": "",
+        "id": "us21---see-and-change-my-profile-details;check-change-password-button-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2267962000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user clicks on the \"Profile\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "75f19446-4f77-448b-89f1-0830236c8f07"
+          },
+          {
+            "result": {
+              "duration": 1063877900,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user sees the \"CHANGE PASSWORD Profile\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHANGE PASSWORD Profile\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CancelOrderTests.the_user_sees_the_button(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "d97f1d55-e3a2-4d5f-bbc8-56f9b423e0b7"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "631cbe1a-40d1-4875-9628-04f94b3ee831",
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 16506994000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "444389fb-c39d-47ff-9862-65906b755b32"
+          },
+          {
+            "result": {
+              "duration": 1734596700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user fills the \"email login\" field with \"rodrigo.campos@mail.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"rodrigo.campos@mail.pt\"",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "890d3ab2-25e7-4426-a1bc-c1b0a358b0f0"
+          },
+          {
+            "result": {
+              "duration": 1648233300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user fills the \"password login\" field with \"12345678\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"12345678\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "82cdc3b6-44c9-4d8b-bb97-a6e157be94dc"
+          },
+          {
+            "result": {
+              "duration": 709817000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "d6455a7d-be6a-4cdd-8186-e1b43250a140"
+          },
+          {
+            "result": {
+              "duration": 3345180900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "6157efe5-e307-452b-974a-971e3f2e749e"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "631cbe1a-40d1-4875-9628-04f94b3ee831",
+        "line": 26,
+        "name": "Check Change Name Button Exists",
+        "description": "",
+        "id": "us21---see-and-change-my-profile-details;check-change-name-button-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1279879000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user clicks on the \"Profile\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "000f0ed4-5101-4132-abc8-f490b723d5a0"
+          },
+          {
+            "result": {
+              "duration": 1080234700,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user sees the \"CHANGE NAME Profile\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHANGE NAME Profile\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CancelOrderTests.the_user_sees_the_button(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "aa6ba329-9f39-48c4-8e44-b1a33232136a"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "7166f1e2-f6b0-44a0-9d5e-e0bc881947ad",
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 12350400700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "8a590472-5e16-41e8-917a-d02856374f29"
+          },
+          {
+            "result": {
+              "duration": 1202058300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user fills the \"email login\" field with \"rodrigo.campos@mail.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"rodrigo.campos@mail.pt\"",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "219707ae-6015-4d80-85d4-fd12f6d95094"
+          },
+          {
+            "result": {
+              "duration": 1689907300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user fills the \"password login\" field with \"12345678\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"12345678\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "ea4b0730-3c84-48c5-bab1-9ed8c8df5b4d"
+          },
+          {
+            "result": {
+              "duration": 672457500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "996a9365-2694-4e74-8247-22ba64de054b"
+          },
+          {
+            "result": {
+              "duration": 3393948700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "390fb2d7-3849-4f6c-9d51-5cf23ca2c846"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "7166f1e2-f6b0-44a0-9d5e-e0bc881947ad",
+        "line": 30,
+        "name": "Go to Change Password Screen",
+        "description": "",
+        "id": "us21---see-and-change-my-profile-details;go-to-change-password-screen",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1273250400,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the user clicks on the \"Profile\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "828418cd-5562-4a60-b903-c0377a79a6fe"
+          },
+          {
+            "result": {
+              "duration": 1151246000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the user clicks on the \"CHANGE PASSWORD Profile\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHANGE PASSWORD Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "47cefc80-f77b-4100-a727-b725453f2acd"
+          },
+          {
+            "result": {
+              "duration": 836093200,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the user sees the \"Change My Password\" text",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Change My Password\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_text(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "ce0907e7-c55e-495c-8e66-0f3f8ccf4e5a"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "0cf62ec0-1e26-4473-b19e-cc511845776e",
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 12880557500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "c61fc92d-181b-4f67-84b4-d341d24e917a"
+          },
+          {
+            "result": {
+              "duration": 1773988300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user fills the \"email login\" field with \"rodrigo.campos@mail.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"rodrigo.campos@mail.pt\"",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "a212cde9-e653-4646-8579-edcba9a61e7e"
+          },
+          {
+            "result": {
+              "duration": 1661019300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user fills the \"password login\" field with \"12345678\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"12345678\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "6e88c522-11fe-46b7-98b1-db7865348d01"
+          },
+          {
+            "result": {
+              "duration": 681033800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "97df39b9-1539-4405-9a3b-928e7b405ce3"
+          },
+          {
+            "result": {
+              "duration": 3402569600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "6372bee5-07c4-4782-9170-4ec6e2d577d9"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "0cf62ec0-1e26-4473-b19e-cc511845776e",
+        "line": 35,
+        "name": "Go Back to Profile Screen in Change Password Screen",
+        "description": "",
+        "id": "us21---see-and-change-my-profile-details;go-back-to-profile-screen-in-change-password-screen",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1253661000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "the user clicks on the \"Profile\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "b389fe35-5717-4527-95cb-d803b2f5fc7e"
+          },
+          {
+            "result": {
+              "duration": 1106851100,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "the user clicks on the \"CHANGE PASSWORD Profile\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHANGE PASSWORD Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "7bde96e3-4019-438b-8730-216f7648f50f"
+          },
+          {
+            "result": {
+              "duration": 873776100,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "the user clicks on the \"BACK Change Password\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BACK Change Password\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "d378a9b2-362b-4405-a8eb-76ac286f3ebb"
+          },
+          {
+            "result": {
+              "duration": 771405400,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "the user sees that the \"Profile Name\" text is not empty",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile Name\"",
+                  "offset": 23
+                }
+              ],
+              "location": "SeeAndChangeMyProfileDetailsTests.the_user_that_the_text_is_not_empty(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "faf89125-a4e4-4821-b78d-c18372862276"
+          },
+          {
+            "result": {
+              "duration": 243581700,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "the user sees that the \"Profile Email\" text is not empty",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile Email\"",
+                  "offset": 23
+                }
+              ],
+              "location": "SeeAndChangeMyProfileDetailsTests.the_user_that_the_text_is_not_empty(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "f42a7310-135f-4151-b639-ebe4b90e3559"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "f23c2959-d632-4a2c-8073-cfd79f57a6cf",
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 12198405700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "734e0cba-11d0-4f2a-ab62-f74431dde0f5"
+          },
+          {
+            "result": {
+              "duration": 1750332300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user fills the \"email login\" field with \"rodrigo.campos@mail.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"rodrigo.campos@mail.pt\"",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "ca24deba-e072-4953-adad-587878321e4d"
+          },
+          {
+            "result": {
+              "duration": 1146252200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user fills the \"password login\" field with \"12345678\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"12345678\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "5d911196-c1d6-4978-a885-11d8a679c81a"
+          },
+          {
+            "result": {
+              "duration": 706822500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "f628438d-a911-4798-a23b-7314d5351078"
+          },
+          {
+            "result": {
+              "duration": 7774152200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "4b055e9e-be8d-4dc2-82ee-f1b0e9d456d6"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "f23c2959-d632-4a2c-8073-cfd79f57a6cf",
+        "line": 42,
+        "name": "Check Change Password Button Exists",
+        "description": "",
+        "id": "us21---see-and-change-my-profile-details;check-change-password-button-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1310953200,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "the user clicks on the \"Profile\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "88649f09-7a25-4c15-bf4f-294770e122a9"
+          },
+          {
+            "result": {
+              "duration": 1126178100,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "the user clicks on the \"CHANGE PASSWORD Profile\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHANGE PASSWORD Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "258e6817-2109-44c8-bb7f-bddcf135b23a"
+          },
+          {
+            "result": {
+              "duration": 872302100,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "the user sees the \"CHANGE PASSWORD Change\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHANGE PASSWORD Change\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CancelOrderTests.the_user_sees_the_button(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "b20309ee-92b9-4eae-9cc3-aff6c326be47"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "e45f2ac9-ced6-4ddd-a89b-f79e5dbf8d17",
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 13079080000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "5e7aa7ac-eb88-4e9d-afd9-9f6622c19fc7"
+          },
+          {
+            "result": {
+              "duration": 1985378300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user fills the \"email login\" field with \"rodrigo.campos@mail.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"rodrigo.campos@mail.pt\"",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "d2d484fe-bae6-49cb-93aa-5b8b450f15bd"
+          },
+          {
+            "result": {
+              "duration": 1648569400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user fills the \"password login\" field with \"12345678\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"12345678\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "b1f4e251-311e-4338-a6fe-a0c93a5fa0c5"
+          },
+          {
+            "result": {
+              "duration": 701640600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "10bc9f77-3e25-4e95-82d1-5953251a6e68"
+          },
+          {
+            "result": {
+              "duration": 3580789200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "f56d853a-3df3-4ad8-96cb-f2c8c68f297f"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "e45f2ac9-ced6-4ddd-a89b-f79e5dbf8d17",
+        "line": 49,
+        "name": "Check Successful Change Password",
+        "description": "",
+        "id": "us21---see-and-change-my-profile-details;check-successful-change-password",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1200384200,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "the user clicks on the \"Profile\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "d0ee442d-7682-42f3-8d68-f1f8a5403417"
+          },
+          {
+            "result": {
+              "duration": 1158632400,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "the user clicks on the \"CHANGE PASSWORD Profile\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHANGE PASSWORD Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "4c725bd8-1566-4e37-ba3c-764b5962d94c"
+          },
+          {
+            "result": {
+              "duration": 1338735100,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "the user fills the \"Atual Password\" field with \"12345678\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Atual Password\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"12345678\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "63a03d05-e15d-4d99-9e9a-662e952703a3"
+          },
+          {
+            "result": {
+              "duration": 1128513800,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "the user fills the \"New Password\" field with \"password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"New Password\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"password\"",
+                  "offset": 45
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "552520db-f074-41e1-8b28-f79d67413d89"
+          },
+          {
+            "result": {
+              "duration": 1134020800,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "the user fills the \"Confirm Password\" field with \"password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Confirm Password\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"password\"",
+                  "offset": 49
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "da8e98bb-c0ce-44d9-87e1-34ac98cfad32"
+          },
+          {
+            "result": {
+              "duration": 694315200,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "the user clicks on the \"CHANGE PASSWORD Change\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHANGE PASSWORD Change\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "6efcc74b-5134-4cd8-bd8a-c95a4fb7a2a1"
+          },
+          {
+            "result": {
+              "duration": 3005236600,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the user sees the Confirmation Dialog \"Success\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Success\"",
+                  "offset": 38
+                }
+              ],
+              "location": "OptOutTests.the_user_sees_the(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "bb1c3f4b-a87a-4638-be99-cf2b019bcae6"
+          },
+          {
+            "result": {
+              "duration": 291285800,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "the user clicks on the \"Success OK\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Success OK\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "37f546ee-34ec-433e-b5ae-f6457fd189ea"
+          },
+          {
+            "result": {
+              "duration": 811451300,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "f820b714-99ec-4b87-be45-20380bd2a24b"
+          },
+          {
+            "result": {
+              "duration": 1105943100,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user clicks on the \"Logout\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Logout\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "c464ce16-ff8e-47bd-89bd-8264a16ecdfa"
+          },
+          {
+            "result": {
+              "duration": 865191200,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user sees the \"LOGIN\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "05b1ca83-67f8-4b1f-b697-5c6255af9428"
+          },
+          {
+            "result": {
+              "duration": 814042500,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "the user fills the \"email login\" field with \"rodrigo.campos@mail.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"rodrigo.campos@mail.pt\"",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "3cc6caab-ca33-48ca-97b6-38b7efa92053"
+          },
+          {
+            "result": {
+              "duration": 1142352800,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "the user fills the \"password login\" field with \"password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"password\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "7550c912-9842-4d3a-9fe9-8ffdcbd61a5f"
+          },
+          {
+            "result": {
+              "duration": 685583400,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "bbb8daf8-ef2e-4d3d-9990-c59331f7e823"
+          },
+          {
+            "result": {
+              "duration": 3401063100,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "68ab6401-82bd-4b9c-9fef-9bbdfdc93b0e"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "c5278c0d-c737-46b5-a3d0-50a5de02193d",
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 16557612100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "fb300102-5224-4d50-8cea-72586b963595"
+          },
+          {
+            "result": {
+              "duration": 1675927200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user fills the \"email login\" field with \"rodrigo.campos@mail.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"rodrigo.campos@mail.pt\"",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "eab7b639-fd11-4770-8ccb-84ddb9dfc8bf"
+          },
+          {
+            "result": {
+              "duration": 1173491500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user fills the \"password login\" field with \"12345678\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"12345678\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "a95f3b42-4a2d-4c47-ad22-c1f0960c58c8"
+          },
+          {
+            "result": {
+              "duration": 711793000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "a5f4c361-3e21-4453-aa5c-63f5cc008725"
+          },
+          {
+            "result": {
+              "duration": 3359251300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "12376000-389e-4e34-808e-f18f5b55140d"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "c5278c0d-c737-46b5-a3d0-50a5de02193d",
+        "line": 66,
+        "name": "Go to Change Name Screen",
+        "description": "",
+        "id": "us21---see-and-change-my-profile-details;go-to-change-name-screen",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1235064100,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "the user clicks on the \"Profile\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "b6f4b417-00dd-4c0a-8d04-ee5d1554625e"
+          },
+          {
+            "result": {
+              "duration": 1073561200,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "the user clicks on the \"CHANGE NAME Profile\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHANGE NAME Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "bdcc1e8c-ec16-479b-9c3b-38cf0d4b01f0"
+          },
+          {
+            "result": {
+              "duration": 794163900,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "the user sees the \"Change Name\" text",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Change Name\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_text(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "b47444e3-d5b5-4d3b-8278-e89cd0f1c9ed"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "6ec9c13a-9362-4c14-a0e2-ab0bcb1503f0",
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 11632728900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "013bfc20-86a9-4dc8-b437-cd6d76246a29"
+          },
+          {
+            "result": {
+              "duration": 1826334500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user fills the \"email login\" field with \"rodrigo.campos@mail.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"rodrigo.campos@mail.pt\"",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "15842fdd-9099-438a-bc5c-4f508846649b"
+          },
+          {
+            "result": {
+              "duration": 1193772200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user fills the \"password login\" field with \"12345678\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"12345678\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "269531a5-facd-4ac4-850b-f9113c7137a3"
+          },
+          {
+            "result": {
+              "duration": 671999000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "0bb299fc-3192-46b5-babf-8d1ee484e637"
+          },
+          {
+            "result": {
+              "duration": 5169835500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "bfa68749-867f-4641-8a54-481c60d2a01d"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "6ec9c13a-9362-4c14-a0e2-ab0bcb1503f0",
+        "line": 71,
+        "name": "Go Back to Profile Screen in Change Name Screen",
+        "description": "",
+        "id": "us21---see-and-change-my-profile-details;go-back-to-profile-screen-in-change-name-screen",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1609960800,
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "the user clicks on the \"Profile\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "5dfdd051-c895-4aeb-97ae-1ddb9d17bf04"
+          },
+          {
+            "result": {
+              "duration": 1129836400,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "the user clicks on the \"CHANGE NAME Profile\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHANGE NAME Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "6140621e-8cc5-4de0-a568-6a660901cf26"
+          },
+          {
+            "result": {
+              "duration": 904052200,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "the user clicks on the \"BACK Change Name\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BACK Change Name\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "33d96462-5584-4e28-aa34-ac1afeb8d33e"
+          },
+          {
+            "result": {
+              "duration": 794276900,
+              "status": "passed"
+            },
+            "line": 75,
+            "name": "the user sees that the \"Profile Name\" text is not empty",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile Name\"",
+                  "offset": 23
+                }
+              ],
+              "location": "SeeAndChangeMyProfileDetailsTests.the_user_that_the_text_is_not_empty(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "a9c16d5e-7ba8-477a-9a23-2b2ade34bbb0"
+          },
+          {
+            "result": {
+              "duration": 297118800,
+              "status": "passed"
+            },
+            "line": 76,
+            "name": "the user sees that the \"Profile Email\" text is not empty",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile Email\"",
+                  "offset": 23
+                }
+              ],
+              "location": "SeeAndChangeMyProfileDetailsTests.the_user_that_the_text_is_not_empty(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "ceec344d-00b4-4f6f-97d7-cb6b5645d242"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "e3bfc521-1ad9-4bab-a988-77581b1a589d",
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 12468962600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "54368ec0-3596-4b01-a2a9-89710801555d"
+          },
+          {
+            "result": {
+              "duration": 1770003800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user fills the \"email login\" field with \"rodrigo.campos@mail.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"rodrigo.campos@mail.pt\"",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "12739163-209e-42ae-8629-bfedee61013b"
+          },
+          {
+            "result": {
+              "duration": 1646142000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user fills the \"password login\" field with \"12345678\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"12345678\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "3920622d-15b6-4cc8-a08e-100b8f1da365"
+          },
+          {
+            "result": {
+              "duration": 729984400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "dd97c0a2-4319-4e4c-a23b-8b7d597b2107"
+          },
+          {
+            "result": {
+              "duration": 10314733600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "c9bed0e1-7c40-4915-82ec-833afa457702"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "e3bfc521-1ad9-4bab-a988-77581b1a589d",
+        "line": 78,
+        "name": "Check Change Name Button Exists",
+        "description": "",
+        "id": "us21---see-and-change-my-profile-details;check-change-name-button-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1213452500,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "the user clicks on the \"Profile\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "4dd79057-7c10-42c9-a9ae-c20bace57b93"
+          },
+          {
+            "result": {
+              "duration": 1163007000,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "the user clicks on the \"CHANGE NAME Profile\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHANGE NAME Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "4116c3a3-75b1-40c4-b79d-935439eb5c53"
+          },
+          {
+            "result": {
+              "duration": 874949100,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "the user sees the \"CHANGE NAME Change\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHANGE NAME Change\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CancelOrderTests.the_user_sees_the_button(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "9efc09a9-7c59-4a42-9922-25e823988328"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "640adb01-2d17-4552-b22f-ca888f2f2121",
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 14099408700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "ed350483-9526-42d7-bf7d-631c79aa5414"
+          },
+          {
+            "result": {
+              "duration": 1246807200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user fills the \"email login\" field with \"rodrigo.campos@mail.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"rodrigo.campos@mail.pt\"",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "81b7768f-6793-4478-a34c-76847caeb75e"
+          },
+          {
+            "result": {
+              "duration": 1180996100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user fills the \"password login\" field with \"12345678\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"12345678\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "93bf377c-5a42-4fc0-bf15-fececa18e518"
+          },
+          {
+            "result": {
+              "duration": 717266600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "c2e4022b-6369-409f-9796-9061c426e473"
+          },
+          {
+            "result": {
+              "duration": 3498601000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "c2658094-e453-494a-80a3-b219e446151b"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "640adb01-2d17-4552-b22f-ca888f2f2121",
+        "line": 83,
+        "name": "Check Successful Change Name",
+        "description": "",
+        "id": "us21---see-and-change-my-profile-details;check-successful-change-name",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1179494700,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "the user clicks on the \"Profile\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "51a63a93-4b10-4b28-bef0-e07bf1de1eba"
+          },
+          {
+            "result": {
+              "duration": 1145398800,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "the user clicks on the \"CHANGE NAME Profile\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHANGE NAME Profile\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "1c7f3f5a-d9b3-4749-8326-2c6e3e4590d7"
+          },
+          {
+            "result": {
+              "duration": 1393493100,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "the user fills the \"First Name Change\" field with \"MARIO\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"First Name Change\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"MARIO\"",
+                  "offset": 50
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "589e2b91-f12c-4bad-ac3e-70c46eda0a40"
+          },
+          {
+            "result": {
+              "duration": 1172497900,
+              "status": "passed"
+            },
+            "line": 87,
+            "name": "the user fills the \"Last Name Change\" field with \"ANTUNES\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Last Name Change\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"ANTUNES\"",
+                  "offset": 49
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "d868b69c-3719-44c5-8b71-7ec564b5d10d"
+          },
+          {
+            "result": {
+              "duration": 698481200,
+              "status": "passed"
+            },
+            "line": 88,
+            "name": "the user clicks on the \"CHANGE NAME Change\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHANGE NAME Change\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "05a91637-4b4f-4617-8bec-7fcb951c8e6a"
+          },
+          {
+            "result": {
+              "duration": 3010854900,
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "the user sees the Confirmation Dialog \"Success\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Success\"",
+                  "offset": 38
+                }
+              ],
+              "location": "OptOutTests.the_user_sees_the(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "9359bbed-40b9-40f1-b973-a5d5adbf86de"
+          },
+          {
+            "result": {
+              "duration": 359633900,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "the user clicks on the \"Success OK\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Success OK\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "bd5bd129-d9d2-41cc-9d8c-a1b6e3ec8034"
+          },
+          {
+            "result": {
+              "duration": 732613600,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "the user sees that the \"Profile Name\" text equals \"MARIO ANTUNES\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile Name\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"MARIO ANTUNES\"",
+                  "offset": 50
+                }
+              ],
+              "location": "SeeAndChangeMyProfileDetailsTests.the_user_that_the_text_is_not_empty(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "b63f6b1f-d198-41ad-8f76-700274ac02a3"
+          }
+        ]
+      }
+    ],
+    "name": "US21 - See And Change My Profile Details",
+    "description": "  As a user\n  I want to opt out from the application",
+    "id": "us21---see-and-change-my-profile-details",
+    "keyword": "Feature",
+    "uri": "C:/Users/sfili/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us21.feature",
+    "tags": []
+  }
+]

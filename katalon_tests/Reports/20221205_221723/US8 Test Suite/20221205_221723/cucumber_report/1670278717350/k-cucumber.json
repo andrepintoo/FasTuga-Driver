@@ -1,0 +1,82 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "BDD_TESTRUN_UUID": "e649132a-8630-484a-beea-9944992c0c5e",
+        "line": 8,
+        "name": "Check Empty Available Orders",
+        "description": "",
+        "id": "us8---assign-order;check-empty-available-orders",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9728325500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "0a2cce8f-8e96-4577-90d1-1e9446714473"
+          },
+          {
+            "result": {
+              "duration": 8669633400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "7eab6a03-240c-4058-98f8-c1b6c2dcbf52"
+          },
+          {
+            "result": {
+              "duration": 140208000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user sees the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_sees_the_list()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "d8d51642-2ff8-42ef-ba18-502c58448b96"
+          },
+          {
+            "result": {
+              "duration": 218101400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user sees that the \"No orders Available\" text exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"No orders Available\"",
+                  "offset": 23
+                }
+              ],
+              "location": "CancelOrderTests.the_user_verifies_text_exists(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "5e8c07aa-de19-4125-80df-f85d8a663667"
+          }
+        ]
+      }
+    ],
+    "name": "US8 - Assign Order",
+    "description": "  \tAs a user\n    I want to be able to accept an order\n    So that it starts to be prepared for the delivery",
+    "id": "us8---assign-order",
+    "keyword": "Feature",
+    "uri": "C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us8emptyorders.feature",
+    "tags": []
+  }
+]

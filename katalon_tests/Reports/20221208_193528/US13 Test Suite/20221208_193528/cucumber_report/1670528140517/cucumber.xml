@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="157.092894">
+<testcase classname="Order from Closest-Furthest Available Orders" name="Check Available Orders &quot;Closest&quot; Button Exists" time="46.719787">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+And the user sees the "Welcome" screen......................................passed
+Then the user sees the "Available Orders Closest" button....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Order from Closest-Furthest Available Orders" name="Check Available Orders Sorted by Closest" time="34.946639">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+And the user sees the "Welcome" screen......................................passed
+And the user clicks on the "Available Orders Closest" button................passed
+Then the user sees the available orders sorted by "Closest".................passed
+]]></system-out>
+</testcase>
+<testcase classname="Order from Closest-Furthest Available Orders" name="Check Available Orders &quot;Furthest&quot; Button Exists" time="38.919733">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+And the user sees the "Welcome" screen......................................passed
+Then the user sees the "Available Orders Closest" button....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Order from Closest-Furthest Available Orders" name="Check Available Orders Sorted by Furthest" time="36.506735">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+And the user sees the "Welcome" screen......................................passed
+And the user clicks on the "Available Orders Furthest" button...............passed
+Then the user sees the available orders sorted by "Furthest"................passed
+]]></system-out>
+</testcase>
+</testsuite>

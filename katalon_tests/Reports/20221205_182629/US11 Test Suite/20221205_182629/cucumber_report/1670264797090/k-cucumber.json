@@ -1,0 +1,278 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "BDD_TESTRUN_UUID": "99e52da7-79b4-41cf-bf05-02326378a498",
+        "line": 7,
+        "name": "Check Cancel Button exists",
+        "description": "",
+        "id": "us11---cancel-order;check-cancel-button-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 14341605600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "37145d37-54fb-4bdf-b5ad-40ce078b7148"
+          },
+          {
+            "result": {
+              "duration": 8045566300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "7129a585-adb0-40ca-9740-c70db42ef9dd"
+          },
+          {
+            "result": {
+              "duration": 153260600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user sees the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_sees_the_list()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "58e1f9f1-e03c-45d5-8488-2a2860c2b2ff"
+          },
+          {
+            "result": {
+              "duration": 632035100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks on one of the \"Assigned Order Item\" in the Assigned Orders list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Order Item\"",
+                  "offset": 30
+                }
+              ],
+              "location": "CancelOrderTests.the_user_clicks_the_button_in_the_list(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "97b3acba-c58c-4a86-9325-40effb501ab2"
+          },
+          {
+            "result": {
+              "duration": 1172582500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user sees the \"Order Details\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Order Details\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "1b48383c-5b45-4f08-9344-a42900bf50e8"
+          },
+          {
+            "result": {
+              "duration": 188098800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user sees the \"Cancel\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Cancel\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CancelOrderTests.the_user_sees_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "e4264884-edd1-41fc-85d4-5a157e5b3ddc"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "59abf1d5-bf78-4557-be51-fb0eb592364e",
+        "line": 15,
+        "name": "Check Successful Cancel Order",
+        "description": "",
+        "id": "us11---cancel-order;check-successful-cancel-order",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9050770800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "c61a1aed-f6f6-4ab2-a237-015cd0a73c2e"
+          },
+          {
+            "result": {
+              "duration": 6195703000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "5a187e9c-e7a0-4f35-ab86-fcf60c3af99b"
+          },
+          {
+            "result": {
+              "duration": 122972600,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user sees the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_sees_the_list()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "77a36de7-8a9a-4304-8c40-0e5801d46baa"
+          },
+          {
+            "result": {
+              "duration": 675849900,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user clicks on one of the \"Assigned Order Item\" in the Assigned Orders list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Order Item\"",
+                  "offset": 30
+                }
+              ],
+              "location": "CancelOrderTests.the_user_clicks_the_button_in_the_list(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "ac646d01-5462-41cf-9bb4-d859b379e1e4"
+          },
+          {
+            "result": {
+              "duration": 961775500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user sees the \"Order Details\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Order Details\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "65048811-8328-410d-8abc-de965b6e76f8"
+          },
+          {
+            "result": {
+              "duration": 358514600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user clicks on the \"Cancel\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Cancel\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "dc87a50a-8225-4d62-aebe-23b968ce0271"
+          },
+          {
+            "result": {
+              "duration": 772341200,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user clicks on the \"YES Cancel Order\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"YES Cancel Order\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "a09f408a-752e-49c8-9014-2b4605647b32"
+          },
+          {
+            "result": {
+              "duration": 1311465400,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user sees that the clicked order item is not in the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_verifies_order_item_missing()"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "b7ab6747-b8eb-4d17-8799-7a28daa1b47d"
+          },
+          {
+            "result": {
+              "duration": 155551000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "2f21b151-ea6f-4f04-8729-66b33a53296c"
+          }
+        ]
+      }
+    ],
+    "name": "US11 - Cancel Order",
+    "description": "  \tAs a user\n    I want to be able to cancel a currently assigned order",
+    "id": "us11---cancel-order",
+    "keyword": "Feature",
+    "uri": "C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us11.feature",
+    "tags": []
+  }
+]

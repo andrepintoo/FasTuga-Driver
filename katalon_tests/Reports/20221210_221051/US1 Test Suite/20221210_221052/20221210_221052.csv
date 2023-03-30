@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+US1 Test Suite,,,,2022-12-10 22:10:59,2022-12-10 22:14:55,3m - 56.128s,PASSED
+,,,,,,,
+Test Cases/US1-Login/US1TestCaseAllFeatures,,,,2022-12-10 22:11:00,2022-12-10 22:14:55,3m - 55.693s,PASSED
+"runFeatureFile(""Include/features/us1.feature"")",,,,2022-12-10 22:11:00,2022-12-10 22:14:55,3m - 55.124s,PASSED

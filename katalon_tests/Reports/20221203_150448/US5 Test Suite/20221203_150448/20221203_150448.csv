@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+US5 Test Suite,,,,2022-12-03 15:04:54,2022-12-03 15:05:28,34.385s,PASSED
+,,,,,,,
+Test Cases/US5 - Logout/US5TestCaseAllFeatures,,,,2022-12-03 15:04:54,2022-12-03 15:05:28,34.114s,PASSED
+"runFeatureFile(""Include/features/us5.feature"")",,,,2022-12-03 15:04:55,2022-12-03 15:05:28,33.721s,PASSED

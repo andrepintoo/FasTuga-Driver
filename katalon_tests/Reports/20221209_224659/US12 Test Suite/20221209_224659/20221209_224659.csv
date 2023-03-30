@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+US12 Test Suite,,,,2022-12-09 22:47:17,2022-12-09 22:48:17,"1m - 0,046s",PASSED
+,,,,,,,
+Test Cases/US12 - Get the Directions To the Destination/US12TestCaseAllFeatures,,,,2022-12-09 22:47:17,2022-12-09 22:48:17,"59,614s",PASSED
+"runFeatureFile(""include/features/us12.feature"")",,,,2022-12-09 22:47:18,2022-12-09 22:48:17,"59,010s",PASSED

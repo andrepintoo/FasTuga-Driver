@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Us2 Test Suite" time="272.175" tests="1" failures="0" errors="0">
+   <testsuite name="Us2 Test Suite" tests="1" failures="0" errors="0" time="272.175" skipped="0" timestamp="2022-12-06 20:11:55" hostname="Yunikyon - DESKTOP-553098Q.mshome.net" id="Test Suites/Us2 Test Suite">
+      <properties>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 13)"/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="D:\\UCs_5th_Semester\\TA_EngenhariaSoftware\\Projeto\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221206_201145\\Us2 Test Suite\\20221206_201146"/>
+         <property name="logFiles" value="D:\\UCs_5th_Semester\\TA_EngenhariaSoftware\\Projeto\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221206_201145\\Us2 Test Suite\\20221206_201146\\appium.log, D:\\UCs_5th_Semester\\TA_EngenhariaSoftware\\Projeto\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221206_201145\\Us2 Test Suite\\20221206_201146\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="Yunikyon - DESKTOP-553098Q.mshome.net"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="appiumServerStatus" value="{&quot;value&quot;:{&quot;build&quot;:{&quot;version&quot;:&quot;1.22.3&quot;}},&quot;sessionId&quot;:null,&quot;status&quot;:0}"/>
+         <property name="katalonVersion" value="8.5.2.208"/>
+         <property name="deviceOS" value="Android"/>
+         <property name="appiumVersion" value="1.22.3"/>
+         <property name="deviceModel" value="sdk_gphone64_x86_64"/>
+         <property name="hostAddress" value="172.20.112.1"/>
+         <property name="deviceManufacturer" value="Google"/>
+         <property name="deviceId" value="emulator-5554"/>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 13)"/>
+         <property name="deviceOSVersion" value="13"/>
+      </properties>
+      <testcase name="Test Cases/Us2/US2TestCaseAllFeatures" time="271.557" classname="Test Cases/Us2/US2TestCaseAllFeatures" status="PASSED">
+         <system-out><![CDATA[2022-12-06 20:11:56 - [TEST_CASE][PASSED] - Test Cases/Us2/US2TestCaseAllFeatures: Test Cases/Us2/US2TestCaseAllFeatures
+
+2022-12-06 20:11:56 - [TEST_STEP][PASSED] - runFeatureFile("Include/features/us2.feature"): Feature file: 'Include/features/us2.feature' was passed
+
+2022-12-06 20:11:56 - [MESSAGE][INFO] - Starting run keyword runFeatureFile: 'Include/features/us2.feature' and extract report to folder: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Reports\20221206_201145\Us2 Test Suite\20221206_201146/cucumber_report/1670357516778'...
+
+2022-12-06 20:11:59 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Go to Login Screen: SCENARIO Go to Login Screen
+
+2022-12-06 20:11:59 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-06 20:11:59 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-06 20:11:59 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-06 20:11:59 - [MESSAGE][INFO] - Detected NodeJS location: "C:\Program Files\nodejs\node.exe"
+
+2022-12-06 20:12:01 - [MESSAGE][INFO] - Appium server started on port 60,484
+
+2022-12-06 20:12:22 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-06 20:12:22 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-06 20:12:22 - [TEST_STEP][PASSED] - the user clicks on the "REGISTER" button: the user clicks on the "REGISTER" button
+
+2022-12-06 20:12:22 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:12:23 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - REGISTER'
+
+2022-12-06 20:12:23 - [MESSAGE][PASSED] - the user clicks on the "REGISTER" button
+
+2022-12-06 20:12:23 - [TEST_STEP][PASSED] - the user sees the "REGISTER" screen: the user sees the "REGISTER" screen
+
+2022-12-06 20:12:23 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:12:24 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - REGISTER' is exist
+
+2022-12-06 20:12:24 - [MESSAGE][PASSED] - the user sees the "REGISTER" screen
+
+2022-12-06 20:12:24 - [TEST_STEP][PASSED] - the user clicks on the "back to login register" button: the user clicks on the "back to login register" button
+
+2022-12-06 20:12:25 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:12:25 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - back to login register'
+
+2022-12-06 20:12:25 - [MESSAGE][PASSED] - the user clicks on the "back to login register" button
+
+2022-12-06 20:12:25 - [TEST_STEP][PASSED] - the user sees the "LOGIN" text: the user sees the "LOGIN" text
+
+2022-12-06 20:12:27 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/android.widget.TextView - LOGIN' are matched.
+
+2022-12-06 20:12:27 - [MESSAGE][PASSED] - the user sees the "LOGIN" text
+
+2022-12-06 20:12:27 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Successful Register: SCENARIO Check Successful Register
+
+2022-12-06 20:12:27 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-06 20:12:27 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-06 20:12:27 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-06 20:12:53 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-06 20:12:53 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-06 20:12:53 - [TEST_STEP][PASSED] - the user clicks on the "REGISTER" button: the user clicks on the "REGISTER" button
+
+2022-12-06 20:12:54 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:12:54 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - REGISTER'
+
+2022-12-06 20:12:54 - [MESSAGE][PASSED] - the user clicks on the "REGISTER" button
+
+2022-12-06 20:12:54 - [TEST_STEP][PASSED] - the user sees the "REGISTER" screen: the user sees the "REGISTER" screen
+
+2022-12-06 20:12:54 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:12:56 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - REGISTER' is exist
+
+2022-12-06 20:12:56 - [MESSAGE][PASSED] - the user sees the "REGISTER" screen
+
+2022-12-06 20:12:56 - [TEST_STEP][PASSED] - the user fills the "first name register" field with "John": the user fills the "first name register" field with "John"
+
+2022-12-06 20:12:56 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:12:57 - [MESSAGE][PASSED] - Text 'John' has been set to element 'Object Repository/android.widget.EditText - first name register'
+
+2022-12-06 20:12:57 - [MESSAGE][PASSED] - the user fills the "first name register" field with "John"
+
+2022-12-06 20:12:57 - [TEST_STEP][PASSED] - the user fills the "last name register" field with "Doe": the user fills the "last name register" field with "Doe"
+
+2022-12-06 20:12:57 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:12:59 - [MESSAGE][PASSED] - Text 'Doe' has been set to element 'Object Repository/android.widget.EditText - last name register'
+
+2022-12-06 20:12:59 - [MESSAGE][PASSED] - the user fills the "last name register" field with "Doe"
+
+2022-12-06 20:12:59 - [TEST_STEP][PASSED] - the user fills the "email register" field with "johndoe@email.pt": the user fills the "email register" field with "johndoe@email.pt"
+
+2022-12-06 20:12:59 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:13:00 - [MESSAGE][PASSED] - Text 'johndoe@email.pt' has been set to element 'Object Repository/android.widget.EditText - email register'
+
+2022-12-06 20:13:00 - [MESSAGE][PASSED] - the user fills the "email register" field with "johndoe@email.pt"
+
+2022-12-06 20:13:00 - [TEST_STEP][PASSED] - the user fills the "password register" field with "password": the user fills the "password register" field with "password"
+
+2022-12-06 20:13:00 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:13:01 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password register'
+
+2022-12-06 20:13:01 - [MESSAGE][PASSED] - the user fills the "password register" field with "password"
+
+2022-12-06 20:13:01 - [TEST_STEP][PASSED] - the user fills the "password confirmation register" field with "password": the user fills the "password confirmation register" field with "password"
+
+2022-12-06 20:13:01 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:13:03 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password confirmation register'
+
+2022-12-06 20:13:03 - [MESSAGE][PASSED] - the user fills the "password confirmation register" field with "password"
+
+2022-12-06 20:13:03 - [TEST_STEP][PASSED] - the user fills the "phone number register" field with "999888777": the user fills the "phone number register" field with "999888777"
+
+2022-12-06 20:13:03 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:13:04 - [MESSAGE][PASSED] - Text '999888777' has been set to element 'Object Repository/android.widget.EditText - phone number register'
+
+2022-12-06 20:13:04 - [MESSAGE][PASSED] - the user fills the "phone number register" field with "999888777"
+
+2022-12-06 20:13:04 - [TEST_STEP][PASSED] - the user fills the "license plate register" field with "AA-11-AA": the user fills the "license plate register" field with "AA-11-AA"
+
+2022-12-06 20:13:04 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:13:05 - [MESSAGE][PASSED] - Text 'AA-11-AA' has been set to element 'Object Repository/android.widget.EditText - license plate register'
+
+2022-12-06 20:13:05 - [MESSAGE][PASSED] - the user fills the "license plate register" field with "AA-11-AA"
+
+2022-12-06 20:13:05 - [TEST_STEP][PASSED] - the user clicks on the "register from register" button: the user clicks on the "register from register" button
+
+2022-12-06 20:13:05 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:13:06 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - register from register'
+
+2022-12-06 20:13:06 - [MESSAGE][PASSED] - the user clicks on the "register from register" button
+
+2022-12-06 20:13:06 - [TEST_STEP][PASSED] - the user sees the "Welcome" screen: the user sees the "Welcome" screen
+
+2022-12-06 20:13:06 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:13:10 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-06 20:13:10 - [MESSAGE][PASSED] - the user sees the "Welcome" screen
+
+2022-12-06 20:13:10 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Register With Existing License Plate: SCENARIO Check Register With Existing License Plate
+
+2022-12-06 20:13:10 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-06 20:13:10 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-06 20:13:10 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-06 20:13:27 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-06 20:13:27 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-06 20:13:27 - [TEST_STEP][PASSED] - the user clicks on the "REGISTER" button: the user clicks on the "REGISTER" button
+
+2022-12-06 20:13:27 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:13:28 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - REGISTER'
+
+2022-12-06 20:13:28 - [MESSAGE][PASSED] - the user clicks on the "REGISTER" button
+
+2022-12-06 20:13:28 - [TEST_STEP][PASSED] - the user sees the "REGISTER" screen: the user sees the "REGISTER" screen
+
+2022-12-06 20:13:28 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:13:30 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - REGISTER' is exist
+
+2022-12-06 20:13:30 - [MESSAGE][PASSED] - the user sees the "REGISTER" screen
+
+2022-12-06 20:13:30 - [TEST_STEP][PASSED] - the user fills the "license plate register" field with "AA-00-AA": the user fills the "license plate register" field with "AA-00-AA"
+
+2022-12-06 20:13:30 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:13:31 - [MESSAGE][PASSED] - Text 'AA-00-AA' has been set to element 'Object Repository/android.widget.EditText - license plate register'
+
+2022-12-06 20:13:31 - [MESSAGE][PASSED] - the user fills the "license plate register" field with "AA-00-AA"
+
+2022-12-06 20:13:31 - [TEST_STEP][PASSED] - the user clicks on the "register from register" button: the user clicks on the "register from register" button
+
+2022-12-06 20:13:31 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:13:31 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - register from register'
+
+2022-12-06 20:13:31 - [MESSAGE][PASSED] - the user clicks on the "register from register" button
+
+2022-12-06 20:13:31 - [TEST_STEP][PASSED] - the user sees the "License plate already exists!" error text in the "existing license plate register" field: the user sees the "License plate already exists!" error text in the "existing license plate register" field
+
+2022-12-06 20:13:32 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:13:33 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.EditText - existing license plate register' has attribute 'contentDescription' is 'License plate already exists!'
+
+2022-12-06 20:13:33 - [MESSAGE][PASSED] - the user sees the "License plate already exists!" error text in the "existing license plate register" field
+
+2022-12-06 20:13:33 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Register With Invalid License Plate Format: SCENARIO Check Register With Invalid License Plate Format
+
+2022-12-06 20:13:33 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-06 20:13:33 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-06 20:13:33 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-06 20:14:01 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-06 20:14:01 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-06 20:14:01 - [TEST_STEP][PASSED] - the user clicks on the "REGISTER" button: the user clicks on the "REGISTER" button
+
+2022-12-06 20:14:01 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:14:03 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - REGISTER'
+
+2022-12-06 20:14:03 - [MESSAGE][PASSED] - the user clicks on the "REGISTER" button
+
+2022-12-06 20:14:03 - [TEST_STEP][PASSED] - the user sees the "REGISTER" screen: the user sees the "REGISTER" screen
+
+2022-12-06 20:14:03 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:14:03 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - REGISTER' is exist
+
+2022-12-06 20:14:03 - [MESSAGE][PASSED] - the user sees the "REGISTER" screen
+
+2022-12-06 20:14:03 - [TEST_STEP][PASSED] - the user fills the "license plate register" field with "AA-ZZ-AA": the user fills the "license plate register" field with "AA-ZZ-AA"
+
+2022-12-06 20:14:03 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:14:05 - [MESSAGE][PASSED] - Text 'AA-ZZ-AA' has been set to element 'Object Repository/android.widget.EditText - license plate register'
+
+2022-12-06 20:14:05 - [MESSAGE][PASSED] - the user fills the "license plate register" field with "AA-ZZ-AA"
+
+2022-12-06 20:14:05 - [TEST_STEP][PASSED] - the user clicks on the "register from register" button: the user clicks on the "register from register" button
+
+2022-12-06 20:14:05 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:14:06 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - register from register'
+
+2022-12-06 20:14:06 - [MESSAGE][PASSED] - the user clicks on the "register from register" button
+
+2022-12-06 20:14:06 - [TEST_STEP][PASSED] - the user sees the "Wrong License Format - AA-00-AA." error text in the "invalid license plate register" field: the user sees the "Wrong License Format - AA-00-AA." error text in the "invalid license plate register" field
+
+2022-12-06 20:14:06 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:14:07 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.EditText - invalid license plate register' has attribute 'contentDescription' is 'Wrong License Format - AA-00-AA.'
+
+2022-12-06 20:14:07 - [MESSAGE][PASSED] - the user sees the "Wrong License Format - AA-00-AA." error text in the "invalid license plate register" field
+
+2022-12-06 20:14:07 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Register With Existing Email: SCENARIO Check Register With Existing Email
+
+2022-12-06 20:14:07 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-06 20:14:07 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-06 20:14:07 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-06 20:14:25 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-06 20:14:25 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-06 20:14:25 - [TEST_STEP][PASSED] - the user clicks on the "REGISTER" button: the user clicks on the "REGISTER" button
+
+2022-12-06 20:14:25 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:14:28 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - REGISTER'
+
+2022-12-06 20:14:28 - [MESSAGE][PASSED] - the user clicks on the "REGISTER" button
+
+2022-12-06 20:14:28 - [TEST_STEP][PASSED] - the user sees the "REGISTER" screen: the user sees the "REGISTER" screen
+
+2022-12-06 20:14:28 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:14:28 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - REGISTER' is exist
+
+2022-12-06 20:14:28 - [MESSAGE][PASSED] - the user sees the "REGISTER" screen
+
+2022-12-06 20:14:28 - [TEST_STEP][PASSED] - the user fills the "email register" field with "sara@mail.pt": the user fills the "email register" field with "sara@mail.pt"
+
+2022-12-06 20:14:28 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:14:30 - [MESSAGE][PASSED] - Text 'sara@mail.pt' has been set to element 'Object Repository/android.widget.EditText - email register'
+
+2022-12-06 20:14:30 - [MESSAGE][PASSED] - the user fills the "email register" field with "sara@mail.pt"
+
+2022-12-06 20:14:30 - [TEST_STEP][PASSED] - the user clicks on the "register from register" button: the user clicks on the "register from register" button
+
+2022-12-06 20:14:30 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:14:31 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - register from register'
+
+2022-12-06 20:14:31 - [MESSAGE][PASSED] - the user clicks on the "register from register" button
+
+2022-12-06 20:14:31 - [TEST_STEP][PASSED] - the user sees the "Email already exists!" error text in the "existing email register" field: the user sees the "Email already exists!" error text in the "existing email register" field
+
+2022-12-06 20:14:31 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:14:34 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.EditText - existing email register' has attribute 'contentDescription' is 'Email already exists!'
+
+2022-12-06 20:14:34 - [MESSAGE][PASSED] - the user sees the "Email already exists!" error text in the "existing email register" field
+
+2022-12-06 20:14:34 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Register With Mismatch Passwords: SCENARIO Check Register With Mismatch Passwords
+
+2022-12-06 20:14:34 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-06 20:14:34 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-06 20:14:34 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-06 20:14:57 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-06 20:14:57 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-06 20:14:57 - [TEST_STEP][PASSED] - the user clicks on the "REGISTER" button: the user clicks on the "REGISTER" button
+
+2022-12-06 20:14:57 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:14:57 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - REGISTER'
+
+2022-12-06 20:14:57 - [MESSAGE][PASSED] - the user clicks on the "REGISTER" button
+
+2022-12-06 20:14:57 - [TEST_STEP][PASSED] - the user sees the "REGISTER" screen: the user sees the "REGISTER" screen
+
+2022-12-06 20:14:58 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:14:59 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - REGISTER' is exist
+
+2022-12-06 20:14:59 - [MESSAGE][PASSED] - the user sees the "REGISTER" screen
+
+2022-12-06 20:14:59 - [TEST_STEP][PASSED] - the user fills the "password register" field with "password": the user fills the "password register" field with "password"
+
+2022-12-06 20:14:59 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:00 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password register'
+
+2022-12-06 20:15:00 - [MESSAGE][PASSED] - the user fills the "password register" field with "password"
+
+2022-12-06 20:15:00 - [TEST_STEP][PASSED] - the user fills the "password confirmation register" field with "paswordddd": the user fills the "password confirmation register" field with "paswordddd"
+
+2022-12-06 20:15:00 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:01 - [MESSAGE][PASSED] - Text 'paswordddd' has been set to element 'Object Repository/android.widget.EditText - password confirmation register'
+
+2022-12-06 20:15:01 - [MESSAGE][PASSED] - the user fills the "password confirmation register" field with "paswordddd"
+
+2022-12-06 20:15:01 - [TEST_STEP][PASSED] - the user clicks on the "register from register" button: the user clicks on the "register from register" button
+
+2022-12-06 20:15:01 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:02 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - register from register'
+
+2022-12-06 20:15:02 - [MESSAGE][PASSED] - the user clicks on the "register from register" button
+
+2022-12-06 20:15:02 - [TEST_STEP][PASSED] - the user sees the "Passwords don't match." error text in the "mismatch password register" field: the user sees the "Passwords don't match." error text in the "mismatch password register" field
+
+2022-12-06 20:15:02 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:03 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.EditText - mismatch password register' has attribute 'contentDescription' is 'Passwords don't match.'
+
+2022-12-06 20:15:03 - [MESSAGE][PASSED] - the user sees the "Passwords don't match." error text in the "mismatch password register" field
+
+2022-12-06 20:15:03 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Register With Empty Fields: SCENARIO Check Register With Empty Fields
+
+2022-12-06 20:15:03 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-06 20:15:03 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-06 20:15:03 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-06 20:15:22 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-06 20:15:22 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-06 20:15:22 - [TEST_STEP][PASSED] - the user clicks on the "REGISTER" button: the user clicks on the "REGISTER" button
+
+2022-12-06 20:15:22 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:23 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - REGISTER'
+
+2022-12-06 20:15:23 - [MESSAGE][PASSED] - the user clicks on the "REGISTER" button
+
+2022-12-06 20:15:23 - [TEST_STEP][PASSED] - the user sees the "REGISTER" screen: the user sees the "REGISTER" screen
+
+2022-12-06 20:15:23 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:25 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - REGISTER' is exist
+
+2022-12-06 20:15:25 - [MESSAGE][PASSED] - the user sees the "REGISTER" screen
+
+2022-12-06 20:15:25 - [TEST_STEP][PASSED] - the user clicks on the "register from register" button: the user clicks on the "register from register" button
+
+2022-12-06 20:15:25 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:25 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - register from register'
+
+2022-12-06 20:15:25 - [MESSAGE][PASSED] - the user clicks on the "register from register" button
+
+2022-12-06 20:15:25 - [TEST_STEP][PASSED] - the user sees the "Enter First Name." error text in the "first name register" field: the user sees the "Enter First Name." error text in the "first name register" field
+
+2022-12-06 20:15:25 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:27 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.EditText - first name register' has attribute 'contentDescription' is 'Enter First Name.'
+
+2022-12-06 20:15:27 - [MESSAGE][PASSED] - the user sees the "Enter First Name." error text in the "first name register" field
+
+2022-12-06 20:15:27 - [TEST_STEP][PASSED] - the user sees the "Enter Last Name." error text in the "last name register" field: the user sees the "Enter Last Name." error text in the "last name register" field
+
+2022-12-06 20:15:27 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:27 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.EditText - last name register' has attribute 'contentDescription' is 'Enter Last Name.'
+
+2022-12-06 20:15:27 - [MESSAGE][PASSED] - the user sees the "Enter Last Name." error text in the "last name register" field
+
+2022-12-06 20:15:27 - [TEST_STEP][PASSED] - the user sees the "Enter Email." error text in the "email register" field: the user sees the "Enter Email." error text in the "email register" field
+
+2022-12-06 20:15:27 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:27 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.EditText - email register' has attribute 'contentDescription' is 'Enter Email.'
+
+2022-12-06 20:15:27 - [MESSAGE][PASSED] - the user sees the "Enter Email." error text in the "email register" field
+
+2022-12-06 20:15:27 - [TEST_STEP][PASSED] - the user sees the "Enter Password." error text in the "password register" field: the user sees the "Enter Password." error text in the "password register" field
+
+2022-12-06 20:15:27 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:27 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.EditText - password register' has attribute 'contentDescription' is 'Enter Password.'
+
+2022-12-06 20:15:27 - [MESSAGE][PASSED] - the user sees the "Enter Password." error text in the "password register" field
+
+2022-12-06 20:15:27 - [TEST_STEP][PASSED] - the user sees the "Enter Password Confirmation." error text in the "password confirmation register" field: the user sees the "Enter Password Confirmation." error text in the "password confirmation register" field
+
+2022-12-06 20:15:28 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:28 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.EditText - password confirmation register' has attribute 'contentDescription' is 'Enter Password Confirmation.'
+
+2022-12-06 20:15:28 - [MESSAGE][PASSED] - the user sees the "Enter Password Confirmation." error text in the "password confirmation register" field
+
+2022-12-06 20:15:28 - [TEST_STEP][PASSED] - the user sees the "Enter Phone Number." error text in the "phone number register" field: the user sees the "Enter Phone Number." error text in the "phone number register" field
+
+2022-12-06 20:15:28 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:28 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.EditText - phone number register' has attribute 'contentDescription' is 'Enter Phone Number.'
+
+2022-12-06 20:15:28 - [MESSAGE][PASSED] - the user sees the "Enter Phone Number." error text in the "phone number register" field
+
+2022-12-06 20:15:28 - [TEST_STEP][PASSED] - the user sees the "Enter License Plate." error text in the "license plate register" field: the user sees the "Enter License Plate." error text in the "license plate register" field
+
+2022-12-06 20:15:28 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:28 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.EditText - license plate register' has attribute 'contentDescription' is 'Enter License Plate.'
+
+2022-12-06 20:15:28 - [MESSAGE][PASSED] - the user sees the "Enter License Plate." error text in the "license plate register" field
+
+2022-12-06 20:15:28 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Register With Invalid Phone Number Format: SCENARIO Check Register With Invalid Phone Number Format
+
+2022-12-06 20:15:28 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-06 20:15:28 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-06 20:15:28 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-06 20:15:49 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-06 20:15:49 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-06 20:15:49 - [TEST_STEP][PASSED] - the user clicks on the "REGISTER" button: the user clicks on the "REGISTER" button
+
+2022-12-06 20:15:49 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:50 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - REGISTER'
+
+2022-12-06 20:15:50 - [MESSAGE][PASSED] - the user clicks on the "REGISTER" button
+
+2022-12-06 20:15:50 - [TEST_STEP][PASSED] - the user sees the "REGISTER" screen: the user sees the "REGISTER" screen
+
+2022-12-06 20:15:50 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:52 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - REGISTER' is exist
+
+2022-12-06 20:15:52 - [MESSAGE][PASSED] - the user sees the "REGISTER" screen
+
+2022-12-06 20:15:52 - [TEST_STEP][PASSED] - the user fills the "phone number register" field with "199888777": the user fills the "phone number register" field with "199888777"
+
+2022-12-06 20:15:52 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:53 - [MESSAGE][PASSED] - Text '199888777' has been set to element 'Object Repository/android.widget.EditText - phone number register'
+
+2022-12-06 20:15:53 - [MESSAGE][PASSED] - the user fills the "phone number register" field with "199888777"
+
+2022-12-06 20:15:53 - [TEST_STEP][PASSED] - the user clicks on the "register from register" button: the user clicks on the "register from register" button
+
+2022-12-06 20:15:53 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:54 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - register from register'
+
+2022-12-06 20:15:54 - [MESSAGE][PASSED] - the user clicks on the "register from register" button
+
+2022-12-06 20:15:54 - [TEST_STEP][PASSED] - the user sees the "Wrong Phone Number Format - 9xxxxxxxx." error text in the "invalid phone number register" field: the user sees the "Wrong Phone Number Format - 9xxxxxxxx." error text in the "invalid phone number register" field
+
+2022-12-06 20:15:54 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:15:55 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.EditText - invalid phone number register' has attribute 'contentDescription' is 'Wrong Phone Number Format - 9xxxxxxxx.'
+
+2022-12-06 20:15:55 - [MESSAGE][PASSED] - the user sees the "Wrong Phone Number Format - 9xxxxxxxx." error text in the "invalid phone number register" field
+
+2022-12-06 20:15:55 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Register With Invalid Email Format: SCENARIO Check Register With Invalid Email Format
+
+2022-12-06 20:15:55 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-06 20:15:55 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-06 20:15:55 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-06 20:16:21 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-06 20:16:21 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-06 20:16:21 - [TEST_STEP][PASSED] - the user clicks on the "REGISTER" button: the user clicks on the "REGISTER" button
+
+2022-12-06 20:16:21 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:16:22 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - REGISTER'
+
+2022-12-06 20:16:22 - [MESSAGE][PASSED] - the user clicks on the "REGISTER" button
+
+2022-12-06 20:16:22 - [TEST_STEP][PASSED] - the user sees the "REGISTER" screen: the user sees the "REGISTER" screen
+
+2022-12-06 20:16:22 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:16:24 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - REGISTER' is exist
+
+2022-12-06 20:16:24 - [MESSAGE][PASSED] - the user sees the "REGISTER" screen
+
+2022-12-06 20:16:24 - [TEST_STEP][PASSED] - the user fills the "email register" field with "abc.pt": the user fills the "email register" field with "abc.pt"
+
+2022-12-06 20:16:24 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:16:25 - [MESSAGE][PASSED] - Text 'abc.pt' has been set to element 'Object Repository/android.widget.EditText - email register'
+
+2022-12-06 20:16:25 - [MESSAGE][PASSED] - the user fills the "email register" field with "abc.pt"
+
+2022-12-06 20:16:25 - [TEST_STEP][PASSED] - the user clicks on the "register from register" button: the user clicks on the "register from register" button
+
+2022-12-06 20:16:25 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:16:26 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - register from register'
+
+2022-12-06 20:16:26 - [MESSAGE][PASSED] - the user clicks on the "register from register" button
+
+2022-12-06 20:16:26 - [TEST_STEP][PASSED] - the user sees the "Wrong Email Format - AA@BB.CC." error text in the "invalid email register" field: the user sees the "Wrong Email Format - AA@BB.CC." error text in the "invalid email register" field
+
+2022-12-06 20:16:26 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 20:16:27 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.EditText - invalid email register' has attribute 'contentDescription' is 'Wrong Email Format - AA@BB.CC.'
+
+2022-12-06 20:16:27 - [MESSAGE][PASSED] - the user sees the "Wrong Email Format - AA@BB.CC." error text in the "invalid email register" field
+
+2022-12-06 20:16:27 - [MESSAGE][PASSED] - Feature file: 'Include/features/us2.feature' was passed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2022-12-06 20:11:55 - [TEST_SUITE][PASSED] - Us2 Test Suite: Test Cases/Us2/US2TestCaseAllFeatures]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

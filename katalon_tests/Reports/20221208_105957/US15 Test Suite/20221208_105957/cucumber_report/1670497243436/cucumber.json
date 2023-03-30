@@ -1,0 +1,185 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 10,
+        "name": "Check Received Ready Order Notification",
+        "description": "",
+        "id": "get-order-ready-notification;check-received-ready-order-notification",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 30650508500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 9589667800,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 307222500,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user sees the \"Assigned Orders List\" list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Orders List\"",
+                  "offset": 18
+                }
+              ],
+              "location": "AvailableOrdersTests.the_user_sees_the_list(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 262183599,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the status is \" PREPARING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\" PREPARING\"",
+                  "offset": 14
+                }
+              ],
+              "location": "GetOrderReadyNotificationTests.the_status_is(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5036745200,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user waits \"5\" seconds",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"5\"",
+                  "offset": 15
+                }
+              ],
+              "location": "GetOrderReadyNotificationTests.the_user_waits_seconds(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 404409100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1205620599,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Available Orders\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Available Orders\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4797981600,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the order status switches to \" READY TO CLAIM\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\" READY TO CLAIM\"",
+                  "offset": 29
+                }
+              ],
+              "location": "ClaimOrderTests.the_order_status_switches_to(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1715849400,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user opens the notifications",
+            "match": {
+              "location": "GetOrderCancelledNotificationTests.the_user_opens_the_notifications()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1469399500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user sees the \"notification ready order\" notification",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"notification ready order\"",
+                  "offset": 18
+                }
+              ],
+              "location": "GetOrderCancelledNotificationTests.the_user_sees_the_notification(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Get Order Ready Notification",
+    "description": "  As a user\n\tI want to receive notifications uppon a ready order from My Orders\n\tSo that I know which order I can start delivering",
+    "id": "get-order-ready-notification",
+    "keyword": "Feature",
+    "uri": "D:/UCs_5th_Semester/TA_EngenhariaSoftware/Projeto/taes22_grupow_fastugadriver_tests.git/include/features/us15.feature",
+    "tags": []
+  }
+]

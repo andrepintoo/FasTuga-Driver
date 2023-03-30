@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="US12 Test Suite" time="60.046" tests="1" failures="0" errors="0">
+   <testsuite name="US12 Test Suite" tests="1" failures="0" errors="0" time="60.046" skipped="0" timestamp="2022-12-09 22:47:17" hostname="sfili - LAPTOP-19A7R8I6.mshome.net" id="Test Suites/US12 Test Suite">
+      <properties>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 12)"/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\sfili\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221209_224659\\US12 Test Suite\\20221209_224659"/>
+         <property name="logFiles" value="C:\\Users\\sfili\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221209_224659\\US12 Test Suite\\20221209_224659\\appium.log, C:\\Users\\sfili\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221209_224659\\US12 Test Suite\\20221209_224659\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="sfili - LAPTOP-19A7R8I6.mshome.net"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="appiumServerStatus" value="{&quot;value&quot;:{&quot;build&quot;:{&quot;version&quot;:&quot;1.22.3&quot;}},&quot;sessionId&quot;:null,&quot;status&quot;:0}"/>
+         <property name="katalonVersion" value="8.5.1.208"/>
+         <property name="deviceOS" value="Android"/>
+         <property name="appiumVersion" value="1.22.3"/>
+         <property name="deviceModel" value="sdk_gphone64_x86_64"/>
+         <property name="hostAddress" value="172.26.0.1"/>
+         <property name="deviceManufacturer" value="Google"/>
+         <property name="deviceId" value="emulator-5554"/>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 12)"/>
+         <property name="deviceOSVersion" value="12"/>
+      </properties>
+      <testcase name="Test Cases/US12 - Get the Directions To the Destination/US12TestCaseAllFeatures" time="59.614" classname="Test Cases/US12 - Get the Directions To the Destination/US12TestCaseAllFeatures" status="PASSED">
+         <system-out><![CDATA[2022-12-09 22:47:17 - [TEST_CASE][PASSED] - Test Cases/US12 - Get the Directions To the Destination/US12TestCaseAllFeatures: Test Cases/US12 - Get the Directions To the Destination/US12TestCaseAllFeatures
+
+2022-12-09 22:47:18 - [TEST_STEP][PASSED] - runFeatureFile("include/features/us12.feature"): Feature file: 'include/features/us12.feature' was passed
+
+2022-12-09 22:47:18 - [MESSAGE][INFO] - Starting run keyword runFeatureFile: 'include/features/us12.feature' and extract report to folder: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Reports\20221209_224659\US12 Test Suite\20221209_224659/cucumber_report/1670626038390'...
+
+2022-12-09 22:47:22 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check If Map Exists: SCENARIO Check If Map Exists
+
+2022-12-09 22:47:22 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-09 22:47:22 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-09 22:47:22 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-09 22:47:22 - [MESSAGE][INFO] - Detected NodeJS location: "C:\Program Files\nodejs\node.exe"
+
+2022-12-09 22:47:25 - [MESSAGE][INFO] - Appium server started on port 55.722
+
+2022-12-09 22:47:59 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-09 22:47:59 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-09 22:47:59 - [TEST_STEP][PASSED] - the user logs in the application: the user logs in the application
+
+2022-12-09 22:47:59 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-09 22:48:02 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-09 22:48:02 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-09 22:48:03 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-09 22:48:03 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-09 22:48:04 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-09 22:48:04 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-09 22:48:12 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-09 22:48:12 - [MESSAGE][PASSED] - the user logs in the application
+
+2022-12-09 22:48:12 - [TEST_STEP][PASSED] - the user sees the Assigned Orders list: the user sees the Assigned Orders list
+
+2022-12-09 22:48:12 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-09 22:48:12 - [MESSAGE][PASSED] - Element '' is exist
+
+2022-12-09 22:48:12 - [MESSAGE][PASSED] - the user sees the Assigned Orders list
+
+2022-12-09 22:48:12 - [TEST_STEP][PASSED] - the user clicks on one of the "Assigned Order Item" in the Assigned Orders list: the user clicks on one of the "Assigned Order Item" in the Assigned Orders list
+
+2022-12-09 22:48:13 - [MESSAGE][PASSED] - Element 'Assigned Order Item' has attribute 'text' is 'ORDER: 8467
+DISTANCE: 2.37 KM
+DURATION: 4.35 MIN
+EARNING: 2€
+STATUS: READY TO CLAIM'
+
+2022-12-09 22:48:13 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-09 22:48:13 - [MESSAGE][PASSED] - Tapped on element 'Assigned Order Item'
+
+2022-12-09 22:48:13 - [MESSAGE][PASSED] - the user clicks on one of the "Assigned Order Item" in the Assigned Orders list
+
+2022-12-09 22:48:13 - [TEST_STEP][PASSED] - the user sees the Frame Layout "Map": the user sees the Frame Layout "Map"
+
+2022-12-09 22:48:13 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-09 22:48:17 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.FrameLayout - Map' is exist
+
+2022-12-09 22:48:17 - [MESSAGE][PASSED] - the user sees the Frame Layout "Map"
+
+2022-12-09 22:48:17 - [MESSAGE][PASSED] - Feature file: 'include/features/us12.feature' was passed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2022-12-09 22:47:17 - [TEST_SUITE][PASSED] - US12 Test Suite: Test Cases/US12 - Get the Directions To the Destination/US12TestCaseAllFeatures]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

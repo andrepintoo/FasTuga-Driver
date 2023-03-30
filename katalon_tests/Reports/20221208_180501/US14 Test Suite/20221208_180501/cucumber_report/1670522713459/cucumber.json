@@ -1,0 +1,365 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 9,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 34430360400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 11758249300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 608238900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 14,
+        "name": "Check Assigned Orders \"Closest\" Button Exists",
+        "description": "",
+        "id": "order-from-closest/furthest-my-orders;check-assigned-orders-\"closest\"-button-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 581445900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user sees the \"Assigned Orders Closest\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Orders Closest\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CancelOrderTests.the_user_sees_the_button(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 25979292800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8890400700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 308755800,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 17,
+        "name": "Check Assigned Orders Sorted by Closest",
+        "description": "",
+        "id": "order-from-closest/furthest-my-orders;check-assigned-orders-sorted-by-closest",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 381499100,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user clicks on the \"Assigned Orders Closest\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Orders Closest\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1074307000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user sees the assigned orders sorted by \"Closest\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Closest\"",
+                  "offset": 44
+                }
+              ],
+              "location": "OrderFromClosestFurthestMyOrders.the_user_sees_the_assigned_orders_sorted_by(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 30134965700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 9379510100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 310514300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 21,
+        "name": "Check Assigned Orders \"Furthest\" Button Exists",
+        "description": "",
+        "id": "order-from-closest/furthest-my-orders;check-assigned-orders-\"furthest\"-button-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 294188400,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user sees the \"Assigned Orders Furthest\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Orders Furthest\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CancelOrderTests.the_user_sees_the_button(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 22537958400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12811404500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 284363000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 24,
+        "name": "Check Assigned Orders Sorted by Furthest",
+        "description": "",
+        "id": "order-from-closest/furthest-my-orders;check-assigned-orders-sorted-by-furthest",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 450496500,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user clicks on the \"Assigned Orders Furthest\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Orders Furthest\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1156057100,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user sees the assigned orders sorted by \"Furthest\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Furthest\"",
+                  "offset": 44
+                }
+              ],
+              "location": "OrderFromClosestFurthestMyOrders.the_user_sees_the_assigned_orders_sorted_by(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Order from Closest/Furthest My Orders",
+    "description": "  As a user\n\tI want to order My Orders from the closest or the furthest from the restaurant\n\tSo that I can make a more informed decision on which order to start delivering",
+    "id": "order-from-closest/furthest-my-orders",
+    "keyword": "Feature",
+    "uri": "D:/UCs_5th_Semester/TA_EngenhariaSoftware/Projeto/taes22_grupow_fastugadriver_tests.git/include/features/us14.feature",
+    "tags": []
+  }
+]

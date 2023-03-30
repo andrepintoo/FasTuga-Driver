@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+US15 Test Suite,,,,2022-12-08 11:00:42,2022-12-08 11:01:40,58.548s,PASSED
+,,,,,,,
+Test Cases/US15 - Get Order Ready Notification/US15TestCaseAllFeatures,,,,2022-12-08 11:00:42,2022-12-08 11:01:40,58.173s,PASSED
+"runFeatureFile(""include/features/us15.feature"")",,,,2022-12-08 11:00:43,2022-12-08 11:01:40,57.581s,PASSED

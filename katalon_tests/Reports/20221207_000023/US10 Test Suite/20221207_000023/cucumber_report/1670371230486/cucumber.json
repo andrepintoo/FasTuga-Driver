@@ -1,0 +1,394 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 8,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 18605374800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8801634500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 168361300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "Check Delivered Button Exists",
+        "description": "",
+        "id": "us10---complete-handover;check-delivered-button-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 138731000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user sees the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_sees_the_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 798530600,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user clicks on one of the \"Assigned Order Item\" in the Assigned Orders list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Order Item\"",
+                  "offset": 30
+                }
+              ],
+              "location": "CancelOrderTests.the_user_clicks_the_button_in_the_list(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2034933100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user sees the \"Order Details\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Order Details\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 171737400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user sees the \"Delivered\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delivered\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CancelOrderTests.the_user_sees_the_button(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 8,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 11360108700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5048047100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 171750500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 19,
+        "name": "Check Balance Text Exists",
+        "description": "",
+        "id": "us10---complete-handover;check-balance-text-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 184238000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user sees that the \"Balance Value\" text exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Balance Value\"",
+                  "offset": 23
+                }
+              ],
+              "location": "CancelOrderTests.the_user_verifies_text_exists(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 8,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 15328335800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5577582600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 216967200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 22,
+        "name": "Check Successful Complete Handover By Button Delivered",
+        "description": "",
+        "id": "us10---complete-handover;check-successful-complete-handover-by-button-delivered",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 124501400,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user sees the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_sees_the_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 148201600,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user sees the Balance value",
+            "match": {
+              "location": "CompleteHandoverTests.the_user_verifies_previous_value()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 795808600,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user clicks on one of the \"Assigned Order Item\" in the Assigned Orders list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Order Item\"",
+                  "offset": 30
+                }
+              ],
+              "location": "CancelOrderTests.the_user_clicks_the_button_in_the_list(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3234122300,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user sees how much he is going to earn for that delivery",
+            "match": {
+              "location": "CompleteHandoverTests.the_user_verifies_earnings_from_delivery()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 209629600,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user clicks on the \"Delivered\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delivered\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2372318100,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 124831300,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the user sees that the clicked order item is not in the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_verifies_order_item_missing()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 136102800,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the user sees that the balance has gone up",
+            "match": {
+              "location": "CompleteHandoverTests.the_user_verifies_balance()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "US10 - Complete Handover",
+    "description": "  \tAs a user\n    I want to complete my order\n    So that I receive my earning",
+    "id": "us10---complete-handover",
+    "keyword": "Feature",
+    "uri": "C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us10.feature",
+    "tags": []
+  }
+]

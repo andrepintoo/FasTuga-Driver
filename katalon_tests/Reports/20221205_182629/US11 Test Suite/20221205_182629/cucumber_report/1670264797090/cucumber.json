@@ -1,0 +1,261 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 7,
+        "name": "Check Cancel Button exists",
+        "description": "",
+        "id": "us11---cancel-order;check-cancel-button-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 14341605600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8045566300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 153260600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user sees the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_sees_the_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 632035100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks on one of the \"Assigned Order Item\" in the Assigned Orders list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Order Item\"",
+                  "offset": 30
+                }
+              ],
+              "location": "CancelOrderTests.the_user_clicks_the_button_in_the_list(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1172582500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user sees the \"Order Details\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Order Details\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 188098800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user sees the \"Cancel\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Cancel\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CancelOrderTests.the_user_sees_the_button(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 15,
+        "name": "Check Successful Cancel Order",
+        "description": "",
+        "id": "us11---cancel-order;check-successful-cancel-order",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9050770800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6195703000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 122972600,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user sees the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_sees_the_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 675849900,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user clicks on one of the \"Assigned Order Item\" in the Assigned Orders list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Order Item\"",
+                  "offset": 30
+                }
+              ],
+              "location": "CancelOrderTests.the_user_clicks_the_button_in_the_list(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 961775500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user sees the \"Order Details\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Order Details\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 358514600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user clicks on the \"Cancel\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Cancel\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 772341200,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user clicks on the \"YES Cancel Order\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"YES Cancel Order\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1311465400,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user sees that the clicked order item is not in the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_verifies_order_item_missing()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 155551000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "US11 - Cancel Order",
+    "description": "  \tAs a user\n    I want to be able to cancel a currently assigned order",
+    "id": "us11---cancel-order",
+    "keyword": "Feature",
+    "uri": "C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us11.feature",
+    "tags": []
+  }
+]

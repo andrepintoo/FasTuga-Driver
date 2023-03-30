@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="US4 Test Suite" time="142.435" tests="1" failures="0" errors="0">
+   <testsuite name="US4 Test Suite" tests="1" failures="0" errors="0" time="142.435" skipped="0" timestamp="2022-12-06 10:46:16" hostname="sfili - LAPTOP-19A7R8I6.mshome.net" id="Test Suites/US4 Test Suite">
+      <properties>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 12)"/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\sfili\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221206_104605\\US4 Test Suite\\20221206_104605"/>
+         <property name="logFiles" value="C:\\Users\\sfili\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221206_104605\\US4 Test Suite\\20221206_104605\\appium.log, C:\\Users\\sfili\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221206_104605\\US4 Test Suite\\20221206_104605\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="sfili - LAPTOP-19A7R8I6.mshome.net"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="appiumServerStatus" value="{&quot;value&quot;:{&quot;build&quot;:{&quot;version&quot;:&quot;1.22.3&quot;}},&quot;sessionId&quot;:null,&quot;status&quot;:0}"/>
+         <property name="katalonVersion" value="8.5.1.208"/>
+         <property name="deviceOS" value="Android"/>
+         <property name="appiumVersion" value="1.22.3"/>
+         <property name="deviceModel" value="sdk_gphone64_x86_64"/>
+         <property name="hostAddress" value="172.17.112.1"/>
+         <property name="deviceManufacturer" value="Google"/>
+         <property name="deviceId" value="emulator-5554"/>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 12)"/>
+         <property name="deviceOSVersion" value="12"/>
+      </properties>
+      <testcase name="Test Cases/US4 - Order Details/US4TestCaseAllFeatures" time="141.973" classname="Test Cases/US4 - Order Details/US4TestCaseAllFeatures" status="PASSED">
+         <system-out><![CDATA[2022-12-06 10:46:16 - [TEST_CASE][PASSED] - Test Cases/US4 - Order Details/US4TestCaseAllFeatures: Test Cases/US4 - Order Details/US4TestCaseAllFeatures
+
+2022-12-06 10:46:17 - [TEST_STEP][PASSED] - runFeatureFile("Include/features/us4.feature"): Feature file: 'Include/features/us4.feature' was passed
+
+2022-12-06 10:46:17 - [MESSAGE][INFO] - Starting run keyword runFeatureFile: 'Include/features/us4.feature' and extract report to folder: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Reports\20221206_104605\US4 Test Suite\20221206_104605/cucumber_report/1670323577271'...
+
+2022-12-06 10:46:20 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Order Details Screen Exists: SCENARIO Check Order Details Screen Exists
+
+2022-12-06 10:46:20 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-06 10:46:20 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-06 10:46:20 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-06 10:46:20 - [MESSAGE][INFO] - Detected NodeJS location: "C:\Program Files\nodejs\node.exe"
+
+2022-12-06 10:46:23 - [MESSAGE][INFO] - Appium server started on port 62.460
+
+2022-12-06 10:46:54 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-06 10:46:54 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-06 10:46:54 - [TEST_STEP][PASSED] - the user logs in the application: the user logs in the application
+
+2022-12-06 10:46:55 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:47:00 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-06 10:47:00 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:47:01 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-06 10:47:01 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:47:02 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-06 10:47:02 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:47:08 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-06 10:47:08 - [MESSAGE][PASSED] - the user logs in the application
+
+2022-12-06 10:47:08 - [TEST_STEP][PASSED] - the user sees the Available Orders list: the user sees the Available Orders list
+
+2022-12-06 10:47:08 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:47:08 - [MESSAGE][PASSED] - Element '' is exist
+
+2022-12-06 10:47:08 - [MESSAGE][PASSED] - the user sees the Available Orders list
+
+2022-12-06 10:47:08 - [TEST_STEP][PASSED] - the user clicks on one of the orders in the Available Orders list: the user clicks on one of the orders in the Available Orders list
+
+2022-12-06 10:47:08 - [MESSAGE][PASSED] - Element '' has attribute 'text' is 'ORDER: 8438
+DISTANCE: 2.37 KM
+DURATION: 4.35 MIN
+EARNING: 2€
+STATUS: AVAILABLE'
+
+2022-12-06 10:47:08 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:47:09 - [MESSAGE][PASSED] - Tapped on element ''
+
+2022-12-06 10:47:09 - [MESSAGE][PASSED] - the user clicks on one of the orders in the Available Orders list
+
+2022-12-06 10:47:09 - [TEST_STEP][PASSED] - the user sees the "Order Details" screen: the user sees the "Order Details" screen
+
+2022-12-06 10:47:09 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:47:11 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Order Details' is exist
+
+2022-12-06 10:47:11 - [MESSAGE][PASSED] - the user sees the "Order Details" screen
+
+2022-12-06 10:47:11 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Order information: SCENARIO Check Order information
+
+2022-12-06 10:47:11 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-06 10:47:11 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-06 10:47:11 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-06 10:47:35 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-06 10:47:35 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-06 10:47:35 - [TEST_STEP][PASSED] - the user logs in the application: the user logs in the application
+
+2022-12-06 10:47:35 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:47:38 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-06 10:47:38 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:47:39 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-06 10:47:39 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:47:40 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-06 10:47:40 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:47:46 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-06 10:47:46 - [MESSAGE][PASSED] - the user logs in the application
+
+2022-12-06 10:47:46 - [TEST_STEP][PASSED] - the user sees the Available Orders list: the user sees the Available Orders list
+
+2022-12-06 10:47:46 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:47:46 - [MESSAGE][PASSED] - Element '' is exist
+
+2022-12-06 10:47:46 - [MESSAGE][PASSED] - the user sees the Available Orders list
+
+2022-12-06 10:47:46 - [TEST_STEP][PASSED] - the user clicks on one of the orders in the Available Orders list: the user clicks on one of the orders in the Available Orders list
+
+2022-12-06 10:47:46 - [MESSAGE][PASSED] - Element '' has attribute 'text' is 'ORDER: 8438
+DISTANCE: 2.37 KM
+DURATION: 4.35 MIN
+EARNING: 2€
+STATUS: AVAILABLE'
+
+2022-12-06 10:47:46 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:47:47 - [MESSAGE][PASSED] - Tapped on element ''
+
+2022-12-06 10:47:47 - [MESSAGE][PASSED] - the user clicks on one of the orders in the Available Orders list
+
+2022-12-06 10:47:47 - [TEST_STEP][PASSED] - the user sees the "Order Details" screen: the user sees the "Order Details" screen
+
+2022-12-06 10:47:47 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:47:49 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Order Details' is exist
+
+2022-12-06 10:47:49 - [MESSAGE][PASSED] - the user sees the "Order Details" screen
+
+2022-12-06 10:47:49 - [TEST_STEP][PASSED] - the user sees the "8438" text in "Order Number" field: the user sees the "8438" text in "Order Number" field
+
+2022-12-06 10:47:51 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Order Number' has attribute 'text' is '8438'
+
+2022-12-06 10:47:51 - [MESSAGE][PASSED] - the user sees the "8438" text in "Order Number" field
+
+2022-12-06 10:47:51 - [TEST_STEP][PASSED] - the user sees the "Customer 2" text in "Client Name" field: the user sees the "Customer 2" text in "Client Name" field
+
+2022-12-06 10:47:51 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Client Name' has attribute 'text' is 'Customer 2'
+
+2022-12-06 10:47:51 - [MESSAGE][PASSED] - the user sees the "Customer 2" text in "Client Name" field
+
+2022-12-06 10:47:51 - [TEST_STEP][PASSED] - the user sees the "+351 220136359" text in "Client Phone" field: the user sees the "+351 220136359" text in "Client Phone" field
+
+2022-12-06 10:47:52 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Client Phone' has attribute 'text' is '+351 220136359'
+
+2022-12-06 10:47:52 - [MESSAGE][PASSED] - the user sees the "+351 220136359" text in "Client Phone" field
+
+2022-12-06 10:47:52 - [TEST_STEP][PASSED] - the user sees the "Rua Afonso Lopes Vieira, Leiria" text in "Location" field: the user sees the "Rua Afonso Lopes Vieira, Leiria" text in "Location" field
+
+2022-12-06 10:47:52 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Location' has attribute 'text' is 'Rua Afonso Lopes Vieira, Leiria'
+
+2022-12-06 10:47:52 - [MESSAGE][PASSED] - the user sees the "Rua Afonso Lopes Vieira, Leiria" text in "Location" field
+
+2022-12-06 10:47:52 - [TEST_STEP][PASSED] - the user sees the "2.37 Km" text in "Distance" field: the user sees the "2.37 Km" text in "Distance" field
+
+2022-12-06 10:47:52 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Distance' has attribute 'text' is '2.37 Km'
+
+2022-12-06 10:47:52 - [MESSAGE][PASSED] - the user sees the "2.37 Km" text in "Distance" field
+
+2022-12-06 10:47:52 - [TEST_STEP][PASSED] - the user sees the "2 €" text in "Earning" field: the user sees the "2 €" text in "Earning" field
+
+2022-12-06 10:47:53 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Earning' has attribute 'text' is '2 €'
+
+2022-12-06 10:47:53 - [MESSAGE][PASSED] - the user sees the "2 €" text in "Earning" field
+
+2022-12-06 10:47:53 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Go Back: SCENARIO Go Back
+
+2022-12-06 10:47:53 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-06 10:47:53 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-06 10:47:53 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-06 10:48:23 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-06 10:48:23 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-06 10:48:23 - [TEST_STEP][PASSED] - the user logs in the application: the user logs in the application
+
+2022-12-06 10:48:23 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:48:25 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-06 10:48:25 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:48:27 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-06 10:48:27 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:48:27 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-06 10:48:27 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:48:31 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-06 10:48:31 - [MESSAGE][PASSED] - the user logs in the application
+
+2022-12-06 10:48:31 - [TEST_STEP][PASSED] - the user sees the Available Orders list: the user sees the Available Orders list
+
+2022-12-06 10:48:31 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:48:31 - [MESSAGE][PASSED] - Element '' is exist
+
+2022-12-06 10:48:31 - [MESSAGE][PASSED] - the user sees the Available Orders list
+
+2022-12-06 10:48:31 - [TEST_STEP][PASSED] - the user clicks on one of the orders in the Available Orders list: the user clicks on one of the orders in the Available Orders list
+
+2022-12-06 10:48:31 - [MESSAGE][PASSED] - Element '' has attribute 'text' is 'ORDER: 8438
+DISTANCE: 2.37 KM
+DURATION: 4.35 MIN
+EARNING: 2€
+STATUS: AVAILABLE'
+
+2022-12-06 10:48:31 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:48:32 - [MESSAGE][PASSED] - Tapped on element ''
+
+2022-12-06 10:48:32 - [MESSAGE][PASSED] - the user clicks on one of the orders in the Available Orders list
+
+2022-12-06 10:48:32 - [TEST_STEP][PASSED] - the user clicks on the "BACK to available orders" button: the user clicks on the "BACK to available orders" button
+
+2022-12-06 10:48:32 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:48:34 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - BACK to available orders'
+
+2022-12-06 10:48:34 - [MESSAGE][PASSED] - the user clicks on the "BACK to available orders" button
+
+2022-12-06 10:48:34 - [TEST_STEP][PASSED] - the user sees the "Welcome" screen: the user sees the "Welcome" screen
+
+2022-12-06 10:48:34 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-06 10:48:38 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-06 10:48:38 - [MESSAGE][PASSED] - the user sees the "Welcome" screen
+
+2022-12-06 10:48:38 - [MESSAGE][PASSED] - Feature file: 'Include/features/us4.feature' was passed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2022-12-06 10:46:16 - [TEST_SUITE][PASSED] - US4 Test Suite: Test Cases/US4 - Order Details/US4TestCaseAllFeatures]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

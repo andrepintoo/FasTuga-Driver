@@ -1,0 +1,222 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "BDD_TESTRUN_UUID": "97e814e8-61bb-4c1e-ae06-a697a75fb9ff",
+        "line": 8,
+        "name": "Check Assign Button Exists",
+        "description": "",
+        "id": "us8---assign-order;check-assign-button-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 17630377800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "ba8cbe5f-19a7-4294-966f-3e6b760890b7"
+          },
+          {
+            "result": {
+              "duration": 6420137400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "91983343-72e2-4a5b-9c99-c53719def9c2"
+          },
+          {
+            "result": {
+              "duration": 169173100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user sees the Available Orders list",
+            "match": {
+              "location": "AssignOrderTests.the_user_sees_the_available_list()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "04a8b032-4e3b-46f9-b3dd-4bd02c4abd48"
+          },
+          {
+            "result": {
+              "duration": 713189400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on one of the orders in the Available Orders list",
+            "match": {
+              "location": "AssignOrderTests.the_user_clicks_the_order_in_the_list()"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "b20ccb26-bfb0-41d1-98eb-cc02674ec28a"
+          },
+          {
+            "result": {
+              "duration": 1090215300,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user sees the \"Order Details\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Order Details\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "7ada98c3-5f6f-4719-9caa-4d9bcaf05e49"
+          },
+          {
+            "result": {
+              "duration": 291967500,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user sees the \"Assign\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assign\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CancelOrderTests.the_user_sees_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "e6400aab-16e2-451d-bb99-ea7b5996454b"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "a099b34e-123b-4745-9db2-3df9338daa0f",
+        "line": 16,
+        "name": "Check Assigned Order By Clicking Assign Button",
+        "description": "",
+        "id": "us8---assign-order;check-assigned-order-by-clicking-assign-button",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9828604800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "a768f6db-077a-4d6a-ad21-4d6abebcdaaa"
+          },
+          {
+            "result": {
+              "duration": 5180320900,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "ac968b8d-a525-4abe-90b3-df2c75300dc2"
+          },
+          {
+            "result": {
+              "duration": 122706500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user sees the Available Orders list",
+            "match": {
+              "location": "AssignOrderTests.the_user_sees_the_available_list()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "41d9a894-d51c-421b-8d9b-a4888bb88126"
+          },
+          {
+            "result": {
+              "duration": 173382600,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user clicks on one of the orders in the Available Orders list",
+            "match": {
+              "location": "AssignOrderTests.the_user_clicks_the_order_in_the_list()"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "00f1f2d1-cb2e-4e71-a046-3f05b6bea419"
+          },
+          {
+            "result": {
+              "duration": 1548199000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user clicks on the \"Assign\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assign\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "ff9472c2-87d4-4da6-a43f-5671fe674855"
+          },
+          {
+            "result": {
+              "duration": 1731591500,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user sees the Available Orders list",
+            "match": {
+              "location": "AssignOrderTests.the_user_sees_the_available_list()"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "4215b3d3-16af-448b-985b-ff0114b130e4"
+          },
+          {
+            "result": {
+              "duration": 328655400,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user sees that the assigned order item is not in the Available Orders list",
+            "match": {
+              "location": "AssignOrderTests.the_user_verifies_order_item_missing_in_available_orders()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "16362aff-c1db-497a-985e-83b40172694d"
+          }
+        ]
+      }
+    ],
+    "name": "US8 - Assign Order",
+    "description": "  \tAs a user\n    I want to be able to accept an order\n    So that it starts to be prepared for the delivery",
+    "id": "us8---assign-order",
+    "keyword": "Feature",
+    "uri": "C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us8.feature",
+    "tags": []
+  }
+]

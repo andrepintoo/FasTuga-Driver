@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="8" time="231.555801">
+<testcase classname="US1 - Login" name="Check Login Exists" time="39.611521">
+<system-out><![CDATA[Given the user opens the application........................................passed
+Then the user sees the "LOGIN" screen.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1 - Login" name="Check Login With Empty Fields" time="22.809927">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user sees the "LOGIN" screen........................................passed
+When the user clicks on the "LOGIN" button..................................passed
+Then the user sees the "Email field cannot be empty" error text in "empty email login" field.passed
+And the user sees the "Password field cannot be empty" error text in "empty password login" field.passed
+]]></system-out>
+</testcase>
+<testcase classname="US1 - Login" name="Check Login With Invalid Email Format" time="23.94098">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user sees the "LOGIN" screen........................................passed
+When the user fills the "email login" field with "abc.pt"...................passed
+And the user clicks on the "LOGIN" button...................................passed
+Then the user sees the "Wrong email format" error text in "invalid email login" field.passed
+]]></system-out>
+</testcase>
+<testcase classname="US1 - Login" name="Go to Register Screen From Login" time="22.979702">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user sees the "LOGIN" screen........................................passed
+When the user clicks on the "REGISTER" button...............................passed
+Then the user sees the "REGISTER" text......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1 - Login" name="Check Successful Authentication" time="33.533962">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user sees the "LOGIN" screen........................................passed
+And the user fills the email field with contacto@email.pt...................passed
+And the user fills the password field with password.........................passed
+And the user clicks on the "LOGIN" button...................................passed
+Then the user sees the "Welcome" text.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1 - Login" name="Check Successful Authentication 2" time="34.354775">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user sees the "LOGIN" screen........................................passed
+And the user fills the email field with rodrigo.campos@mail.pt..............passed
+And the user fills the password field with 12345678.........................passed
+And the user clicks on the "LOGIN" button...................................passed
+Then the user sees the "Welcome" text.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1 - Login" name="Check Login With Invalid Credentials" time="30.729225">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user sees the "LOGIN" screen........................................passed
+And the user fills the email field with abc@email.pt........................passed
+And the user fills the password field with 123456789........................passed
+And the user clicks on the "LOGIN" button...................................passed
+Then the user sees the "Wrong Credentials" text.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1 - Login" name="Check Login With Invalid Credentials 2" time="23.595709">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user sees the "LOGIN" screen........................................passed
+And the user fills the email field with utilizador@email.pt.................passed
+And the user fills the password field with admin............................passed
+And the user clicks on the "LOGIN" button...................................passed
+Then the user sees the "Wrong Credentials" text.............................passed
+]]></system-out>
+</testcase>
+</testsuite>

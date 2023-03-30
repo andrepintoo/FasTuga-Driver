@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "C6FBE5C97D99707AAE8746EFDC78CBE2",
+  "keywordClasses": [
+    {
+      "name": "us2.CheckRegisterWithInvalidLicensePlateFormat",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

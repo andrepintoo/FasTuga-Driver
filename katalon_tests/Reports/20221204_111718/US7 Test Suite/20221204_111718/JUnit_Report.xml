@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="US7 Test Suite" time="90.764" tests="1" failures="0" errors="0">
+   <testsuite name="US7 Test Suite" tests="1" failures="0" errors="0" time="90.764" skipped="0" timestamp="2022-12-04 11:17:26" hostname="André - DESKTOP-MHCQ2QC.mshome.net" id="Test Suites/US7 Test Suite">
+      <properties>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 12)"/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\Andr\u00E9\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221204_111718\\US7 Test Suite\\20221204_111718"/>
+         <property name="logFiles" value="C:\\Users\\Andr\u00E9\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221204_111718\\US7 Test Suite\\20221204_111718\\appium.log, C:\\Users\\Andr\u00E9\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221204_111718\\US7 Test Suite\\20221204_111718\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="André - DESKTOP-MHCQ2QC.mshome.net"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="appiumServerStatus" value="{&quot;value&quot;:{&quot;build&quot;:{&quot;version&quot;:&quot;1.22.3&quot;}},&quot;sessionId&quot;:null,&quot;status&quot;:0}"/>
+         <property name="katalonVersion" value="8.5.1.208"/>
+         <property name="deviceOS" value="Android"/>
+         <property name="appiumVersion" value="1.22.3"/>
+         <property name="deviceModel" value="sdk_gphone64_x86_64"/>
+         <property name="hostAddress" value="192.168.96.1"/>
+         <property name="deviceManufacturer" value="Google"/>
+         <property name="deviceId" value="emulator-5554"/>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 12)"/>
+         <property name="deviceOSVersion" value="12"/>
+      </properties>
+      <testcase name="Test Cases/US7 - Keep Me Logged In/US7TestCaseAllFeatures" time="90.388" classname="Test Cases/US7 - Keep Me Logged In/US7TestCaseAllFeatures" status="PASSED">
+         <system-out><![CDATA[2022-12-04 11:17:27 - [TEST_CASE][PASSED] - Test Cases/US7 - Keep Me Logged In/US7TestCaseAllFeatures: Test Cases/US7 - Keep Me Logged In/US7TestCaseAllFeatures
+
+2022-12-04 11:17:27 - [TEST_STEP][PASSED] - runFeatureFile("Include/features/us7.feature"): Feature file: 'Include/features/us7.feature' was passed
+
+2022-12-04 11:17:27 - [MESSAGE][INFO] - Starting run keyword runFeatureFile: 'Include/features/us7.feature' and extract report to folder: 'C:\Users\André\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Reports\20221204_111718\US7 Test Suite\20221204_111718/cucumber_report/1670152647759'...
+
+2022-12-04 11:17:29 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Keep Me Logged In Checkbox Exists: SCENARIO Check Keep Me Logged In Checkbox Exists
+
+2022-12-04 11:17:29 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-04 11:17:29 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-04 11:17:29 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-04 11:17:29 - [MESSAGE][INFO] - Detected NodeJS location: "C:\Program Files\nodejs\node.exe"
+
+2022-12-04 11:17:31 - [MESSAGE][INFO] - Appium server started on port 56,781
+
+2022-12-04 11:17:50 - [MESSAGE][PASSED] - Started app at: 'C:\Users\André\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-04 11:17:50 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-04 11:17:50 - [TEST_STEP][PASSED] - the user sees the "Keep Me Logged In" checkbox: the user sees the "Keep Me Logged In" checkbox
+
+2022-12-04 11:17:50 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:17:51 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.CheckBox - Keep Me Logged In' is exist
+
+2022-12-04 11:17:51 - [MESSAGE][PASSED] - the user sees the "Keep Me Logged In" checkbox
+
+2022-12-04 11:17:51 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Opening Application After Logout With Keep Me Signed In: SCENARIO Check Opening Application After Logout With Keep Me Signed In
+
+2022-12-04 11:17:51 - [TEST_STEP][PASSED] - the user opens the application - false: the user opens the application - false
+
+2022-12-04 11:17:51 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-04 11:17:51 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-04 11:17:58 - [MESSAGE][PASSED] - Started app at: 'C:\Users\André\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-04 11:17:58 - [MESSAGE][PASSED] - the user opens the application - false
+
+2022-12-04 11:17:58 - [TEST_STEP][PASSED] - the user clicks on the "Keep Me Logged In" checkbox: the user clicks on the "Keep Me Logged In" checkbox
+
+2022-12-04 11:17:58 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:17:59 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckBox - Keep Me Logged In'
+
+2022-12-04 11:17:59 - [MESSAGE][PASSED] - the user clicks on the "Keep Me Logged In" checkbox
+
+2022-12-04 11:17:59 - [TEST_STEP][PASSED] - the user logs in the application: the user logs in the application
+
+2022-12-04 11:17:59 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:00 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-04 11:18:00 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:02 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-04 11:18:02 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:03 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-04 11:18:03 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:04 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-04 11:18:04 - [MESSAGE][PASSED] - the user logs in the application
+
+2022-12-04 11:18:04 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-04 11:18:04 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:04 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-04 11:18:04 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-04 11:18:04 - [TEST_STEP][PASSED] - the user clicks on the "Logout" text in the Menu: the user clicks on the "Logout" text in the Menu
+
+2022-12-04 11:18:04 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:05 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Logout'
+
+2022-12-04 11:18:05 - [MESSAGE][PASSED] - the user clicks on the "Logout" text in the Menu
+
+2022-12-04 11:18:05 - [TEST_STEP][PASSED] - the user closes the application: the user closes the application
+
+2022-12-04 11:18:05 - [MESSAGE][PASSED] - Close app successfully
+
+2022-12-04 11:18:05 - [MESSAGE][PASSED] - the user closes the application
+
+2022-12-04 11:18:05 - [TEST_STEP][PASSED] - the user opens the application - false: the user opens the application - false
+
+2022-12-04 11:18:05 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-04 11:18:05 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-04 11:18:06 - [MESSAGE][INFO] - Detected NodeJS location: "C:\Program Files\nodejs\node.exe"
+
+2022-12-04 11:18:07 - [MESSAGE][INFO] - Appium server started on port 57,020
+
+2022-12-04 11:18:14 - [MESSAGE][PASSED] - Started app at: 'C:\Users\André\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-04 11:18:14 - [MESSAGE][PASSED] - the user opens the application - false
+
+2022-12-04 11:18:14 - [TEST_STEP][PASSED] - the user sees the "LOGIN" screen: the user sees the "LOGIN" screen
+
+2022-12-04 11:18:14 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:14 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - LOGIN' is exist
+
+2022-12-04 11:18:14 - [MESSAGE][PASSED] - the user sees the "LOGIN" screen
+
+2022-12-04 11:18:14 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Opening Application After Login With Keep Me Signed In: SCENARIO Check Opening Application After Login With Keep Me Signed In
+
+2022-12-04 11:18:14 - [TEST_STEP][PASSED] - the user opens the application - false: the user opens the application - false
+
+2022-12-04 11:18:14 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-04 11:18:14 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-04 11:18:21 - [MESSAGE][PASSED] - Started app at: 'C:\Users\André\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-04 11:18:21 - [MESSAGE][PASSED] - the user opens the application - false
+
+2022-12-04 11:18:21 - [TEST_STEP][PASSED] - the user clicks on the "Keep Me Logged In" checkbox: the user clicks on the "Keep Me Logged In" checkbox
+
+2022-12-04 11:18:21 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:21 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckBox - Keep Me Logged In'
+
+2022-12-04 11:18:21 - [MESSAGE][PASSED] - the user clicks on the "Keep Me Logged In" checkbox
+
+2022-12-04 11:18:21 - [TEST_STEP][PASSED] - the user logs in the application: the user logs in the application
+
+2022-12-04 11:18:21 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:23 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-04 11:18:23 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:24 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-04 11:18:24 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:25 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-04 11:18:25 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:26 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-04 11:18:26 - [MESSAGE][PASSED] - the user logs in the application
+
+2022-12-04 11:18:26 - [TEST_STEP][PASSED] - the user closes the application: the user closes the application
+
+2022-12-04 11:18:26 - [MESSAGE][PASSED] - Close app successfully
+
+2022-12-04 11:18:26 - [MESSAGE][PASSED] - the user closes the application
+
+2022-12-04 11:18:26 - [TEST_STEP][PASSED] - the user opens the application - false: the user opens the application - false
+
+2022-12-04 11:18:26 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-04 11:18:26 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-04 11:18:26 - [MESSAGE][INFO] - Detected NodeJS location: "C:\Program Files\nodejs\node.exe"
+
+2022-12-04 11:18:27 - [MESSAGE][INFO] - Appium server started on port 57,233
+
+2022-12-04 11:18:34 - [MESSAGE][PASSED] - Started app at: 'C:\Users\André\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-04 11:18:34 - [MESSAGE][PASSED] - the user opens the application - false
+
+2022-12-04 11:18:34 - [TEST_STEP][PASSED] - the user sees the "Welcome" screen: the user sees the "Welcome" screen
+
+2022-12-04 11:18:34 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:35 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-04 11:18:35 - [MESSAGE][PASSED] - the user sees the "Welcome" screen
+
+2022-12-04 11:18:35 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Opening Application After Login Without Keep Me Signed In: SCENARIO Check Opening Application After Login Without Keep Me Signed In
+
+2022-12-04 11:18:35 - [TEST_STEP][PASSED] - the application state was reset: the application state was reset
+
+2022-12-04 11:18:37 - [MESSAGE][PASSED] - the application state was reset
+
+2022-12-04 11:18:37 - [TEST_STEP][PASSED] - the user opens the application - false: the user opens the application - false
+
+2022-12-04 11:18:37 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-04 11:18:37 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-04 11:18:43 - [MESSAGE][PASSED] - Started app at: 'C:\Users\André\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-04 11:18:43 - [MESSAGE][PASSED] - the user opens the application - false
+
+2022-12-04 11:18:43 - [TEST_STEP][PASSED] - the user sees the "LOGIN" screen: the user sees the "LOGIN" screen
+
+2022-12-04 11:18:43 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:44 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - LOGIN' is exist
+
+2022-12-04 11:18:44 - [MESSAGE][PASSED] - the user sees the "LOGIN" screen
+
+2022-12-04 11:18:44 - [TEST_STEP][PASSED] - the "Keep Me Logged In" checkbox is not checked: the "Keep Me Logged In" checkbox is not checked
+
+2022-12-04 11:18:44 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:44 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.CheckBox - Keep Me Logged In' has attribute 'checked' is 'false'
+
+2022-12-04 11:18:44 - [MESSAGE][PASSED] - the "Keep Me Logged In" checkbox is not checked
+
+2022-12-04 11:18:44 - [TEST_STEP][PASSED] - the user logs in the application: the user logs in the application
+
+2022-12-04 11:18:44 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:45 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-04 11:18:45 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:47 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-04 11:18:47 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:47 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-04 11:18:47 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:48 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-04 11:18:48 - [MESSAGE][PASSED] - the user logs in the application
+
+2022-12-04 11:18:48 - [TEST_STEP][PASSED] - the user closes the application: the user closes the application
+
+2022-12-04 11:18:48 - [MESSAGE][PASSED] - Close app successfully
+
+2022-12-04 11:18:48 - [MESSAGE][PASSED] - the user closes the application
+
+2022-12-04 11:18:48 - [TEST_STEP][PASSED] - the user opens the application - false: the user opens the application - false
+
+2022-12-04 11:18:49 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-04 11:18:49 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-04 11:18:49 - [MESSAGE][INFO] - Detected NodeJS location: "C:\Program Files\nodejs\node.exe"
+
+2022-12-04 11:18:50 - [MESSAGE][INFO] - Appium server started on port 57,478
+
+2022-12-04 11:18:57 - [MESSAGE][PASSED] - Started app at: 'C:\Users\André\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-04 11:18:57 - [MESSAGE][PASSED] - the user opens the application - false
+
+2022-12-04 11:18:57 - [TEST_STEP][PASSED] - the user sees the "LOGIN" screen: the user sees the "LOGIN" screen
+
+2022-12-04 11:18:57 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-04 11:18:57 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - LOGIN' is exist
+
+2022-12-04 11:18:57 - [MESSAGE][PASSED] - the user sees the "LOGIN" screen
+
+2022-12-04 11:18:57 - [MESSAGE][PASSED] - Feature file: 'Include/features/us7.feature' was passed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2022-12-04 11:17:26 - [TEST_SUITE][PASSED] - US7 Test Suite: Test Cases/US7 - Keep Me Logged In/US7TestCaseAllFeatures]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

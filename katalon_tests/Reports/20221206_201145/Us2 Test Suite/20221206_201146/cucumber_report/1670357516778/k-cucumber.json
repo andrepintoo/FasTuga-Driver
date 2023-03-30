@@ -1,0 +1,1491 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "BDD_TESTRUN_UUID": "5e8b5e66-04d7-450b-be4b-7ca5e65170d5",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 23253420400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "49c75fcb-b04a-4cfa-bb0f-f3125cd7ca66"
+          },
+          {
+            "result": {
+              "duration": 965858100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "1b01f5f4-12c4-4a4e-8d8e-1277dac98f79"
+          },
+          {
+            "result": {
+              "duration": 1718005200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"REGISTER\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "98c43d00-2211-4aab-a16b-9db2f7125752"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "5e8b5e66-04d7-450b-be4b-7ca5e65170d5",
+        "line": 11,
+        "name": "Go to Login Screen",
+        "description": "",
+        "id": "register;go-to-login-screen",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 407383600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on the \"back to login register\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"back to login register\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "1f937be3-fd69-4781-bfaf-faf9f5da7f36"
+          },
+          {
+            "result": {
+              "duration": 1825069100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user sees the \"LOGIN\" text",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_text(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "d3e73cab-a8ac-4d7c-b30a-7ce75adc1a0c"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "6a75debb-2c25-44c3-9b61-ddbe05fea7bc",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 26704593600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "505b583b-bf5e-42a7-8928-623c3dd340bd"
+          },
+          {
+            "result": {
+              "duration": 789312600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "a96dcfa5-8b6f-41bd-ba21-194411a2ce3a"
+          },
+          {
+            "result": {
+              "duration": 1748070400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"REGISTER\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "279123af-ba12-4f35-b265-6f6ec84349a9"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "6a75debb-2c25-44c3-9b61-ddbe05fea7bc",
+        "line": 15,
+        "name": "Check Successful Register",
+        "description": "",
+        "id": "register;check-successful-register",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 899970200,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user fills the \"first name register\" field with \"John\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"first name register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"John\"",
+                  "offset": 52
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "f8a9d1ba-1af4-48c6-b862-e0eb7bf03fe9"
+          },
+          {
+            "result": {
+              "duration": 1691617700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user fills the \"last name register\" field with \"Doe\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"last name register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"Doe\"",
+                  "offset": 51
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "f14dc858-ba61-4085-8c12-c13fa83ea05e"
+          },
+          {
+            "result": {
+              "duration": 1195144700,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user fills the \"email register\" field with \"johndoe@email.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"johndoe@email.pt\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "4048d0a8-2256-4c63-9ac6-1ba0f885b307"
+          },
+          {
+            "result": {
+              "duration": 1185249000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user fills the \"password register\" field with \"password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"password\"",
+                  "offset": 50
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "0b71ae68-4725-49b5-a327-e6ec52c9137e"
+          },
+          {
+            "result": {
+              "duration": 1636511000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user fills the \"password confirmation register\" field with \"password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password confirmation register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"password\"",
+                  "offset": 63
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "3b9b5ad4-830a-475a-a7f9-3abba0364a1a"
+          },
+          {
+            "result": {
+              "duration": 1161833800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user fills the \"phone number register\" field with \"999888777\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"phone number register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"999888777\"",
+                  "offset": 54
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "6fc07e79-533c-4134-a183-1abfbbc970b8"
+          },
+          {
+            "result": {
+              "duration": 1197575800,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user fills the \"license plate register\" field with \"AA-11-AA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"license plate register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"AA-11-AA\"",
+                  "offset": 55
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "ebc9777d-5fbf-46cd-ae3a-30f9f946403d"
+          },
+          {
+            "result": {
+              "duration": 695912900,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user clicks on the \"register from register\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"register from register\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "531371d2-34be-424f-9aa3-192cdc829433"
+          },
+          {
+            "result": {
+              "duration": 4036199500,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "67e0d49f-c6d9-480b-904b-05842974d72c"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "023577fc-2895-47b2-8b08-33cb8400c367",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 17557668800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "115c6fec-4717-4d88-a3a5-e88cd9877591"
+          },
+          {
+            "result": {
+              "duration": 832457000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "48e8bfcc-7086-4e71-9d95-d0a97353b710"
+          },
+          {
+            "result": {
+              "duration": 1712502400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"REGISTER\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "bc9526c8-5fa5-45a2-9ec5-6ca72076963b"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "023577fc-2895-47b2-8b08-33cb8400c367",
+        "line": 26,
+        "name": "Check Register With Existing License Plate",
+        "description": "",
+        "id": "register;check-register-with-existing-license-plate",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 834414000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user fills the \"license plate register\" field with \"AA-00-AA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"license plate register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"AA-00-AA\"",
+                  "offset": 55
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "d6c1afe5-680a-499b-ab5c-1591b5076404"
+          },
+          {
+            "result": {
+              "duration": 736949700,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user clicks on the \"register from register\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"register from register\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "a46652c4-08e8-4c33-a7bd-322b4e58bb9a"
+          },
+          {
+            "result": {
+              "duration": 1258358700,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the user sees the \"License plate already exists!\" error text in the \"existing license plate register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"License plate already exists!\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"existing license plate register\"",
+                  "offset": 68
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "a6161e23-4268-4941-8b95-74f1de256887"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "b2ad620d-49b0-4c32-ae89-1d476aeb81f8",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 27861324900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "aa7f34c4-3954-4bd1-8d54-1a056f1ff9fb"
+          },
+          {
+            "result": {
+              "duration": 2569311300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "e7878791-90cb-441e-a013-6a1fad0dfc44"
+          },
+          {
+            "result": {
+              "duration": 303281300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"REGISTER\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "93ab25cc-9074-485b-ad8b-cb238aee15ee"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "b2ad620d-49b0-4c32-ae89-1d476aeb81f8",
+        "line": 31,
+        "name": "Check Register With Invalid License Plate Format",
+        "description": "",
+        "id": "register;check-register-with-invalid-license-plate-format",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1326518200,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the user fills the \"license plate register\" field with \"AA-ZZ-AA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"license plate register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"AA-ZZ-AA\"",
+                  "offset": 55
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "57113fc0-fee7-46ca-a270-b803fbaa6c02"
+          },
+          {
+            "result": {
+              "duration": 779735000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the user clicks on the \"register from register\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"register from register\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "9ac850c0-69a1-43ce-a819-72f663e3e8d3"
+          },
+          {
+            "result": {
+              "duration": 1193653800,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "the user sees the \"Wrong License Format - AA-00-AA.\" error text in the \"invalid license plate register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Wrong License Format - AA-00-AA.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"invalid license plate register\"",
+                  "offset": 71
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "561a9a90-b06a-4063-a29a-423f6992879a"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "d885d9e5-d57e-49e7-8a04-deb2c1e7e406",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 18625933500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "e60c682a-69c2-4e60-9de2-9dff5c5ac82f"
+          },
+          {
+            "result": {
+              "duration": 2767580400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "92fa1a4d-b36b-4ae0-8213-fb05a43dc469"
+          },
+          {
+            "result": {
+              "duration": 298778400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"REGISTER\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "59a27534-43c5-43c5-892d-ab25f1db6f93"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "d885d9e5-d57e-49e7-8a04-deb2c1e7e406",
+        "line": 36,
+        "name": "Check Register With Existing Email",
+        "description": "",
+        "id": "register;check-register-with-existing-email",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1380501600,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "the user fills the \"email register\" field with \"sara@mail.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"sara@mail.pt\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "3a839335-7f21-4be9-8649-c822746d1915"
+          },
+          {
+            "result": {
+              "duration": 795931900,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "the user clicks on the \"register from register\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"register from register\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "56e46a31-590a-4eb7-8403-4884a0562c4f"
+          },
+          {
+            "result": {
+              "duration": 3586311900,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "the user sees the \"Email already exists!\" error text in the \"existing email register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Email already exists!\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"existing email register\"",
+                  "offset": 60
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "8c44adfc-f8a6-4b82-b176-b07612406b74"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "0f8cc012-fc80-48e0-8d87-651533becd2b",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 22368783600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "b0a58f23-6f5b-4c57-bde3-7fb821241584"
+          },
+          {
+            "result": {
+              "duration": 932290100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "f1b1c48b-31a2-4805-bfa4-35b2b7763a05"
+          },
+          {
+            "result": {
+              "duration": 1762191500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"REGISTER\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "334cf4c4-1186-44bc-8360-d9c7af0aafcc"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "0f8cc012-fc80-48e0-8d87-651533becd2b",
+        "line": 41,
+        "name": "Check Register With Mismatch Passwords",
+        "description": "",
+        "id": "register;check-register-with-mismatch-passwords",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 881349900,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "the user fills the \"password register\" field with \"password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"password\"",
+                  "offset": 50
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "11187278-1b4f-491d-accf-942af3589524"
+          },
+          {
+            "result": {
+              "duration": 1240790600,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "the user fills the \"password confirmation register\" field with \"paswordddd\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password confirmation register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"paswordddd\"",
+                  "offset": 63
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "cdacdd10-6c49-4193-bf92-cbfc97d6b826"
+          },
+          {
+            "result": {
+              "duration": 677511800,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "the user clicks on the \"register from register\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"register from register\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "a98d378f-2038-4ce0-b3e0-0b594a346282"
+          },
+          {
+            "result": {
+              "duration": 1103398700,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "the user sees the \"Passwords don\u0027t match.\" error text in the \"mismatch password register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Passwords don\u0027t match.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"mismatch password register\"",
+                  "offset": 61
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "a8e125a1-2f12-43a6-84f0-3acee8d671bb"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "ffaa8ab3-fd25-402d-948b-d24da508dcd5",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 18749471500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "edb935bc-c3a7-4140-a9ff-66647b91f045"
+          },
+          {
+            "result": {
+              "duration": 976048200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "18877eb3-3bf2-4c4e-9b78-9d113ff0e9c1"
+          },
+          {
+            "result": {
+              "duration": 1789052700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"REGISTER\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "d6a85ce0-9b17-4886-b9c7-9910e4019a74"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "ffaa8ab3-fd25-402d-948b-d24da508dcd5",
+        "line": 47,
+        "name": "Check Register With Empty Fields",
+        "description": "",
+        "id": "register;check-register-with-empty-fields",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 535931000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "the user clicks on the \"register from register\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"register from register\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "0524076c-3866-4904-a6f4-0db5f6465ef0"
+          },
+          {
+            "result": {
+              "duration": 1281821700,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "the user sees the \"Enter First Name.\" error text in the \"first name register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enter First Name.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"first name register\"",
+                  "offset": 56
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "9f36c035-e896-4869-b83e-87bfc57e4c2e"
+          },
+          {
+            "result": {
+              "duration": 377547100,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "the user sees the \"Enter Last Name.\" error text in the \"last name register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enter Last Name.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"last name register\"",
+                  "offset": 55
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "2541bf8a-f6b8-4238-aba3-c7f4bf6d5e91"
+          },
+          {
+            "result": {
+              "duration": 339816400,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "the user sees the \"Enter Email.\" error text in the \"email register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enter Email.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"email register\"",
+                  "offset": 51
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "0afd67a5-4268-4293-9b57-ebdc9659bc03"
+          },
+          {
+            "result": {
+              "duration": 274090100,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "the user sees the \"Enter Password.\" error text in the \"password register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enter Password.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"password register\"",
+                  "offset": 54
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "f4e313e1-02d8-4a34-beac-22dacd45c134"
+          },
+          {
+            "result": {
+              "duration": 260149300,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "the user sees the \"Enter Password Confirmation.\" error text in the \"password confirmation register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enter Password Confirmation.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"password confirmation register\"",
+                  "offset": 67
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "04a1cc58-8c9d-4067-8c63-4f7f9b2addd5"
+          },
+          {
+            "result": {
+              "duration": 304926800,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "the user sees the \"Enter Phone Number.\" error text in the \"phone number register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enter Phone Number.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"phone number register\"",
+                  "offset": 58
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "797af0c7-3e24-4664-be8c-17f28da91b13"
+          },
+          {
+            "result": {
+              "duration": 288540500,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "the user sees the \"Enter License Plate.\" error text in the \"license plate register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enter License Plate.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"license plate register\"",
+                  "offset": 59
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "1db31b53-4fe6-4fed-a5b7-11b5a10a62ed"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "fcded8c4-baa0-48c7-8f42-60f5847a557e",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 20370380700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "4b91a246-d63e-46f5-b702-47b891e19c4e"
+          },
+          {
+            "result": {
+              "duration": 1006981900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "7c0d5384-7ae8-434e-bff1-d8466617fc7c"
+          },
+          {
+            "result": {
+              "duration": 1943496400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"REGISTER\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "64903362-eafd-41af-9dc5-a86c361a7998"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "fcded8c4-baa0-48c7-8f42-60f5847a557e",
+        "line": 57,
+        "name": "Check Register With Invalid Phone Number Format",
+        "description": "",
+        "id": "register;check-register-with-invalid-phone-number-format",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1314572200,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user fills the \"phone number register\" field with \"199888777\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"phone number register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"199888777\"",
+                  "offset": 54
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "00ff4518-bb20-4242-9901-5c7f349a874a"
+          },
+          {
+            "result": {
+              "duration": 778609600,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user clicks on the \"register from register\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"register from register\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "550f92ca-9685-4dc4-b226-8b201a638319"
+          },
+          {
+            "result": {
+              "duration": 1437735300,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user sees the \"Wrong Phone Number Format - 9xxxxxxxx.\" error text in the \"invalid phone number register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Wrong Phone Number Format - 9xxxxxxxx.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"invalid phone number register\"",
+                  "offset": 77
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "5dd3a24f-486e-4f89-beca-cc3abbb8fde8"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "9b4008a9-2a9d-4f00-b71a-9c6830dd79d4",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 25359690000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "ed63df16-1505-4c52-b658-bfaa12d3b9ed"
+          },
+          {
+            "result": {
+              "duration": 1607235900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "218bdeda-31d0-4dfa-859d-2beea23ae44c"
+          },
+          {
+            "result": {
+              "duration": 1448295000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"REGISTER\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "9066d865-3555-4a87-b744-0514665e43db"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "9b4008a9-2a9d-4f00-b71a-9c6830dd79d4",
+        "line": 62,
+        "name": "Check Register With Invalid Email Format",
+        "description": "",
+        "id": "register;check-register-with-invalid-email-format",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1298870000,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "the user fills the \"email register\" field with \"abc.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"abc.pt\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "174e876b-19b3-4279-a1ec-bc3524c2f3c4"
+          },
+          {
+            "result": {
+              "duration": 784982000,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "the user clicks on the \"register from register\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"register from register\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "ae527459-5443-48f8-ba83-4fc6f794c7f8"
+          },
+          {
+            "result": {
+              "duration": 1188584600,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "the user sees the \"Wrong Email Format - AA@BB.CC.\" error text in the \"invalid email register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Wrong Email Format - AA@BB.CC.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"invalid email register\"",
+                  "offset": 69
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "67a1d119-a672-4dd7-b4f2-aa50c388cb1a"
+          }
+        ]
+      }
+    ],
+    "name": "Register",
+    "description": "  As a user\n\tI want to be able to register to the aplication\n\tSo that I can authenticate myself",
+    "id": "register",
+    "keyword": "Feature",
+    "uri": "D:/UCs_5th_Semester/TA_EngenhariaSoftware/Projeto/taes22_grupow_fastugadriver_tests.git/Include/features/us2.feature",
+    "tags": []
+  }
+]

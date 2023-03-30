@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+US18 Test Suite,,,,2022-12-10 21:43:18,2022-12-10 21:48:16,"4m - 58,352s",PASSED
+,,,,,,,
+Test Cases/US18 - See Notifications History/US18TestCaseAllFeatures,,,,2022-12-10 21:43:18,2022-12-10 21:48:16,"4m - 57,648s",PASSED
+"runFeatureFile(""Include/features/us18.feature"")",,,,2022-12-10 21:43:19,2022-12-10 21:48:16,"4m - 56,841s",PASSED

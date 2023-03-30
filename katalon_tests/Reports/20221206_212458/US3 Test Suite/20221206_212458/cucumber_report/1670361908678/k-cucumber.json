@@ -1,0 +1,145 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "BDD_TESTRUN_UUID": "918bfa5a-803e-402b-9806-87a9314f708d",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 28696873900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "07110edc-2aa5-4eed-9281-2885d50a5f40"
+          },
+          {
+            "result": {
+              "duration": 9286434600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "b9e1cefd-6cdf-42c0-aea0-241db5c48cdd"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "918bfa5a-803e-402b-9806-87a9314f708d",
+        "line": 10,
+        "name": "Check Available Orders Screen Exists",
+        "description": "",
+        "id": "register;check-available-orders-screen-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 433787100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user sees the \"Available Orders List\" list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Available Orders List\"",
+                  "offset": 18
+                }
+              ],
+              "location": "AvailableOrdersTests.the_user_sees_the_list(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "9c7d9347-559a-450c-b59c-8c3d678575cc"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "d4f72c65-bf4d-4634-892d-e7d4613ccc90",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 29056403800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "e512b953-2b9c-4bf4-9b6f-0b01c5e8280f"
+          },
+          {
+            "result": {
+              "duration": 14294261500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "f7c9cc39-4618-4752-b40b-a98cf6214e34"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "d4f72c65-bf4d-4634-892d-e7d4613ccc90",
+        "line": 13,
+        "name": "Check Empty Available Orders",
+        "description": "",
+        "id": "register;check-empty-available-orders",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 384196100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user sees the \"No orders Available\" text",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"No orders Available\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_text(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "8ec09226-bbee-452f-98d0-99c13703b742"
+          }
+        ]
+      }
+    ],
+    "name": "Register",
+    "description": "\tAs a user\n\tI want to access the Orders Screen\n\tSo that I can see all available orders",
+    "id": "register",
+    "keyword": "Feature",
+    "uri": "D:/UCs_5th_Semester/TA_EngenhariaSoftware/Projeto/taes22_grupow_fastugadriver_tests.git/include/features/us3.feature",
+    "tags": []
+  }
+]

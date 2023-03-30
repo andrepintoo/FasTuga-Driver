@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="292.77006">
+<testcase classname="See Notifications History" name="Check Notification History Button Exists" time="62.592474">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user logs in the application........................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+Then the user sees the "Notification History" text in the Menu..............passed
+]]></system-out>
+</testcase>
+<testcase classname="See Notifications History" name="Check Notification History Screen Exists" time="50.871767">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user logs in the application........................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+Then the user clicks on the "Notification History" text in the Menu.........passed
+And the user sees that the "Order Ready Notification" text exists...........passed
+And the user sees that the "Order Cancelled Notification" text exists.......passed
+]]></system-out>
+</testcase>
+<testcase classname="See Notifications History" name="Check Order Ready Notification in Notification History" time="60.117551">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user logs in the application........................................passed
+And the user sees the "Available Orders List" list..........................passed
+And the user waits "10" seconds.............................................passed
+And the user clicks on the "Menu" in the navbar.............................passed
+And the user clicks on the "Available Orders Menu" text in the Menu.........passed
+And the user opens the notifications........................................passed
+And the user sees the "notification ready order" notification...............passed
+And the user closes the notifications.......................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Notification History" text in the Menu..........passed
+And the user sees that the "Order Ready Notification" text exists...........passed
+Then the user sees the Orders Ready Notification list.......................passed
+And the user sees the "ORDER READY" button in the Orders Ready Notification list.passed
+]]></system-out>
+</testcase>
+<testcase classname="See Notifications History" name="Check Cancel Order Notification In Notification History" time="55.563887">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user logs in the application........................................passed
+And the user sees the Assigned Orders list..................................passed
+And the user clicks on one of the "Assigned Order Item" in the Assigned Orders list.passed
+And the user sees the "Order Details" screen................................passed
+And the user clicks on the "Claim" button...................................passed
+And the user sees the "Welcome" screen......................................passed
+And the user sees the Assigned Orders list..................................passed
+And the user clicks on one of the "Assigned Order Item" in the Assigned Orders list.passed
+And the user sees the "Order Details" screen................................passed
+And the user clicks on the "Cancel" button..................................passed
+And the user sees the "Cancel Order Confirmation" confirmation..............passed
+And the user fills the "reason cancel order" field with "I fell"............passed
+And the user clicks on the "YES Cancel Order" button........................passed
+And the user sees the "Welcome" screen......................................passed
+And the user opens the notifications........................................passed
+And the user sees the "notification cancel order" notification..............passed
+And the user closes the notifications.......................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Notification History" text in the Menu..........passed
+Then the user sees the Orders Cancelled Notification list...................passed
+And the user sees the "ORDER CANCELLED" button in the Orders Cancelled Notification list.passed
+]]></system-out>
+</testcase>
+<testcase classname="See Notifications History" name="Check New Notification Doesn't Delete Older One" time="63.624381">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user logs in the application........................................passed
+And the user clicks on the "Menu" in the navbar.............................passed
+And the user clicks on the "Notification History" text in the Menu..........passed
+And the user sees the Orders Ready Notification list........................passed
+And the user sees the text button in the Orders Ready Notification list.....passed
+And the user clicks on the "Menu" in the navbar.............................passed
+And the user clicks on the "Available Orders Menu" text in the Menu.........passed
+And the user waits "10" seconds.............................................passed
+And the user clicks on the "Menu" in the navbar.............................passed
+And the user clicks on the "Available Orders Menu" text in the Menu.........passed
+And the user opens the notifications........................................passed
+And the user sees the "notification ready order" notification...............passed
+And the user closes the notifications.......................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Notification History" text in the Menu..........passed
+And the user sees that the "Order Ready Notification" text exists...........passed
+Then the user sees the Orders Ready Notification list.......................passed
+And the user sees the "ORDER READY" button in the Orders Ready Notification list still exists.passed
+]]></system-out>
+</testcase>
+</testsuite>

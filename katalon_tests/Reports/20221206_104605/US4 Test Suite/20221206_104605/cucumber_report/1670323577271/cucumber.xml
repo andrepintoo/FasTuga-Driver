@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="138.675274">
+<testcase classname="US4 - Order Details" name="Check Order Details Screen Exists" time="51.722645">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user logs in the application........................................passed
+And the user sees the Available Orders list.................................passed
+When the user clicks on one of the orders in the Available Orders list......passed
+Then the user sees the "Order Details" screen...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="US4 - Order Details" name="Check Order information" time="41.725889">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user logs in the application........................................passed
+And the user sees the Available Orders list.................................passed
+When the user clicks on one of the orders in the Available Orders list......passed
+Then the user sees the "Order Details" screen...............................passed
+And the user sees the "8438" text in "Order Number" field...................passed
+And the user sees the "Customer 2" text in "Client Name" field..............passed
+And the user sees the "+351 220136359" text in "Client Phone" field.........passed
+And the user sees the "Rua Afonso Lopes Vieira, Leiria" text in "Location" field.passed
+And the user sees the "2.37 Km" text in "Distance" field....................passed
+And the user sees the "2 €" text in "Earning" field.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="US4 - Order Details" name="Go Back" time="45.22674">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user logs in the application........................................passed
+And the user sees the Available Orders list.................................passed
+When the user clicks on one of the orders in the Available Orders list......passed
+And the user clicks on the "BACK to available orders" button................passed
+Then the user sees the "Welcome" screen.....................................passed
+]]></system-out>
+</testcase>
+</testsuite>

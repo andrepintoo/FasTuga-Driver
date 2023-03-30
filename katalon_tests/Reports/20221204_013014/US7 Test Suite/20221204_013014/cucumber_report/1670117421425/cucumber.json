@@ -1,0 +1,401 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 6,
+        "name": "Check Keep Me Logged In Checkbox Exists",
+        "description": "",
+        "id": "us7---keep-me-logged-in;check-keep-me-logged-in-checkbox-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 13192603100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 677616700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user sees the \"Keep Me Logged In\" checkbox",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Keep Me Logged In\"",
+                  "offset": 18
+                }
+              ],
+              "location": "KeepMeLoggedInTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "Check Opening Application After Logout With Keep Me Signed In",
+        "description": "",
+        "id": "us7---keep-me-logged-in;check-opening-application-after-logout-with-keep-me-signed-in",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6822562100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user opens the application - false",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_opens_the_application_false()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 608279300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on the \"Keep Me Logged In\" checkbox",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Keep Me Logged In\"",
+                  "offset": 23
+                }
+              ],
+              "location": "KeepMeLoggedInTests.the_user_clicks_on_the_checkbox(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4883906800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 265549700,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1113269200,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user clicks on the \"Logout\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Logout\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 453052700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user closes the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_closes_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7929813700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user opens the application - false",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_opens_the_application_false()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 442752700,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user sees the \"LOGIN\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 20,
+        "name": "Check Successful Keep Me Logged In",
+        "description": "",
+        "id": "us7---keep-me-logged-in;check-successful-keep-me-logged-in",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6387258500,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user opens the application - false",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_opens_the_application_false()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 499691900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user clicks on the \"Keep Me Logged In\" checkbox",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Keep Me Logged In\"",
+                  "offset": 23
+                }
+              ],
+              "location": "KeepMeLoggedInTests.the_user_clicks_on_the_checkbox(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4309005200,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 290536300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user closes the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_closes_the_application()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7702018000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user opens the application - false",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_opens_the_application_false()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 448540700,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 28,
+        "name": "Check Login Without Checkbox Redirects To Login Screen",
+        "description": "",
+        "id": "us7---keep-me-logged-in;check-login-without-checkbox-redirects-to-login-screen",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1993405900,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the application state was reset",
+            "match": {
+              "location": "KeepMeLoggedInTests.reset_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6401678100,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the user opens the application - false",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_opens_the_application_false()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 442792600,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the user sees the \"LOGIN\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 187401300,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the \"Keep Me Logged In\" checkbox is not checked",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Keep Me Logged In\"",
+                  "offset": 4
+                }
+              ],
+              "location": "KeepMeLoggedInTests.the_checkbox_is_not_checked(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3769502300,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 283389200,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "the user closes the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_closes_the_application()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7817962500,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "the user opens the application - false",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_opens_the_application_false()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 420093100,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "the user sees the \"LOGIN\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "US7 - Keep Me Logged In",
+    "description": "  As a user\n\tI want to keep me login\n\tSo that I don’t have to authenticate myself every time I want to access the application",
+    "id": "us7---keep-me-logged-in",
+    "keyword": "Feature",
+    "uri": "C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us7.feature",
+    "tags": []
+  }
+]

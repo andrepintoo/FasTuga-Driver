@@ -1,0 +1,14 @@
+{
+<<<<<<< HEAD
+  "keywordFileContentHash": "A186C8F1BC53AC496AA09A4D08FD78EB",
+=======
+  "keywordFileContentHash": "59860817F8108E938B5135014F56D653",
+>>>>>>> cd6fe1fa9a409e27e1829f8fde5e88e5f83bdc0d
+  "keywordClasses": [
+    {
+      "name": "us17.TurnOnOffNotificationsTests",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": false
+}

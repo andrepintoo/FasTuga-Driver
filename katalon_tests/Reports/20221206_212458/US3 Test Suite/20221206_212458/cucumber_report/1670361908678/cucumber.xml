@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="82.656055">
+<testcase classname="Register" name="Check Available Orders Screen Exists" time="38.91572">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+Then the user sees the "Available Orders List" list.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Register" name="Check Empty Available Orders" time="43.740335">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+Then the user sees the "No orders Available" text...........................passed
+]]></system-out>
+</testcase>
+</testsuite>

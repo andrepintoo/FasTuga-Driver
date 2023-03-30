@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+US10 Test Suite,,,,2022-12-07 00:00:29,2022-12-07 00:01:48,1m - 18.338s,PASSED
+,,,,,,,
+Test Cases/US10 - Complete Handover/US10TestCaseAllFeatures,,,,2022-12-07 00:00:29,2022-12-07 00:01:48,1m - 18.034s,PASSED
+"runFeatureFile(""Include/features/us10.feature"")",,,,2022-12-07 00:00:30,2022-12-07 00:01:48,1m - 17.597s,PASSED

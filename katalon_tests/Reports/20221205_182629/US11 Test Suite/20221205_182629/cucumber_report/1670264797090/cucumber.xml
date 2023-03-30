@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="44.580127">
+<testcase classname="US11 - Cancel Order" name="Check Cancel Button exists" time="24.965125">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user logs in the application........................................passed
+And the user sees the Assigned Orders list..................................passed
+When the user clicks on one of the "Assigned Order Item" in the Assigned Orders list.passed
+Then the user sees the "Order Details" screen...............................passed
+And the user sees the "Cancel" button.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US11 - Cancel Order" name="Check Successful Cancel Order" time="19.615002">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user logs in the application........................................passed
+And the user sees the Assigned Orders list..................................passed
+When the user clicks on one of the "Assigned Order Item" in the Assigned Orders list.passed
+And the user sees the "Order Details" screen................................passed
+And the user clicks on the "Cancel" button..................................passed
+And the user clicks on the "YES Cancel Order" button........................passed
+Then the user sees that the clicked order item is not in the Assigned Orders list.passed
+And the user sees the "Welcome" screen......................................passed
+]]></system-out>
+</testcase>
+</testsuite>

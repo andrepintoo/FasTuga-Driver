@@ -1,0 +1,1010 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "BDD_TESTRUN_UUID": "0b167a7e-665b-458d-8011-fa2d571034a7",
+        "line": 13,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 12607333001,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "0a55cd2e-292d-4a50-8e85-4f7a78dc2804"
+          },
+          {
+            "result": {
+              "duration": 5680143499,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "89471688-e91d-4f63-a2f9-9e3cc13898ff"
+          },
+          {
+            "result": {
+              "duration": 211367400,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "031eb3dc-34a4-4b05-934a-620ad0bf58d6"
+          },
+          {
+            "result": {
+              "duration": 1132541501,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "3bf4e2b6-6df1-4fae-9aa0-3f2128b35b8c"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "0b167a7e-665b-458d-8011-fa2d571034a7",
+        "line": 19,
+        "name": "Check Statistics Screen Exists",
+        "description": "",
+        "id": "statistics;check-statistics-screen-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1023290799,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user sees the \"Statistics\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "62094869-2074-443b-8956-fb45de34af29"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "8bbea679-9231-4194-b8e9-83567fb2fc2f",
+        "line": 13,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9375876800,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "5a8a2fc4-0da5-4f22-8a6d-3699d02c09ef"
+          },
+          {
+            "result": {
+              "duration": 7729876599,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "a6de205e-994d-4aaf-87c9-88890dc818c1"
+          },
+          {
+            "result": {
+              "duration": 211909600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "13c1355d-5c23-43c6-bf3e-2e6296965944"
+          },
+          {
+            "result": {
+              "duration": 1131076800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "825e8529-54e4-4c5e-8f70-d1baddea3895"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "8bbea679-9231-4194-b8e9-83567fb2fc2f",
+        "line": 22,
+        "name": "Check \"Total Delivery Time\" Field Exists",
+        "description": "",
+        "id": "statistics;check-\"total-delivery-time\"-field-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1017262100,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user sees the \"total delivery time statistics\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"total delivery time statistics\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StatisticsTests.the_user_sees_the_field(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "45388598-774c-4b76-af08-e4d7f9613cf9"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "5827035d-f04a-423f-b1b8-e9bda5c9ba76",
+        "line": 13,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9106475900,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "9c1e1b67-f5cc-4915-9be4-b792fa753d88"
+          },
+          {
+            "result": {
+              "duration": 5905692801,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "19dd8f7a-62bc-40ad-b6b6-63162b1a4a32"
+          },
+          {
+            "result": {
+              "duration": 1186987901,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "a2de373e-d19f-4e06-aee9-35530cacf8b8"
+          },
+          {
+            "result": {
+              "duration": 262534701,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "32f5c105-c9e9-47bc-a0bf-536b5e43a5ee"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "5827035d-f04a-423f-b1b8-e9bda5c9ba76",
+        "line": 25,
+        "name": "Check \"Average Time Per Delivery\" Field Exists",
+        "description": "",
+        "id": "statistics;check-\"average-time-per-delivery\"-field-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1022070499,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user sees the \"average time per delivery statistics\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"average time per delivery statistics\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StatisticsTests.the_user_sees_the_field(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "5d76f177-33f3-4c8d-a593-7d41fdd0a336"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "7fb50107-35db-49db-9b53-d4fa80c02210",
+        "line": 13,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9107982400,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "34539abf-e947-4388-96af-6dad94e9cb1d"
+          },
+          {
+            "result": {
+              "duration": 5025523401,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "8fa5d9a0-dea4-4bb7-a763-365595ef64e9"
+          },
+          {
+            "result": {
+              "duration": 1226252799,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "cfadfe99-1c36-44c1-ab77-6be080978bee"
+          },
+          {
+            "result": {
+              "duration": 282547499,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "fcd14799-686b-4f52-86d8-5e9c4d7130ee"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "7fb50107-35db-49db-9b53-d4fa80c02210",
+        "line": 28,
+        "name": "Check \"Balance\" Field Exists",
+        "description": "",
+        "id": "statistics;check-\"balance\"-field-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1081132701,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the user sees the \"balance statistics\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"balance statistics\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StatisticsTests.the_user_sees_the_field(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "3f992611-f782-45df-b963-b7e9d8afec93"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "e974f051-c21b-417d-a3ae-c96df7d8321c",
+        "line": 13,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9071152900,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "78b807cc-326f-47fe-9215-aa713abd191a"
+          },
+          {
+            "result": {
+              "duration": 6327351600,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "e9780ce8-63fb-412d-b883-489bc5de7f95"
+          },
+          {
+            "result": {
+              "duration": 1165768101,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "1ae48bb4-27cc-4d9e-b797-aeab3c62c868"
+          },
+          {
+            "result": {
+              "duration": 262800799,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "8cfcc7c4-5e13-41a3-8cc0-593dde67bc3a"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "e974f051-c21b-417d-a3ae-c96df7d8321c",
+        "line": 31,
+        "name": "Check \"Clients Served\" Field Exists",
+        "description": "",
+        "id": "statistics;check-\"clients-served\"-field-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1058508400,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the user sees the \"clients served statistics\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"clients served statistics\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StatisticsTests.the_user_sees_the_field(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "b933b807-5f3b-4e5e-b049-9beb887b9900"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "ff3d3288-39fd-4129-b50b-9bf9ba56fb60",
+        "line": 13,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 11060295901,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "4c34af0d-7203-4dac-93ee-acbc8d51cd5b"
+          },
+          {
+            "result": {
+              "duration": 5058327399,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "b18c912b-1ba2-46b5-89ba-eb17889e9a04"
+          },
+          {
+            "result": {
+              "duration": 235546700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "0b4105a7-43cc-4bdf-b9f6-31048a4ac319"
+          },
+          {
+            "result": {
+              "duration": 1118591699,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "66dc24f9-10d0-4d32-b785-3d72e994ce86"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "ff3d3288-39fd-4129-b50b-9bf9ba56fb60",
+        "line": 34,
+        "name": "Check \"Average Speed Per Delivery\" Field Exists",
+        "description": "",
+        "id": "statistics;check-\"average-speed-per-delivery\"-field-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1067275700,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "the user sees the \"average speed per delivery statistics\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"average speed per delivery statistics\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StatisticsTests.the_user_sees_the_field(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "aa29fbd8-318b-447b-8161-7f830f1b20f1"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "389aa40c-242d-4a42-8456-5b20f109aba6",
+        "line": 13,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9099148300,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "a09b258e-92bb-47bd-8b53-d10d0c9a42bb"
+          },
+          {
+            "result": {
+              "duration": 5689099100,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "518d24c8-61f9-432c-9dbe-340edb336997"
+          },
+          {
+            "result": {
+              "duration": 1221610800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "0de352b4-81d9-4331-8987-e102db28ead9"
+          },
+          {
+            "result": {
+              "duration": 278862600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "32be2c05-31fd-4856-933d-05600887af61"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "389aa40c-242d-4a42-8456-5b20f109aba6",
+        "line": 37,
+        "name": "Check \"Assigned Orders Delivered\" Field Exists",
+        "description": "",
+        "id": "statistics;check-\"assigned-orders-delivered\"-field-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1046201500,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "the user sees the \"assigned orders delivered statistics\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"assigned orders delivered statistics\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StatisticsTests.the_user_sees_the_field(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "b024dbd2-095d-4e04-927e-858578d455f4"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "fcdd86e4-c54a-42b8-9e7c-aabade8ec204",
+        "line": 13,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 8994072499,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "3b1ece2b-5dc4-4884-976c-d5f08deac73b"
+          },
+          {
+            "result": {
+              "duration": 5982677001,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "56a99056-66ea-44b0-8d28-43c476797689"
+          },
+          {
+            "result": {
+              "duration": 225663300,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "c427dd5a-4b17-4c26-a824-fb906effd852"
+          },
+          {
+            "result": {
+              "duration": 1112768000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "b80e8125-c5ae-4dd5-809b-b634abcad09a"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "fcdd86e4-c54a-42b8-9e7c-aabade8ec204",
+        "line": 40,
+        "name": "Check Fields Updates After Order Delivered",
+        "description": "",
+        "id": "statistics;check-fields-updates-after-order-delivered",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1381790401,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "the user sees the \"previous\" statistics values",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"previous\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StatisticsTests.the_user_sees_the_statistics_values(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "9d5ed8e8-33a1-4255-85b5-e1af1ac9faea"
+          },
+          {
+            "result": {
+              "duration": 1170102600,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "fc4facc5-ae6a-4ea9-82e9-f15fb265fcb5"
+          },
+          {
+            "result": {
+              "duration": 230749301,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "the user clicks on the \"Available Orders Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Available Orders Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "fd829b08-8e8e-4e2f-a0a5-d9e89050154b"
+          },
+          {
+            "result": {
+              "duration": 2394797500,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "the user clicks on one of the \"Assigned Order Item\" in the Assigned Orders list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Order Item\"",
+                  "offset": 30
+                }
+              ],
+              "location": "CancelOrderTests.the_user_clicks_the_button_in_the_list(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "0e2086aa-3391-4f73-9d46-b298f2eb501c"
+          },
+          {
+            "result": {
+              "duration": 1635438200,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "the user clicks on the \"Delivered\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delivered\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "8f916544-207d-4e5a-800c-9125636529c8"
+          },
+          {
+            "result": {
+              "duration": 3626071100,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "21e50a64-b49b-4f60-8baa-343af6846f03"
+          },
+          {
+            "result": {
+              "duration": 204506900,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "91aa639d-86d3-4b66-8491-b39c5453b1e4"
+          },
+          {
+            "result": {
+              "duration": 1151334599,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "the user clicks on the \"Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "35ed4b13-5c5c-45e7-ab3e-e0837e703dbf"
+          },
+          {
+            "result": {
+              "duration": 1283759900,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "the user sees the \"new\" statistics values",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"new\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StatisticsTests.the_user_sees_the_statistics_values(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "48460ac1-13dc-4816-a5f0-ca82529bc5f3"
+          },
+          {
+            "result": {
+              "duration": 1448900,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "the user verifies that the statistics values changed",
+            "match": {
+              "location": "StatisticsTests.the_user_verifies_that_the_statistics_values_changed()"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "08fbae12-584e-4929-aa14-1313becec877"
+          }
+        ]
+      }
+    ],
+    "name": "Statistics",
+    "description": "  As a user\n\tI want to see the number os assigned orders delivered\n\t\tAnd the total delivery time\t\n\t\tAnd the average time per delivery\n\t\tAnd the balance\n\t\tAnd the different number of clients served\n\t\tAnd the average speed per delivery\n\tSo that I can measure my performance as a driver",
+    "id": "statistics",
+    "keyword": "Feature",
+    "uri": "C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/include/features/us19.feature",
+    "tags": []
+  }
+]

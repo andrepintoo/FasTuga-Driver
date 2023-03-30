@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CheckReceivedCancelledOrderNotification</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>4ba02023-f7e1-4c99-992e-9e6c437142fb</testCaseGuid>
+</TestCaseEntity>

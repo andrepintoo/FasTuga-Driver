@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CheckKeepMeLoggedInCheckboxExists</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>096cad3c-77cf-4be5-9ed4-7c5b15fcd70d</testCaseGuid>
+</TestCaseEntity>

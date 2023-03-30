@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CheckLoginWithEmptyFields</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b49dcdf9-1aa1-455d-950d-f930b64f8b89</testCaseGuid>
+</TestCaseEntity>

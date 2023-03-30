@@ -1,0 +1,182 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "BDD_TESTRUN_UUID": "4e180552-e935-4cbd-aafd-860b614ed4e8",
+        "line": 5,
+        "name": "Check Logout Button Exists",
+        "description": "",
+        "id": "us5---logout;check-logout-button-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 12437370700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "ee447eb6-23ba-43df-8e60-4adb4344701a"
+          },
+          {
+            "result": {
+              "duration": 4415014800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "442103cc-5f64-48c4-bb53-84fcc0bfd682"
+          },
+          {
+            "result": {
+              "duration": 262650200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "59fac098-ad27-43e4-8a64-6667031f150e"
+          },
+          {
+            "result": {
+              "duration": 1026683300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"Logout\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Logout\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LogoutTests.the_user_sees_the_text(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "de2222a5-6cc9-4c7e-8508-daa91e61461a"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "d6c8a598-c635-494a-85cb-a1bf62633848",
+        "line": 11,
+        "name": "Check Successful Logout",
+        "description": "",
+        "id": "us5---logout;check-successful-logout",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7687665900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "b65333e8-21d5-4767-aef8-525c33978615"
+          },
+          {
+            "result": {
+              "duration": 4272117300,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "a36b18fd-b30f-481c-a502-bd2f2a85fc00"
+          },
+          {
+            "result": {
+              "duration": 264735300,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "ae9f37d1-6f31-40a3-8ac9-61c52f842531"
+          },
+          {
+            "result": {
+              "duration": 1122806900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user clicks on the \"Logout\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Logout\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "06bf14d3-3034-4852-9446-fc6ab2cbb7a7"
+          },
+          {
+            "result": {
+              "duration": 764848700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user sees the \"LOGIN\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "73f6cc97-2490-4d99-95b3-02487a6db3aa"
+          }
+        ]
+      }
+    ],
+    "name": "US5 - Logout",
+    "description": "  As a user\n  I want to logout from the application",
+    "id": "us5---logout",
+    "keyword": "Feature",
+    "uri": "C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us5.feature",
+    "tags": []
+  }
+]

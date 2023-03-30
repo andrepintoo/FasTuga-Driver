@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "7FD60E0C5F1E9CE387A02FC1151E960A",
+  "keywordClasses": [
+    {
+      "name": "us2.CheckRegisterWithInvalidEmailFormat",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

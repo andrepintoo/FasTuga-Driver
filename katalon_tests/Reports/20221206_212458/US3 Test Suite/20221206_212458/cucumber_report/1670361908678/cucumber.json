@@ -1,0 +1,135 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 28696873900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 9286434600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "Check Available Orders Screen Exists",
+        "description": "",
+        "id": "register;check-available-orders-screen-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 433787100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user sees the \"Available Orders List\" list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Available Orders List\"",
+                  "offset": 18
+                }
+              ],
+              "location": "AvailableOrdersTests.the_user_sees_the_list(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 29056403800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 14294261500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "Check Empty Available Orders",
+        "description": "",
+        "id": "register;check-empty-available-orders",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 384196100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user sees the \"No orders Available\" text",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"No orders Available\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_text(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Register",
+    "description": "\tAs a user\n\tI want to access the Orders Screen\n\tSo that I can see all available orders",
+    "id": "register",
+    "keyword": "Feature",
+    "uri": "D:/UCs_5th_Semester/TA_EngenhariaSoftware/Projeto/taes22_grupow_fastugadriver_tests.git/include/features/us3.feature",
+    "tags": []
+  }
+]

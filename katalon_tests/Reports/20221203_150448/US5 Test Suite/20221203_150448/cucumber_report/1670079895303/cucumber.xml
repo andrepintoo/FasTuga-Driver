@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="32.696333">
+<testcase classname="US5 - Logout" name="Check Logout Button Exists" time="18.576299">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+Then the user sees the "Logout" text in the Menu............................passed
+]]></system-out>
+</testcase>
+<testcase classname="US5 - Logout" name="Check Successful Logout" time="14.120034">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Logout" text in the Menu........................passed
+Then the user sees the "LOGIN" screen.......................................passed
+]]></system-out>
+</testcase>
+</testsuite>

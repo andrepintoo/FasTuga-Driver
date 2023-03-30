@@ -1,0 +1,77 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Check Empty Assigned Orders",
+        "description": "",
+        "id": "us11---cancel-order;check-empty-assigned-orders",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8657728500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5629544500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 106772800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user sees the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_sees_the_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 199930700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees that the \"No assigned Orders\" text exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"No assigned Orders\"",
+                  "offset": 23
+                }
+              ],
+              "location": "CancelOrderTests.the_user_verifies_text_exists(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "US11 - Cancel Order",
+    "description": "  \tAs a user\n    I want to be able to cancel a currently assigned order",
+    "id": "us11---cancel-order",
+    "keyword": "Feature",
+    "uri": "C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us11emptyorders.feature",
+    "tags": []
+  }
+]

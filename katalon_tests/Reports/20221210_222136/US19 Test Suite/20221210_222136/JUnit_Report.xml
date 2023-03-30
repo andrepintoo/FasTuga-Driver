@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="US19 Test Suite" time="160.384" tests="1" failures="0" errors="0">
+   <testsuite name="US19 Test Suite" tests="1" failures="0" errors="0" time="160.384" skipped="0" timestamp="2022-12-10 22:21:43" hostname="André - DESKTOP-MHCQ2QC.mshome.net" id="Test Suites/US19 Test Suite">
+      <properties>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 12)"/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\Andr\u00E9\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221210_222136\\US19 Test Suite\\20221210_222136"/>
+         <property name="logFiles" value="C:\\Users\\Andr\u00E9\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221210_222136\\US19 Test Suite\\20221210_222136\\appium.log, C:\\Users\\Andr\u00E9\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221210_222136\\US19 Test Suite\\20221210_222136\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="André - DESKTOP-MHCQ2QC.mshome.net"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="appiumServerStatus" value="{&quot;value&quot;:{&quot;build&quot;:{&quot;version&quot;:&quot;1.22.3&quot;}},&quot;sessionId&quot;:null,&quot;status&quot;:0}"/>
+         <property name="katalonVersion" value="8.5.1.208"/>
+         <property name="deviceOS" value="Android"/>
+         <property name="appiumVersion" value="1.22.3"/>
+         <property name="deviceModel" value="sdk_gphone64_x86_64"/>
+         <property name="hostAddress" value="172.30.224.1"/>
+         <property name="deviceManufacturer" value="Google"/>
+         <property name="deviceId" value="emulator-5554"/>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 12)"/>
+         <property name="deviceOSVersion" value="12"/>
+      </properties>
+      <testcase name="Test Cases/US19 - Statistics/US19TestCaseAllFeatures" time="160.127" classname="Test Cases/US19 - Statistics/US19TestCaseAllFeatures" status="PASSED">
+         <system-out><![CDATA[2022-12-10 22:21:43 - [TEST_CASE][PASSED] - Test Cases/US19 - Statistics/US19TestCaseAllFeatures: Test Cases/US19 - Statistics/US19TestCaseAllFeatures
+
+2022-12-10 22:21:43 - [TEST_STEP][PASSED] - runFeatureFile("include/features/us19.feature"): Feature file: 'include/features/us19.feature' was passed
+
+2022-12-10 22:21:44 - [MESSAGE][INFO] - Starting run keyword runFeatureFile: 'include/features/us19.feature' and extract report to folder: 'C:\Users\André\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Reports\20221210_222136\US19 Test Suite\20221210_222136/cucumber_report/1670710904019'...
+
+2022-12-10 22:21:46 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Statistics Screen Exists: SCENARIO Check Statistics Screen Exists
+
+2022-12-10 22:21:46 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 22:21:46 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 22:21:46 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 22:21:46 - [MESSAGE][INFO] - Detected NodeJS location: "C:\Program Files\nodejs\node.exe"
+
+2022-12-10 22:21:47 - [MESSAGE][INFO] - Appium server started on port 49,906
+
+2022-12-10 22:21:58 - [MESSAGE][PASSED] - Started app at: 'C:\Users\André\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 22:21:58 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 22:21:58 - [TEST_STEP][PASSED] - the user is logged in: the user is logged in
+
+2022-12-10 22:21:58 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:00 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-10 22:22:00 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:01 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-10 22:22:01 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:02 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 22:22:02 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:04 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-10 22:22:04 - [MESSAGE][PASSED] - the user is logged in
+
+2022-12-10 22:22:04 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:22:04 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:04 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 22:22:04 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:22:04 - [TEST_STEP][PASSED] - the user clicks on the "Statistics" text in the Menu: the user clicks on the "Statistics" text in the Menu
+
+2022-12-10 22:22:04 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:05 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Statistics'
+
+2022-12-10 22:22:05 - [MESSAGE][PASSED] - the user clicks on the "Statistics" text in the Menu
+
+2022-12-10 22:22:05 - [TEST_STEP][PASSED] - the user sees the "Statistics" screen: the user sees the "Statistics" screen
+
+2022-12-10 22:22:05 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:06 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Statistics' is exist
+
+2022-12-10 22:22:06 - [MESSAGE][PASSED] - the user sees the "Statistics" screen
+
+2022-12-10 22:22:06 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check "Total Delivery Time" Field Exists: SCENARIO Check "Total Delivery Time" Field Exists
+
+2022-12-10 22:22:06 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 22:22:06 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 22:22:06 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 22:22:16 - [MESSAGE][PASSED] - Started app at: 'C:\Users\André\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 22:22:16 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 22:22:16 - [TEST_STEP][PASSED] - the user is logged in: the user is logged in
+
+2022-12-10 22:22:16 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:17 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-10 22:22:17 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:18 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-10 22:22:18 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:19 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 22:22:19 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:23 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-10 22:22:23 - [MESSAGE][PASSED] - the user is logged in
+
+2022-12-10 22:22:23 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:22:23 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:24 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 22:22:24 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:22:24 - [TEST_STEP][PASSED] - the user clicks on the "Statistics" text in the Menu: the user clicks on the "Statistics" text in the Menu
+
+2022-12-10 22:22:24 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:25 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Statistics'
+
+2022-12-10 22:22:25 - [MESSAGE][PASSED] - the user clicks on the "Statistics" text in the Menu
+
+2022-12-10 22:22:25 - [TEST_STEP][PASSED] - the user sees the "total delivery time statistics" field: the user sees the "total delivery time statistics" field
+
+2022-12-10 22:22:25 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:26 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - total delivery time statistics' is exist
+
+2022-12-10 22:22:26 - [MESSAGE][PASSED] - the user sees the "total delivery time statistics" field
+
+2022-12-10 22:22:26 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check "Average Time Per Delivery" Field Exists: SCENARIO Check "Average Time Per Delivery" Field Exists
+
+2022-12-10 22:22:26 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 22:22:26 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 22:22:26 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 22:22:35 - [MESSAGE][PASSED] - Started app at: 'C:\Users\André\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 22:22:35 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 22:22:35 - [TEST_STEP][PASSED] - the user is logged in: the user is logged in
+
+2022-12-10 22:22:35 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:36 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-10 22:22:36 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:38 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-10 22:22:38 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:38 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 22:22:39 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:41 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-10 22:22:41 - [MESSAGE][PASSED] - the user is logged in
+
+2022-12-10 22:22:41 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:22:41 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:42 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 22:22:42 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:22:42 - [TEST_STEP][PASSED] - the user clicks on the "Statistics" text in the Menu: the user clicks on the "Statistics" text in the Menu
+
+2022-12-10 22:22:42 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:42 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Statistics'
+
+2022-12-10 22:22:42 - [MESSAGE][PASSED] - the user clicks on the "Statistics" text in the Menu
+
+2022-12-10 22:22:42 - [TEST_STEP][PASSED] - the user sees the "average time per delivery statistics" field: the user sees the "average time per delivery statistics" field
+
+2022-12-10 22:22:42 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:43 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - average time per delivery statistics' is exist
+
+2022-12-10 22:22:43 - [MESSAGE][PASSED] - the user sees the "average time per delivery statistics" field
+
+2022-12-10 22:22:43 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check "Balance" Field Exists: SCENARIO Check "Balance" Field Exists
+
+2022-12-10 22:22:43 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 22:22:43 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 22:22:43 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 22:22:52 - [MESSAGE][PASSED] - Started app at: 'C:\Users\André\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 22:22:52 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 22:22:52 - [TEST_STEP][PASSED] - the user is logged in: the user is logged in
+
+2022-12-10 22:22:52 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:53 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-10 22:22:53 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:54 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-10 22:22:54 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:55 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 22:22:55 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:57 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-10 22:22:57 - [MESSAGE][PASSED] - the user is logged in
+
+2022-12-10 22:22:57 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:22:57 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:59 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 22:22:59 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:22:59 - [TEST_STEP][PASSED] - the user clicks on the "Statistics" text in the Menu: the user clicks on the "Statistics" text in the Menu
+
+2022-12-10 22:22:59 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:22:59 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Statistics'
+
+2022-12-10 22:22:59 - [MESSAGE][PASSED] - the user clicks on the "Statistics" text in the Menu
+
+2022-12-10 22:22:59 - [TEST_STEP][PASSED] - the user sees the "balance statistics" field: the user sees the "balance statistics" field
+
+2022-12-10 22:22:59 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:00 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - balance statistics' is exist
+
+2022-12-10 22:23:00 - [MESSAGE][PASSED] - the user sees the "balance statistics" field
+
+2022-12-10 22:23:00 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check "Clients Served" Field Exists: SCENARIO Check "Clients Served" Field Exists
+
+2022-12-10 22:23:00 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 22:23:00 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 22:23:00 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 22:23:09 - [MESSAGE][PASSED] - Started app at: 'C:\Users\André\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 22:23:09 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 22:23:09 - [TEST_STEP][PASSED] - the user is logged in: the user is logged in
+
+2022-12-10 22:23:09 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:10 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-10 22:23:10 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:12 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-10 22:23:12 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:13 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 22:23:13 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:15 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-10 22:23:15 - [MESSAGE][PASSED] - the user is logged in
+
+2022-12-10 22:23:15 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:23:15 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:16 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 22:23:16 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:23:16 - [TEST_STEP][PASSED] - the user clicks on the "Statistics" text in the Menu: the user clicks on the "Statistics" text in the Menu
+
+2022-12-10 22:23:16 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:17 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Statistics'
+
+2022-12-10 22:23:17 - [MESSAGE][PASSED] - the user clicks on the "Statistics" text in the Menu
+
+2022-12-10 22:23:17 - [TEST_STEP][PASSED] - the user sees the "clients served statistics" field: the user sees the "clients served statistics" field
+
+2022-12-10 22:23:17 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:18 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - clients served statistics' is exist
+
+2022-12-10 22:23:18 - [MESSAGE][PASSED] - the user sees the "clients served statistics" field
+
+2022-12-10 22:23:18 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check "Average Speed Per Delivery" Field Exists: SCENARIO Check "Average Speed Per Delivery" Field Exists
+
+2022-12-10 22:23:18 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 22:23:18 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 22:23:18 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 22:23:29 - [MESSAGE][PASSED] - Started app at: 'C:\Users\André\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 22:23:29 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 22:23:29 - [TEST_STEP][PASSED] - the user is logged in: the user is logged in
+
+2022-12-10 22:23:29 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:30 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-10 22:23:30 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:31 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-10 22:23:31 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:32 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 22:23:32 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:34 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-10 22:23:34 - [MESSAGE][PASSED] - the user is logged in
+
+2022-12-10 22:23:34 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:23:34 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:34 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 22:23:34 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:23:34 - [TEST_STEP][PASSED] - the user clicks on the "Statistics" text in the Menu: the user clicks on the "Statistics" text in the Menu
+
+2022-12-10 22:23:34 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:35 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Statistics'
+
+2022-12-10 22:23:35 - [MESSAGE][PASSED] - the user clicks on the "Statistics" text in the Menu
+
+2022-12-10 22:23:35 - [TEST_STEP][PASSED] - the user sees the "average speed per delivery statistics" field: the user sees the "average speed per delivery statistics" field
+
+2022-12-10 22:23:35 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:36 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - average speed per delivery statistics' is exist
+
+2022-12-10 22:23:36 - [MESSAGE][PASSED] - the user sees the "average speed per delivery statistics" field
+
+2022-12-10 22:23:36 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check "Assigned Orders Delivered" Field Exists: SCENARIO Check "Assigned Orders Delivered" Field Exists
+
+2022-12-10 22:23:36 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 22:23:36 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 22:23:36 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 22:23:45 - [MESSAGE][PASSED] - Started app at: 'C:\Users\André\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 22:23:45 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 22:23:45 - [TEST_STEP][PASSED] - the user is logged in: the user is logged in
+
+2022-12-10 22:23:45 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:46 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-10 22:23:47 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:48 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-10 22:23:48 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:49 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 22:23:49 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:51 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-10 22:23:51 - [MESSAGE][PASSED] - the user is logged in
+
+2022-12-10 22:23:51 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:23:51 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:52 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 22:23:52 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:23:52 - [TEST_STEP][PASSED] - the user clicks on the "Statistics" text in the Menu: the user clicks on the "Statistics" text in the Menu
+
+2022-12-10 22:23:52 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:53 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Statistics'
+
+2022-12-10 22:23:53 - [MESSAGE][PASSED] - the user clicks on the "Statistics" text in the Menu
+
+2022-12-10 22:23:53 - [TEST_STEP][PASSED] - the user sees the "assigned orders delivered statistics" field: the user sees the "assigned orders delivered statistics" field
+
+2022-12-10 22:23:53 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:23:54 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - assigned orders delivered statistics' is exist
+
+2022-12-10 22:23:54 - [MESSAGE][PASSED] - the user sees the "assigned orders delivered statistics" field
+
+2022-12-10 22:23:54 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Fields Updates After Order Delivered: SCENARIO Check Fields Updates After Order Delivered
+
+2022-12-10 22:23:54 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 22:23:54 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 22:23:54 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 22:24:03 - [MESSAGE][PASSED] - Started app at: 'C:\Users\André\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 22:24:03 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 22:24:03 - [TEST_STEP][PASSED] - the user is logged in: the user is logged in
+
+2022-12-10 22:24:03 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:05 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-10 22:24:05 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:06 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-10 22:24:06 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:06 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 22:24:06 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:09 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-10 22:24:09 - [MESSAGE][PASSED] - the user is logged in
+
+2022-12-10 22:24:09 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:24:09 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:09 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 22:24:09 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:24:09 - [TEST_STEP][PASSED] - the user clicks on the "Statistics" text in the Menu: the user clicks on the "Statistics" text in the Menu
+
+2022-12-10 22:24:09 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:10 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Statistics'
+
+2022-12-10 22:24:10 - [MESSAGE][PASSED] - the user clicks on the "Statistics" text in the Menu
+
+2022-12-10 22:24:10 - [TEST_STEP][PASSED] - the user sees the "previous" statistics values: the user sees the "previous" statistics values
+
+2022-12-10 22:24:10 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:11 - [MESSAGE][PASSED] - Element '' has attribute 'text' is '0'
+
+2022-12-10 22:24:11 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:11 - [MESSAGE][PASSED] - Element '' has attribute 'text' is '0'
+
+2022-12-10 22:24:11 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:11 - [MESSAGE][PASSED] - Element '' has attribute 'text' is '0'
+
+2022-12-10 22:24:11 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:11 - [MESSAGE][PASSED] - Element '' has attribute 'text' is '0'
+
+2022-12-10 22:24:11 - [MESSAGE][PASSED] - the user sees the "previous" statistics values
+
+2022-12-10 22:24:11 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:24:11 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:13 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 22:24:13 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:24:13 - [TEST_STEP][PASSED] - the user clicks on the "Available Orders Statistics" text in the Menu: the user clicks on the "Available Orders Statistics" text in the Menu
+
+2022-12-10 22:24:13 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:13 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Available Orders Statistics'
+
+2022-12-10 22:24:13 - [MESSAGE][PASSED] - the user clicks on the "Available Orders Statistics" text in the Menu
+
+2022-12-10 22:24:13 - [TEST_STEP][PASSED] - the user clicks on one of the "Assigned Order Item" in the Assigned Orders list: the user clicks on one of the "Assigned Order Item" in the Assigned Orders list
+
+2022-12-10 22:24:15 - [MESSAGE][PASSED] - Element 'Assigned Order Item' has attribute 'text' is 'ORDER: 8941
+DISTANCE: 2.37 KM
+DURATION: 4.35 MIN
+EARNING: 2€
+STATUS: DELIVERING'
+
+2022-12-10 22:24:15 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:15 - [MESSAGE][PASSED] - Tapped on element 'Assigned Order Item'
+
+2022-12-10 22:24:15 - [MESSAGE][PASSED] - the user clicks on one of the "Assigned Order Item" in the Assigned Orders list
+
+2022-12-10 22:24:15 - [TEST_STEP][PASSED] - the user clicks on the "Delivered" button: the user clicks on the "Delivered" button
+
+2022-12-10 22:24:15 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:17 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - Delivered'
+
+2022-12-10 22:24:17 - [MESSAGE][PASSED] - the user clicks on the "Delivered" button
+
+2022-12-10 22:24:17 - [TEST_STEP][PASSED] - the user sees the "Welcome" screen: the user sees the "Welcome" screen
+
+2022-12-10 22:24:17 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:20 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-10 22:24:20 - [MESSAGE][PASSED] - the user sees the "Welcome" screen
+
+2022-12-10 22:24:20 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:24:20 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:21 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 22:24:21 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 22:24:21 - [TEST_STEP][PASSED] - the user clicks on the "Statistics" text in the Menu: the user clicks on the "Statistics" text in the Menu
+
+2022-12-10 22:24:21 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:22 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Statistics'
+
+2022-12-10 22:24:22 - [MESSAGE][PASSED] - the user clicks on the "Statistics" text in the Menu
+
+2022-12-10 22:24:22 - [TEST_STEP][PASSED] - the user sees the "new" statistics values: the user sees the "new" statistics values
+
+2022-12-10 22:24:22 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:23 - [MESSAGE][PASSED] - Element '' has attribute 'text' is '2'
+
+2022-12-10 22:24:23 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:23 - [MESSAGE][PASSED] - Element '' has attribute 'text' is '1'
+
+2022-12-10 22:24:23 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:23 - [MESSAGE][PASSED] - Element '' has attribute 'text' is '1'
+
+2022-12-10 22:24:23 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:24:23 - [MESSAGE][PASSED] - Element '' has attribute 'text' is '2'
+
+2022-12-10 22:24:23 - [MESSAGE][PASSED] - the user sees the "new" statistics values
+
+2022-12-10 22:24:23 - [TEST_STEP][PASSED] - the user verifies that the statistics values changed: the user verifies that the statistics values changed
+
+2022-12-10 22:24:23 - [MESSAGE][PASSED] - the user verifies that the statistics values changed
+
+2022-12-10 22:24:23 - [MESSAGE][PASSED] - Feature file: 'include/features/us19.feature' was passed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2022-12-10 22:21:43 - [TEST_SUITE][PASSED] - US19 Test Suite: Test Cases/US19 - Statistics/US19TestCaseAllFeatures]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

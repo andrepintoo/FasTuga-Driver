@@ -1,0 +1,536 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "BDD_TESTRUN_UUID": "6165d5aa-0076-4ec1-b2a0-5610d9bcf073",
+        "line": 5,
+        "name": "Check Opt Out Button Exists",
+        "description": "",
+        "id": "us6---opt-out;check-opt-out-button-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 28662907600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "81840680-8fb7-4019-befb-fdad9566a54c"
+          },
+          {
+            "result": {
+              "duration": 5348772800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "e1fffa63-b474-4f48-b9c6-99e16c53b5dd"
+          },
+          {
+            "result": {
+              "duration": 546576600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "d0f9c7b1-3eab-4d83-a345-63bde06dc231"
+          },
+          {
+            "result": {
+              "duration": 2828306800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"Opt Out\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opt Out\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LogoutTests.the_user_sees_the_text(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "3277c5cb-e53c-483a-8dea-b0ed2cbc309d"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "ca4e8bdc-355c-44e5-afde-9630f4900a9f",
+        "line": 11,
+        "name": "Check Successful Opt Out",
+        "description": "",
+        "id": "us6---opt-out;check-successful-opt-out",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 11644345700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "c5e31f95-c4b6-42b7-8252-ec0812e9a2f2"
+          },
+          {
+            "result": {
+              "duration": 2782627200,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user fills the \"email login\" field with \"nicole.azevedo@mail.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"nicole.azevedo@mail.pt\"",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "aea621b4-92cc-437b-a103-72703aca63f7"
+          },
+          {
+            "result": {
+              "duration": 1190078200,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user fills the \"password login\" field with \"12345678\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"12345678\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "0bdbdf95-6275-48e0-a5f0-437c7fa76771"
+          },
+          {
+            "result": {
+              "duration": 696978800,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "061c38b3-93db-46ec-b440-31ff20ae754f"
+          },
+          {
+            "result": {
+              "duration": 2135582600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "984d2b4e-9f32-4c26-8a60-fab636518dad"
+          },
+          {
+            "result": {
+              "duration": 1175603900,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Opt Out\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opt Out\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "f6c6377d-afef-427f-b24f-bf18a4dba056"
+          },
+          {
+            "result": {
+              "duration": 639212200,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user sees the Confirmation Dialog \"Opt Out Confirmation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opt Out Confirmation\"",
+                  "offset": 38
+                }
+              ],
+              "location": "OptOutTests.the_user_sees_the(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "b236bae7-fc94-4297-b3e4-b9a591a545c1"
+          },
+          {
+            "result": {
+              "duration": 410600200,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user clicks on the \"Yes\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Yes\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "a1de46ae-ac43-4cd0-ad1f-bfef50bf83c6"
+          },
+          {
+            "result": {
+              "duration": 818348500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user sees the \"LOGIN\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "a0792534-7452-4932-99eb-b0e3794da1b7"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "4e21345a-814a-413e-a495-7fce4fef9071",
+        "line": 22,
+        "name": "Check Register with Existing Email After Opt Out",
+        "description": "",
+        "id": "us6---opt-out;check-register-with-existing-email-after-opt-out",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10474324800,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "8d260f40-267c-438b-9899-456c5e9c3066"
+          },
+          {
+            "result": {
+              "duration": 2147919900,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user fills the \"email login\" field with \"nicole.azevedo@mail.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"nicole.azevedo@mail.pt\"",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "1f8d07be-66f0-41ff-b116-923e0449421b"
+          },
+          {
+            "result": {
+              "duration": 1193798700,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user fills the \"password login\" field with \"12345678\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"12345678\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "3ee704cd-e47c-4100-bb9f-3fa3bb72b4bf"
+          },
+          {
+            "result": {
+              "duration": 917094900,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "95c21528-5986-40f7-9d8e-c4097e68f2d3"
+          },
+          {
+            "result": {
+              "duration": 1333940900,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "a54cb46b-b982-4836-86b8-25b8a379d5dd"
+          },
+          {
+            "result": {
+              "duration": 1980078300,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user clicks on the \"Opt Out\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opt Out\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "6297620f-0fef-4b25-99d5-f84a15380b4e"
+          },
+          {
+            "result": {
+              "duration": 664995400,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the user sees the Confirmation Dialog \"Opt Out Confirmation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opt Out Confirmation\"",
+                  "offset": 38
+                }
+              ],
+              "location": "OptOutTests.the_user_sees_the(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "b7160ee2-00de-4128-8513-2a54f55109c8"
+          },
+          {
+            "result": {
+              "duration": 371865500,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the user clicks on the \"Yes\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Yes\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "400456a5-4d59-4b42-8bf3-c3177ede7f5c"
+          },
+          {
+            "result": {
+              "duration": 825308900,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the user sees the \"LOGIN\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "35182ea2-4011-46ee-b577-47a363257c7e"
+          },
+          {
+            "result": {
+              "duration": 316583700,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "99b284a5-ea54-4691-8737-24dc5f4e0047"
+          },
+          {
+            "result": {
+              "duration": 1966385300,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the user fills the \"email register2\" field with \"nicole.azevedo@mail.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email register2\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"nicole.azevedo@mail.pt\"",
+                  "offset": 48
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "fb0b60db-d30a-42f9-8b24-81b7a9b3ae64"
+          },
+          {
+            "result": {
+              "duration": 651317500,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "the user clicks on the \"REGISTER register2\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER register2\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "44af1934-e101-4156-8b54-3fb7d34a9d5b"
+          },
+          {
+            "result": {
+              "duration": 2555871400,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "the user sees the Confirmation Dialog \"Contact Administrator\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Contact Administrator\"",
+                  "offset": 38
+                }
+              ],
+              "location": "OptOutTests.the_user_sees_the(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "1867e830-d98d-4ad3-94a9-ace2a93df885"
+          }
+        ]
+      }
+    ],
+    "name": "US6 - Opt Out",
+    "description": "  As a user\n  I want to opt out from the application",
+    "id": "us6---opt-out",
+    "keyword": "Feature",
+    "uri": "C:/Users/sfili/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us6.feature",
+    "tags": []
+  }
+]

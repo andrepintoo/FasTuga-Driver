@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "A8EA05087E0FD415B5FC4015D991071A",
+  "keywordClasses": [
+    {
+      "name": "us2.CheckRegisterWithExistingEmail",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

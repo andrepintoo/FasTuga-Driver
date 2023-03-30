@@ -1,0 +1,77 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 8,
+        "name": "Check Empty Available Orders",
+        "description": "",
+        "id": "us8---assign-order;check-empty-available-orders",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9728325500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8669633400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 140208000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user sees the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_sees_the_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 218101400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user sees that the \"No orders Available\" text exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"No orders Available\"",
+                  "offset": 23
+                }
+              ],
+              "location": "CancelOrderTests.the_user_verifies_text_exists(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "US8 - Assign Order",
+    "description": "  \tAs a user\n    I want to be able to accept an order\n    So that it starts to be prepared for the delivery",
+    "id": "us8---assign-order",
+    "keyword": "Feature",
+    "uri": "C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us8emptyorders.feature",
+    "tags": []
+  }
+]

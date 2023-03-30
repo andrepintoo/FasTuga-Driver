@@ -1,0 +1,278 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 6,
+        "name": "Check Keep Me Logged In Checkbox Exists",
+        "description": "",
+        "id": "us7---keep-me-logged-in;check-keep-me-logged-in-checkbox-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 13129385000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 622996600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user sees the \"Keep Me Logged In\" checkbox",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Keep Me Logged In\"",
+                  "offset": 18
+                }
+              ],
+              "location": "KeepMeLoggedInTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "Check Opening Application After Logout With Keep Me Signed In",
+        "description": "",
+        "id": "us7---keep-me-logged-in;check-opening-application-after-logout-with-keep-me-signed-in",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6718001200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user opens the application - false",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_opens_the_application_false()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 625540000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on the \"Keep Me Logged In\" checkbox",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Keep Me Logged In\"",
+                  "offset": 23
+                }
+              ],
+              "location": "KeepMeLoggedInTests.the_user_clicks_on_the_checkbox(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4753936300,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 226080600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1148541400,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user clicks on the \"Logout\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Logout\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 356225200,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user closes the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_closes_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9096352200,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user opens the application - false",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_opens_the_application_false()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 435580200,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user sees the \"LOGIN\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 20,
+        "name": "Check Successful Keep Me Logged In",
+        "description": "",
+        "id": "us7---keep-me-logged-in;check-successful-keep-me-logged-in",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7527207600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 533617800,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user clicks on the \"Keep Me Logged In\" checkbox",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Keep Me Logged In\"",
+                  "offset": 23
+                }
+              ],
+              "location": "KeepMeLoggedInTests.the_user_clicks_on_the_checkbox(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4820032500,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 735084800,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user closes the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_closes_the_application()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 9206225800,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user opens the application - false",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_opens_the_application_false()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "com.kms.katalon.core.exception.StepFailedException: Element \u0027Object Repository/android.widget.TextView - Welcome\u0027 not found\r\n\tat com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:50)\r\n\tat com.kms.katalon.core.mobile.keyword.internal.MobileKeywordMain.stepFailed(MobileKeywordMain.groovy:40)\r\n\tat com.kms.katalon.core.mobile.keyword.builtin.VerifyElementExistKeyword$_verifyElementExist_closure1.doCall(VerifyElementExistKeyword.groovy:77)\r\n\tat com.kms.katalon.core.mobile.keyword.builtin.VerifyElementExistKeyword$_verifyElementExist_closure1.call(VerifyElementExistKeyword.groovy)\r\n\tat com.kms.katalon.core.mobile.keyword.internal.MobileKeywordMain.runKeyword(MobileKeywordMain.groovy:21)\r\n\tat com.kms.katalon.core.mobile.keyword.builtin.VerifyElementExistKeyword.verifyElementExist(VerifyElementExistKeyword.groovy:80)\r\n\tat com.kms.katalon.core.mobile.keyword.builtin.VerifyElementExistKeyword.execute(VerifyElementExistKeyword.groovy:64)\r\n\tat com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)\r\n\tat com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords.verifyElementExist(MobileBuiltInKeywords.groovy:1755)\r\n\tat com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords$verifyElementExist$0.call(Unknown Source)\r\n\tat us1.LoginTests.the_user_sees_the_screen(LoginTests.groovy:55)\r\n\tat ✽.the user sees the \"Welcome\" screen(C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us7.feature:26)\r\n",
+              "duration": 30505280000,
+              "status": "failed"
+            },
+            "line": 26,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "US7 - Keep Me Logged In",
+    "description": "  As a user\n\tI want to keep me login\n\tSo that I don’t have to authenticate myself every time I want to access the application",
+    "id": "us7---keep-me-logged-in",
+    "keyword": "Feature",
+    "uri": "C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us7.feature",
+    "tags": []
+  }
+]

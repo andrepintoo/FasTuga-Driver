@@ -1,0 +1,278 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "BDD_TESTRUN_UUID": "1992eb64-37e5-485f-9651-962f04561b0d",
+        "line": 8,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 27649711300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "7fb9d978-14fd-4433-966d-b57422bbb63a"
+          },
+          {
+            "result": {
+              "duration": 8689625200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "cd96a8fe-cd38-4826-ad67-5dd56bf3bbaa"
+          },
+          {
+            "result": {
+              "duration": 395962700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user sees the \"Assigned Orders List\" list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Orders List\"",
+                  "offset": 18
+                }
+              ],
+              "location": "AvailableOrdersTests.the_user_sees_the_list(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "059ca7de-ff22-4a73-893a-56eeb388f0d8"
+          },
+          {
+            "result": {
+              "duration": 1144537500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on one of the \"Assigned Order Item\" in the Assigned Orders list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Order Item\"",
+                  "offset": 30
+                }
+              ],
+              "location": "CancelOrderTests.the_user_clicks_the_button_in_the_list(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "b2415053-97ba-4402-9d48-0077bed50ea1"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "1992eb64-37e5-485f-9651-962f04561b0d",
+        "line": 14,
+        "name": "Check Claim Button Exists",
+        "description": "",
+        "id": "claim-order;check-claim-button-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1546125500,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user sees the \"Order Details\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Order Details\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "12532610-dcc7-448a-9dbb-74747efd0ea6"
+          },
+          {
+            "result": {
+              "duration": 445199600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user sees the \"Claim\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Claim\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CancelOrderTests.the_user_sees_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "7894f3be-dba7-467c-a235-842e3863ad2d"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "4850d8dc-3b27-43c4-bed1-91717bbb1f25",
+        "line": 8,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 22691812900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "491a26d0-21d1-4d4f-9151-81b703803f5a"
+          },
+          {
+            "result": {
+              "duration": 11542952200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "83bcf09b-66ff-4c3e-b905-b819f990bbfd"
+          },
+          {
+            "result": {
+              "duration": 294689000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user sees the \"Assigned Orders List\" list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Orders List\"",
+                  "offset": 18
+                }
+              ],
+              "location": "AvailableOrdersTests.the_user_sees_the_list(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "4a2414e6-149f-41e0-be5b-8e11ae922468"
+          },
+          {
+            "result": {
+              "duration": 1335639900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on one of the \"Assigned Order Item\" in the Assigned Orders list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Order Item\"",
+                  "offset": 30
+                }
+              ],
+              "location": "CancelOrderTests.the_user_clicks_the_button_in_the_list(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "65d270e3-5358-4c59-870d-eaef265495a1"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "4850d8dc-3b27-43c4-bed1-91717bbb1f25",
+        "line": 18,
+        "name": "Check Claimed Order By Clicking Claim Button",
+        "description": "",
+        "id": "claim-order;check-claimed-order-by-clicking-claim-button",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2363227000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user clicks on the \"Claim\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Claim\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "c7176708-d315-4706-a6e9-c84ed57d1b7e"
+          },
+          {
+            "result": {
+              "duration": 7732208400,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the order status switches to \" DELIVERING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\" DELIVERING\"",
+                  "offset": 29
+                }
+              ],
+              "location": "ClaimOrderTests.the_order_status_switches_to(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "8c87dc61-89ca-43a8-bf79-26c3a42f957e"
+          },
+          {
+            "result": {
+              "duration": 768116600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "bfe05b34-b06c-4f79-a770-2bea1f6cd858"
+          }
+        ]
+      }
+    ],
+    "name": "Claim Order",
+    "description": "  As a user \n\tI want to claim an order\n\tSo that I can start my delivery",
+    "id": "claim-order",
+    "keyword": "Feature",
+    "uri": "D:/UCs_5th_Semester/TA_EngenhariaSoftware/Projeto/taes22_grupow_fastugadriver_tests.git/include/features/us9.feature",
+    "tags": []
+  }
+]

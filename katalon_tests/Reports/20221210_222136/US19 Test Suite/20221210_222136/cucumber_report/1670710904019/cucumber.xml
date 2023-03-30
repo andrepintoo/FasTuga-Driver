@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="8" time="157.960631">
+<testcase classname="Statistics" name="Check Statistics Screen Exists" time="21.089376">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Statistics" text in the Menu....................passed
+Then the user sees the "Statistics" screen..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Statistics" name="Check &quot;Total Delivery Time&quot; Field Exists" time="19.471776">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Statistics" text in the Menu....................passed
+Then the user sees the "total delivery time statistics" field...............passed
+]]></system-out>
+</testcase>
+<testcase classname="Statistics" name="Check &quot;Average Time Per Delivery&quot; Field Exists" time="17.4892">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Statistics" text in the Menu....................passed
+Then the user sees the "average time per delivery statistics" field.........passed
+]]></system-out>
+</testcase>
+<testcase classname="Statistics" name="Check &quot;Balance&quot; Field Exists" time="16.728778">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Statistics" text in the Menu....................passed
+Then the user sees the "balance statistics" field...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Statistics" name="Check &quot;Clients Served&quot; Field Exists" time="17.890033">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Statistics" text in the Menu....................passed
+Then the user sees the "clients served statistics" field....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Statistics" name="Check &quot;Average Speed Per Delivery&quot; Field Exists" time="18.54481">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Statistics" text in the Menu....................passed
+Then the user sees the "average speed per delivery statistics" field........passed
+]]></system-out>
+</testcase>
+<testcase classname="Statistics" name="Check &quot;Assigned Orders Delivered&quot; Field Exists" time="17.339533">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Statistics" text in the Menu....................passed
+Then the user sees the "assigned orders delivered statistics" field.........passed
+]]></system-out>
+</testcase>
+<testcase classname="Statistics" name="Check Fields Updates After Order Delivered" time="29.407125">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Statistics" text in the Menu....................passed
+And the user sees the "previous" statistics values..........................passed
+And the user clicks on the "Menu" in the navbar.............................passed
+And the user clicks on the "Available Orders Statistics" text in the Menu...passed
+And the user clicks on one of the "Assigned Order Item" in the Assigned Orders list.passed
+And the user clicks on the "Delivered" button...............................passed
+And the user sees the "Welcome" screen......................................passed
+And the user clicks on the "Menu" in the navbar.............................passed
+And the user clicks on the "Statistics" text in the Menu....................passed
+And the user sees the "new" statistics values...............................passed
+Then the user verifies that the statistics values changed...................passed
+]]></system-out>
+</testcase>
+</testsuite>

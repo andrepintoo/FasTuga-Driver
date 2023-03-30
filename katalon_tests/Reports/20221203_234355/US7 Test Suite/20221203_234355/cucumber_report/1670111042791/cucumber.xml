@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="60.326709">
+<testcase classname="US7 - Keep Me Logged In" name="Check Keep Me Logged In Checkbox Exists" time="14.69147">
+<system-out><![CDATA[Given the user opens the application........................................passed
+Then the user sees the "Keep Me Logged In" checkbox.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="US7 - Keep Me Logged In" name="Check Opening Application After Logout With Keep Me Signed In" time="24.261798">
+<system-out><![CDATA[Given the user opens the application - false................................passed
+And the user clicks on the "Keep Me Logged In" checkbox.....................passed
+And the user logs in the application........................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Logout" text in the Menu........................passed
+And the user closes the application.........................................passed
+And the user opens the application - false..................................passed
+Then the user sees the "LOGIN" screen.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US7 - Keep Me Logged In" name="Check Successful Keep Me Logged In" time="21.373441">
+<system-out><![CDATA[Given the user opens the application - false................................passed
+And the user clicks on the "Keep Me Logged In" checkbox.....................passed
+And the user logs in the application........................................passed
+When the user closes the application........................................passed
+And the user opens the application - false..................................passed
+Then the user sees the "Welcome" screen.....................................passed
+]]></system-out>
+</testcase>
+</testsuite>

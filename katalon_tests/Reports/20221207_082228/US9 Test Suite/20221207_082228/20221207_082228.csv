@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+US9 Test Suite,,,,2022-12-07 08:22:36,2022-12-07 08:24:05,1m - 29.401s,PASSED
+,,,,,,,
+Test Cases/US9 - Claim Order/US9TestCaseAllFeatures,,,,2022-12-07 08:22:36,2022-12-07 08:24:05,1m - 29.061s,PASSED
+"runFeatureFile(""include/features/us9.feature"")",,,,2022-12-07 08:22:37,2022-12-07 08:24:05,1m - 28.616s,PASSED

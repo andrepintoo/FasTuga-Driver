@@ -1,0 +1,418 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 34814951800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13201269500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 216677200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the Available Orders list",
+            "match": {
+              "location": "AssignOrderTests.the_user_sees_the_available_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 904904200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks on one of the orders in the Available Orders list",
+            "match": {
+              "location": "AssignOrderTests.the_user_clicks_the_order_in_the_list()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "Check Order Details Screen Exists",
+        "description": "",
+        "id": "us4---order-details;check-order-details-screen-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2191553500,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user sees the \"Order Details\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Order Details\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 24336985600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10610120300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 199040900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the Available Orders list",
+            "match": {
+              "location": "AssignOrderTests.the_user_sees_the_available_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 750674300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks on one of the orders in the Available Orders list",
+            "match": {
+              "location": "AssignOrderTests.the_user_clicks_the_order_in_the_list()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "line": 15,
+        "name": "Check Order information",
+        "description": "",
+        "id": "us4---order-details;check-order-information",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1887340700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user sees the \"Order Details\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Order Details\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1839007800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user sees the \"8438\" text in \"Order Number\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"8438\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Order Number\"",
+                  "offset": 33
+                }
+              ],
+              "location": "OrderDetailsTests.the_user_sees_the_text(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 501652900,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user sees the \"Customer 2\" text in \"Client Name\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Customer 2\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Client Name\"",
+                  "offset": 39
+                }
+              ],
+              "location": "OrderDetailsTests.the_user_sees_the_text(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 552010200,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user sees the \"+351 220136359\" text in \"Client Phone\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"+351 220136359\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Client Phone\"",
+                  "offset": 43
+                }
+              ],
+              "location": "OrderDetailsTests.the_user_sees_the_text(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 315589100,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user sees the \"Rua Afonso Lopes Vieira, Leiria\" text in \"Location\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Rua Afonso Lopes Vieira, Leiria\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Location\"",
+                  "offset": 60
+                }
+              ],
+              "location": "OrderDetailsTests.the_user_sees_the_text(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 259770100,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user sees the \"2.37 Km\" text in \"Distance\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2.37 Km\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Distance\"",
+                  "offset": 36
+                }
+              ],
+              "location": "OrderDetailsTests.the_user_sees_the_text(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 450462600,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user sees the \"2 €\" text in \"Earning\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2 €\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Earning\"",
+                  "offset": 32
+                }
+              ],
+              "location": "OrderDetailsTests.the_user_sees_the_text(String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 30347358400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8062235700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 180717900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the Available Orders list",
+            "match": {
+              "location": "AssignOrderTests.the_user_sees_the_available_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 882325700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks on one of the orders in the Available Orders list",
+            "match": {
+              "location": "AssignOrderTests.the_user_clicks_the_order_in_the_list()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "line": 25,
+        "name": "Go Back",
+        "description": "",
+        "id": "us4---order-details;go-back",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1493481600,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user clicks on the \"BACK to available orders\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BACK to available orders\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4250823300,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "US4 - Order Details",
+    "description": "  As a user\n\tI want to open the order details\n\tSo that I can check the order information",
+    "id": "us4---order-details",
+    "keyword": "Feature",
+    "uri": "C:/Users/sfili/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us4.feature",
+    "tags": []
+  }
+]

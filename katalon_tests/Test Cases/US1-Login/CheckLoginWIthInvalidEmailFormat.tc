@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CheckLoginWIthInvalidEmailFormat</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>87c6de69-96c4-4d9a-b775-8f0cbba5f50a</testCaseGuid>
+</TestCaseEntity>

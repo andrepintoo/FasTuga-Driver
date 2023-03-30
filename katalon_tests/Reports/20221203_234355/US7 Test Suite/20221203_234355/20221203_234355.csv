@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+US7 Test Suite,,,,2022-12-03 23:44:01,2022-12-03 23:45:04,1m - 2.390s,PASSED
+,,,,,,,
+Test Cases/US7 - Keep Me Logged In/US7TestCaseAllFeatures,,,,2022-12-03 23:44:02,2022-12-03 23:45:04,1m - 2.073s,PASSED
+"runFeatureFile(""Include/features/us7.feature"")",,,,2022-12-03 23:44:02,2022-12-03 23:45:04,1m - 1.623s,PASSED

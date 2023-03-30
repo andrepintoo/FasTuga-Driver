@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+US21 Test Suite,,,,2022-12-08 20:05:52,2022-12-08 20:11:24,"5m - 31,902s",PASSED
+,,,,,,,
+Test Cases/US21 - See And Change My Profile Details/US21TestCaseAllFeatures,,,,2022-12-08 20:05:52,2022-12-08 20:11:24,"5m - 31,581s",PASSED
+"runFeatureFile(""Include/features/us21.feature"")",,,,2022-12-08 20:05:53,2022-12-08 20:11:24,"5m - 31,074s",PASSED

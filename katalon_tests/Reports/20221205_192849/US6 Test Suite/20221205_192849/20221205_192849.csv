@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+US6 Test Suite,,,,2022-12-05 19:28:56,2022-12-05 19:30:23,"1m - 26,702s",PASSED
+,,,,,,,
+Test Cases/US6 - Opt Out/US6TestCaseAllFeatures,,,,2022-12-05 19:28:57,2022-12-05 19:30:23,"1m - 26,327s",PASSED
+"runFeatureFile(""Include/features/us6.feature"")",,,,2022-12-05 19:28:57,2022-12-05 19:30:23,"1m - 25,877s",PASSED

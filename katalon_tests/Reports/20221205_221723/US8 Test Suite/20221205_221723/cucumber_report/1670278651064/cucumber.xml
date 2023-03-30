@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="45.712584">
+<testcase classname="US8 - Assign Order" name="Check Assign Button Exists" time="26.789842">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user logs in the application........................................passed
+And the user sees the Available Orders list.................................passed
+When the user clicks on one of the orders in the Available Orders list......passed
+Then the user sees the "Order Details" screen...............................passed
+And the user sees the "Assign" button.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US8 - Assign Order" name="Check Assigned Order By Clicking Assign Button" time="18.922742">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user logs in the application........................................passed
+And the user sees the Available Orders list.................................passed
+When the user clicks on one of the orders in the Available Orders list......passed
+And the user clicks on the "Assign" button..................................passed
+Then the user sees the Available Orders list................................passed
+And the user sees that the assigned order item is not in the Available Orders list.passed
+]]></system-out>
+</testcase>
+</testsuite>

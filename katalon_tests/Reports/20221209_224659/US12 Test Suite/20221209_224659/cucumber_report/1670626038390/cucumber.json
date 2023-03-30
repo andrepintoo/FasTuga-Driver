@@ -1,0 +1,104 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 36969464700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13169007500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 580403500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_sees_the_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 627118500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks on one of the \"Assigned Order Item\" in the Assigned Orders list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Order Item\"",
+                  "offset": 30
+                }
+              ],
+              "location": "CancelOrderTests.the_user_clicks_the_button_in_the_list(String)"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "Check If Map Exists",
+        "description": "",
+        "id": "get-the-directions-to-the-destination;check-if-map-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3773956400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user sees the Frame Layout \"Map\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Map\"",
+                  "offset": 31
+                }
+              ],
+              "location": "GetTheDirectionsToTheDestination.the_user_sees_the(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Get the Directions To the Destination",
+    "description": "\tAs a user\n\tI want to receive the directions to the destination\n\tSo that I can optimize my delivery time",
+    "id": "get-the-directions-to-the-destination",
+    "keyword": "Feature",
+    "uri": "C:/Users/sfili/Katalon Studio/taes22_grupow_fastugadriver_tests.git/include/features/us12.feature",
+    "tags": []
+  }
+]

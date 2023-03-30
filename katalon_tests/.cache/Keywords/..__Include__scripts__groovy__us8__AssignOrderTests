@@ -1,0 +1,14 @@
+{
+<<<<<<< HEAD
+  "keywordFileContentHash": "0245A0B100C9440716309C44FEFAD293",
+=======
+  "keywordFileContentHash": "9D118BC254E9FA700CE6F26917064430",
+>>>>>>> 063e6228fbdc119bcc43b112260fe43702adb28f
+  "keywordClasses": [
+    {
+      "name": "us8.AssignOrderTests",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

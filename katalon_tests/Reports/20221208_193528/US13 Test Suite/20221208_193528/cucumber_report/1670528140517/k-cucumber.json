@@ -1,0 +1,391 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "BDD_TESTRUN_UUID": "5921e3b3-0f07-4f2d-998c-8d9f9c1079e7",
+        "line": 9,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 32400296000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "036a5cea-6d7b-4673-a01d-0b77ce67db45"
+          },
+          {
+            "result": {
+              "duration": 12721969599,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "d127460c-7446-41b7-bd64-d3e76bf19f69"
+          },
+          {
+            "result": {
+              "duration": 677552599,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "51581ab0-80ee-4f9b-b38c-8f1ab133ee8d"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "5921e3b3-0f07-4f2d-998c-8d9f9c1079e7",
+        "line": 14,
+        "name": "Check Available Orders \"Closest\" Button Exists",
+        "description": "",
+        "id": "order-from-closest-furthest-available-orders;check-available-orders-\"closest\"-button-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 466295399,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user sees the \"Available Orders Closest\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Available Orders Closest\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CancelOrderTests.the_user_sees_the_button(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "afdcecef-ee7c-4054-bfff-d82f73d00dff"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "ca15c733-c854-40a4-845f-7e21e565c524",
+        "line": 9,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 20803642901,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "d83853f0-fd0e-4783-9524-525ae6c4aa1c"
+          },
+          {
+            "result": {
+              "duration": 11301506500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "05e0db3c-1a23-4323-b886-64c0f31b6b36"
+          },
+          {
+            "result": {
+              "duration": 464049801,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "3753875a-f8b4-41d4-97e7-dc0448c39192"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "ca15c733-c854-40a4-845f-7e21e565c524",
+        "line": 17,
+        "name": "Check Available Orders Sorted by Closest",
+        "description": "",
+        "id": "order-from-closest-furthest-available-orders;check-available-orders-sorted-by-closest",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 810760500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user clicks on the \"Available Orders Closest\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Available Orders Closest\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "b02c3c12-2e7b-4acc-a719-fd35375b2701"
+          },
+          {
+            "result": {
+              "duration": 1558180801,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user sees the available orders sorted by \"Closest\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Closest\"",
+                  "offset": 45
+                }
+              ],
+              "location": "OrderFromClosestFurthestAvailableOrders.the_user_sees_the_available_orders_sorted_by(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "4a2f1e06-4cf5-4c8a-a693-4aecd1c2c784"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "aff85c12-9f04-42f9-9f56-9b99f5776167",
+        "line": 9,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 26463440400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "c68098e8-8db2-4043-bf9c-926ebfd4352b"
+          },
+          {
+            "result": {
+              "duration": 11364436500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "bdf5ca7c-7f3f-4fd4-af81-616d1891ed39"
+          },
+          {
+            "result": {
+              "duration": 558041800,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "e6249a46-53aa-4ae4-9827-54c5f265037d"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "aff85c12-9f04-42f9-9f56-9b99f5776167",
+        "line": 21,
+        "name": "Check Available Orders \"Furthest\" Button Exists",
+        "description": "",
+        "id": "order-from-closest-furthest-available-orders;check-available-orders-\"furthest\"-button-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 527504101,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user sees the \"Available Orders Closest\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Available Orders Closest\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CancelOrderTests.the_user_sees_the_button(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "239a00df-7946-487d-b80a-61c6aadac4ab"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "d9269c5d-9185-4f4d-87da-ac19a56cf34c",
+        "line": 9,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 22474008500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "83e1dcc8-988a-425b-8af5-9b7372a0aa1b"
+          },
+          {
+            "result": {
+              "duration": 11965737099,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "a56ca4fe-58b1-4fa1-a3d6-f509135d7452"
+          },
+          {
+            "result": {
+              "duration": 326830499,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "ac5a91a3-594f-4e1a-bd57-ed517fb4e232"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "d9269c5d-9185-4f4d-87da-ac19a56cf34c",
+        "line": 24,
+        "name": "Check Available Orders Sorted by Furthest",
+        "description": "",
+        "id": "order-from-closest-furthest-available-orders;check-available-orders-sorted-by-furthest",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1169522399,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user clicks on the \"Available Orders Furthest\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Available Orders Furthest\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "be5a7288-c725-471d-ad62-4c93ebc09f7e"
+          },
+          {
+            "result": {
+              "duration": 563519101,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user sees the available orders sorted by \"Furthest\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Furthest\"",
+                  "offset": 45
+                }
+              ],
+              "location": "OrderFromClosestFurthestAvailableOrders.the_user_sees_the_available_orders_sorted_by(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "a97e3a63-8cbe-49f0-870a-39b948206cb1"
+          }
+        ]
+      }
+    ],
+    "name": "Order from Closest-Furthest Available Orders",
+    "description": "\tAs a user\n\tI want to order Available Orders from the closest or the furthest from the restaurant\n\tSo that I can make a more informed decision on which order to take",
+    "id": "order-from-closest-furthest-available-orders",
+    "keyword": "Feature",
+    "uri": "D:/UCs_5th_Semester/TA_EngenhariaSoftware/Projeto/taes22_grupow_fastugadriver_tests.git/include/features/us13.feature",
+    "tags": []
+  }
+]

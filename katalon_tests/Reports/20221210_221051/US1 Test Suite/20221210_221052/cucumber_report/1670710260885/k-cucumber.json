@@ -1,0 +1,909 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "BDD_TESTRUN_UUID": "f7bde89b-f03d-4d60-9fe8-4e9d5c84f724",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 37401115700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "ad7e3f9b-c586-49d5-8d16-db1dd879fb86"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "f7bde89b-f03d-4d60-9fe8-4e9d5c84f724",
+        "line": 9,
+        "name": "Check Login Exists",
+        "description": "",
+        "id": "us1---login;check-login-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1814767100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user sees the \"LOGIN\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "a1a58941-f2b4-4778-8b29-fd16879bbf3f"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "7c2a6d3f-9999-4009-bcae-b1c94a1ac439",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 20506711200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "9628a591-cce0-4d80-8490-2ad2b1ce62ee"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "7c2a6d3f-9999-4009-bcae-b1c94a1ac439",
+        "line": 12,
+        "name": "Check Login With Empty Fields",
+        "description": "",
+        "id": "us1---login;check-login-with-empty-fields",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 772887800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user sees the \"LOGIN\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "9e5ca4ca-6a63-47bc-a5ed-1b6c052fd5a9"
+          },
+          {
+            "result": {
+              "duration": 462503600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "23b55638-bf01-42a3-822d-cc1c115dcf3a"
+          },
+          {
+            "result": {
+              "duration": 750718600,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user sees the \"Email field cannot be empty\" error text in \"empty email login\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Email field cannot be empty\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"empty email login\"",
+                  "offset": 62
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_error_text(String,String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "1d611b9b-2d5e-445f-a309-ce8e98abf8ac"
+          },
+          {
+            "result": {
+              "duration": 305681700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user sees the \"Password field cannot be empty\" error text in \"empty password login\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Password field cannot be empty\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"empty password login\"",
+                  "offset": 65
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_error_text(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "42f3f194-907f-41fa-ba8b-d2f940b029d5"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "ba222c02-5162-400a-98d1-ba91dd5d1dbf",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 20126246300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "458418de-2e84-4dfa-a6e6-c3dc43a219d0"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "ba222c02-5162-400a-98d1-ba91dd5d1dbf",
+        "line": 18,
+        "name": "Check Login With Invalid Email Format",
+        "description": "",
+        "id": "us1---login;check-login-with-invalid-email-format",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 865142200,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user sees the \"LOGIN\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "7cbdc968-1db1-4456-9ee9-3142ff7ffeb8"
+          },
+          {
+            "result": {
+              "duration": 1570030900,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user fills the \"email login\" field with \"abc.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email login\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"abc.pt\"",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "757d3f89-00d2-4aa4-808c-b7ccea8ad2a9"
+          },
+          {
+            "result": {
+              "duration": 652796400,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "4e7d36af-1a60-4c38-83bf-5853defb444c"
+          },
+          {
+            "result": {
+              "duration": 717370800,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user sees the \"Wrong email format\" error text in \"invalid email login\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Wrong email format\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"invalid email login\"",
+                  "offset": 53
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_error_text(String,String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "ef70c835-28c5-4852-af55-f10c7f5fc046"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "664cf9b5-5b66-4ea8-99f8-972ff5c309ac",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 19936883100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "864eda15-d524-46df-ba79-a30b3f34186d"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "664cf9b5-5b66-4ea8-99f8-972ff5c309ac",
+        "line": 24,
+        "name": "Go to Register Screen From Login",
+        "description": "",
+        "id": "us1---login;go-to-register-screen-from-login",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 797654000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user sees the \"LOGIN\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "3f1a182d-7b4a-4b95-82e8-8b7de195d7a1"
+          },
+          {
+            "result": {
+              "duration": 399318200,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "e8030655-d3bd-48ca-a35c-a96764ef957e"
+          },
+          {
+            "result": {
+              "duration": 1839374000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user sees the \"REGISTER\" text",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_text(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "60d02340-d6a3-4553-9047-1996b1cd3b87"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "130a8d40-79f2-43f1-8ba7-a6ba5fe7d85c",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 24763937300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "93edbfc6-0380-4566-8925-9d171dd45bea"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "130a8d40-79f2-43f1-8ba7-a6ba5fe7d85c",
+        "line": 38,
+        "name": "Check Successful Authentication",
+        "description": "",
+        "id": "us1---login;check-successful-authentication;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 860031400,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the user sees the \"LOGIN\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "df2c5ae9-a658-43ec-93a4-254ad2ecc7ef"
+          },
+          {
+            "result": {
+              "duration": 865012300,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the user fills the email field with contacto@email.pt",
+            "match": {
+              "arguments": [
+                {
+                  "val": "contacto@email.pt",
+                  "offset": 36
+                }
+              ],
+              "location": "LoginTests.the_user_fills_email_outline(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "27eaebbb-04f0-44f7-bdcf-7de3e90fc5ad"
+          },
+          {
+            "result": {
+              "duration": 1212962600,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the user fills the password field with password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "password",
+                  "offset": 39
+                }
+              ],
+              "location": "LoginTests.the_user_fills_password_outline(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "65fdbcf4-cd7f-4e98-94f7-cb9614e6aefd"
+          },
+          {
+            "result": {
+              "duration": 734816900,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "3af1b522-1173-4262-bcd9-7f57dfce1fd6"
+          },
+          {
+            "result": {
+              "duration": 5085618600,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "the user sees the \"Welcome\" text",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_text(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "45ea8f38-924a-4fec-ab6f-de8c35df3b85"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "e5956a25-aa3d-46e1-a3f1-6bbe14daf057",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 21231542300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "789970e0-20fd-4add-91da-460932641de0"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "e5956a25-aa3d-46e1-a3f1-6bbe14daf057",
+        "line": 39,
+        "name": "Check Successful Authentication",
+        "description": "",
+        "id": "us1---login;check-successful-authentication;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 811008400,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the user sees the \"LOGIN\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "23573217-ef3d-4233-ae97-59fd1e4a909c"
+          },
+          {
+            "result": {
+              "duration": 1469213700,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the user fills the email field with rodrigo.campos@mail.pt",
+            "match": {
+              "arguments": [
+                {
+                  "val": "rodrigo.campos@mail.pt",
+                  "offset": 36
+                }
+              ],
+              "location": "LoginTests.the_user_fills_email_outline(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "d74d1e63-490d-4e80-b051-d3144c7869d7"
+          },
+          {
+            "result": {
+              "duration": 1239179300,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the user fills the password field with 12345678",
+            "match": {
+              "arguments": [
+                {
+                  "val": "12345678",
+                  "offset": 39
+                }
+              ],
+              "location": "LoginTests.the_user_fills_password_outline(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "6f006c79-b413-4f65-958c-3910ae23749c"
+          },
+          {
+            "result": {
+              "duration": 906138300,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "9af2ed7d-1f6c-4307-8880-8112d0ff001c"
+          },
+          {
+            "result": {
+              "duration": 8689363800,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "the user sees the \"Welcome\" text",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_text(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "364f4ec1-c36d-48b1-a859-1cdf23fc9b7d"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "1526f3b1-d126-421e-8668-ef8e245bff08",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 25532346800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "ff662eb3-4f10-4c1a-9734-a7f4770660ac"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "1526f3b1-d126-421e-8668-ef8e245bff08",
+        "line": 50,
+        "name": "Check Login With Invalid Credentials",
+        "description": "",
+        "id": "us1---login;check-login-with-invalid-credentials;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1005791300,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "the user sees the \"LOGIN\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "5710908d-9775-4051-b0ec-0d87055b33f4"
+          },
+          {
+            "result": {
+              "duration": 1343548100,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "the user fills the email field with abc@email.pt",
+            "match": {
+              "arguments": [
+                {
+                  "val": "abc@email.pt",
+                  "offset": 36
+                }
+              ],
+              "location": "LoginTests.the_user_fills_email_outline(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "03d56f13-7f37-4c70-9f24-5d1d075b4845"
+          },
+          {
+            "result": {
+              "duration": 1386632600,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "the user fills the password field with 123456789",
+            "match": {
+              "arguments": [
+                {
+                  "val": "123456789",
+                  "offset": 39
+                }
+              ],
+              "location": "LoginTests.the_user_fills_password_outline(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "a59a9024-d60c-4b60-939f-510ff8e5a8ec"
+          },
+          {
+            "result": {
+              "duration": 765463000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "aafbb9dc-c1e4-4a35-a585-b8e8cb217fda"
+          },
+          {
+            "result": {
+              "duration": 684007300,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "the user sees the \"Wrong Credentials\" text",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Wrong Credentials\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_text(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "e47048b9-6f00-4837-b2d2-39ce4a246257"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "d8b1455c-3e0a-467d-b294-f64b4e135924",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 18846299800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "7ac2a880-db62-49a0-a023-b54a581a856c"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "d8b1455c-3e0a-467d-b294-f64b4e135924",
+        "line": 51,
+        "name": "Check Login With Invalid Credentials",
+        "description": "",
+        "id": "us1---login;check-login-with-invalid-credentials;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 745608900,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "the user sees the \"LOGIN\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "aaecf3e5-9629-4ab9-adb9-a59ded7883f1"
+          },
+          {
+            "result": {
+              "duration": 1355768900,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "the user fills the email field with utilizador@email.pt",
+            "match": {
+              "arguments": [
+                {
+                  "val": "utilizador@email.pt",
+                  "offset": 36
+                }
+              ],
+              "location": "LoginTests.the_user_fills_email_outline(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "937e19eb-1eda-4e78-9ab1-d7e9f0e5a2eb"
+          },
+          {
+            "result": {
+              "duration": 1192759300,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "the user fills the password field with admin",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 39
+                }
+              ],
+              "location": "LoginTests.the_user_fills_password_outline(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "cae471be-802f-43ce-8e04-9fde4d155d5f"
+          },
+          {
+            "result": {
+              "duration": 717536100,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "the user clicks on the \"LOGIN\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "7c5eca9a-673b-415f-a518-5e478daacd5d"
+          },
+          {
+            "result": {
+              "duration": 728216500,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "the user sees the \"Wrong Credentials\" text",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Wrong Credentials\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_text(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "d3533419-8a1a-4bf3-95d8-694ff58429d7"
+          }
+        ]
+      }
+    ],
+    "name": "US1 - Login",
+    "description": "  As a user\n    I want to authenticate myself\n    So that I can access the application",
+    "id": "us1---login",
+    "keyword": "Feature",
+    "uri": "D:/UCs_5th_Semester/TA_EngenhariaSoftware/Projeto/taes22_grupow_fastugadriver_tests.git/Include/features/us1.feature",
+    "tags": []
+  }
+]

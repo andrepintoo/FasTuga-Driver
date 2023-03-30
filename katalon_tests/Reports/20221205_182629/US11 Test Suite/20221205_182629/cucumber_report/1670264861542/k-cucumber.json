@@ -1,0 +1,82 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "BDD_TESTRUN_UUID": "0c7b0265-9e64-4894-9e47-8469dca91d05",
+        "line": 5,
+        "name": "Check Empty Assigned Orders",
+        "description": "",
+        "id": "us11---cancel-order;check-empty-assigned-orders",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8657728500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "29f5d083-dc38-4ce7-9dff-502c7abf8e23"
+          },
+          {
+            "result": {
+              "duration": 5629544500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "e28d804f-d71d-47b9-b14b-23887a5f6bb2"
+          },
+          {
+            "result": {
+              "duration": 106772800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user sees the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_sees_the_list()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "461e82c1-48e1-401b-a933-7ca80e290b56"
+          },
+          {
+            "result": {
+              "duration": 199930700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees that the \"No assigned Orders\" text exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"No assigned Orders\"",
+                  "offset": 23
+                }
+              ],
+              "location": "CancelOrderTests.the_user_verifies_text_exists(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "71ffcc1c-138e-4e2a-85a0-957ac125e333"
+          }
+        ]
+      }
+    ],
+    "name": "US11 - Cancel Order",
+    "description": "  \tAs a user\n    I want to be able to cancel a currently assigned order",
+    "id": "us11---cancel-order",
+    "keyword": "Feature",
+    "uri": "C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us11emptyorders.feature",
+    "tags": []
+  }
+]

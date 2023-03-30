@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "8C59CBD40D58177EBB598B7E15983201",
+  "keywordClasses": [
+    {
+      "name": "us2.CheckRegisterWithInvalidPhoneNumberFormat",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

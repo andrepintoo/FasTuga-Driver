@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+US20 Test Suite,,,,2022-12-10 18:00:12,2022-12-10 18:01:00,47.962s,PASSED
+,,,,,,,
+Test Cases/US20 - Check My Balance/US20TestCaseAllFeatures,,,,2022-12-10 18:00:13,2022-12-10 18:01:00,47.721s,PASSED
+"runFeatureFile(""Include/features/us20.feature"")",,,,2022-12-10 18:00:13,2022-12-10 18:01:00,47.371s,PASSED

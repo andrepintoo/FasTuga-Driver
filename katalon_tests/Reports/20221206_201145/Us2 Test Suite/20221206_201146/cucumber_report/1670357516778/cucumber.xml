@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="9" time="268.669356">
+<testcase classname="Register" name="Go to Login Screen" time="28.537086">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user clicks on the "REGISTER" button................................passed
+And the user sees the "REGISTER" screen.....................................passed
+When the user clicks on the "back to login register" button.................passed
+Then the user sees the "LOGIN" text.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Register" name="Check Successful Register" time="42.96172">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user clicks on the "REGISTER" button................................passed
+And the user sees the "REGISTER" screen.....................................passed
+When the user fills the "first name register" field with "John".............passed
+And the user fills the "last name register" field with "Doe"................passed
+And the user fills the "email register" field with "johndoe@email.pt".......passed
+And the user fills the "password register" field with "password"............passed
+And the user fills the "password confirmation register" field with "password".passed
+And the user fills the "phone number register" field with "999888777".......passed
+And the user fills the "license plate register" field with "AA-11-AA".......passed
+And the user clicks on the "register from register" button..................passed
+Then the user sees the "Welcome" screen.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Register" name="Check Register With Existing License Plate" time="22.941554">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user clicks on the "REGISTER" button................................passed
+And the user sees the "REGISTER" screen.....................................passed
+When the user fills the "license plate register" field with "AA-00-AA"......passed
+And the user clicks on the "register from register" button..................passed
+Then the user sees the "License plate already exists!" error text in the "existing license plate register" field.passed
+]]></system-out>
+</testcase>
+<testcase classname="Register" name="Check Register With Invalid License Plate Format" time="34.043004">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user clicks on the "REGISTER" button................................passed
+And the user sees the "REGISTER" screen.....................................passed
+When the user fills the "license plate register" field with "AA-ZZ-AA"......passed
+And the user clicks on the "register from register" button..................passed
+Then the user sees the "Wrong License Format - AA-00-AA." error text in the "invalid license plate register" field.passed
+]]></system-out>
+</testcase>
+<testcase classname="Register" name="Check Register With Existing Email" time="27.464077">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user clicks on the "REGISTER" button................................passed
+And the user sees the "REGISTER" screen.....................................passed
+When the user fills the "email register" field with "sara@mail.pt"..........passed
+And the user clicks on the "register from register" button..................passed
+Then the user sees the "Email already exists!" error text in the "existing email register" field.passed
+]]></system-out>
+</testcase>
+<testcase classname="Register" name="Check Register With Mismatch Passwords" time="28.975395">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user clicks on the "REGISTER" button................................passed
+And the user sees the "REGISTER" screen.....................................passed
+When the user fills the "password register" field with "password"...........passed
+And the user fills the "password confirmation register" field with "paswordddd".passed
+And the user clicks on the "register from register" button..................passed
+Then the user sees the "Passwords don't match." error text in the "mismatch password register" field.passed
+]]></system-out>
+</testcase>
+<testcase classname="Register" name="Check Register With Empty Fields" time="25.19141">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user clicks on the "REGISTER" button................................passed
+And the user sees the "REGISTER" screen.....................................passed
+When the user clicks on the "register from register" button.................passed
+Then the user sees the "Enter First Name." error text in the "first name register" field.passed
+And the user sees the "Enter Last Name." error text in the "last name register" field.passed
+And the user sees the "Enter Email." error text in the "email register" field.passed
+And the user sees the "Enter Password." error text in the "password register" field.passed
+And the user sees the "Enter Password Confirmation." error text in the "password confirmation register" field.passed
+And the user sees the "Enter Phone Number." error text in the "phone number register" field.passed
+And the user sees the "Enter License Plate." error text in the "license plate register" field.passed
+]]></system-out>
+</testcase>
+<testcase classname="Register" name="Check Register With Invalid Phone Number Format" time="26.860285">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user clicks on the "REGISTER" button................................passed
+And the user sees the "REGISTER" screen.....................................passed
+When the user fills the "phone number register" field with "199888777"......passed
+And the user clicks on the "register from register" button..................passed
+Then the user sees the "Wrong Phone Number Format - 9xxxxxxxx." error text in the "invalid phone number register" field.passed
+]]></system-out>
+</testcase>
+<testcase classname="Register" name="Check Register With Invalid Email Format" time="31.694825">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user clicks on the "REGISTER" button................................passed
+And the user sees the "REGISTER" screen.....................................passed
+When the user fills the "email register" field with "abc.pt"................passed
+And the user clicks on the "register from register" button..................passed
+Then the user sees the "Wrong Email Format - AA@BB.CC." error text in the "invalid email register" field.passed
+]]></system-out>
+</testcase>
+</testsuite>

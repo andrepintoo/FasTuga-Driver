@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="55.801923">
+<testcase classname="Get Order Ready Notification" name="Check Received Ready Order Notification" time="55.801923">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+And the user sees the "Assigned Orders List" list...........................passed
+And the status is " PREPARING"..............................................passed
+And the user waits "5" seconds..............................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Available Orders" text in the Menu..............passed
+Then the order status switches to " READY TO CLAIM".........................passed
+And the user opens the notifications........................................passed
+And the user sees the "notification ready order" notification...............passed
+]]></system-out>
+</testcase>
+</testsuite>

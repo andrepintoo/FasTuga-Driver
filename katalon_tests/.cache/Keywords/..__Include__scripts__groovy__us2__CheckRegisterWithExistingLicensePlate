@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "425F9E205845A4BCD609012CAECA7166",
+  "keywordClasses": [
+    {
+      "name": "us2.CheckRegisterWithExistingLicensePlate",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

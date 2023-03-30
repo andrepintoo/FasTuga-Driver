@@ -1,0 +1,945 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 13,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 12607333001,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5680143499,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 211367400,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1132541501,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 19,
+        "name": "Check Statistics Screen Exists",
+        "description": "",
+        "id": "statistics;check-statistics-screen-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1023290799,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user sees the \"Statistics\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9375876800,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7729876599,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 211909600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1131076800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 22,
+        "name": "Check \"Total Delivery Time\" Field Exists",
+        "description": "",
+        "id": "statistics;check-\"total-delivery-time\"-field-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1017262100,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user sees the \"total delivery time statistics\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"total delivery time statistics\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StatisticsTests.the_user_sees_the_field(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9106475900,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5905692801,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1186987901,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 262534701,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 25,
+        "name": "Check \"Average Time Per Delivery\" Field Exists",
+        "description": "",
+        "id": "statistics;check-\"average-time-per-delivery\"-field-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1022070499,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user sees the \"average time per delivery statistics\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"average time per delivery statistics\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StatisticsTests.the_user_sees_the_field(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9107982400,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5025523401,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1226252799,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 282547499,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 28,
+        "name": "Check \"Balance\" Field Exists",
+        "description": "",
+        "id": "statistics;check-\"balance\"-field-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1081132701,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the user sees the \"balance statistics\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"balance statistics\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StatisticsTests.the_user_sees_the_field(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9071152900,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6327351600,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1165768101,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 262800799,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 31,
+        "name": "Check \"Clients Served\" Field Exists",
+        "description": "",
+        "id": "statistics;check-\"clients-served\"-field-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1058508400,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the user sees the \"clients served statistics\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"clients served statistics\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StatisticsTests.the_user_sees_the_field(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 11060295901,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5058327399,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 235546700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1118591699,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 34,
+        "name": "Check \"Average Speed Per Delivery\" Field Exists",
+        "description": "",
+        "id": "statistics;check-\"average-speed-per-delivery\"-field-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1067275700,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "the user sees the \"average speed per delivery statistics\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"average speed per delivery statistics\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StatisticsTests.the_user_sees_the_field(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9099148300,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5689099100,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1221610800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 278862600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 37,
+        "name": "Check \"Assigned Orders Delivered\" Field Exists",
+        "description": "",
+        "id": "statistics;check-\"assigned-orders-delivered\"-field-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1046201500,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "the user sees the \"assigned orders delivered statistics\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"assigned orders delivered statistics\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StatisticsTests.the_user_sees_the_field(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 8994072499,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5982677001,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 225663300,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1112768000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 40,
+        "name": "Check Fields Updates After Order Delivered",
+        "description": "",
+        "id": "statistics;check-fields-updates-after-order-delivered",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1381790401,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "the user sees the \"previous\" statistics values",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"previous\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StatisticsTests.the_user_sees_the_statistics_values(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1170102600,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 230749301,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "the user clicks on the \"Available Orders Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Available Orders Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2394797500,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "the user clicks on one of the \"Assigned Order Item\" in the Assigned Orders list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Order Item\"",
+                  "offset": 30
+                }
+              ],
+              "location": "CancelOrderTests.the_user_clicks_the_button_in_the_list(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1635438200,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "the user clicks on the \"Delivered\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delivered\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3626071100,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 204506900,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1151334599,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "the user clicks on the \"Statistics\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statistics\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1283759900,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "the user sees the \"new\" statistics values",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"new\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StatisticsTests.the_user_sees_the_statistics_values(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1448900,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "the user verifies that the statistics values changed",
+            "match": {
+              "location": "StatisticsTests.the_user_verifies_that_the_statistics_values_changed()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Statistics",
+    "description": "  As a user\n\tI want to see the number os assigned orders delivered\n\t\tAnd the total delivery time\t\n\t\tAnd the average time per delivery\n\t\tAnd the balance\n\t\tAnd the different number of clients served\n\t\tAnd the average speed per delivery\n\tSo that I can measure my performance as a driver",
+    "id": "statistics",
+    "keyword": "Feature",
+    "uri": "C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/include/features/us19.feature",
+    "tags": []
+  }
+]

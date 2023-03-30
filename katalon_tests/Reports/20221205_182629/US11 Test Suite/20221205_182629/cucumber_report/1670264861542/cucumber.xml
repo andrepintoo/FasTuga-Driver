@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="14.599511">
+<testcase classname="US11 - Cancel Order" name="Check Empty Assigned Orders" time="14.599511">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user logs in the application........................................passed
+And the user sees the Assigned Orders list..................................passed
+Then the user sees that the "No assigned Orders" text exists................passed
+]]></system-out>
+</testcase>
+</testsuite>

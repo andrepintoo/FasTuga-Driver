@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="45.848414">
+<testcase classname="US20 - Check My Balance" name="Check Balance Value Exists" time="24.144167">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+Then the user can see that the "Balance Text Label" exists..................passed
+And the user can see that the "Balance Value" has a number..................passed
+]]></system-out>
+</testcase>
+<testcase classname="US20 - Check My Balance" name="Check Balance Value Updates After Delivery" time="21.704247">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user is logged in...................................................passed
+And the user sees the Assigned Orders list..................................passed
+And the user sees the Balance value.........................................passed
+When the user clicks on one of the "Assigned Order Item" in the Assigned Orders list.passed
+And the user sees how much he is going to earn for that delivery............passed
+And the user clicks on the "Delivered" button...............................passed
+Then the user sees that the balance has gone up.............................passed
+]]></system-out>
+</testcase>
+</testsuite>

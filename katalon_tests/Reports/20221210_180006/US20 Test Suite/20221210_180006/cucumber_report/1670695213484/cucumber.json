@@ -1,0 +1,219 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 17526227099,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5644023400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 11,
+        "name": "Check Balance Value Exists",
+        "description": "",
+        "id": "us20---check-my-balance;check-balance-value-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 156334600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user can see that the \"Balance Text Label\" exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Balance Text Label\"",
+                  "offset": 26
+                }
+              ],
+              "location": "CheckMyBalanceTests.the_user_see_label_exists(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 386888200,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user can see that the \"Balance Value\" has a number",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Balance Value\"",
+                  "offset": 26
+                }
+              ],
+              "location": "CheckMyBalanceTests.the_user_see_number(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9318155000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5919576100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 15,
+        "name": "Check Balance Value Updates After Delivery",
+        "description": "",
+        "id": "us20---check-my-balance;check-balance-value-updates-after-delivery",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 141564699,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user sees the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_sees_the_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 202643400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user sees the Balance value",
+            "match": {
+              "location": "CompleteHandoverTests.the_user_verifies_previous_value()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 331666800,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user clicks on one of the \"Assigned Order Item\" in the Assigned Orders list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Order Item\"",
+                  "offset": 30
+                }
+              ],
+              "location": "CancelOrderTests.the_user_clicks_the_button_in_the_list(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3217233100,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user sees how much he is going to earn for that delivery",
+            "match": {
+              "location": "CompleteHandoverTests.the_user_verifies_earnings_from_delivery()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 212214800,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user clicks on the \"Delivered\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delivered\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2352647200,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user sees that the balance has gone up",
+            "match": {
+              "location": "CompleteHandoverTests.the_user_verifies_balance()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "US20 - Check My Balance",
+    "description": "  As a user\n  I want to be able to check my balance",
+    "id": "us20---check-my-balance",
+    "keyword": "Feature",
+    "uri": "C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us20.feature",
+    "tags": []
+  }
+]

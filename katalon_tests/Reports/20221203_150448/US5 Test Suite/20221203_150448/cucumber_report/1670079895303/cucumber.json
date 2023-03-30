@@ -1,0 +1,171 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Check Logout Button Exists",
+        "description": "",
+        "id": "us5---logout;check-logout-button-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 12437370700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4415014800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 262650200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1026683300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"Logout\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Logout\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LogoutTests.the_user_sees_the_text(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 11,
+        "name": "Check Successful Logout",
+        "description": "",
+        "id": "us5---logout;check-successful-logout",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7687665900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4272117300,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 264735300,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1122806900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user clicks on the \"Logout\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Logout\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 764848700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user sees the \"LOGIN\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "US5 - Logout",
+    "description": "  As a user\n  I want to logout from the application",
+    "id": "us5---logout",
+    "keyword": "Feature",
+    "uri": "C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us5.feature",
+    "tags": []
+  }
+]

@@ -1,0 +1,232 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "BDD_TESTRUN_UUID": "e49a131f-281d-4701-a0fb-46ae753b25b5",
+        "line": 7,
+        "name": "Check Received Cancelled Order Notification",
+        "description": "",
+        "id": "us16---get-order-cancelled-notification;check-received-cancelled-order-notification",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 40286400200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "27e63946-1731-48bd-82dc-9dee05a8d345"
+          },
+          {
+            "result": {
+              "duration": 9129742000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "fa919c61-a5c1-409d-8447-e88d8c5a59ab"
+          },
+          {
+            "result": {
+              "duration": 216236900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user sees the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_sees_the_list()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "7ac1d501-86fa-4945-b331-ac8600b2bb7c"
+          },
+          {
+            "result": {
+              "duration": 598622600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks on one of the \"Assigned Order Item\" in the Assigned Orders list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Order Item\"",
+                  "offset": 30
+                }
+              ],
+              "location": "CancelOrderTests.the_user_clicks_the_button_in_the_list(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "a88b45ba-fc18-473b-a4e8-80690526a27a"
+          },
+          {
+            "result": {
+              "duration": 1856403200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user sees the \"Order Details\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Order Details\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "f0ee922e-1037-4ca5-8ae9-5ac3fb2a0a7b"
+          },
+          {
+            "result": {
+              "duration": 1933313500,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user clicks on the \"Cancel\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Cancel\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "c9299d06-9939-41aa-98cc-8912c6ca417c"
+          },
+          {
+            "result": {
+              "duration": 539435600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user sees the \"Cancel Order Confirmation\" confirmation",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Cancel Order Confirmation\"",
+                  "offset": 18
+                }
+              ],
+              "location": "GetOrderCancelledNotificationTests.the_user_sees_the_confirmation(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "48f66924-4ca0-40f0-9d8e-c119de6f092d"
+          },
+          {
+            "result": {
+              "duration": 1338143800,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user fills the \"reason cancel order\" field with \"I fell\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"reason cancel order\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"I fell\"",
+                  "offset": 52
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "9e977cba-3642-490b-976d-cb866109008f"
+          },
+          {
+            "result": {
+              "duration": 730322000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"YES Cancel Order\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"YES Cancel Order\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "9d669bff-8869-483d-85de-31305988ecef"
+          },
+          {
+            "result": {
+              "duration": 2909393800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "6108b415-cf80-4a35-8c3d-d95ae91144e4"
+          },
+          {
+            "result": {
+              "duration": 1951453800,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user opens the notifications",
+            "match": {
+              "location": "GetOrderCancelledNotificationTests.the_user_opens_the_notifications()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "3a984be5-c60f-4aaa-b92b-d40701f13ea8"
+          },
+          {
+            "result": {
+              "duration": 4900427200,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user sees the \"notification cancel order\" notification",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"notification cancel order\"",
+                  "offset": 18
+                }
+              ],
+              "location": "GetOrderCancelledNotificationTests.the_user_sees_the_notification(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "ece6174f-2edb-4438-803a-134c5f82db42"
+          }
+        ]
+      }
+    ],
+    "name": "US16 - Get Order Cancelled Notification",
+    "description": "\tAs a user\n\tI want to receive notifications uppon a cancelled order from My Orders\n\tSo that I can stop a deliver or avoid starting that delivery",
+    "id": "us16---get-order-cancelled-notification",
+    "keyword": "Feature",
+    "uri": "D:/UCs_5th_Semester/TA_EngenhariaSoftware/Projeto/taes22_grupow_fastugadriver_tests.git/Include/features/us16.feature",
+    "tags": []
+  }
+]

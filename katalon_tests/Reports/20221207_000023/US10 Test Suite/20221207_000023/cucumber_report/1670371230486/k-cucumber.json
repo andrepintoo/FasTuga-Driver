@@ -1,0 +1,422 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "BDD_TESTRUN_UUID": "91afab31-3466-4199-a105-9e53594e8820",
+        "line": 8,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 18605374800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "aca2be0e-11df-4475-a9c7-762b90e9af31"
+          },
+          {
+            "result": {
+              "duration": 8801634500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "bf38853e-7582-4e42-8835-ea5bd4d180a8"
+          },
+          {
+            "result": {
+              "duration": 168361300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "ef6d1f7c-f519-4cc1-8bc3-b702524d9b13"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "91afab31-3466-4199-a105-9e53594e8820",
+        "line": 13,
+        "name": "Check Delivered Button Exists",
+        "description": "",
+        "id": "us10---complete-handover;check-delivered-button-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 138731000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user sees the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_sees_the_list()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "f4724edf-f866-43d2-9767-492c4d5138a8"
+          },
+          {
+            "result": {
+              "duration": 798530600,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user clicks on one of the \"Assigned Order Item\" in the Assigned Orders list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Order Item\"",
+                  "offset": 30
+                }
+              ],
+              "location": "CancelOrderTests.the_user_clicks_the_button_in_the_list(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "a61dc815-a87d-46eb-89eb-237d6b274990"
+          },
+          {
+            "result": {
+              "duration": 2034933100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user sees the \"Order Details\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Order Details\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "1bd25c2d-a824-45a4-b2ff-02623d2c0e87"
+          },
+          {
+            "result": {
+              "duration": 171737400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user sees the \"Delivered\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delivered\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CancelOrderTests.the_user_sees_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "fe6fe7e7-390c-4f30-a265-42f8ff8c5fde"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "9a57bae4-3d71-4c4e-8e37-18086fc359cb",
+        "line": 8,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 11360108700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "02d9d9ac-1b20-4bcd-8f3e-87b242aba13a"
+          },
+          {
+            "result": {
+              "duration": 5048047100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "f1cda444-7ec0-477f-8b0c-2d6d1c8aa37a"
+          },
+          {
+            "result": {
+              "duration": 171750500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "4d020cea-600b-42f1-b327-3d46aa61c92b"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "9a57bae4-3d71-4c4e-8e37-18086fc359cb",
+        "line": 19,
+        "name": "Check Balance Text Exists",
+        "description": "",
+        "id": "us10---complete-handover;check-balance-text-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 184238000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user sees that the \"Balance Value\" text exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Balance Value\"",
+                  "offset": 23
+                }
+              ],
+              "location": "CancelOrderTests.the_user_verifies_text_exists(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "491f9893-3407-4c2b-9a74-f4585cae96df"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "b8215a9c-e334-431d-8567-1328b9b9c417",
+        "line": 8,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 15328335800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "73e1e2ba-33b9-46a4-b07f-e9b96facd76b"
+          },
+          {
+            "result": {
+              "duration": 5577582600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "ece79dc0-8e11-4dd9-9b9b-5b8011f8319f"
+          },
+          {
+            "result": {
+              "duration": 216967200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "f73dd2c2-45d6-479a-b78b-470cc3dffcc7"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "b8215a9c-e334-431d-8567-1328b9b9c417",
+        "line": 22,
+        "name": "Check Successful Complete Handover By Button Delivered",
+        "description": "",
+        "id": "us10---complete-handover;check-successful-complete-handover-by-button-delivered",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 124501400,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user sees the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_sees_the_list()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "878459cc-9daf-49c4-bda9-83d35a8399b7"
+          },
+          {
+            "result": {
+              "duration": 148201600,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user sees the Balance value",
+            "match": {
+              "location": "CompleteHandoverTests.the_user_verifies_previous_value()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "dfd2335f-eec4-448b-bfd8-ef82ee4ec481"
+          },
+          {
+            "result": {
+              "duration": 795808600,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user clicks on one of the \"Assigned Order Item\" in the Assigned Orders list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Order Item\"",
+                  "offset": 30
+                }
+              ],
+              "location": "CancelOrderTests.the_user_clicks_the_button_in_the_list(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "b12a9ce8-8cfc-4ff8-9e38-3e6916bfa51a"
+          },
+          {
+            "result": {
+              "duration": 3234122300,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user sees how much he is going to earn for that delivery",
+            "match": {
+              "location": "CompleteHandoverTests.the_user_verifies_earnings_from_delivery()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "80250667-0ca9-4955-9b28-8df3cb096332"
+          },
+          {
+            "result": {
+              "duration": 209629600,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user clicks on the \"Delivered\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delivered\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "e6371a7b-1e76-4197-acc8-15ff36f6a0c6"
+          },
+          {
+            "result": {
+              "duration": 2372318100,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "037b10ac-bad0-4cbf-9d93-44516282d129"
+          },
+          {
+            "result": {
+              "duration": 124831300,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the user sees that the clicked order item is not in the Assigned Orders list",
+            "match": {
+              "location": "CancelOrderTests.the_user_verifies_order_item_missing()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "d6a16fec-4e41-460c-8bc4-789cf9c36aeb"
+          },
+          {
+            "result": {
+              "duration": 136102800,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the user sees that the balance has gone up",
+            "match": {
+              "location": "CompleteHandoverTests.the_user_verifies_balance()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "576608da-56af-47b6-8af1-532a3619aaf0"
+          }
+        ]
+      }
+    ],
+    "name": "US10 - Complete Handover",
+    "description": "  \tAs a user\n    I want to complete my order\n    So that I receive my earning",
+    "id": "us10---complete-handover",
+    "keyword": "Feature",
+    "uri": "C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us10.feature",
+    "tags": []
+  }
+]

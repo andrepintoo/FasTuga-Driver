@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="12" time="354.329395">
+<testcase classname="US21 - See And Change My Profile Details" name="Check Profile Button Exists" time="33.072757">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user fills the "email login" field with "rodrigo.campos@mail.pt"....passed
+And the user fills the "password login" field with "12345678"...............passed
+And the user clicks on the "LOGIN" button...................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+Then the user sees the "Profile" text in the Menu...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="US21 - See And Change My Profile Details" name="Check User Profile Details Exist" time="23.763081">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user fills the "email login" field with "rodrigo.campos@mail.pt"....passed
+And the user fills the "password login" field with "12345678"...............passed
+And the user clicks on the "LOGIN" button...................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+Then the user clicks on the "Profile" text in the Menu......................passed
+And the user sees that the "Profile Name" text is not empty.................passed
+And the user sees that the "Profile Email" text is not empty................passed
+]]></system-out>
+</testcase>
+<testcase classname="US21 - See And Change My Profile Details" name="Check Change Password Button Exists" time="31.815602">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user fills the "email login" field with "rodrigo.campos@mail.pt"....passed
+And the user fills the "password login" field with "12345678"...............passed
+And the user clicks on the "LOGIN" button...................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Profile" text in the Menu.......................passed
+Then the user sees the "CHANGE PASSWORD Profile" button.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="US21 - See And Change My Profile Details" name="Check Change Name Button Exists" time="21.354157">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user fills the "email login" field with "rodrigo.campos@mail.pt"....passed
+And the user fills the "password login" field with "12345678"...............passed
+And the user clicks on the "LOGIN" button...................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Profile" text in the Menu.......................passed
+Then the user sees the "CHANGE NAME Profile" button.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="US21 - See And Change My Profile Details" name="Go to Change Password Screen" time="21.9536">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user fills the "email login" field with "rodrigo.campos@mail.pt"....passed
+And the user fills the "password login" field with "12345678"...............passed
+And the user clicks on the "LOGIN" button...................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Profile" text in the Menu.......................passed
+And the user clicks on the "CHANGE PASSWORD Profile" button.................passed
+Then the user sees the "Change My Password" text............................passed
+]]></system-out>
+</testcase>
+<testcase classname="US21 - See And Change My Profile Details" name="Go Back to Profile Change Password Screen" time="30.42641">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user fills the "email login" field with "rodrigo.campos@mail.pt"....passed
+And the user fills the "password login" field with "12345678"...............passed
+And the user clicks on the "LOGIN" button...................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Profile" text in the Menu.......................passed
+And the user clicks on the "CHANGE PASSWORD Profile" button.................passed
+Then the user clicks on the "BACK Change Password" button...................passed
+And the user sees that the "Profile Name" text is not empty.................passed
+And the user sees that the "Profile Email" text is not empty................passed
+]]></system-out>
+</testcase>
+<testcase classname="US21 - See And Change My Profile Details" name="Check Change Password Button Exists" time="40.31943">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user fills the "email login" field with "rodrigo.campos@mail.pt"....passed
+And the user fills the "password login" field with "12345678"...............passed
+And the user clicks on the "LOGIN" button...................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Profile" text in the Menu.......................passed
+And the user clicks on the "CHANGE PASSWORD Profile" button.................passed
+Then the user sees the "CHANGE PASSWORD Change" button......................passed
+]]></system-out>
+</testcase>
+<testcase classname="US21 - See And Change My Profile Details" name="Check Successful Change Password" time="44.255401">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user fills the "email login" field with "rodrigo.campos@mail.pt"....passed
+And the user fills the "password login" field with "12345678"...............passed
+And the user clicks on the "LOGIN" button...................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Profile" text in the Menu.......................passed
+And the user clicks on the "CHANGE PASSWORD Profile" button.................passed
+And the user fills the "Atual Password" field with "12345678"...............passed
+And the user fills the "New Password" field with "password".................passed
+And the user fills the "Confirm Password" field with "password".............passed
+And the user clicks on the "CHANGE PASSWORD Change" button..................passed
+Then the user sees the Confirmation Dialog "Success"........................passed
+And the user clicks on the "Success OK" button..............................passed
+And the user clicks on the "Menu" in the navbar.............................passed
+And the user clicks on the "Logout" text in the Menu........................passed
+And the user sees the "LOGIN" screen........................................passed
+And the user fills the "email login" field with "rodrigo.campos@mail.pt"....passed
+And the user fills the "password login" field with "password"...............passed
+And the user clicks on the "LOGIN" button...................................passed
+And the user sees the "Welcome" screen......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US21 - See And Change My Profile Details" name="Go to Change Name Screen" time="22.284982">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user fills the "email login" field with "rodrigo.campos@mail.pt"....passed
+And the user fills the "password login" field with "12345678"...............passed
+And the user clicks on the "LOGIN" button...................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Profile" text in the Menu.......................passed
+And the user clicks on the "CHANGE NAME Profile" button.....................passed
+Then the user sees the "Change Name" text...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US21 - See And Change My Profile Details" name="Go Back to Profile Change Password Screen" time="29.240149">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user fills the "email login" field with "rodrigo.campos@mail.pt"....passed
+And the user fills the "password login" field with "12345678"...............passed
+And the user clicks on the "LOGIN" button...................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Profile" text in the Menu.......................passed
+And the user clicks on the "CHANGE NAME Profile" button.....................passed
+Then the user clicks on the "BACK Change Name" button.......................passed
+And the user sees that the "Profile Name" text is not empty.................passed
+And the user sees that the "Profile Email" text is not empty................passed
+]]></system-out>
+</testcase>
+<testcase classname="US21 - See And Change My Profile Details" name="Check Change Password Button Exists" time="23.713255">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user fills the "email login" field with "rodrigo.campos@mail.pt"....passed
+And the user fills the "password login" field with "12345678"...............passed
+And the user clicks on the "LOGIN" button...................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Profile" text in the Menu.......................passed
+And the user clicks on the "CHANGE NAME Profile" button.....................passed
+Then the user sees the "CHANGE NAME Change" button..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="US21 - See And Change My Profile Details" name="Check Successful Change Name" time="32.130571">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user fills the "email login" field with "rodrigo.campos@mail.pt"....passed
+And the user fills the "password login" field with "12345678"...............passed
+And the user clicks on the "LOGIN" button...................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Profile" text in the Menu.......................passed
+And the user clicks on the "CHANGE NAME Profile" button.....................passed
+And the user fills the "First Name Change" field with "MARIO"...............passed
+And the user fills the "Last Name Change" field with "ANTUNES"..............passed
+And the user clicks on the "CHANGE NAME Change" button......................passed
+Then the user sees the Confirmation Dialog "Success"........................passed
+And the user clicks on the "Success OK" button..............................passed
+And the user sees that the "Profile Name" text is not empty.................passed
+And the user sees that the "Profile Email" text is not empty................passed
+]]></system-out>
+</testcase>
+</testsuite>

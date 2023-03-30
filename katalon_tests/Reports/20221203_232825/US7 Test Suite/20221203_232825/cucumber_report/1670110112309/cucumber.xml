@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="90.886791">
+<testcase classname="US7 - Keep Me Logged In" name="Check Keep Me Logged In Checkbox Exists" time="14.180222">
+<system-out><![CDATA[Given the user opens the application........................................passed
+Then the user sees the "Keep Me Logged In" checkbox.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="US7 - Keep Me Logged In" name="Check Opening Application After Logout With Keep Me Signed In" time="23.370921">
+<system-out><![CDATA[Given the user opens the application - false................................passed
+And the user clicks on the "Keep Me Logged In" checkbox.....................passed
+And the user logs in the application........................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Logout" text in the Menu........................passed
+And the user closes the application.........................................passed
+And the user opens the application - false..................................passed
+Then the user sees the "LOGIN" screen.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US7 - Keep Me Logged In" name="Check Successful Keep Me Logged In" time="53.335648">
+<failure message="com.kms.katalon.core.exception.StepFailedException: Element 'Object Repository/android.widget.TextView - Welcome' not found&#13;&#10;&#9;at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:50)&#13;&#10;&#9;at com.kms.katalon.core.mobile.keyword.internal.MobileKeywordMain.stepFailed(MobileKeywordMain.groovy:40)&#13;&#10;&#9;at com.kms.katalon.core.mobile.keyword.builtin.VerifyElementExistKeyword$_verifyElementExist_closure1.doCall(VerifyElementExistKeyword.groovy:77)&#13;&#10;&#9;at com.kms.katalon.core.mobile.keyword.builtin.VerifyElementExistKeyword$_verifyElementExist_closure1.call(VerifyElementExistKeyword.groovy)&#13;&#10;&#9;at com.kms.katalon.core.mobile.keyword.internal.MobileKeywordMain.runKeyword(MobileKeywordMain.groovy:21)&#13;&#10;&#9;at com.kms.katalon.core.mobile.keyword.builtin.VerifyElementExistKeyword.verifyElementExist(VerifyElementExistKeyword.groovy:80)&#13;&#10;&#9;at com.kms.katalon.core.mobile.keyword.builtin.VerifyElementExistKeyword.execute(VerifyElementExistKeyword.groovy:64)&#13;&#10;&#9;at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)&#13;&#10;&#9;at com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords.verifyElementExist(MobileBuiltInKeywords.groovy:1755)&#13;&#10;&#9;at com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords$verifyElementExist$0.call(Unknown Source)&#13;&#10;&#9;at us1.LoginTests.the_user_sees_the_screen(LoginTests.groovy:55)&#13;&#10;&#9;at ✽.the user sees the &quot;Welcome&quot; screen(C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us7.feature:26)&#13;&#10;"><![CDATA[Given the user opens the application........................................passed
+And the user clicks on the "Keep Me Logged In" checkbox.....................passed
+And the user logs in the application........................................passed
+When the user closes the application........................................passed
+And the user opens the application - false..................................passed
+Then the user sees the "Welcome" screen.....................................failed
+
+StackTrace:
+com.kms.katalon.core.exception.StepFailedException: Element 'Object Repository/android.widget.TextView - Welcome' not found
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:50)
+	at com.kms.katalon.core.mobile.keyword.internal.MobileKeywordMain.stepFailed(MobileKeywordMain.groovy:40)
+	at com.kms.katalon.core.mobile.keyword.builtin.VerifyElementExistKeyword$_verifyElementExist_closure1.doCall(VerifyElementExistKeyword.groovy:77)
+	at com.kms.katalon.core.mobile.keyword.builtin.VerifyElementExistKeyword$_verifyElementExist_closure1.call(VerifyElementExistKeyword.groovy)
+	at com.kms.katalon.core.mobile.keyword.internal.MobileKeywordMain.runKeyword(MobileKeywordMain.groovy:21)
+	at com.kms.katalon.core.mobile.keyword.builtin.VerifyElementExistKeyword.verifyElementExist(VerifyElementExistKeyword.groovy:80)
+	at com.kms.katalon.core.mobile.keyword.builtin.VerifyElementExistKeyword.execute(VerifyElementExistKeyword.groovy:64)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords.verifyElementExist(MobileBuiltInKeywords.groovy:1755)
+	at com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords$verifyElementExist$0.call(Unknown Source)
+	at us1.LoginTests.the_user_sees_the_screen(LoginTests.groovy:55)
+	at ✽.the user sees the "Welcome" screen(C:/Users/André/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us7.feature:26)
+]]></failure>
+</testcase>
+</testsuite>

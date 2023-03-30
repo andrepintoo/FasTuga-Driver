@@ -1,0 +1,7 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+US8 Test Suite,,,,2022-12-05 22:17:30,2022-12-05 22:18:56,1m - 26.307s,PASSED
+,,,,,,,
+Test Cases/US8 - Assign Order/US8TestCaseAllFeatures,,,,2022-12-05 22:17:30,2022-12-05 22:18:56,1m - 26.054s,PASSED
+"runFeatureFile(""Include/features/us8.feature"")",,,,2022-12-05 22:17:31,2022-12-05 22:18:17,46.850s,PASSED
+"callTestCase(findTestCase(""US8 - Assign Order/CheckAssignOrderByButtonAssign""), [:], STOP_ON_FAILURE)",,,,2022-12-05 22:18:17,2022-12-05 22:18:37,19.489s,PASSED
+"runFeatureFile(""Include/features/us8emptyorders.feature"")",,,,2022-12-05 22:18:37,2022-12-05 22:18:56,19.321s,PASSED

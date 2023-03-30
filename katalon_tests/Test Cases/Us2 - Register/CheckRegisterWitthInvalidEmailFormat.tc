@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CheckRegisterWitthInvalidEmailFormat</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>aae70e05-de13-4f44-921a-e4cafa14d073</testCaseGuid>
+</TestCaseEntity>

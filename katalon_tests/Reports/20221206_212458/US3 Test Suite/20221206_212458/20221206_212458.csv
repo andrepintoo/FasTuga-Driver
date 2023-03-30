@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+US3 Test Suite,,,,2022-12-06 21:25:07,2022-12-06 21:26:33,1m - 25.524s,PASSED
+,,,,,,,
+Test Cases/US3 - List Available Orders/US3TestCaseAllFeatures,,,,2022-12-06 21:25:07,2022-12-06 21:26:33,1m - 25.184s,PASSED
+"runFeatureFile(""include/features/us3.feature"")",,,,2022-12-06 21:25:08,2022-12-06 21:26:33,1m - 24.656s,PASSED

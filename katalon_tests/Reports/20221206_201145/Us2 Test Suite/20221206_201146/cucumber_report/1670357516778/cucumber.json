@@ -1,0 +1,1408 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 23253420400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 965858100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1718005200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"REGISTER\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 11,
+        "name": "Go to Login Screen",
+        "description": "",
+        "id": "register;go-to-login-screen",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 407383600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks on the \"back to login register\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"back to login register\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1825069100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user sees the \"LOGIN\" text",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LOGIN\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_text(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 26704593600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 789312600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1748070400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"REGISTER\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 15,
+        "name": "Check Successful Register",
+        "description": "",
+        "id": "register;check-successful-register",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 899970200,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user fills the \"first name register\" field with \"John\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"first name register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"John\"",
+                  "offset": 52
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1691617700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user fills the \"last name register\" field with \"Doe\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"last name register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"Doe\"",
+                  "offset": 51
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1195144700,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user fills the \"email register\" field with \"johndoe@email.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"johndoe@email.pt\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1185249000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user fills the \"password register\" field with \"password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"password\"",
+                  "offset": 50
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1636511000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user fills the \"password confirmation register\" field with \"password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password confirmation register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"password\"",
+                  "offset": 63
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1161833800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user fills the \"phone number register\" field with \"999888777\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"phone number register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"999888777\"",
+                  "offset": 54
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1197575800,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user fills the \"license plate register\" field with \"AA-11-AA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"license plate register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"AA-11-AA\"",
+                  "offset": 55
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 695912900,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user clicks on the \"register from register\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"register from register\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4036199500,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 17557668800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 832457000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1712502400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"REGISTER\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 26,
+        "name": "Check Register With Existing License Plate",
+        "description": "",
+        "id": "register;check-register-with-existing-license-plate",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 834414000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user fills the \"license plate register\" field with \"AA-00-AA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"license plate register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"AA-00-AA\"",
+                  "offset": 55
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 736949700,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user clicks on the \"register from register\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"register from register\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1258358700,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the user sees the \"License plate already exists!\" error text in the \"existing license plate register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"License plate already exists!\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"existing license plate register\"",
+                  "offset": 68
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 27861324900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2569311300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 303281300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"REGISTER\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 31,
+        "name": "Check Register With Invalid License Plate Format",
+        "description": "",
+        "id": "register;check-register-with-invalid-license-plate-format",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1326518200,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the user fills the \"license plate register\" field with \"AA-ZZ-AA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"license plate register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"AA-ZZ-AA\"",
+                  "offset": 55
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 779735000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the user clicks on the \"register from register\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"register from register\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1193653800,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "the user sees the \"Wrong License Format - AA-00-AA.\" error text in the \"invalid license plate register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Wrong License Format - AA-00-AA.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"invalid license plate register\"",
+                  "offset": 71
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 18625933500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2767580400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 298778400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"REGISTER\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 36,
+        "name": "Check Register With Existing Email",
+        "description": "",
+        "id": "register;check-register-with-existing-email",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1380501600,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "the user fills the \"email register\" field with \"sara@mail.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"sara@mail.pt\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 795931900,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "the user clicks on the \"register from register\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"register from register\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3586311900,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "the user sees the \"Email already exists!\" error text in the \"existing email register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Email already exists!\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"existing email register\"",
+                  "offset": 60
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 22368783600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 932290100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1762191500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"REGISTER\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 41,
+        "name": "Check Register With Mismatch Passwords",
+        "description": "",
+        "id": "register;check-register-with-mismatch-passwords",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 881349900,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "the user fills the \"password register\" field with \"password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"password\"",
+                  "offset": 50
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1240790600,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "the user fills the \"password confirmation register\" field with \"paswordddd\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password confirmation register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"paswordddd\"",
+                  "offset": 63
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 677511800,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "the user clicks on the \"register from register\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"register from register\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1103398700,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "the user sees the \"Passwords don\u0027t match.\" error text in the \"mismatch password register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Passwords don\u0027t match.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"mismatch password register\"",
+                  "offset": 61
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 18749471500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 976048200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1789052700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"REGISTER\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 47,
+        "name": "Check Register With Empty Fields",
+        "description": "",
+        "id": "register;check-register-with-empty-fields",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 535931000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "the user clicks on the \"register from register\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"register from register\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1281821700,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "the user sees the \"Enter First Name.\" error text in the \"first name register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enter First Name.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"first name register\"",
+                  "offset": 56
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 377547100,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "the user sees the \"Enter Last Name.\" error text in the \"last name register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enter Last Name.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"last name register\"",
+                  "offset": 55
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 339816400,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "the user sees the \"Enter Email.\" error text in the \"email register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enter Email.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"email register\"",
+                  "offset": 51
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 274090100,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "the user sees the \"Enter Password.\" error text in the \"password register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enter Password.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"password register\"",
+                  "offset": 54
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 260149300,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "the user sees the \"Enter Password Confirmation.\" error text in the \"password confirmation register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enter Password Confirmation.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"password confirmation register\"",
+                  "offset": 67
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 304926800,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "the user sees the \"Enter Phone Number.\" error text in the \"phone number register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enter Phone Number.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"phone number register\"",
+                  "offset": 58
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 288540500,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "the user sees the \"Enter License Plate.\" error text in the \"license plate register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enter License Plate.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"license plate register\"",
+                  "offset": 59
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 20370380700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1006981900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1943496400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"REGISTER\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 57,
+        "name": "Check Register With Invalid Phone Number Format",
+        "description": "",
+        "id": "register;check-register-with-invalid-phone-number-format",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1314572200,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user fills the \"phone number register\" field with \"199888777\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"phone number register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"199888777\"",
+                  "offset": 54
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 778609600,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user clicks on the \"register from register\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"register from register\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1437735300,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user sees the \"Wrong Phone Number Format - 9xxxxxxxx.\" error text in the \"invalid phone number register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Wrong Phone Number Format - 9xxxxxxxx.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"invalid phone number register\"",
+                  "offset": 77
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 25359690000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1607235900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on the \"REGISTER\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1448295000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the \"REGISTER\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"REGISTER\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 62,
+        "name": "Check Register With Invalid Email Format",
+        "description": "",
+        "id": "register;check-register-with-invalid-email-format",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1298870000,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "the user fills the \"email register\" field with \"abc.pt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email register\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"abc.pt\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginTests.the_user_fills_the_password_field_with(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 784982000,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "the user clicks on the \"register from register\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"register from register\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1188584600,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "the user sees the \"Wrong Email Format - AA@BB.CC.\" error text in the \"invalid email register\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Wrong Email Format - AA@BB.CC.\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"invalid email register\"",
+                  "offset": 69
+                }
+              ],
+              "location": "CheckRegisterWithExistingLicensePlate.the_user_sees_the_error_text_in_the_field(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Register",
+    "description": "  As a user\n\tI want to be able to register to the aplication\n\tSo that I can authenticate myself",
+    "id": "register",
+    "keyword": "Feature",
+    "uri": "D:/UCs_5th_Semester/TA_EngenhariaSoftware/Projeto/taes22_grupow_fastugadriver_tests.git/Include/features/us2.feature",
+    "tags": []
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "5D4D52C09FEB26DA9324A35A4ACF170A",
+  "keywordClasses": [
+    {
+      "name": "us2.CheckRegisterWithInvalidFields",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

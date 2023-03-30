@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="84.589842">
+<testcase classname="US6 - Opt Out" name="Check Opt Out Button Exists" time="37.658414">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user logs in the application........................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+Then the user sees the "Opt Out" text in the Menu...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="US6 - Opt Out" name="Check Successful Opt Out" time="21.50931">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user fills the "email login" field with "nicole.azevedo@mail.pt"....passed
+And the user fills the "password login" field with "12345678"...............passed
+And the user clicks on the "LOGIN" button...................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Opt Out" text in the Menu.......................passed
+And the user sees the Confirmation Dialog "Opt Out Confirmation"............passed
+And the user clicks on the "Yes" button.....................................passed
+Then the user sees the "LOGIN" screen.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US6 - Opt Out" name="Check Register with Existing Email After Opt Out" time="25.422118">
+<system-out><![CDATA[Given the user opens the application........................................passed
+And the user fills the "email login" field with "nicole.azevedo@mail.pt"....passed
+And the user fills the "password login" field with "12345678"...............passed
+And the user clicks on the "LOGIN" button...................................passed
+When the user clicks on the "Menu" in the navbar............................passed
+And the user clicks on the "Opt Out" text in the Menu.......................passed
+And the user sees the Confirmation Dialog "Opt Out Confirmation"............passed
+And the user clicks on the "Yes" button.....................................passed
+And the user sees the "LOGIN" screen........................................passed
+And the user clicks on the "REGISTER" button................................passed
+And the user fills the "email register2" field with "nicole.azevedo@mail.pt".passed
+And the user clicks on the "REGISTER register2" button......................passed
+Then the user sees the Confirmation Dialog "Contact Administrator"..........passed
+]]></system-out>
+</testcase>
+</testsuite>

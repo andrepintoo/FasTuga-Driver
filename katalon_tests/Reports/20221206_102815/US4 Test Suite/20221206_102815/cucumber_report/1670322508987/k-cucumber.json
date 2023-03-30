@@ -1,0 +1,446 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "BDD_TESTRUN_UUID": "7aea6e88-874f-45c4-9d14-f1a7af6399c8",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 41590785600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "b71e03f6-3ad9-4946-b2cd-3000b626dde9"
+          },
+          {
+            "result": {
+              "duration": 17173530100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "f7abba31-93f5-4601-9af4-ee872bc0f13d"
+          },
+          {
+            "result": {
+              "duration": 516787800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the Available Orders list",
+            "match": {
+              "location": "AssignOrderTests.the_user_sees_the_available_list()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "72468b7c-c888-4f6a-83fd-c90cd2280d65"
+          },
+          {
+            "result": {
+              "duration": 1080851600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks on one of the orders in the Available Orders list",
+            "match": {
+              "location": "AssignOrderTests.the_user_clicks_the_order_in_the_list()"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "de6f40c5-20c1-4d6e-9a4c-883d91c31476"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "7aea6e88-874f-45c4-9d14-f1a7af6399c8",
+        "line": 12,
+        "name": "Check Order Details Screen Exists",
+        "description": "",
+        "id": "us4---order-details;check-order-details-screen-exists",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3456044600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user sees the \"Order Details\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Order Details\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "62cb8e42-bbbd-438f-b2d4-8a897447f7fe"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "9dfa2fce-b516-4dcf-938c-4dfc3f08caac",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 19042134500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "ca3e383a-3b1a-46f3-8d0e-73049d75ce8d"
+          },
+          {
+            "result": {
+              "duration": 12181881900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "998f2b3d-d35a-4f11-ba85-70ff795332a3"
+          },
+          {
+            "result": {
+              "duration": 278537600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the Available Orders list",
+            "match": {
+              "location": "AssignOrderTests.the_user_sees_the_available_list()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "94482e27-5446-4e45-b2ed-3000278cdf2d"
+          },
+          {
+            "result": {
+              "duration": 1313374700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks on one of the orders in the Available Orders list",
+            "match": {
+              "location": "AssignOrderTests.the_user_clicks_the_order_in_the_list()"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "04a498bb-9c20-4e22-8db2-4c9496e048f0"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "9dfa2fce-b516-4dcf-938c-4dfc3f08caac",
+        "line": 15,
+        "name": "Check Order information",
+        "description": "",
+        "id": "us4---order-details;check-order-information",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1586681000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user sees the \"Order Details\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Order Details\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "97818355-0554-4fa4-bcd6-9bd12f714264"
+          },
+          {
+            "result": {
+              "duration": 3645967400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user sees the \"8438\" text in \"Order Number\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"8438\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Order Number\"",
+                  "offset": 33
+                }
+              ],
+              "location": "OrderDetailsTests.the_user_sees_the_text(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "6b6958df-a686-4c5d-9d01-504dc8867a3b"
+          },
+          {
+            "result": {
+              "duration": 351461000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user sees the \"Customer 2\" text in \"Client Name\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Customer 2\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Client Name\"",
+                  "offset": 39
+                }
+              ],
+              "location": "OrderDetailsTests.the_user_sees_the_text(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "9ad78760-9799-483e-b796-faee42474594"
+          },
+          {
+            "result": {
+              "duration": 399746700,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user sees the \"+351 220136359\" text in \"Client Phone\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"+351 220136359\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Client Phone\"",
+                  "offset": 43
+                }
+              ],
+              "location": "OrderDetailsTests.the_user_sees_the_text(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "e6de962a-3332-41e8-8fbf-29f75b4edf7b"
+          },
+          {
+            "result": {
+              "duration": 388321000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user sees the \"Rua Afonso Lopes Vieira, Leiria\" text in \"Location\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Rua Afonso Lopes Vieira, Leiria\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Location\"",
+                  "offset": 60
+                }
+              ],
+              "location": "OrderDetailsTests.the_user_sees_the_text(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "d54d9aa9-0bef-413d-9a26-b0324572a5fe"
+          },
+          {
+            "result": {
+              "duration": 320580800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user sees the \"2.37 Km\" text in \"Distance\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2.37 Km\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Distance\"",
+                  "offset": 36
+                }
+              ],
+              "location": "OrderDetailsTests.the_user_sees_the_text(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "d6c5d33e-792f-481c-b869-c9f3ca956d64"
+          },
+          {
+            "result": {
+              "duration": 313003100,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user sees the \"2 €\" text in \"Earning\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2 €\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Earning\"",
+                  "offset": 32
+                }
+              ],
+              "location": "OrderDetailsTests.the_user_sees_the_text(String,String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "a4bec0f5-75fa-4fa4-9595-ad6b181ffbf4"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "11e4dd0d-d716-465f-b8d5-886cb0e9dd3f",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 21392694700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "01cdf91a-5e13-4f01-8e2a-546f415aec99"
+          },
+          {
+            "result": {
+              "duration": 11970564100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user logs in the application",
+            "match": {
+              "location": "KeepMeLoggedInTests.the_user_logs_in_the_application()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "61278bb9-7d02-4094-ac96-557597241ae1"
+          },
+          {
+            "result": {
+              "duration": 216699300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user sees the Available Orders list",
+            "match": {
+              "location": "AssignOrderTests.the_user_sees_the_available_list()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "77476cb3-94d5-4157-9f22-1eda55781c24"
+          },
+          {
+            "result": {
+              "duration": 558343600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks on one of the orders in the Available Orders list",
+            "match": {
+              "location": "AssignOrderTests.the_user_clicks_the_order_in_the_list()"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "51f8cf42-59ba-4dde-986b-c60cf52f1221"
+          }
+        ]
+      },
+      {
+        "BDD_TESTRUN_UUID": "11e4dd0d-d716-465f-b8d5-886cb0e9dd3f",
+        "line": 25,
+        "name": "Go Back",
+        "description": "",
+        "id": "us4---order-details;go-back",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2033338800,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user clicks on the \"BACK to available orders\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BACK to available orders\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginTests.the_user_clicks_the_button(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "efc1a906-5315-4d64-8705-9328b0630721"
+          },
+          {
+            "result": {
+              "duration": 8419841700,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user sees the \"Welcome\" screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginTests.the_user_sees_the_screen(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "2f5e549b-3371-43ba-9f2a-79037a120b67"
+          }
+        ]
+      }
+    ],
+    "name": "US4 - Order Details",
+    "description": "  As a user\n\tI want to open the order details\n\tSo that I can check the order information",
+    "id": "us4---order-details",
+    "keyword": "Feature",
+    "uri": "C:/Users/sfili/Katalon Studio/taes22_grupow_fastugadriver_tests.git/Include/features/us4.feature",
+    "tags": []
+  }
+]

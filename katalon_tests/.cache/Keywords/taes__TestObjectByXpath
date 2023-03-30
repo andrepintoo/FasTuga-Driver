@@ -1,0 +1,30 @@
+{
+  "keywordFileContentHash": "3B928A39B99C9B6B8953CB18D5F83B86",
+  "keywordClasses": [
+    {
+      "name": "taes.TestObjectByXpath",
+      "keywordMethods": [
+        {
+          "name": "getTestObjectWithXpath",
+          "parameters": [
+            {
+              "name": "xpath",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+US16 Test Suite,,,,2022-12-07 23:10:38,2022-12-07 23:11:49,1m - 10.293s,PASSED
+,,,,,,,
+Test Cases/US16 - Get Order Cancelled Notification/US16TestCaseAllFeatures,,,,2022-12-07 23:10:39,2022-12-07 23:11:49,1m - 9.784s,PASSED
+"runFeatureFile(""Include/features/us16.feature"")",,,,2022-12-07 23:10:39,2022-12-07 23:11:49,1m - 9.280s,PASSED

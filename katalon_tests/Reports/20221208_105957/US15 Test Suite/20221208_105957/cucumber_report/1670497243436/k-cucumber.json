@@ -1,0 +1,196 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "BDD_TESTRUN_UUID": "37dfe07c-6730-4f72-832b-59aaffeb46ff",
+        "line": 10,
+        "name": "Check Received Ready Order Notification",
+        "description": "",
+        "id": "get-order-ready-notification;check-received-ready-order-notification",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 30650508500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user opens the application",
+            "match": {
+              "location": "LoginTests.the_user_opens_the_application()"
+            },
+            "keyword": "Given ",
+            "BDD_STEP_UUID": "6bba5f2a-227e-473c-a5f1-120a31aeab18"
+          },
+          {
+            "result": {
+              "duration": 9589667800,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user is logged in",
+            "match": {
+              "location": "LogoutTests.the_user_is_logged_in()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "b1025069-9178-4919-9362-2e8b7f8fae63"
+          },
+          {
+            "result": {
+              "duration": 307222500,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user sees the \"Assigned Orders List\" list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Assigned Orders List\"",
+                  "offset": 18
+                }
+              ],
+              "location": "AvailableOrdersTests.the_user_sees_the_list(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "ea6b1306-be02-4ffb-8628-efda8297515e"
+          },
+          {
+            "result": {
+              "duration": 262183599,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the status is \" PREPARING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\" PREPARING\"",
+                  "offset": 14
+                }
+              ],
+              "location": "GetOrderReadyNotificationTests.the_status_is(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "522799e0-ae85-43a5-9c7d-cfab87635a37"
+          },
+          {
+            "result": {
+              "duration": 5036745200,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user waits \"5\" seconds",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"5\"",
+                  "offset": 15
+                }
+              ],
+              "location": "GetOrderReadyNotificationTests.the_user_waits_seconds(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "fb521caf-ca2e-4f86-8441-17a2ac20a09c"
+          },
+          {
+            "result": {
+              "duration": 404409100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on the \"Menu\" in the navbar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Menu\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the(String)"
+            },
+            "keyword": "When ",
+            "BDD_STEP_UUID": "fe1e63e6-f485-4600-8af2-3c2ea416b985"
+          },
+          {
+            "result": {
+              "duration": 1205620599,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks on the \"Available Orders\" text in the Menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Available Orders\"",
+                  "offset": 23
+                }
+              ],
+              "location": "LogoutTests.the_user_clicks_on_the_text(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "91b297e7-5e2e-4ab9-80ee-af6ad1a17e4f"
+          },
+          {
+            "result": {
+              "duration": 4797981600,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the order status switches to \" READY TO CLAIM\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\" READY TO CLAIM\"",
+                  "offset": 29
+                }
+              ],
+              "location": "ClaimOrderTests.the_order_status_switches_to(String)"
+            },
+            "keyword": "Then ",
+            "BDD_STEP_UUID": "306d13b5-db7d-4df5-9b40-262416516776"
+          },
+          {
+            "result": {
+              "duration": 1715849400,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user opens the notifications",
+            "match": {
+              "location": "GetOrderCancelledNotificationTests.the_user_opens_the_notifications()"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "c2e6d918-e7cc-4ec6-9d23-b39e215807ea"
+          },
+          {
+            "result": {
+              "duration": 1469399500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user sees the \"notification ready order\" notification",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"notification ready order\"",
+                  "offset": 18
+                }
+              ],
+              "location": "GetOrderCancelledNotificationTests.the_user_sees_the_notification(String)"
+            },
+            "keyword": "And ",
+            "BDD_STEP_UUID": "086dca48-473b-494b-b26d-66d411ee2270"
+          }
+        ]
+      }
+    ],
+    "name": "Get Order Ready Notification",
+    "description": "  As a user\n\tI want to receive notifications uppon a ready order from My Orders\n\tSo that I know which order I can start delivering",
+    "id": "get-order-ready-notification",
+    "keyword": "Feature",
+    "uri": "D:/UCs_5th_Semester/TA_EngenhariaSoftware/Projeto/taes22_grupow_fastugadriver_tests.git/include/features/us15.feature",
+    "tags": []
+  }
+]

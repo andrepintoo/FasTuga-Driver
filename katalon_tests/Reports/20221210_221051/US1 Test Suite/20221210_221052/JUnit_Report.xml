@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="US1 Test Suite" time="236.128" tests="1" failures="0" errors="0">
+   <testsuite name="US1 Test Suite" tests="1" failures="0" errors="0" time="236.128" skipped="0" timestamp="2022-12-10 22:10:59" hostname="Yunikyon - host.docker.internal" id="Test Suites/US1 Test Suite">
+      <properties>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 13)"/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="D:\\UCs_5th_Semester\\TA_EngenhariaSoftware\\Projeto\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221210_221051\\US1 Test Suite\\20221210_221052"/>
+         <property name="logFiles" value="D:\\UCs_5th_Semester\\TA_EngenhariaSoftware\\Projeto\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221210_221051\\US1 Test Suite\\20221210_221052\\appium.log, D:\\UCs_5th_Semester\\TA_EngenhariaSoftware\\Projeto\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221210_221051\\US1 Test Suite\\20221210_221052\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="Yunikyon - host.docker.internal"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="appiumServerStatus" value="{&quot;value&quot;:{&quot;build&quot;:{&quot;version&quot;:&quot;1.22.3&quot;}},&quot;sessionId&quot;:null,&quot;status&quot;:0}"/>
+         <property name="katalonVersion" value="8.5.2.208"/>
+         <property name="deviceOS" value="Android"/>
+         <property name="appiumVersion" value="1.22.3"/>
+         <property name="deviceModel" value="sdk_gphone64_x86_64"/>
+         <property name="hostAddress" value="192.168.1.66"/>
+         <property name="deviceManufacturer" value="Google"/>
+         <property name="deviceId" value="emulator-5554"/>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 13)"/>
+         <property name="deviceOSVersion" value="13"/>
+      </properties>
+      <testcase name="Test Cases/US1-Login/US1TestCaseAllFeatures" time="235.693" classname="Test Cases/US1-Login/US1TestCaseAllFeatures" status="PASSED">
+         <system-out><![CDATA[2022-12-10 22:11:00 - [TEST_CASE][PASSED] - Test Cases/US1-Login/US1TestCaseAllFeatures: Test Cases/US1-Login/US1TestCaseAllFeatures
+
+2022-12-10 22:11:00 - [TEST_STEP][PASSED] - runFeatureFile("Include/features/us1.feature"): Feature file: 'Include/features/us1.feature' was passed
+
+2022-12-10 22:11:00 - [MESSAGE][INFO] - Starting run keyword runFeatureFile: 'Include/features/us1.feature' and extract report to folder: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Reports\20221210_221051\US1 Test Suite\20221210_221052/cucumber_report/1670710260885'...
+
+2022-12-10 22:11:04 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Login Exists: SCENARIO Check Login Exists
+
+2022-12-10 22:11:04 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 22:11:04 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 22:11:04 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 22:11:05 - [MESSAGE][INFO] - Detected NodeJS location: "C:\Program Files\nodejs\node.exe"
+
+2022-12-10 22:11:08 - [MESSAGE][INFO] - Appium server started on port 50,519
+
+2022-12-10 22:11:41 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 22:11:41 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 22:11:41 - [TEST_STEP][PASSED] - the user sees the "LOGIN" screen: the user sees the "LOGIN" screen
+
+2022-12-10 22:11:42 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:11:43 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - LOGIN' is exist
+
+2022-12-10 22:11:43 - [MESSAGE][PASSED] - the user sees the "LOGIN" screen
+
+2022-12-10 22:11:43 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Login With Empty Fields: SCENARIO Check Login With Empty Fields
+
+2022-12-10 22:11:43 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 22:11:43 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 22:11:43 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 22:12:04 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 22:12:04 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 22:12:04 - [TEST_STEP][PASSED] - the user sees the "LOGIN" screen: the user sees the "LOGIN" screen
+
+2022-12-10 22:12:04 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:12:04 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - LOGIN' is exist
+
+2022-12-10 22:12:04 - [MESSAGE][PASSED] - the user sees the "LOGIN" screen
+
+2022-12-10 22:12:04 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-10 22:12:05 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:12:05 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 22:12:05 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-10 22:12:05 - [TEST_STEP][PASSED] - the user sees the "Email field cannot be empty" error text in "empty email login" field: the user sees the "Email field cannot be empty" error text in "empty email login" field
+
+2022-12-10 22:12:05 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:12:06 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.EditText - empty email login' has attribute 'contentDescription' is 'Email field cannot be empty'
+
+2022-12-10 22:12:06 - [MESSAGE][PASSED] - the user sees the "Email field cannot be empty" error text in "empty email login" field
+
+2022-12-10 22:12:06 - [TEST_STEP][PASSED] - the user sees the "Password field cannot be empty" error text in "empty password login" field: the user sees the "Password field cannot be empty" error text in "empty password login" field
+
+2022-12-10 22:12:06 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:12:06 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.EditText - empty password login' has attribute 'contentDescription' is 'Password field cannot be empty'
+
+2022-12-10 22:12:06 - [MESSAGE][PASSED] - the user sees the "Password field cannot be empty" error text in "empty password login" field
+
+2022-12-10 22:12:06 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Login With Invalid Email Format: SCENARIO Check Login With Invalid Email Format
+
+2022-12-10 22:12:06 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 22:12:06 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 22:12:06 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 22:12:26 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 22:12:26 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 22:12:26 - [TEST_STEP][PASSED] - the user sees the "LOGIN" screen: the user sees the "LOGIN" screen
+
+2022-12-10 22:12:26 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:12:27 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - LOGIN' is exist
+
+2022-12-10 22:12:27 - [MESSAGE][PASSED] - the user sees the "LOGIN" screen
+
+2022-12-10 22:12:27 - [TEST_STEP][PASSED] - the user fills the "email login" field with "abc.pt": the user fills the "email login" field with "abc.pt"
+
+2022-12-10 22:12:27 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:12:29 - [MESSAGE][PASSED] - Text 'abc.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-10 22:12:29 - [MESSAGE][PASSED] - the user fills the "email login" field with "abc.pt"
+
+2022-12-10 22:12:29 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-10 22:12:29 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:12:29 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 22:12:29 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-10 22:12:29 - [TEST_STEP][PASSED] - the user sees the "Wrong email format" error text in "invalid email login" field: the user sees the "Wrong email format" error text in "invalid email login" field
+
+2022-12-10 22:12:29 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:12:30 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.EditText - invalid email login' has attribute 'contentDescription' is 'Wrong email format'
+
+2022-12-10 22:12:30 - [MESSAGE][PASSED] - the user sees the "Wrong email format" error text in "invalid email login" field
+
+2022-12-10 22:12:30 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Go to Register Screen From Login: SCENARIO Go to Register Screen From Login
+
+2022-12-10 22:12:30 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 22:12:30 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 22:12:30 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 22:12:50 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 22:12:50 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 22:12:50 - [TEST_STEP][PASSED] - the user sees the "LOGIN" screen: the user sees the "LOGIN" screen
+
+2022-12-10 22:12:50 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:12:51 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - LOGIN' is exist
+
+2022-12-10 22:12:51 - [MESSAGE][PASSED] - the user sees the "LOGIN" screen
+
+2022-12-10 22:12:51 - [TEST_STEP][PASSED] - the user clicks on the "REGISTER" button: the user clicks on the "REGISTER" button
+
+2022-12-10 22:12:51 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:12:51 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - REGISTER'
+
+2022-12-10 22:12:51 - [MESSAGE][PASSED] - the user clicks on the "REGISTER" button
+
+2022-12-10 22:12:51 - [TEST_STEP][PASSED] - the user sees the "REGISTER" text: the user sees the "REGISTER" text
+
+2022-12-10 22:12:53 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/android.widget.TextView - REGISTER' are matched.
+
+2022-12-10 22:12:53 - [MESSAGE][PASSED] - the user sees the "REGISTER" text
+
+2022-12-10 22:12:53 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Successful Authentication: SCENARIO Check Successful Authentication
+
+2022-12-10 22:12:53 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 22:12:53 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 22:12:53 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 22:13:18 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 22:13:18 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 22:13:18 - [TEST_STEP][PASSED] - the user sees the "LOGIN" screen: the user sees the "LOGIN" screen
+
+2022-12-10 22:13:18 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:13:19 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - LOGIN' is exist
+
+2022-12-10 22:13:19 - [MESSAGE][PASSED] - the user sees the "LOGIN" screen
+
+2022-12-10 22:13:19 - [TEST_STEP][PASSED] - the user fills the email field with contacto@email.pt: the user fills the email field with contacto@email.pt
+
+2022-12-10 22:13:19 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:13:19 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-10 22:13:19 - [MESSAGE][PASSED] - the user fills the email field with contacto@email.pt
+
+2022-12-10 22:13:19 - [TEST_STEP][PASSED] - the user fills the password field with password: the user fills the password field with password
+
+2022-12-10 22:13:20 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:13:21 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-10 22:13:21 - [MESSAGE][PASSED] - the user fills the password field with password
+
+2022-12-10 22:13:21 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-10 22:13:21 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:13:21 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 22:13:21 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-10 22:13:21 - [TEST_STEP][PASSED] - the user sees the "Welcome" text: the user sees the "Welcome" text
+
+2022-12-10 22:13:26 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/android.widget.TextView - Welcome' are matched.
+
+2022-12-10 22:13:26 - [MESSAGE][PASSED] - the user sees the "Welcome" text
+
+2022-12-10 22:13:26 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Successful Authentication: SCENARIO Check Successful Authentication
+
+2022-12-10 22:13:26 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 22:13:26 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 22:13:26 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 22:13:48 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 22:13:48 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 22:13:48 - [TEST_STEP][PASSED] - the user sees the "LOGIN" screen: the user sees the "LOGIN" screen
+
+2022-12-10 22:13:48 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:13:49 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - LOGIN' is exist
+
+2022-12-10 22:13:49 - [MESSAGE][PASSED] - the user sees the "LOGIN" screen
+
+2022-12-10 22:13:49 - [TEST_STEP][PASSED] - the user fills the email field with rodrigo.campos@mail.pt: the user fills the email field with rodrigo.campos@mail.pt
+
+2022-12-10 22:13:49 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:13:50 - [MESSAGE][PASSED] - Text 'rodrigo.campos@mail.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-10 22:13:50 - [MESSAGE][PASSED] - the user fills the email field with rodrigo.campos@mail.pt
+
+2022-12-10 22:13:50 - [TEST_STEP][PASSED] - the user fills the password field with 12345678: the user fills the password field with 12345678
+
+2022-12-10 22:13:50 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:13:51 - [MESSAGE][PASSED] - Text '12345678' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-10 22:13:51 - [MESSAGE][PASSED] - the user fills the password field with 12345678
+
+2022-12-10 22:13:51 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-10 22:13:51 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:13:52 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 22:13:52 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-10 22:13:52 - [TEST_STEP][PASSED] - the user sees the "Welcome" text: the user sees the "Welcome" text
+
+2022-12-10 22:14:01 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/android.widget.TextView - Welcome' are matched.
+
+2022-12-10 22:14:01 - [MESSAGE][PASSED] - the user sees the "Welcome" text
+
+2022-12-10 22:14:01 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Login With Invalid Credentials: SCENARIO Check Login With Invalid Credentials
+
+2022-12-10 22:14:01 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 22:14:01 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 22:14:01 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 22:14:26 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 22:14:26 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 22:14:26 - [TEST_STEP][PASSED] - the user sees the "LOGIN" screen: the user sees the "LOGIN" screen
+
+2022-12-10 22:14:26 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:14:27 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - LOGIN' is exist
+
+2022-12-10 22:14:27 - [MESSAGE][PASSED] - the user sees the "LOGIN" screen
+
+2022-12-10 22:14:27 - [TEST_STEP][PASSED] - the user fills the email field with abc@email.pt: the user fills the email field with abc@email.pt
+
+2022-12-10 22:14:27 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:14:29 - [MESSAGE][PASSED] - Text 'abc@email.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-10 22:14:29 - [MESSAGE][PASSED] - the user fills the email field with abc@email.pt
+
+2022-12-10 22:14:29 - [TEST_STEP][PASSED] - the user fills the password field with 123456789: the user fills the password field with 123456789
+
+2022-12-10 22:14:29 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:14:30 - [MESSAGE][PASSED] - Text '123456789' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-10 22:14:30 - [MESSAGE][PASSED] - the user fills the password field with 123456789
+
+2022-12-10 22:14:30 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-10 22:14:30 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:14:31 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 22:14:31 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-10 22:14:31 - [TEST_STEP][PASSED] - the user sees the "Wrong Credentials" text: the user sees the "Wrong Credentials" text
+
+2022-12-10 22:14:32 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/android.widget.TextView - Wrong Credentials' are matched.
+
+2022-12-10 22:14:32 - [MESSAGE][PASSED] - the user sees the "Wrong Credentials" text
+
+2022-12-10 22:14:32 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Login With Invalid Credentials: SCENARIO Check Login With Invalid Credentials
+
+2022-12-10 22:14:32 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 22:14:32 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 22:14:32 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 22:14:50 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 22:14:50 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 22:14:50 - [TEST_STEP][PASSED] - the user sees the "LOGIN" screen: the user sees the "LOGIN" screen
+
+2022-12-10 22:14:51 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:14:51 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - LOGIN' is exist
+
+2022-12-10 22:14:51 - [MESSAGE][PASSED] - the user sees the "LOGIN" screen
+
+2022-12-10 22:14:51 - [TEST_STEP][PASSED] - the user fills the email field with utilizador@email.pt: the user fills the email field with utilizador@email.pt
+
+2022-12-10 22:14:51 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:14:52 - [MESSAGE][PASSED] - Text 'utilizador@email.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-10 22:14:53 - [MESSAGE][PASSED] - the user fills the email field with utilizador@email.pt
+
+2022-12-10 22:14:53 - [TEST_STEP][PASSED] - the user fills the password field with admin: the user fills the password field with admin
+
+2022-12-10 22:14:53 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:14:54 - [MESSAGE][PASSED] - Text 'admin' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-10 22:14:54 - [MESSAGE][PASSED] - the user fills the password field with admin
+
+2022-12-10 22:14:54 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-10 22:14:54 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 22:14:54 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 22:14:54 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-10 22:14:54 - [TEST_STEP][PASSED] - the user sees the "Wrong Credentials" text: the user sees the "Wrong Credentials" text
+
+2022-12-10 22:14:55 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/android.widget.TextView - Wrong Credentials' are matched.
+
+2022-12-10 22:14:55 - [MESSAGE][PASSED] - the user sees the "Wrong Credentials" text
+
+2022-12-10 22:14:55 - [MESSAGE][PASSED] - Feature file: 'Include/features/us1.feature' was passed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2022-12-10 22:10:59 - [TEST_SUITE][PASSED] - US1 Test Suite: Test Cases/US1-Login/US1TestCaseAllFeatures]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

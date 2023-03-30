@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="US18 Test Suite" time="298.352" tests="1" failures="0" errors="0">
+   <testsuite name="US18 Test Suite" tests="1" failures="0" errors="0" time="298.352" skipped="0" timestamp="2022-12-10 21:43:18" hostname="sfili - LAPTOP-19A7R8I6.mshome.net" id="Test Suites/US18 Test Suite">
+      <properties>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 12)"/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\sfili\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221210_214304\\US18 Test Suite\\20221210_214304"/>
+         <property name="logFiles" value="C:\\Users\\sfili\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221210_214304\\US18 Test Suite\\20221210_214304\\appium.log, C:\\Users\\sfili\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221210_214304\\US18 Test Suite\\20221210_214304\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="sfili - LAPTOP-19A7R8I6.mshome.net"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="appiumServerStatus" value="{&quot;value&quot;:{&quot;build&quot;:{&quot;version&quot;:&quot;1.22.3&quot;}},&quot;sessionId&quot;:null,&quot;status&quot;:0}"/>
+         <property name="katalonVersion" value="8.5.1.208"/>
+         <property name="deviceOS" value="Android"/>
+         <property name="appiumVersion" value="1.22.3"/>
+         <property name="deviceModel" value="sdk_gphone64_x86_64"/>
+         <property name="hostAddress" value="172.26.0.1"/>
+         <property name="deviceManufacturer" value="Google"/>
+         <property name="deviceId" value="emulator-5554"/>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 12)"/>
+         <property name="deviceOSVersion" value="12"/>
+      </properties>
+      <testcase name="Test Cases/US18 - See Notifications History/US18TestCaseAllFeatures" time="297.648" classname="Test Cases/US18 - See Notifications History/US18TestCaseAllFeatures" status="PASSED">
+         <system-out><![CDATA[2022-12-10 21:43:18 - [TEST_CASE][PASSED] - Test Cases/US18 - See Notifications History/US18TestCaseAllFeatures: Test Cases/US18 - See Notifications History/US18TestCaseAllFeatures
+
+2022-12-10 21:43:19 - [TEST_STEP][PASSED] - runFeatureFile("Include/features/us18.feature"): Feature file: 'Include/features/us18.feature' was passed
+
+2022-12-10 21:43:19 - [MESSAGE][INFO] - Starting run keyword runFeatureFile: 'Include/features/us18.feature' and extract report to folder: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Reports\20221210_214304\US18 Test Suite\20221210_214304/cucumber_report/1670708599745'...
+
+2022-12-10 21:43:23 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Notification History Button Exists: SCENARIO Check Notification History Button Exists
+
+2022-12-10 21:43:23 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 21:43:24 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 21:43:24 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 21:43:24 - [MESSAGE][INFO] - Detected NodeJS location: "C:\Program Files\nodejs\node.exe"
+
+2022-12-10 21:43:28 - [MESSAGE][INFO] - Appium server started on port 59.265
+
+2022-12-10 21:44:08 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 21:44:08 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 21:44:08 - [TEST_STEP][PASSED] - the user logs in the application: the user logs in the application
+
+2022-12-10 21:44:08 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:44:11 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-10 21:44:11 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:44:12 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-10 21:44:12 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:44:13 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 21:44:13 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:44:23 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-10 21:44:23 - [MESSAGE][PASSED] - the user logs in the application
+
+2022-12-10 21:44:23 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 21:44:24 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:44:24 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 21:44:24 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 21:44:24 - [TEST_STEP][PASSED] - the user sees the "Notification History" text in the Menu: the user sees the "Notification History" text in the Menu
+
+2022-12-10 21:44:26 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/android.widget.CheckedTextView - Notification History' are matched.
+
+2022-12-10 21:44:26 - [MESSAGE][PASSED] - the user sees the "Notification History" text in the Menu
+
+2022-12-10 21:44:26 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Notification History Screen Exists: SCENARIO Check Notification History Screen Exists
+
+2022-12-10 21:44:26 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 21:44:26 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 21:44:26 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 21:44:52 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 21:44:52 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 21:44:52 - [TEST_STEP][PASSED] - the user logs in the application: the user logs in the application
+
+2022-12-10 21:44:52 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:44:53 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-10 21:44:53 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:44:55 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-10 21:44:55 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:44:56 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 21:44:56 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:45:14 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-10 21:45:14 - [MESSAGE][PASSED] - the user logs in the application
+
+2022-12-10 21:45:14 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 21:45:14 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:45:14 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 21:45:14 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 21:45:14 - [TEST_STEP][PASSED] - the user clicks on the "Notification History" text in the Menu: the user clicks on the "Notification History" text in the Menu
+
+2022-12-10 21:45:14 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:45:15 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Notification History'
+
+2022-12-10 21:45:15 - [MESSAGE][PASSED] - the user clicks on the "Notification History" text in the Menu
+
+2022-12-10 21:45:15 - [TEST_STEP][PASSED] - the user sees that the "Order Ready Notification" text exists: the user sees that the "Order Ready Notification" text exists
+
+2022-12-10 21:45:15 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:45:16 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Order Ready Notification' is exist
+
+2022-12-10 21:45:16 - [MESSAGE][PASSED] - the user sees that the "Order Ready Notification" text exists
+
+2022-12-10 21:45:16 - [TEST_STEP][PASSED] - the user sees that the "Order Cancelled Notification" text exists: the user sees that the "Order Cancelled Notification" text exists
+
+2022-12-10 21:45:16 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:45:17 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Order Cancelled Notification' is exist
+
+2022-12-10 21:45:17 - [MESSAGE][PASSED] - the user sees that the "Order Cancelled Notification" text exists
+
+2022-12-10 21:45:17 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Order Ready Notification in Notification History: SCENARIO Check Order Ready Notification in Notification History
+
+2022-12-10 21:45:17 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 21:45:17 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 21:45:17 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 21:45:38 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 21:45:38 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 21:45:38 - [TEST_STEP][PASSED] - the user logs in the application: the user logs in the application
+
+2022-12-10 21:45:38 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:45:40 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-10 21:45:40 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:45:41 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-10 21:45:41 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:45:42 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 21:45:42 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:45:52 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-10 21:45:52 - [MESSAGE][PASSED] - the user logs in the application
+
+2022-12-10 21:45:52 - [TEST_STEP][PASSED] - the user sees the "Available Orders List" list: the user sees the "Available Orders List" list
+
+2022-12-10 21:45:52 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:45:52 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.ScrollView - Available Orders List' is exist
+
+2022-12-10 21:45:52 - [MESSAGE][PASSED] - the user sees the "Available Orders List" list
+
+2022-12-10 21:45:52 - [TEST_STEP][PASSED] - the user waits "10" seconds: the user waits "10" seconds
+
+2022-12-10 21:46:02 - [MESSAGE][PASSED] - Delayed 10 second(s)
+
+2022-12-10 21:46:02 - [MESSAGE][PASSED] - the user waits "10" seconds
+
+2022-12-10 21:46:02 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 21:46:02 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:02 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 21:46:02 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 21:46:02 - [TEST_STEP][PASSED] - the user clicks on the "Available Orders Menu" text in the Menu: the user clicks on the "Available Orders Menu" text in the Menu
+
+2022-12-10 21:46:02 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:04 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Available Orders Menu'
+
+2022-12-10 21:46:04 - [MESSAGE][PASSED] - the user clicks on the "Available Orders Menu" text in the Menu
+
+2022-12-10 21:46:04 - [TEST_STEP][PASSED] - the user opens the notifications: the user opens the notifications
+
+2022-12-10 21:46:06 - [MESSAGE][PASSED] - Swiped from 0,0 to 0,500
+
+2022-12-10 21:46:06 - [MESSAGE][PASSED] - the user opens the notifications
+
+2022-12-10 21:46:06 - [TEST_STEP][PASSED] - the user sees the "notification ready order" notification: the user sees the "notification ready order" notification
+
+2022-12-10 21:46:06 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:07 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.LinearLayout - notification ready order' is exist
+
+2022-12-10 21:46:07 - [MESSAGE][PASSED] - the user sees the "notification ready order" notification
+
+2022-12-10 21:46:07 - [TEST_STEP][PASSED] - the user closes the notifications: the user closes the notifications
+
+2022-12-10 21:46:09 - [MESSAGE][PASSED] - Notification closed.
+
+2022-12-10 21:46:09 - [MESSAGE][PASSED] - the user closes the notifications
+
+2022-12-10 21:46:09 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 21:46:09 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:14 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 21:46:14 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 21:46:14 - [TEST_STEP][PASSED] - the user clicks on the "Notification History" text in the Menu: the user clicks on the "Notification History" text in the Menu
+
+2022-12-10 21:46:14 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:15 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Notification History'
+
+2022-12-10 21:46:15 - [MESSAGE][PASSED] - the user clicks on the "Notification History" text in the Menu
+
+2022-12-10 21:46:15 - [TEST_STEP][PASSED] - the user sees that the "Order Ready Notification" text exists: the user sees that the "Order Ready Notification" text exists
+
+2022-12-10 21:46:15 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:16 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Order Ready Notification' is exist
+
+2022-12-10 21:46:16 - [MESSAGE][PASSED] - the user sees that the "Order Ready Notification" text exists
+
+2022-12-10 21:46:16 - [TEST_STEP][PASSED] - the user sees the Orders Ready Notification list: the user sees the Orders Ready Notification list
+
+2022-12-10 21:46:16 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:17 - [MESSAGE][PASSED] - Element '' is exist
+
+2022-12-10 21:46:17 - [MESSAGE][PASSED] - the user sees the Orders Ready Notification list
+
+2022-12-10 21:46:17 - [TEST_STEP][PASSED] - the user sees the "ORDER READY" button in the Orders Ready Notification list: the user sees the "ORDER READY" button in the Orders Ready Notification list
+
+2022-12-10 21:46:17 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:17 - [MESSAGE][PASSED] - Element 'ORDER READY' is exist
+
+2022-12-10 21:46:17 - [MESSAGE][PASSED] - the user sees the "ORDER READY" button in the Orders Ready Notification list
+
+2022-12-10 21:46:17 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Cancel Order Notification In Notification History: SCENARIO Check Cancel Order Notification In Notification History
+
+2022-12-10 21:46:17 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 21:46:17 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 21:46:17 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 21:46:31 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 21:46:31 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 21:46:31 - [TEST_STEP][PASSED] - the user logs in the application: the user logs in the application
+
+2022-12-10 21:46:31 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:33 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-10 21:46:33 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:35 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-10 21:46:35 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:35 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 21:46:35 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:43 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-10 21:46:43 - [MESSAGE][PASSED] - the user logs in the application
+
+2022-12-10 21:46:43 - [TEST_STEP][PASSED] - the user sees the Assigned Orders list: the user sees the Assigned Orders list
+
+2022-12-10 21:46:43 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:43 - [MESSAGE][PASSED] - Element '' is exist
+
+2022-12-10 21:46:43 - [MESSAGE][PASSED] - the user sees the Assigned Orders list
+
+2022-12-10 21:46:43 - [TEST_STEP][PASSED] - the user clicks on one of the "Assigned Order Item" in the Assigned Orders list: the user clicks on one of the "Assigned Order Item" in the Assigned Orders list
+
+2022-12-10 21:46:45 - [MESSAGE][PASSED] - Element 'Assigned Order Item' has attribute 'text' is 'ORDER: 8476
+DISTANCE: 2.37 KM
+DURATION: 4.35 MIN
+EARNING: 2€
+STATUS: READY TO CLAIM'
+
+2022-12-10 21:46:45 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:45 - [MESSAGE][PASSED] - Tapped on element 'Assigned Order Item'
+
+2022-12-10 21:46:45 - [MESSAGE][PASSED] - the user clicks on one of the "Assigned Order Item" in the Assigned Orders list
+
+2022-12-10 21:46:45 - [TEST_STEP][PASSED] - the user sees the "Order Details" screen: the user sees the "Order Details" screen
+
+2022-12-10 21:46:45 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:47 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Order Details' is exist
+
+2022-12-10 21:46:47 - [MESSAGE][PASSED] - the user sees the "Order Details" screen
+
+2022-12-10 21:46:47 - [TEST_STEP][PASSED] - the user clicks on the "Claim" button: the user clicks on the "Claim" button
+
+2022-12-10 21:46:47 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:47 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - Claim'
+
+2022-12-10 21:46:47 - [MESSAGE][PASSED] - the user clicks on the "Claim" button
+
+2022-12-10 21:46:47 - [TEST_STEP][PASSED] - the user sees the "Welcome" screen: the user sees the "Welcome" screen
+
+2022-12-10 21:46:47 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:55 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-10 21:46:55 - [MESSAGE][PASSED] - the user sees the "Welcome" screen
+
+2022-12-10 21:46:55 - [TEST_STEP][PASSED] - the user sees the Assigned Orders list: the user sees the Assigned Orders list
+
+2022-12-10 21:46:55 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:55 - [MESSAGE][PASSED] - Element '' is exist
+
+2022-12-10 21:46:55 - [MESSAGE][PASSED] - the user sees the Assigned Orders list
+
+2022-12-10 21:46:55 - [TEST_STEP][PASSED] - the user clicks on one of the "Assigned Order Item" in the Assigned Orders list: the user clicks on one of the "Assigned Order Item" in the Assigned Orders list
+
+2022-12-10 21:46:55 - [MESSAGE][PASSED] - Element 'Assigned Order Item' has attribute 'text' is 'ORDER: 8476
+DISTANCE: 2.37 KM
+DURATION: 4.35 MIN
+EARNING: 2€
+STATUS: DELIVERING'
+
+2022-12-10 21:46:55 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:55 - [MESSAGE][PASSED] - Tapped on element 'Assigned Order Item'
+
+2022-12-10 21:46:55 - [MESSAGE][PASSED] - the user clicks on one of the "Assigned Order Item" in the Assigned Orders list
+
+2022-12-10 21:46:55 - [TEST_STEP][PASSED] - the user sees the "Order Details" screen: the user sees the "Order Details" screen
+
+2022-12-10 21:46:55 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:57 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Order Details' is exist
+
+2022-12-10 21:46:57 - [MESSAGE][PASSED] - the user sees the "Order Details" screen
+
+2022-12-10 21:46:57 - [TEST_STEP][PASSED] - the user clicks on the "Cancel" button: the user clicks on the "Cancel" button
+
+2022-12-10 21:46:57 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:57 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - Cancel'
+
+2022-12-10 21:46:57 - [MESSAGE][PASSED] - the user clicks on the "Cancel" button
+
+2022-12-10 21:46:57 - [TEST_STEP][PASSED] - the user sees the "Cancel Order Confirmation" confirmation: the user sees the "Cancel Order Confirmation" confirmation
+
+2022-12-10 21:46:57 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:58 - [MESSAGE][PASSED] - Element 'Object Repository/android.view.ViewGroup - Cancel Order Confirmation' is exist
+
+2022-12-10 21:46:58 - [MESSAGE][PASSED] - the user sees the "Cancel Order Confirmation" confirmation
+
+2022-12-10 21:46:58 - [TEST_STEP][PASSED] - the user fills the "reason cancel order" field with "I fell": the user fills the "reason cancel order" field with "I fell"
+
+2022-12-10 21:46:58 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:58 - [MESSAGE][PASSED] - Text 'I fell' has been set to element 'Object Repository/android.widget.EditText - reason cancel order'
+
+2022-12-10 21:46:58 - [MESSAGE][PASSED] - the user fills the "reason cancel order" field with "I fell"
+
+2022-12-10 21:46:58 - [TEST_STEP][PASSED] - the user clicks on the "YES Cancel Order" button: the user clicks on the "YES Cancel Order" button
+
+2022-12-10 21:46:59 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:46:59 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - YES Cancel Order'
+
+2022-12-10 21:46:59 - [MESSAGE][PASSED] - the user clicks on the "YES Cancel Order" button
+
+2022-12-10 21:46:59 - [TEST_STEP][PASSED] - the user sees the "Welcome" screen: the user sees the "Welcome" screen
+
+2022-12-10 21:46:59 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:47:05 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-10 21:47:05 - [MESSAGE][PASSED] - the user sees the "Welcome" screen
+
+2022-12-10 21:47:05 - [TEST_STEP][PASSED] - the user opens the notifications: the user opens the notifications
+
+2022-12-10 21:47:07 - [MESSAGE][PASSED] - Swiped from 0,0 to 0,500
+
+2022-12-10 21:47:07 - [MESSAGE][PASSED] - the user opens the notifications
+
+2022-12-10 21:47:07 - [TEST_STEP][PASSED] - the user sees the "notification cancel order" notification: the user sees the "notification cancel order" notification
+
+2022-12-10 21:47:07 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:47:08 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.LinearLayout - notification cancel order' is exist
+
+2022-12-10 21:47:08 - [MESSAGE][PASSED] - the user sees the "notification cancel order" notification
+
+2022-12-10 21:47:08 - [TEST_STEP][PASSED] - the user closes the notifications: the user closes the notifications
+
+2022-12-10 21:47:09 - [MESSAGE][PASSED] - Notification closed.
+
+2022-12-10 21:47:09 - [MESSAGE][PASSED] - the user closes the notifications
+
+2022-12-10 21:47:09 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 21:47:09 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:47:10 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 21:47:10 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 21:47:10 - [TEST_STEP][PASSED] - the user clicks on the "Notification History" text in the Menu: the user clicks on the "Notification History" text in the Menu
+
+2022-12-10 21:47:10 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:47:11 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Notification History'
+
+2022-12-10 21:47:11 - [MESSAGE][PASSED] - the user clicks on the "Notification History" text in the Menu
+
+2022-12-10 21:47:11 - [TEST_STEP][PASSED] - the user sees the Orders Cancelled Notification list: the user sees the Orders Cancelled Notification list
+
+2022-12-10 21:47:11 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:47:12 - [MESSAGE][PASSED] - Element '' is exist
+
+2022-12-10 21:47:12 - [MESSAGE][PASSED] - the user sees the Orders Cancelled Notification list
+
+2022-12-10 21:47:12 - [TEST_STEP][PASSED] - the user sees the "ORDER CANCELLED" button in the Orders Cancelled Notification list: the user sees the "ORDER CANCELLED" button in the Orders Cancelled Notification list
+
+2022-12-10 21:47:12 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:47:12 - [MESSAGE][PASSED] - Element 'ORDER CANCELLED' is exist
+
+2022-12-10 21:47:12 - [MESSAGE][PASSED] - the user sees the "ORDER CANCELLED" button in the Orders Cancelled Notification list
+
+2022-12-10 21:47:12 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check New Notification Doesn't Delete Older One: SCENARIO Check New Notification Doesn't Delete Older One
+
+2022-12-10 21:47:12 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-10 21:47:12 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-10 21:47:12 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-10 21:47:31 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-10 21:47:31 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-10 21:47:31 - [TEST_STEP][PASSED] - the user logs in the application: the user logs in the application
+
+2022-12-10 21:47:31 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:47:32 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-10 21:47:33 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:47:34 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-10 21:47:34 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:47:34 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-10 21:47:35 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:47:44 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-10 21:47:44 - [MESSAGE][PASSED] - the user logs in the application
+
+2022-12-10 21:47:44 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 21:47:44 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:47:44 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 21:47:44 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 21:47:44 - [TEST_STEP][PASSED] - the user clicks on the "Notification History" text in the Menu: the user clicks on the "Notification History" text in the Menu
+
+2022-12-10 21:47:44 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:47:45 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Notification History'
+
+2022-12-10 21:47:45 - [MESSAGE][PASSED] - the user clicks on the "Notification History" text in the Menu
+
+2022-12-10 21:47:45 - [TEST_STEP][PASSED] - the user sees the Orders Ready Notification list: the user sees the Orders Ready Notification list
+
+2022-12-10 21:47:45 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:47:46 - [MESSAGE][PASSED] - Element '' is exist
+
+2022-12-10 21:47:46 - [MESSAGE][PASSED] - the user sees the Orders Ready Notification list
+
+2022-12-10 21:47:46 - [TEST_STEP][PASSED] - the user sees the text button in the Orders Ready Notification list: the user sees the text button in the Orders Ready Notification list
+
+2022-12-10 21:47:49 - [MESSAGE][PASSED] - Delayed 3 second(s)
+
+2022-12-10 21:47:49 - [MESSAGE][PASSED] - Element '' has attribute 'text' is 'ORDER 8502 IS READY TO BE CLAIMED
+PLEASE CLAIM THE FOLLOWING ORDER TO BE DELIVERED
+SAT DEC 10 21:47:26 GMT 2022'
+
+2022-12-10 21:47:49 - [MESSAGE][PASSED] - the user sees the text button in the Orders Ready Notification list
+
+2022-12-10 21:47:49 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 21:47:50 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:47:50 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 21:47:50 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 21:47:50 - [TEST_STEP][PASSED] - the user clicks on the "Available Orders Menu" text in the Menu: the user clicks on the "Available Orders Menu" text in the Menu
+
+2022-12-10 21:47:50 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:47:51 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Available Orders Menu'
+
+2022-12-10 21:47:51 - [MESSAGE][PASSED] - the user clicks on the "Available Orders Menu" text in the Menu
+
+2022-12-10 21:47:51 - [TEST_STEP][PASSED] - the user waits "10" seconds: the user waits "10" seconds
+
+2022-12-10 21:48:01 - [MESSAGE][PASSED] - Delayed 10 second(s)
+
+2022-12-10 21:48:01 - [MESSAGE][PASSED] - the user waits "10" seconds
+
+2022-12-10 21:48:01 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 21:48:01 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:48:01 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 21:48:01 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 21:48:01 - [TEST_STEP][PASSED] - the user clicks on the "Available Orders Menu" text in the Menu: the user clicks on the "Available Orders Menu" text in the Menu
+
+2022-12-10 21:48:01 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:48:03 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Available Orders Menu'
+
+2022-12-10 21:48:03 - [MESSAGE][PASSED] - the user clicks on the "Available Orders Menu" text in the Menu
+
+2022-12-10 21:48:03 - [TEST_STEP][PASSED] - the user opens the notifications: the user opens the notifications
+
+2022-12-10 21:48:04 - [MESSAGE][PASSED] - Swiped from 0,0 to 0,500
+
+2022-12-10 21:48:04 - [MESSAGE][PASSED] - the user opens the notifications
+
+2022-12-10 21:48:04 - [TEST_STEP][PASSED] - the user sees the "notification ready order" notification: the user sees the "notification ready order" notification
+
+2022-12-10 21:48:04 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:48:04 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.LinearLayout - notification ready order' is exist
+
+2022-12-10 21:48:04 - [MESSAGE][PASSED] - the user sees the "notification ready order" notification
+
+2022-12-10 21:48:04 - [TEST_STEP][PASSED] - the user closes the notifications: the user closes the notifications
+
+2022-12-10 21:48:06 - [MESSAGE][PASSED] - Notification closed.
+
+2022-12-10 21:48:06 - [MESSAGE][PASSED] - the user closes the notifications
+
+2022-12-10 21:48:06 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-10 21:48:06 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:48:13 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-10 21:48:13 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-10 21:48:13 - [TEST_STEP][PASSED] - the user clicks on the "Notification History" text in the Menu: the user clicks on the "Notification History" text in the Menu
+
+2022-12-10 21:48:13 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:48:15 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Notification History'
+
+2022-12-10 21:48:15 - [MESSAGE][PASSED] - the user clicks on the "Notification History" text in the Menu
+
+2022-12-10 21:48:15 - [TEST_STEP][PASSED] - the user sees that the "Order Ready Notification" text exists: the user sees that the "Order Ready Notification" text exists
+
+2022-12-10 21:48:15 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:48:16 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Order Ready Notification' is exist
+
+2022-12-10 21:48:16 - [MESSAGE][PASSED] - the user sees that the "Order Ready Notification" text exists
+
+2022-12-10 21:48:16 - [TEST_STEP][PASSED] - the user sees the Orders Ready Notification list: the user sees the Orders Ready Notification list
+
+2022-12-10 21:48:16 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-10 21:48:16 - [MESSAGE][PASSED] - Element '' is exist
+
+2022-12-10 21:48:16 - [MESSAGE][PASSED] - the user sees the Orders Ready Notification list
+
+2022-12-10 21:48:16 - [TEST_STEP][PASSED] - the user sees the "ORDER READY" button in the Orders Ready Notification list still exists: the user sees the "ORDER READY" button in the Orders Ready Notification list still exists
+
+2022-12-10 21:48:16 - [MESSAGE][PASSED] - Element 'ORDER READY' has attribute 'text' is 'ORDER 8502 IS READY TO BE CLAIMED
+PLEASE CLAIM THE FOLLOWING ORDER TO BE DELIVERED
+SAT DEC 10 21:47:26 GMT 2022'
+
+2022-12-10 21:48:16 - [MESSAGE][PASSED] - the user sees the "ORDER READY" button in the Orders Ready Notification list still exists
+
+2022-12-10 21:48:16 - [MESSAGE][PASSED] - Feature file: 'Include/features/us18.feature' was passed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2022-12-10 21:43:18 - [TEST_SUITE][PASSED] - US18 Test Suite: Test Cases/US18 - See Notifications History/US18TestCaseAllFeatures]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

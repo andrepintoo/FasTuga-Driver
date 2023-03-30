@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="US9 Test Suite" time="89.401" tests="1" failures="0" errors="0">
+   <testsuite name="US9 Test Suite" tests="1" failures="0" errors="0" time="89.401" skipped="0" timestamp="2022-12-07 08:22:36" hostname="Yunikyon - DESKTOP-553098Q.mshome.net" id="Test Suites/US9 Test Suite">
+      <properties>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 13)"/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="D:\\UCs_5th_Semester\\TA_EngenhariaSoftware\\Projeto\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221207_082228\\US9 Test Suite\\20221207_082228"/>
+         <property name="logFiles" value="D:\\UCs_5th_Semester\\TA_EngenhariaSoftware\\Projeto\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221207_082228\\US9 Test Suite\\20221207_082228\\appium.log, D:\\UCs_5th_Semester\\TA_EngenhariaSoftware\\Projeto\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221207_082228\\US9 Test Suite\\20221207_082228\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="Yunikyon - DESKTOP-553098Q.mshome.net"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="appiumServerStatus" value="{&quot;value&quot;:{&quot;build&quot;:{&quot;version&quot;:&quot;1.22.3&quot;}},&quot;sessionId&quot;:null,&quot;status&quot;:0}"/>
+         <property name="katalonVersion" value="8.5.2.208"/>
+         <property name="deviceOS" value="Android"/>
+         <property name="appiumVersion" value="1.22.3"/>
+         <property name="deviceModel" value="sdk_gphone64_x86_64"/>
+         <property name="hostAddress" value="172.20.112.1"/>
+         <property name="deviceManufacturer" value="Google"/>
+         <property name="deviceId" value="emulator-5554"/>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 13)"/>
+         <property name="deviceOSVersion" value="13"/>
+      </properties>
+      <testcase name="Test Cases/US9 - Claim Order/US9TestCaseAllFeatures" time="89.061" classname="Test Cases/US9 - Claim Order/US9TestCaseAllFeatures" status="PASSED">
+         <system-out><![CDATA[2022-12-07 08:22:36 - [TEST_CASE][PASSED] - Test Cases/US9 - Claim Order/US9TestCaseAllFeatures: Test Cases/US9 - Claim Order/US9TestCaseAllFeatures
+
+2022-12-07 08:22:37 - [TEST_STEP][PASSED] - runFeatureFile("include/features/us9.feature"): Feature file: 'include/features/us9.feature' was passed
+
+2022-12-07 08:22:37 - [MESSAGE][INFO] - Starting run keyword runFeatureFile: 'include/features/us9.feature' and extract report to folder: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Reports\20221207_082228\US9 Test Suite\20221207_082228/cucumber_report/1670401357117'...
+
+2022-12-07 08:22:38 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Claim Button Exists: SCENARIO Check Claim Button Exists
+
+2022-12-07 08:22:38 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-07 08:22:39 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-07 08:22:39 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-07 08:22:39 - [MESSAGE][INFO] - Detected NodeJS location: "C:\Program Files\nodejs\node.exe"
+
+2022-12-07 08:22:41 - [MESSAGE][INFO] - Appium server started on port 53,139
+
+2022-12-07 08:23:06 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-07 08:23:06 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-07 08:23:06 - [TEST_STEP][PASSED] - the user is logged in: the user is logged in
+
+2022-12-07 08:23:06 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-07 08:23:08 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-07 08:23:08 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-07 08:23:10 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-07 08:23:10 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-07 08:23:10 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-07 08:23:11 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-07 08:23:15 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-07 08:23:15 - [MESSAGE][PASSED] - the user is logged in
+
+2022-12-07 08:23:15 - [TEST_STEP][PASSED] - the user sees the "Assigned Orders List" list: the user sees the "Assigned Orders List" list
+
+2022-12-07 08:23:15 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-07 08:23:15 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.ScrollView - Assigned Orders List' is exist
+
+2022-12-07 08:23:15 - [MESSAGE][PASSED] - the user sees the "Assigned Orders List" list
+
+2022-12-07 08:23:15 - [TEST_STEP][PASSED] - the user clicks on one of the "Assigned Order Item" in the Assigned Orders list: the user clicks on one of the "Assigned Order Item" in the Assigned Orders list
+
+2022-12-07 08:23:15 - [MESSAGE][PASSED] - Element 'Assigned Order Item' has attribute 'text' is 'ORDER: 9076
+DISTANCE: 2.95 KM
+DURATION: 5.75 MIN
+EARNING: 2€
+STATUS: READY TO CLAIM'
+
+2022-12-07 08:23:15 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-07 08:23:16 - [MESSAGE][PASSED] - Tapped on element 'Assigned Order Item'
+
+2022-12-07 08:23:16 - [MESSAGE][PASSED] - the user clicks on one of the "Assigned Order Item" in the Assigned Orders list
+
+2022-12-07 08:23:16 - [TEST_STEP][PASSED] - the user sees the "Order Details" screen: the user sees the "Order Details" screen
+
+2022-12-07 08:23:16 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-07 08:23:18 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Order Details' is exist
+
+2022-12-07 08:23:18 - [MESSAGE][PASSED] - the user sees the "Order Details" screen
+
+2022-12-07 08:23:18 - [TEST_STEP][PASSED] - the user sees the "Claim" button: the user sees the "Claim" button
+
+2022-12-07 08:23:18 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-07 08:23:18 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.Button - Claim' is exist
+
+2022-12-07 08:23:18 - [MESSAGE][PASSED] - the user sees the "Claim" button
+
+2022-12-07 08:23:18 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Claimed Order By Clicking Claim Button: SCENARIO Check Claimed Order By Clicking Claim Button
+
+2022-12-07 08:23:18 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-07 08:23:18 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-07 08:23:18 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-07 08:23:41 - [MESSAGE][PASSED] - Started app at: 'D:\UCs_5th_Semester\TA_EngenhariaSoftware\Projeto\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-07 08:23:41 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-07 08:23:41 - [TEST_STEP][PASSED] - the user is logged in: the user is logged in
+
+2022-12-07 08:23:41 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-07 08:23:43 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-07 08:23:43 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-07 08:23:44 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-07 08:23:44 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-07 08:23:45 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-07 08:23:45 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-07 08:23:53 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-07 08:23:53 - [MESSAGE][PASSED] - the user is logged in
+
+2022-12-07 08:23:53 - [TEST_STEP][PASSED] - the user sees the "Assigned Orders List" list: the user sees the "Assigned Orders List" list
+
+2022-12-07 08:23:53 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-07 08:23:53 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.ScrollView - Assigned Orders List' is exist
+
+2022-12-07 08:23:53 - [MESSAGE][PASSED] - the user sees the "Assigned Orders List" list
+
+2022-12-07 08:23:53 - [TEST_STEP][PASSED] - the user clicks on one of the "Assigned Order Item" in the Assigned Orders list: the user clicks on one of the "Assigned Order Item" in the Assigned Orders list
+
+2022-12-07 08:23:53 - [MESSAGE][PASSED] - Element 'Assigned Order Item' has attribute 'text' is 'ORDER: 9076
+DISTANCE: 2.95 KM
+DURATION: 5.75 MIN
+EARNING: 2€
+STATUS: READY TO CLAIM'
+
+2022-12-07 08:23:53 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-07 08:23:54 - [MESSAGE][PASSED] - Tapped on element 'Assigned Order Item'
+
+2022-12-07 08:23:54 - [MESSAGE][PASSED] - the user clicks on one of the "Assigned Order Item" in the Assigned Orders list
+
+2022-12-07 08:23:54 - [TEST_STEP][PASSED] - the user clicks on the "Claim" button: the user clicks on the "Claim" button
+
+2022-12-07 08:23:54 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-07 08:23:57 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - Claim'
+
+2022-12-07 08:23:57 - [MESSAGE][PASSED] - the user clicks on the "Claim" button
+
+2022-12-07 08:23:57 - [TEST_STEP][PASSED] - the order status switches to " DELIVERING": the order status switches to " DELIVERING"
+
+2022-12-07 08:23:57 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-07 08:24:04 - [MESSAGE][PASSED] - Element '' has attribute 'text' is 'ORDER: 9076
+DISTANCE: 2.95 KM
+DURATION: 5.75 MIN
+EARNING: 2€
+STATUS: DELIVERING'
+
+2022-12-07 08:24:04 - [MESSAGE][PASSED] - the order status switches to " DELIVERING"
+
+2022-12-07 08:24:04 - [TEST_STEP][PASSED] - the user sees the "Welcome" screen: the user sees the "Welcome" screen
+
+2022-12-07 08:24:04 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-07 08:24:05 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-07 08:24:05 - [MESSAGE][PASSED] - the user sees the "Welcome" screen
+
+2022-12-07 08:24:05 - [MESSAGE][PASSED] - Feature file: 'include/features/us9.feature' was passed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2022-12-07 08:22:36 - [TEST_SUITE][PASSED] - US9 Test Suite: Test Cases/US9 - Claim Order/US9TestCaseAllFeatures]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

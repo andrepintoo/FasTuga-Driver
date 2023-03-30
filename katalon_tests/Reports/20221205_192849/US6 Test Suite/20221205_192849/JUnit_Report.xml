@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="US6 Test Suite" time="86.702" tests="1" failures="0" errors="0">
+   <testsuite name="US6 Test Suite" tests="1" failures="0" errors="0" time="86.702" skipped="0" timestamp="2022-12-05 19:28:56" hostname="sfili - host.docker.internal" id="Test Suites/US6 Test Suite">
+      <properties>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 12)"/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\sfili\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221205_192849\\US6 Test Suite\\20221205_192849"/>
+         <property name="logFiles" value="C:\\Users\\sfili\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221205_192849\\US6 Test Suite\\20221205_192849\\appium.log, C:\\Users\\sfili\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221205_192849\\US6 Test Suite\\20221205_192849\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="sfili - host.docker.internal"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="appiumServerStatus" value="{&quot;value&quot;:{&quot;build&quot;:{&quot;version&quot;:&quot;1.22.3&quot;}},&quot;sessionId&quot;:null,&quot;status&quot;:0}"/>
+         <property name="katalonVersion" value="8.5.1.208"/>
+         <property name="deviceOS" value="Android"/>
+         <property name="appiumVersion" value="1.22.3"/>
+         <property name="deviceModel" value="sdk_gphone64_x86_64"/>
+         <property name="hostAddress" value="192.168.1.118"/>
+         <property name="deviceManufacturer" value="Google"/>
+         <property name="deviceId" value="emulator-5554"/>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 12)"/>
+         <property name="deviceOSVersion" value="12"/>
+      </properties>
+      <testcase name="Test Cases/US6 - Opt Out/US6TestCaseAllFeatures" time="86.327" classname="Test Cases/US6 - Opt Out/US6TestCaseAllFeatures" status="PASSED">
+         <system-out><![CDATA[2022-12-05 19:28:57 - [TEST_CASE][PASSED] - Test Cases/US6 - Opt Out/US6TestCaseAllFeatures: Test Cases/US6 - Opt Out/US6TestCaseAllFeatures
+
+2022-12-05 19:28:57 - [TEST_STEP][PASSED] - runFeatureFile("Include/features/us6.feature"): Feature file: 'Include/features/us6.feature' was passed
+
+2022-12-05 19:28:57 - [MESSAGE][INFO] - Starting run keyword runFeatureFile: 'Include/features/us6.feature' and extract report to folder: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Reports\20221205_192849\US6 Test Suite\20221205_192849/cucumber_report/1670268537656'...
+
+2022-12-05 19:28:59 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Opt Out Button Exists: SCENARIO Check Opt Out Button Exists
+
+2022-12-05 19:28:59 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-05 19:28:59 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-05 19:28:59 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-05 19:28:59 - [MESSAGE][INFO] - Detected NodeJS location: "C:\Program Files\nodejs\node.exe"
+
+2022-12-05 19:29:01 - [MESSAGE][INFO] - Appium server started on port 60.710
+
+2022-12-05 19:29:27 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-05 19:29:27 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-05 19:29:27 - [TEST_STEP][PASSED] - the user logs in the application: the user logs in the application
+
+2022-12-05 19:29:27 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:29:29 - [MESSAGE][PASSED] - Text 'contacto@email.pt' has been set to element 'Object Repository/android.widget.EditText - email'
+
+2022-12-05 19:29:29 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:29:30 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password'
+
+2022-12-05 19:29:30 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:29:31 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-05 19:29:31 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:29:33 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-05 19:29:33 - [MESSAGE][PASSED] - the user logs in the application
+
+2022-12-05 19:29:33 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-05 19:29:33 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:29:33 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-05 19:29:33 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-05 19:29:33 - [TEST_STEP][PASSED] - the user sees the "Opt Out" text in the Menu: the user sees the "Opt Out" text in the Menu
+
+2022-12-05 19:29:36 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/android.widget.CheckedTextView - Opt Out' are matched.
+
+2022-12-05 19:29:36 - [MESSAGE][PASSED] - the user sees the "Opt Out" text in the Menu
+
+2022-12-05 19:29:36 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Successful Opt Out: SCENARIO Check Successful Opt Out
+
+2022-12-05 19:29:36 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-05 19:29:36 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-05 19:29:36 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-05 19:29:48 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-05 19:29:48 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-05 19:29:48 - [TEST_STEP][PASSED] - the user fills the "email login" field with "nicole.azevedo@mail.pt": the user fills the "email login" field with "nicole.azevedo@mail.pt"
+
+2022-12-05 19:29:48 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:29:50 - [MESSAGE][PASSED] - Text 'nicole.azevedo@mail.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-05 19:29:50 - [MESSAGE][PASSED] - the user fills the "email login" field with "nicole.azevedo@mail.pt"
+
+2022-12-05 19:29:50 - [TEST_STEP][PASSED] - the user fills the "password login" field with "12345678": the user fills the "password login" field with "12345678"
+
+2022-12-05 19:29:50 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:29:52 - [MESSAGE][PASSED] - Text '12345678' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-05 19:29:52 - [MESSAGE][PASSED] - the user fills the "password login" field with "12345678"
+
+2022-12-05 19:29:52 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-05 19:29:52 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:29:52 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-05 19:29:52 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-05 19:29:52 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-05 19:29:52 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:29:54 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-05 19:29:54 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-05 19:29:54 - [TEST_STEP][PASSED] - the user clicks on the "Opt Out" text in the Menu: the user clicks on the "Opt Out" text in the Menu
+
+2022-12-05 19:29:54 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:29:56 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Opt Out'
+
+2022-12-05 19:29:56 - [MESSAGE][PASSED] - the user clicks on the "Opt Out" text in the Menu
+
+2022-12-05 19:29:56 - [TEST_STEP][PASSED] - the user sees the Confirmation Dialog "Opt Out Confirmation": the user sees the Confirmation Dialog "Opt Out Confirmation"
+
+2022-12-05 19:29:56 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:29:56 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.RelativeLayout - Opt Out Confirmation' is exist
+
+2022-12-05 19:29:56 - [MESSAGE][PASSED] - the user sees the Confirmation Dialog "Opt Out Confirmation"
+
+2022-12-05 19:29:56 - [TEST_STEP][PASSED] - the user clicks on the "Yes" button: the user clicks on the "Yes" button
+
+2022-12-05 19:29:56 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:29:57 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - Yes'
+
+2022-12-05 19:29:57 - [MESSAGE][PASSED] - the user clicks on the "Yes" button
+
+2022-12-05 19:29:57 - [TEST_STEP][PASSED] - the user sees the "LOGIN" screen: the user sees the "LOGIN" screen
+
+2022-12-05 19:29:57 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:29:57 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - LOGIN' is exist
+
+2022-12-05 19:29:57 - [MESSAGE][PASSED] - the user sees the "LOGIN" screen
+
+2022-12-05 19:29:57 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Register with Existing Email After Opt Out: SCENARIO Check Register with Existing Email After Opt Out
+
+2022-12-05 19:29:57 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-05 19:29:57 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-05 19:29:57 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-05 19:30:08 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-05 19:30:08 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-05 19:30:08 - [TEST_STEP][PASSED] - the user fills the "email login" field with "nicole.azevedo@mail.pt": the user fills the "email login" field with "nicole.azevedo@mail.pt"
+
+2022-12-05 19:30:08 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:30:10 - [MESSAGE][PASSED] - Text 'nicole.azevedo@mail.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-05 19:30:10 - [MESSAGE][PASSED] - the user fills the "email login" field with "nicole.azevedo@mail.pt"
+
+2022-12-05 19:30:10 - [TEST_STEP][PASSED] - the user fills the "password login" field with "12345678": the user fills the "password login" field with "12345678"
+
+2022-12-05 19:30:10 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:30:11 - [MESSAGE][PASSED] - Text '12345678' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-05 19:30:11 - [MESSAGE][PASSED] - the user fills the "password login" field with "12345678"
+
+2022-12-05 19:30:11 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-05 19:30:11 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:30:12 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-05 19:30:12 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-05 19:30:12 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-05 19:30:12 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:30:14 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-05 19:30:14 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-05 19:30:14 - [TEST_STEP][PASSED] - the user clicks on the "Opt Out" text in the Menu: the user clicks on the "Opt Out" text in the Menu
+
+2022-12-05 19:30:14 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:30:16 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Opt Out'
+
+2022-12-05 19:30:16 - [MESSAGE][PASSED] - the user clicks on the "Opt Out" text in the Menu
+
+2022-12-05 19:30:16 - [TEST_STEP][PASSED] - the user sees the Confirmation Dialog "Opt Out Confirmation": the user sees the Confirmation Dialog "Opt Out Confirmation"
+
+2022-12-05 19:30:16 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:30:16 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.RelativeLayout - Opt Out Confirmation' is exist
+
+2022-12-05 19:30:16 - [MESSAGE][PASSED] - the user sees the Confirmation Dialog "Opt Out Confirmation"
+
+2022-12-05 19:30:16 - [TEST_STEP][PASSED] - the user clicks on the "Yes" button: the user clicks on the "Yes" button
+
+2022-12-05 19:30:16 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:30:17 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - Yes'
+
+2022-12-05 19:30:17 - [MESSAGE][PASSED] - the user clicks on the "Yes" button
+
+2022-12-05 19:30:17 - [TEST_STEP][PASSED] - the user sees the "LOGIN" screen: the user sees the "LOGIN" screen
+
+2022-12-05 19:30:17 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:30:17 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - LOGIN' is exist
+
+2022-12-05 19:30:17 - [MESSAGE][PASSED] - the user sees the "LOGIN" screen
+
+2022-12-05 19:30:17 - [TEST_STEP][PASSED] - the user clicks on the "REGISTER" button: the user clicks on the "REGISTER" button
+
+2022-12-05 19:30:17 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:30:18 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - REGISTER'
+
+2022-12-05 19:30:18 - [MESSAGE][PASSED] - the user clicks on the "REGISTER" button
+
+2022-12-05 19:30:18 - [TEST_STEP][PASSED] - the user fills the "email register2" field with "nicole.azevedo@mail.pt": the user fills the "email register2" field with "nicole.azevedo@mail.pt"
+
+2022-12-05 19:30:18 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:30:20 - [MESSAGE][PASSED] - Text 'nicole.azevedo@mail.pt' has been set to element 'Object Repository/android.widget.EditText - email register2'
+
+2022-12-05 19:30:20 - [MESSAGE][PASSED] - the user fills the "email register2" field with "nicole.azevedo@mail.pt"
+
+2022-12-05 19:30:20 - [TEST_STEP][PASSED] - the user clicks on the "REGISTER register2" button: the user clicks on the "REGISTER register2" button
+
+2022-12-05 19:30:20 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:30:20 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - REGISTER register2'
+
+2022-12-05 19:30:20 - [MESSAGE][PASSED] - the user clicks on the "REGISTER register2" button
+
+2022-12-05 19:30:20 - [TEST_STEP][PASSED] - the user sees the Confirmation Dialog "Contact Administrator": the user sees the Confirmation Dialog "Contact Administrator"
+
+2022-12-05 19:30:20 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-05 19:30:23 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.RelativeLayout - Contact Administrator' is exist
+
+2022-12-05 19:30:23 - [MESSAGE][PASSED] - the user sees the Confirmation Dialog "Contact Administrator"
+
+2022-12-05 19:30:23 - [MESSAGE][PASSED] - Feature file: 'Include/features/us6.feature' was passed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2022-12-05 19:28:56 - [TEST_SUITE][PASSED] - US6 Test Suite: Test Cases/US6 - Opt Out/US6TestCaseAllFeatures]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

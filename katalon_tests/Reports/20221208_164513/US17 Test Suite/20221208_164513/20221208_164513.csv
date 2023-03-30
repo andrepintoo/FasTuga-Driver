@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+US17 Test Suite,,,,2022-12-08 16:45:20,2022-12-08 16:46:54,1m - 34.206s,PASSED
+,,,,,,,
+Test Cases/US17 - Turn OnOff Notifications/US17TestCaseAllFeatures,,,,2022-12-08 16:45:20,2022-12-08 16:46:54,1m - 33.956s,PASSED
+"runFeatureFile(""Include/features/us17.feature"")",,,,2022-12-08 16:45:21,2022-12-08 16:46:54,1m - 33.588s,PASSED

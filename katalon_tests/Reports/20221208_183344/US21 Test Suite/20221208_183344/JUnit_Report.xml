@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="US21 Test Suite" time="357.068" tests="1" failures="0" errors="0">
+   <testsuite name="US21 Test Suite" tests="1" failures="0" errors="0" time="357.068" skipped="0" timestamp="2022-12-08 18:33:51" hostname="sfili - host.docker.internal" id="Test Suites/US21 Test Suite">
+      <properties>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 12)"/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\sfili\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221208_183344\\US21 Test Suite\\20221208_183344"/>
+         <property name="logFiles" value="C:\\Users\\sfili\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221208_183344\\US21 Test Suite\\20221208_183344\\appium.log, C:\\Users\\sfili\\Katalon Studio\\taes22_grupow_fastugadriver_tests.git\\Reports\\20221208_183344\\US21 Test Suite\\20221208_183344\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="sfili - host.docker.internal"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="appiumServerStatus" value="{&quot;value&quot;:{&quot;build&quot;:{&quot;version&quot;:&quot;1.22.3&quot;}},&quot;sessionId&quot;:null,&quot;status&quot;:0}"/>
+         <property name="katalonVersion" value="8.5.1.208"/>
+         <property name="deviceOS" value="Android"/>
+         <property name="appiumVersion" value="1.22.3"/>
+         <property name="deviceModel" value="sdk_gphone64_x86_64"/>
+         <property name="hostAddress" value="192.168.1.118"/>
+         <property name="deviceManufacturer" value="Google"/>
+         <property name="deviceId" value="emulator-5554"/>
+         <property name="deviceName" value="emulator-5554 (sdk_gphone64_x86_64 - Android 12)"/>
+         <property name="deviceOSVersion" value="12"/>
+      </properties>
+      <testcase name="Test Cases/US21 - See And Change My Profile Details/US21TestCaseAllFeatures" time="356.704" classname="Test Cases/US21 - See And Change My Profile Details/US21TestCaseAllFeatures" status="PASSED">
+         <system-out><![CDATA[2022-12-08 18:33:51 - [TEST_CASE][PASSED] - Test Cases/US21 - See And Change My Profile Details/US21TestCaseAllFeatures: Test Cases/US21 - See And Change My Profile Details/US21TestCaseAllFeatures
+
+2022-12-08 18:33:52 - [TEST_STEP][PASSED] - runFeatureFile("Include/features/us21.feature"): Feature file: 'Include/features/us21.feature' was passed
+
+2022-12-08 18:33:52 - [MESSAGE][INFO] - Starting run keyword runFeatureFile: 'Include/features/us21.feature' and extract report to folder: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Reports\20221208_183344\US21 Test Suite\20221208_183344/cucumber_report/1670524432283'...
+
+2022-12-08 18:33:54 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Profile Button Exists: SCENARIO Check Profile Button Exists
+
+2022-12-08 18:33:54 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-08 18:33:54 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-08 18:33:54 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-08 18:33:54 - [MESSAGE][INFO] - Detected NodeJS location: "C:\Program Files\nodejs\node.exe"
+
+2022-12-08 18:33:56 - [MESSAGE][INFO] - Appium server started on port 50.481
+
+2022-12-08 18:34:19 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-08 18:34:19 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-08 18:34:19 - [TEST_STEP][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt": the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:34:19 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:34:20 - [MESSAGE][PASSED] - Text 'rodrigo.campos@mail.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-08 18:34:20 - [MESSAGE][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:34:20 - [TEST_STEP][PASSED] - the user fills the "password login" field with "12345678": the user fills the "password login" field with "12345678"
+
+2022-12-08 18:34:20 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:34:21 - [MESSAGE][PASSED] - Text '12345678' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-08 18:34:21 - [MESSAGE][PASSED] - the user fills the "password login" field with "12345678"
+
+2022-12-08 18:34:21 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-08 18:34:21 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:34:22 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-08 18:34:22 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-08 18:34:22 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:34:22 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:34:25 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-08 18:34:25 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:34:25 - [TEST_STEP][PASSED] - the user sees the "Profile" text in the Menu: the user sees the "Profile" text in the Menu
+
+2022-12-08 18:34:27 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/android.widget.CheckedTextView - Profile' are matched.
+
+2022-12-08 18:34:27 - [MESSAGE][PASSED] - the user sees the "Profile" text in the Menu
+
+2022-12-08 18:34:27 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check User Profile Details Exist: SCENARIO Check User Profile Details Exist
+
+2022-12-08 18:34:27 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-08 18:34:27 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-08 18:34:27 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-08 18:34:39 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-08 18:34:39 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-08 18:34:39 - [TEST_STEP][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt": the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:34:39 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:34:40 - [MESSAGE][PASSED] - Text 'rodrigo.campos@mail.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-08 18:34:40 - [MESSAGE][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:34:40 - [TEST_STEP][PASSED] - the user fills the "password login" field with "12345678": the user fills the "password login" field with "12345678"
+
+2022-12-08 18:34:40 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:34:41 - [MESSAGE][PASSED] - Text '12345678' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-08 18:34:41 - [MESSAGE][PASSED] - the user fills the "password login" field with "12345678"
+
+2022-12-08 18:34:41 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-08 18:34:41 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:34:42 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-08 18:34:42 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-08 18:34:42 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:34:42 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:34:48 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-08 18:34:48 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:34:48 - [TEST_STEP][PASSED] - the user clicks on the "Profile" text in the Menu: the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:34:48 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:34:49 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Profile'
+
+2022-12-08 18:34:49 - [MESSAGE][PASSED] - the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:34:49 - [TEST_STEP][PASSED] - the user sees that the "Profile Name" text is not empty: the user sees that the "Profile Name" text is not empty
+
+2022-12-08 18:34:50 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Profile Name' has attribute 'text' is 'PrimeiroNome Apelido'
+
+2022-12-08 18:34:50 - [MESSAGE][PASSED] - the user sees that the "Profile Name" text is not empty
+
+2022-12-08 18:34:50 - [TEST_STEP][PASSED] - the user sees that the "Profile Email" text is not empty: the user sees that the "Profile Email" text is not empty
+
+2022-12-08 18:34:50 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Profile Email' has attribute 'text' is 'rodrigo.campos@mail.pt'
+
+2022-12-08 18:34:50 - [MESSAGE][PASSED] - the user sees that the "Profile Email" text is not empty
+
+2022-12-08 18:34:50 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Change Password Button Exists: SCENARIO Check Change Password Button Exists
+
+2022-12-08 18:34:50 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-08 18:34:50 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-08 18:34:50 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-08 18:35:08 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-08 18:35:08 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-08 18:35:08 - [TEST_STEP][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt": the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:35:08 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:35:09 - [MESSAGE][PASSED] - Text 'rodrigo.campos@mail.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-08 18:35:09 - [MESSAGE][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:35:09 - [TEST_STEP][PASSED] - the user fills the "password login" field with "12345678": the user fills the "password login" field with "12345678"
+
+2022-12-08 18:35:09 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:35:10 - [MESSAGE][PASSED] - Text '12345678' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-08 18:35:10 - [MESSAGE][PASSED] - the user fills the "password login" field with "12345678"
+
+2022-12-08 18:35:10 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-08 18:35:10 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:35:11 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-08 18:35:11 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-08 18:35:11 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:35:11 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:35:20 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-08 18:35:20 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:35:20 - [TEST_STEP][PASSED] - the user clicks on the "Profile" text in the Menu: the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:35:20 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:35:21 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Profile'
+
+2022-12-08 18:35:21 - [MESSAGE][PASSED] - the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:35:21 - [TEST_STEP][PASSED] - the user sees the "CHANGE PASSWORD Profile" button: the user sees the "CHANGE PASSWORD Profile" button
+
+2022-12-08 18:35:21 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:35:22 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.Button - CHANGE PASSWORD Profile' is exist
+
+2022-12-08 18:35:22 - [MESSAGE][PASSED] - the user sees the "CHANGE PASSWORD Profile" button
+
+2022-12-08 18:35:22 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Change Name Button Exists: SCENARIO Check Change Name Button Exists
+
+2022-12-08 18:35:22 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-08 18:35:22 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-08 18:35:22 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-08 18:35:34 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-08 18:35:34 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-08 18:35:34 - [TEST_STEP][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt": the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:35:34 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:35:36 - [MESSAGE][PASSED] - Text 'rodrigo.campos@mail.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-08 18:35:36 - [MESSAGE][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:35:36 - [TEST_STEP][PASSED] - the user fills the "password login" field with "12345678": the user fills the "password login" field with "12345678"
+
+2022-12-08 18:35:36 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:35:37 - [MESSAGE][PASSED] - Text '12345678' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-08 18:35:37 - [MESSAGE][PASSED] - the user fills the "password login" field with "12345678"
+
+2022-12-08 18:35:37 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-08 18:35:37 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:35:38 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-08 18:35:38 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-08 18:35:38 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:35:38 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:35:41 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-08 18:35:41 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:35:41 - [TEST_STEP][PASSED] - the user clicks on the "Profile" text in the Menu: the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:35:41 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:35:42 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Profile'
+
+2022-12-08 18:35:42 - [MESSAGE][PASSED] - the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:35:42 - [TEST_STEP][PASSED] - the user sees the "CHANGE NAME Profile" button: the user sees the "CHANGE NAME Profile" button
+
+2022-12-08 18:35:43 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:35:43 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.Button - CHANGE NAME Profile' is exist
+
+2022-12-08 18:35:43 - [MESSAGE][PASSED] - the user sees the "CHANGE NAME Profile" button
+
+2022-12-08 18:35:43 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Go to Change Password Screen: SCENARIO Go to Change Password Screen
+
+2022-12-08 18:35:43 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-08 18:35:43 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-08 18:35:43 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-08 18:35:55 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-08 18:35:55 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-08 18:35:55 - [TEST_STEP][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt": the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:35:55 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:35:57 - [MESSAGE][PASSED] - Text 'rodrigo.campos@mail.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-08 18:35:57 - [MESSAGE][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:35:57 - [TEST_STEP][PASSED] - the user fills the "password login" field with "12345678": the user fills the "password login" field with "12345678"
+
+2022-12-08 18:35:57 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:35:58 - [MESSAGE][PASSED] - Text '12345678' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-08 18:35:58 - [MESSAGE][PASSED] - the user fills the "password login" field with "12345678"
+
+2022-12-08 18:35:58 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-08 18:35:58 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:35:59 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-08 18:35:59 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-08 18:35:59 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:35:59 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:36:02 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-08 18:36:02 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:36:02 - [TEST_STEP][PASSED] - the user clicks on the "Profile" text in the Menu: the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:36:02 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:36:04 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Profile'
+
+2022-12-08 18:36:04 - [MESSAGE][PASSED] - the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:36:04 - [TEST_STEP][PASSED] - the user clicks on the "CHANGE PASSWORD Profile" button: the user clicks on the "CHANGE PASSWORD Profile" button
+
+2022-12-08 18:36:04 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:36:05 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - CHANGE PASSWORD Profile'
+
+2022-12-08 18:36:05 - [MESSAGE][PASSED] - the user clicks on the "CHANGE PASSWORD Profile" button
+
+2022-12-08 18:36:05 - [TEST_STEP][PASSED] - the user sees the "Change My Password" text: the user sees the "Change My Password" text
+
+2022-12-08 18:36:05 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/android.widget.TextView - Change My Password' are matched.
+
+2022-12-08 18:36:05 - [MESSAGE][PASSED] - the user sees the "Change My Password" text
+
+2022-12-08 18:36:05 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Go Back to Profile Change Password Screen: SCENARIO Go Back to Profile Change Password Screen
+
+2022-12-08 18:36:05 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-08 18:36:05 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-08 18:36:05 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-08 18:36:18 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-08 18:36:18 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-08 18:36:18 - [TEST_STEP][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt": the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:36:18 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:36:20 - [MESSAGE][PASSED] - Text 'rodrigo.campos@mail.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-08 18:36:20 - [MESSAGE][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:36:20 - [TEST_STEP][PASSED] - the user fills the "password login" field with "12345678": the user fills the "password login" field with "12345678"
+
+2022-12-08 18:36:20 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:36:21 - [MESSAGE][PASSED] - Text '12345678' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-08 18:36:21 - [MESSAGE][PASSED] - the user fills the "password login" field with "12345678"
+
+2022-12-08 18:36:21 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-08 18:36:21 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:36:22 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-08 18:36:22 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-08 18:36:22 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:36:22 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:36:30 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-08 18:36:30 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:36:30 - [TEST_STEP][PASSED] - the user clicks on the "Profile" text in the Menu: the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:36:30 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:36:31 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Profile'
+
+2022-12-08 18:36:31 - [MESSAGE][PASSED] - the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:36:31 - [TEST_STEP][PASSED] - the user clicks on the "CHANGE PASSWORD Profile" button: the user clicks on the "CHANGE PASSWORD Profile" button
+
+2022-12-08 18:36:31 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:36:34 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - CHANGE PASSWORD Profile'
+
+2022-12-08 18:36:34 - [MESSAGE][PASSED] - the user clicks on the "CHANGE PASSWORD Profile" button
+
+2022-12-08 18:36:34 - [TEST_STEP][PASSED] - the user clicks on the "BACK Change Password" button: the user clicks on the "BACK Change Password" button
+
+2022-12-08 18:36:34 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:36:35 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - BACK Change Password'
+
+2022-12-08 18:36:35 - [MESSAGE][PASSED] - the user clicks on the "BACK Change Password" button
+
+2022-12-08 18:36:35 - [TEST_STEP][PASSED] - the user sees that the "Profile Name" text is not empty: the user sees that the "Profile Name" text is not empty
+
+2022-12-08 18:36:36 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Profile Name' has attribute 'text' is 'PrimeiroNome Apelido'
+
+2022-12-08 18:36:36 - [MESSAGE][PASSED] - the user sees that the "Profile Name" text is not empty
+
+2022-12-08 18:36:36 - [TEST_STEP][PASSED] - the user sees that the "Profile Email" text is not empty: the user sees that the "Profile Email" text is not empty
+
+2022-12-08 18:36:36 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Profile Email' has attribute 'text' is 'rodrigo.campos@mail.pt'
+
+2022-12-08 18:36:36 - [MESSAGE][PASSED] - the user sees that the "Profile Email" text is not empty
+
+2022-12-08 18:36:36 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Change Password Button Exists: SCENARIO Check Change Password Button Exists
+
+2022-12-08 18:36:36 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-08 18:36:36 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-08 18:36:36 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-08 18:37:05 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-08 18:37:05 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-08 18:37:05 - [TEST_STEP][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt": the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:37:05 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:07 - [MESSAGE][PASSED] - Text 'rodrigo.campos@mail.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-08 18:37:07 - [MESSAGE][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:37:07 - [TEST_STEP][PASSED] - the user fills the "password login" field with "12345678": the user fills the "password login" field with "12345678"
+
+2022-12-08 18:37:07 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:08 - [MESSAGE][PASSED] - Text '12345678' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-08 18:37:08 - [MESSAGE][PASSED] - the user fills the "password login" field with "12345678"
+
+2022-12-08 18:37:08 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-08 18:37:08 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:09 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-08 18:37:09 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-08 18:37:09 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:37:09 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:13 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-08 18:37:13 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:37:13 - [TEST_STEP][PASSED] - the user clicks on the "Profile" text in the Menu: the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:37:13 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:14 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Profile'
+
+2022-12-08 18:37:14 - [MESSAGE][PASSED] - the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:37:14 - [TEST_STEP][PASSED] - the user clicks on the "CHANGE PASSWORD Profile" button: the user clicks on the "CHANGE PASSWORD Profile" button
+
+2022-12-08 18:37:14 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:15 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - CHANGE PASSWORD Profile'
+
+2022-12-08 18:37:15 - [MESSAGE][PASSED] - the user clicks on the "CHANGE PASSWORD Profile" button
+
+2022-12-08 18:37:15 - [TEST_STEP][PASSED] - the user sees the "CHANGE PASSWORD Change" button: the user sees the "CHANGE PASSWORD Change" button
+
+2022-12-08 18:37:15 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:16 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.Button - CHANGE PASSWORD Change' is exist
+
+2022-12-08 18:37:16 - [MESSAGE][PASSED] - the user sees the "CHANGE PASSWORD Change" button
+
+2022-12-08 18:37:16 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Successful Change Password: SCENARIO Check Successful Change Password
+
+2022-12-08 18:37:16 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-08 18:37:16 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-08 18:37:16 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-08 18:37:34 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-08 18:37:34 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-08 18:37:34 - [TEST_STEP][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt": the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:37:34 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:35 - [MESSAGE][PASSED] - Text 'rodrigo.campos@mail.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-08 18:37:35 - [MESSAGE][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:37:35 - [TEST_STEP][PASSED] - the user fills the "password login" field with "12345678": the user fills the "password login" field with "12345678"
+
+2022-12-08 18:37:35 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:37 - [MESSAGE][PASSED] - Text '12345678' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-08 18:37:37 - [MESSAGE][PASSED] - the user fills the "password login" field with "12345678"
+
+2022-12-08 18:37:37 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-08 18:37:37 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:38 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-08 18:37:38 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-08 18:37:38 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:37:38 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:41 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-08 18:37:41 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:37:41 - [TEST_STEP][PASSED] - the user clicks on the "Profile" text in the Menu: the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:37:41 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:43 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Profile'
+
+2022-12-08 18:37:43 - [MESSAGE][PASSED] - the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:37:43 - [TEST_STEP][PASSED] - the user clicks on the "CHANGE PASSWORD Profile" button: the user clicks on the "CHANGE PASSWORD Profile" button
+
+2022-12-08 18:37:43 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:44 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - CHANGE PASSWORD Profile'
+
+2022-12-08 18:37:44 - [MESSAGE][PASSED] - the user clicks on the "CHANGE PASSWORD Profile" button
+
+2022-12-08 18:37:44 - [TEST_STEP][PASSED] - the user fills the "Atual Password" field with "12345678": the user fills the "Atual Password" field with "12345678"
+
+2022-12-08 18:37:44 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:45 - [MESSAGE][PASSED] - Text '12345678' has been set to element 'Object Repository/android.widget.EditText - Atual Password'
+
+2022-12-08 18:37:45 - [MESSAGE][PASSED] - the user fills the "Atual Password" field with "12345678"
+
+2022-12-08 18:37:45 - [TEST_STEP][PASSED] - the user fills the "New Password" field with "password": the user fills the "New Password" field with "password"
+
+2022-12-08 18:37:45 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:46 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - New Password'
+
+2022-12-08 18:37:46 - [MESSAGE][PASSED] - the user fills the "New Password" field with "password"
+
+2022-12-08 18:37:46 - [TEST_STEP][PASSED] - the user fills the "Confirm Password" field with "password": the user fills the "Confirm Password" field with "password"
+
+2022-12-08 18:37:46 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:47 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - Confirm Password'
+
+2022-12-08 18:37:47 - [MESSAGE][PASSED] - the user fills the "Confirm Password" field with "password"
+
+2022-12-08 18:37:47 - [TEST_STEP][PASSED] - the user clicks on the "CHANGE PASSWORD Change" button: the user clicks on the "CHANGE PASSWORD Change" button
+
+2022-12-08 18:37:47 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:48 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - CHANGE PASSWORD Change'
+
+2022-12-08 18:37:48 - [MESSAGE][PASSED] - the user clicks on the "CHANGE PASSWORD Change" button
+
+2022-12-08 18:37:48 - [TEST_STEP][PASSED] - the user sees the Confirmation Dialog "Success": the user sees the Confirmation Dialog "Success"
+
+2022-12-08 18:37:48 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:51 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.RelativeLayout - Success' is exist
+
+2022-12-08 18:37:51 - [MESSAGE][PASSED] - the user sees the Confirmation Dialog "Success"
+
+2022-12-08 18:37:51 - [TEST_STEP][PASSED] - the user clicks on the "Success OK" button: the user clicks on the "Success OK" button
+
+2022-12-08 18:37:51 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:52 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - Success OK'
+
+2022-12-08 18:37:52 - [MESSAGE][PASSED] - the user clicks on the "Success OK" button
+
+2022-12-08 18:37:52 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:37:52 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:52 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-08 18:37:52 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:37:52 - [TEST_STEP][PASSED] - the user clicks on the "Logout" text in the Menu: the user clicks on the "Logout" text in the Menu
+
+2022-12-08 18:37:52 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:54 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Logout'
+
+2022-12-08 18:37:54 - [MESSAGE][PASSED] - the user clicks on the "Logout" text in the Menu
+
+2022-12-08 18:37:54 - [TEST_STEP][PASSED] - the user sees the "LOGIN" screen: the user sees the "LOGIN" screen
+
+2022-12-08 18:37:54 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:54 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - LOGIN' is exist
+
+2022-12-08 18:37:54 - [MESSAGE][PASSED] - the user sees the "LOGIN" screen
+
+2022-12-08 18:37:54 - [TEST_STEP][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt": the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:37:54 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:55 - [MESSAGE][PASSED] - Text 'rodrigo.campos@mail.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-08 18:37:55 - [MESSAGE][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:37:55 - [TEST_STEP][PASSED] - the user fills the "password login" field with "password": the user fills the "password login" field with "password"
+
+2022-12-08 18:37:55 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:56 - [MESSAGE][PASSED] - Text 'password' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-08 18:37:56 - [MESSAGE][PASSED] - the user fills the "password login" field with "password"
+
+2022-12-08 18:37:56 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-08 18:37:56 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:37:57 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-08 18:37:57 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-08 18:37:57 - [TEST_STEP][PASSED] - the user sees the "Welcome" screen: the user sees the "Welcome" screen
+
+2022-12-08 18:37:57 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:38:00 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Welcome' is exist
+
+2022-12-08 18:38:00 - [MESSAGE][PASSED] - the user sees the "Welcome" screen
+
+2022-12-08 18:38:00 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Go to Change Name Screen: SCENARIO Go to Change Name Screen
+
+2022-12-08 18:38:00 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-08 18:38:00 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-08 18:38:00 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-08 18:38:12 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-08 18:38:12 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-08 18:38:12 - [TEST_STEP][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt": the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:38:12 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:38:13 - [MESSAGE][PASSED] - Text 'rodrigo.campos@mail.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-08 18:38:13 - [MESSAGE][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:38:14 - [TEST_STEP][PASSED] - the user fills the "password login" field with "12345678": the user fills the "password login" field with "12345678"
+
+2022-12-08 18:38:14 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:38:15 - [MESSAGE][PASSED] - Text '12345678' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-08 18:38:15 - [MESSAGE][PASSED] - the user fills the "password login" field with "12345678"
+
+2022-12-08 18:38:15 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-08 18:38:15 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:38:16 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-08 18:38:16 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-08 18:38:16 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:38:16 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:38:20 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-08 18:38:20 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:38:20 - [TEST_STEP][PASSED] - the user clicks on the "Profile" text in the Menu: the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:38:20 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:38:21 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Profile'
+
+2022-12-08 18:38:21 - [MESSAGE][PASSED] - the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:38:21 - [TEST_STEP][PASSED] - the user clicks on the "CHANGE NAME Profile" button: the user clicks on the "CHANGE NAME Profile" button
+
+2022-12-08 18:38:21 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:38:22 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - CHANGE NAME Profile'
+
+2022-12-08 18:38:22 - [MESSAGE][PASSED] - the user clicks on the "CHANGE NAME Profile" button
+
+2022-12-08 18:38:22 - [TEST_STEP][PASSED] - the user sees the "Change Name" text: the user sees the "Change Name" text
+
+2022-12-08 18:38:23 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/android.widget.TextView - Change Name' are matched.
+
+2022-12-08 18:38:23 - [MESSAGE][PASSED] - the user sees the "Change Name" text
+
+2022-12-08 18:38:23 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Go Back to Profile Change Password Screen: SCENARIO Go Back to Profile Change Password Screen
+
+2022-12-08 18:38:23 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-08 18:38:23 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-08 18:38:23 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-08 18:38:35 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-08 18:38:35 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-08 18:38:35 - [TEST_STEP][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt": the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:38:35 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:38:36 - [MESSAGE][PASSED] - Text 'rodrigo.campos@mail.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-08 18:38:36 - [MESSAGE][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:38:36 - [TEST_STEP][PASSED] - the user fills the "password login" field with "12345678": the user fills the "password login" field with "12345678"
+
+2022-12-08 18:38:36 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:38:38 - [MESSAGE][PASSED] - Text '12345678' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-08 18:38:38 - [MESSAGE][PASSED] - the user fills the "password login" field with "12345678"
+
+2022-12-08 18:38:38 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-08 18:38:38 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:38:39 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-08 18:38:39 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-08 18:38:39 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:38:39 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:38:47 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-08 18:38:47 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:38:47 - [TEST_STEP][PASSED] - the user clicks on the "Profile" text in the Menu: the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:38:47 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:38:49 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Profile'
+
+2022-12-08 18:38:49 - [MESSAGE][PASSED] - the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:38:49 - [TEST_STEP][PASSED] - the user clicks on the "CHANGE NAME Profile" button: the user clicks on the "CHANGE NAME Profile" button
+
+2022-12-08 18:38:49 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:38:50 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - CHANGE NAME Profile'
+
+2022-12-08 18:38:50 - [MESSAGE][PASSED] - the user clicks on the "CHANGE NAME Profile" button
+
+2022-12-08 18:38:50 - [TEST_STEP][PASSED] - the user clicks on the "BACK Change Name" button: the user clicks on the "BACK Change Name" button
+
+2022-12-08 18:38:50 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:38:51 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - BACK Change Name'
+
+2022-12-08 18:38:51 - [MESSAGE][PASSED] - the user clicks on the "BACK Change Name" button
+
+2022-12-08 18:38:51 - [TEST_STEP][PASSED] - the user sees that the "Profile Name" text is not empty: the user sees that the "Profile Name" text is not empty
+
+2022-12-08 18:38:52 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Profile Name' has attribute 'text' is 'PrimeiroNome Apelido'
+
+2022-12-08 18:38:52 - [MESSAGE][PASSED] - the user sees that the "Profile Name" text is not empty
+
+2022-12-08 18:38:52 - [TEST_STEP][PASSED] - the user sees that the "Profile Email" text is not empty: the user sees that the "Profile Email" text is not empty
+
+2022-12-08 18:38:52 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Profile Email' has attribute 'text' is 'rodrigo.campos@mail.pt'
+
+2022-12-08 18:38:52 - [MESSAGE][PASSED] - the user sees that the "Profile Email" text is not empty
+
+2022-12-08 18:38:52 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Change Password Button Exists: SCENARIO Check Change Password Button Exists
+
+2022-12-08 18:38:52 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-08 18:38:52 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-08 18:38:52 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-08 18:39:05 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-08 18:39:05 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-08 18:39:05 - [TEST_STEP][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt": the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:39:05 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:39:07 - [MESSAGE][PASSED] - Text 'rodrigo.campos@mail.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-08 18:39:07 - [MESSAGE][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:39:07 - [TEST_STEP][PASSED] - the user fills the "password login" field with "12345678": the user fills the "password login" field with "12345678"
+
+2022-12-08 18:39:07 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:39:08 - [MESSAGE][PASSED] - Text '12345678' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-08 18:39:08 - [MESSAGE][PASSED] - the user fills the "password login" field with "12345678"
+
+2022-12-08 18:39:08 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-08 18:39:08 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:39:09 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-08 18:39:09 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-08 18:39:09 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:39:09 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:39:12 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-08 18:39:12 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:39:12 - [TEST_STEP][PASSED] - the user clicks on the "Profile" text in the Menu: the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:39:13 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:39:14 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Profile'
+
+2022-12-08 18:39:14 - [MESSAGE][PASSED] - the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:39:14 - [TEST_STEP][PASSED] - the user clicks on the "CHANGE NAME Profile" button: the user clicks on the "CHANGE NAME Profile" button
+
+2022-12-08 18:39:14 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:39:15 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - CHANGE NAME Profile'
+
+2022-12-08 18:39:15 - [MESSAGE][PASSED] - the user clicks on the "CHANGE NAME Profile" button
+
+2022-12-08 18:39:15 - [TEST_STEP][PASSED] - the user sees the "CHANGE NAME Change" button: the user sees the "CHANGE NAME Change" button
+
+2022-12-08 18:39:15 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:39:16 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.Button - CHANGE NAME Change' is exist
+
+2022-12-08 18:39:16 - [MESSAGE][PASSED] - the user sees the "CHANGE NAME Change" button
+
+2022-12-08 18:39:16 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Check Successful Change Name: SCENARIO Check Successful Change Name
+
+2022-12-08 18:39:16 - [TEST_STEP][PASSED] - the user opens the application: the user opens the application
+
+2022-12-08 18:39:16 - [MESSAGE][INFO] - User set preference: ['appWaitActivity', '*']
+
+2022-12-08 18:39:16 - [MESSAGE][INFO] - User set preference: ['deviceId', 'emulator-5554']
+
+2022-12-08 18:39:28 - [MESSAGE][PASSED] - Started app at: 'C:\Users\sfili\Katalon Studio\taes22_grupow_fastugadriver_tests.git\Apk\app-debug.apk'
+
+2022-12-08 18:39:28 - [MESSAGE][PASSED] - the user opens the application
+
+2022-12-08 18:39:28 - [TEST_STEP][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt": the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:39:28 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:39:29 - [MESSAGE][PASSED] - Text 'rodrigo.campos@mail.pt' has been set to element 'Object Repository/android.widget.EditText - email login'
+
+2022-12-08 18:39:29 - [MESSAGE][PASSED] - the user fills the "email login" field with "rodrigo.campos@mail.pt"
+
+2022-12-08 18:39:29 - [TEST_STEP][PASSED] - the user fills the "password login" field with "12345678": the user fills the "password login" field with "12345678"
+
+2022-12-08 18:39:29 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:39:31 - [MESSAGE][PASSED] - Text '12345678' has been set to element 'Object Repository/android.widget.EditText - password login'
+
+2022-12-08 18:39:31 - [MESSAGE][PASSED] - the user fills the "password login" field with "12345678"
+
+2022-12-08 18:39:31 - [TEST_STEP][PASSED] - the user clicks on the "LOGIN" button: the user clicks on the "LOGIN" button
+
+2022-12-08 18:39:31 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:39:32 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - LOGIN'
+
+2022-12-08 18:39:32 - [MESSAGE][PASSED] - the user clicks on the "LOGIN" button
+
+2022-12-08 18:39:32 - [TEST_STEP][PASSED] - the user clicks on the "Menu" in the navbar: the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:39:32 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:39:36 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.ImageView - Menu'
+
+2022-12-08 18:39:36 - [MESSAGE][PASSED] - the user clicks on the "Menu" in the navbar
+
+2022-12-08 18:39:36 - [TEST_STEP][PASSED] - the user clicks on the "Profile" text in the Menu: the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:39:36 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:39:37 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.CheckedTextView - Profile'
+
+2022-12-08 18:39:37 - [MESSAGE][PASSED] - the user clicks on the "Profile" text in the Menu
+
+2022-12-08 18:39:37 - [TEST_STEP][PASSED] - the user clicks on the "CHANGE NAME Profile" button: the user clicks on the "CHANGE NAME Profile" button
+
+2022-12-08 18:39:37 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:39:38 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - CHANGE NAME Profile'
+
+2022-12-08 18:39:38 - [MESSAGE][PASSED] - the user clicks on the "CHANGE NAME Profile" button
+
+2022-12-08 18:39:38 - [TEST_STEP][PASSED] - the user fills the "First Name Change" field with "MARIO": the user fills the "First Name Change" field with "MARIO"
+
+2022-12-08 18:39:38 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:39:40 - [MESSAGE][PASSED] - Text 'MARIO' has been set to element 'Object Repository/android.widget.EditText - First Name Change'
+
+2022-12-08 18:39:40 - [MESSAGE][PASSED] - the user fills the "First Name Change" field with "MARIO"
+
+2022-12-08 18:39:40 - [TEST_STEP][PASSED] - the user fills the "Last Name Change" field with "ANTUNES": the user fills the "Last Name Change" field with "ANTUNES"
+
+2022-12-08 18:39:40 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:39:41 - [MESSAGE][PASSED] - Text 'ANTUNES' has been set to element 'Object Repository/android.widget.EditText - Last Name Change'
+
+2022-12-08 18:39:41 - [MESSAGE][PASSED] - the user fills the "Last Name Change" field with "ANTUNES"
+
+2022-12-08 18:39:41 - [TEST_STEP][PASSED] - the user clicks on the "CHANGE NAME Change" button: the user clicks on the "CHANGE NAME Change" button
+
+2022-12-08 18:39:41 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:39:41 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - CHANGE NAME Change'
+
+2022-12-08 18:39:41 - [MESSAGE][PASSED] - the user clicks on the "CHANGE NAME Change" button
+
+2022-12-08 18:39:41 - [TEST_STEP][PASSED] - the user sees the Confirmation Dialog "Success": the user sees the Confirmation Dialog "Success"
+
+2022-12-08 18:39:41 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:39:47 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.RelativeLayout - Success' is exist
+
+2022-12-08 18:39:47 - [MESSAGE][PASSED] - the user sees the Confirmation Dialog "Success"
+
+2022-12-08 18:39:47 - [TEST_STEP][PASSED] - the user clicks on the "Success OK" button: the user clicks on the "Success OK" button
+
+2022-12-08 18:39:47 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2022-12-08 18:39:47 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button - Success OK'
+
+2022-12-08 18:39:47 - [MESSAGE][PASSED] - the user clicks on the "Success OK" button
+
+2022-12-08 18:39:47 - [TEST_STEP][PASSED] - the user sees that the "Profile Name" text is not empty: the user sees that the "Profile Name" text is not empty
+
+2022-12-08 18:39:48 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Profile Name' has attribute 'text' is 'MARIO ANTUNES'
+
+2022-12-08 18:39:48 - [MESSAGE][PASSED] - the user sees that the "Profile Name" text is not empty
+
+2022-12-08 18:39:48 - [TEST_STEP][PASSED] - the user sees that the "Profile Email" text is not empty: the user sees that the "Profile Email" text is not empty
+
+2022-12-08 18:39:48 - [MESSAGE][PASSED] - Element 'Object Repository/android.widget.TextView - Profile Email' has attribute 'text' is 'rodrigo.campos@mail.pt'
+
+2022-12-08 18:39:48 - [MESSAGE][PASSED] - the user sees that the "Profile Email" text is not empty
+
+2022-12-08 18:39:48 - [MESSAGE][PASSED] - Feature file: 'Include/features/us21.feature' was passed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2022-12-08 18:33:51 - [TEST_SUITE][PASSED] - US21 Test Suite: Test Cases/US21 - See And Change My Profile Details/US21TestCaseAllFeatures]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>
